@@ -1,0 +1,68 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Supprimer l'article - Mon Blog Django" %}{% endblock %}
+
+{% block content %}
+<div class="container my-5">        <!-- Navigation -->
+        <nav class="mb-4">
+            <a href="{% url 'article_detail' article.id %}" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left me-2"></i>{% trans "Retour à l'article" %}
+            </a>
+            <a href="{% url 'home' %}" class="btn btn-outline-primary ms-2">
+                <i class="bi bi-house me-2"></i>{% trans "Accueil" %}
+            </a>
+        </nav>
+
+        <!-- Confirmation de suppression -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">                <div class="card border-danger shadow">
+                    <div class="card-header bg-danger text-white">
+                        <h2 class="mb-0">
+                            <i class="bi bi-trash me-2"></i>{% trans "Supprimer l'article" %}
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-warning">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            <strong>{% trans "Attention !" %}</strong> {% trans "Cette action est irréversible." %}
+                        </div>
+                        
+                        <p>{% trans "Êtes-vous sûr de vouloir supprimer l'article suivant ?" %}</p>
+                        
+                        <div class="card mb-3">
+                            {% if article.image %}
+                                <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.titre }}" 
+                                     style="max-height: 200px; object-fit: cover;">
+                            {% endif %}
+                            <div class="card-body">
+                                {% if article.category %}
+                                    <span class="badge bg-primary mb-2">{{ article.category.nom }}</span>
+                                {% endif %}
+                                <h5 class="card-title">{{ article.titre }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    {% blocktrans with auteur=article.auteur date=article.date_creation %}
+                                        Par {{ auteur }} - {{ date|date:"d/m/Y à H:i" }}
+                                    {% endblocktrans %}
+                                </h6>
+                                <p class="card-text">{{ article.contenu|truncatewords:30 }}</p>
+                            </div>
+                        </div>
+
+                        <form method="post">
+                            {% csrf_token %}                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <a href="{% url 'article_detail' article.id %}" class="btn btn-outline-secondary">
+                                    <i class="bi bi-arrow-left me-2"></i>{% trans "Annuler" %}
+                                </a>
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="bi bi-trash me-2"></i>{% trans "Supprimer définitivement" %}
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,700 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: My Django Blog 1.0\n"
+"Report-Msgid-Bugs-To: you@example.com\n"
+"POT-Creation-Date: 2025-06-02 15:57+0200\n"
+"PO-Revision-Date: 2025-06-02 18:00+0200\n"
+"Last-Translator: John Doe <john@example.com>\n"
+"Language-Team: English <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\blog\templates\blog\ajouter_article.html:12
+msgid "Ajouter un Nouvel Article"
+msgstr "Add a New Article"
+
+#: .\blog\templates\blog\ajouter_article.html:21
+msgid "Titre de l'article"
+msgstr "Article title"
+
+#: .\blog\templates\blog\ajouter_article.html:33
+#: .\blog\templates\blog\modifier_article.html:67
+msgid "Auteur"
+msgstr "Author"
+
+#: .\blog\templates\blog\ajouter_article.html:45
+#: .\blog\templates\blog\modifier_article.html:79
+msgid "Catgorie"
+msgstr "Category"
+
+#: .\blog\templates\blog\ajouter_article.html:55
+msgid "Crer une nouvelle catgorie"
+msgstr "Creating a new category"
+
+#: .\blog\templates\blog\ajouter_article.html:61
+#: .\blog\templates\blog\modifier_article.html:94
+msgid "Image"
+msgstr "Image"
+
+#: .\blog\templates\blog\ajouter_article.html:70
+msgid "Formats accepts: JPG, PNG, GIF (optionnel)"
+msgstr "Acceptable formats: JPG, PNG, GIF (optional)"
+
+#: .\blog\templates\blog\ajouter_article.html:76
+msgid "Contenu de l'article"
+msgstr "Article content"
+
+#: .\blog\templates\blog\ajouter_article.html:88
+#: .\blog\templates\blog\ajouter_categorie.html:56
+#: .\blog\templates\blog\modifier_article.html:118
+#: .\blog\templates\blog\modifier_categorie.html:58
+#: .\blog\templates\blog\supprimer_article.html:55
+#: .\blog\templates\blog\supprimer_categorie.html:45
+msgid "Annuler"
+msgstr "Cancel"
+
+#: .\blog\templates\blog\ajouter_article.html:91
+msgid "Ajouter l'article"
+msgstr "Add article"
+
+#: .\blog\templates\blog\ajouter_categorie.html:12
+msgid "Ajouter une nouvelle catgorie"
+msgstr "Add a new category"
+
+#: .\blog\templates\blog\ajouter_categorie.html:29
+#: .\blog\templates\blog\modifier_categorie.html:29
+msgid "Nom de la catgorie"
+msgstr "Category name"
+
+#: .\blog\templates\blog\ajouter_categorie.html:41
+#: .\blog\templates\blog\gerer_categories.html:38
+#: .\blog\templates\blog\modifier_categorie.html:37
+msgid "Description"
+msgstr "Description"
+
+#: .\blog\templates\blog\ajouter_categorie.html:53
+#: .\blog\templates\blog\modifier_categorie.html:57
+msgid "Grer les catgories"
+msgstr "Manage categories"
+
+#: .\blog\templates\blog\ajouter_categorie.html:59
+msgid "Ajouter la catgorie"
+msgstr "Add category"
+
+#: .\blog\templates\blog\article_detail.html:10
+msgid "Retour  l'accueil"
+msgstr "Back to home"
+
+#: .\blog\templates\blog\article_detail.html:14
+msgid "Modifier cet article"
+msgstr "Edit this article"
+
+#: .\blog\templates\blog\article_detail.html:17
+#: .\blog\templates\blog\gerer_articles.html:124
+#: .\blog\templates\blog\gerer_categories.html:72
+msgid "Supprimer"
+msgstr "Delete"
+
+#: .\blog\templates\blog\article_detail.html:64
+#, python-format
+msgid "Commentaire (%(comments_count)s)"
+msgid_plural "Commentaires (%(comments_count)s)"
+msgstr[0] "Comment (%(comments_count)s)"
+msgstr[1] "Comments (%(comments_count)s)"
+
+#: .\blog\templates\blog\article_detail.html:87
+msgid "Aucun commentaire pour le moment. Soyez le premier  commenter !"
+msgstr "No comments yet. Be the first to comment!"
+
+#: .\blog\templates\blog\article_detail.html:97
+msgid "Ajouter un commentaire"
+msgstr "Add a comment"
+
+#: .\blog\templates\blog\article_detail.html:106
+#: .\blog\templates\blog\auth\register.html:65
+#: .\blog\templates\blog\gerer_categories.html:37
+msgid "Nom"
+msgstr "Name"
+
+#: .\blog\templates\blog\article_detail.html:118
+#: .\blog\templates\blog\auth\register.html:43
+msgid "Email"
+msgstr ""
+
+#: .\blog\templates\blog\article_detail.html:122
+msgid "Votre email ne sera pas publi"
+msgstr "Your email will not be published"
+
+#: .\blog\templates\blog\article_detail.html:133
+msgid "Commentaire"
+msgstr "Comment"
+
+#: .\blog\templates\blog\article_detail.html:144
+msgid "Publier le commentaire"
+msgstr "Publish comment"
+
+#: .\blog\templates\blog\auth\login.html:4
+#: .\blog\templates\blog\auth\login.html:13
+msgid "Connexion"
+msgstr "Login"
+
+#: .\blog\templates\blog\auth\login.html:30
+#: .\blog\templates\blog\auth\register.html:32
+msgid "Nom d'utilisateur"
+msgstr "Username"
+
+#: .\blog\templates\blog\auth\login.html:34
+msgid "Veuillez saisir votre nom d'utilisateur."
+msgstr "Please enter your username."
+
+#: .\blog\templates\blog\auth\login.html:40
+#: .\blog\templates\blog\auth\register.html:76
+msgid "Mot de passe"
+msgstr "Password"
+
+#: .\blog\templates\blog\auth\login.html:44
+msgid "Veuillez saisir votre mot de passe."
+msgstr "Please enter your password."
+
+#: .\blog\templates\blog\auth\login.html:50
+#: .\blog\templates\blog\auth\register.html:109
+msgid "Retour"
+msgstr "Back"
+
+#: .\blog\templates\blog\auth\login.html:54
+#: .\blog\templates\blog\auth\register.html:116
+msgid "S'inscrire"
+msgstr "Sign up"
+
+#: .\blog\templates\blog\auth\login.html:57
+#: .\blog\templates\blog\auth\register.html:113
+msgid "Se connecter"
+msgstr "Log in"
+
+#: .\blog\templates\blog\auth\register.html:4
+#: .\blog\templates\blog\auth\register.html:13
+msgid "Inscription"
+msgstr "Registration"
+
+#: .\blog\templates\blog\auth\register.html:36
+msgid "Veuillez saisir un nom d'utilisateur."
+msgstr "Please enter a username."
+
+#: .\blog\templates\blog\auth\register.html:47
+msgid "Veuillez saisir une adresse email valide."
+msgstr "Please enter a valid email address."
+
+#: .\blog\templates\blog\auth\register.html:57
+msgid "Prnom"
+msgstr "First name"
+
+#: .\blog\templates\blog\auth\register.html:80
+msgid "Veuillez saisir un mot de passe."
+msgstr "Please enter a password."
+
+#: .\blog\templates\blog\auth\register.html:87
+msgid "Confirmer le mot de passe"
+msgstr "Confirm password"
+
+#: .\blog\templates\blog\auth\register.html:91
+msgid "Veuillez confirmer votre mot de passe."
+msgstr "Please confirm your password."
+
+#: .\blog\templates\blog\auth\register.html:99
+msgid "Conseils pour le mot de passe :"
+msgstr "Password tips:"
+
+#: .\blog\templates\blog\auth\register.html:101
+msgid "Au moins 8 caractres"
+msgstr "At least 8 characters"
+
+#: .\blog\templates\blog\auth\register.html:102
+msgid "Ne doit pas tre entirement numrique"
+msgstr "Must not be entirely numeric"
+
+#: .\blog\templates\blog\auth\register.html:103
+msgid "Ne doit pas tre trop commun"
+msgstr "Must not be too common"
+
+#: .\blog\templates\blog\auth\register.html:151
+msgid "Les mots de passe ne correspondent pas."
+msgstr "Passwords do not match."
+
+#: .\blog\templates\blog\base.html:7
+msgid "My Awesome Blog"
+msgstr "My Awesome Blog"
+
+#: .\blog\templates\blog\base.html:151 .\blog\templates\blog\base.html:242
+msgid "MonBlog"
+msgstr "MyBlog"
+
+#: .\blog\templates\blog\base.html:162 .\blog\templates\blog\base.html:266
+#: .\blog\templates\blog\modifier_article.html:13
+#: .\blog\templates\blog\supprimer_article.html:13
+msgid "Accueil"
+msgstr "Home"
+
+#: .\blog\templates\blog\base.html:167 .\blog\templates\blog\home.html:22
+msgid "Nouvel Article"
+msgstr "New Article"
+
+#: .\blog\templates\blog\base.html:172 .\blog\templates\blog\home.html:28
+msgid "Grer Articles"
+msgstr "Manage Articles"
+
+#: .\blog\templates\blog\base.html:177 .\blog\templates\blog\base.html:269
+msgid "Catgories"
+msgstr "Categories"
+
+#: .\blog\templates\blog\base.html:189
+msgid "Profil"
+msgstr "Profile"
+
+#: .\blog\templates\blog\base.html:192
+msgid "Mon Profil"
+msgstr "My Profile"
+
+#: .\blog\templates\blog\base.html:193
+msgid "Paramtres"
+msgstr "Settings"
+
+#: .\blog\templates\blog\base.html:195
+msgid "Dconnexion"
+msgstr "Logout"
+
+#: .\blog\templates\blog\base.html:209
+msgid "Bienvenue sur MonBlog"
+msgstr "Welcome to MyBlog"
+
+#: .\blog\templates\blog\base.html:210
+msgid ""
+"Dcouvrez des articles passionnants et partagez vos ides avec notre communaut."
+msgstr ""
+"Discover exciting articles and share your ideas with our community."
+
+#: .\blog\templates\blog\base.html:213
+msgid "crire un article"
+msgstr "Write an article"
+
+#: .\blog\templates\blog\base.html:216
+msgid "Dcouvrir"
+msgstr "Discover"
+
+#: .\blog\templates\blog\base.html:245
+msgid ""
+"Votre plateforme de blog moderne pour partager vos ides et dcouvrir de "
+"nouveaux contenus inspirants."
+msgstr ""
+"Your modern blog platform to share your ideas and discover new inspiring "
+"content."
+
+#: .\blog\templates\blog\base.html:264
+msgid "Navigation"
+msgstr "Navigation"
+
+#: .\blog\templates\blog\base.html:267
+msgid "crire"
+msgstr "Write"
+
+#: .\blog\templates\blog\base.html:268
+msgid "Mes Articles"
+msgstr "My Articles"
+
+#: .\blog\templates\blog\base.html:274
+msgid "Ressources"
+msgstr "Resources"
+
+#: .\blog\templates\blog\base.html:276
+msgid "Aide"
+msgstr "Help"
+
+#: .\blog\templates\blog\base.html:277
+msgid "FAQ"
+msgstr "FAQ"
+
+#: .\blog\templates\blog\base.html:278
+msgid "Contact"
+msgstr "Contact"
+
+#: .\blog\templates\blog\base.html:279
+msgid "Support"
+msgstr "Support"
+
+#: .\blog\templates\blog\base.html:284
+msgid "Lgal"
+msgstr "Legal"
+
+#: .\blog\templates\blog\base.html:286
+msgid "Confidentialit"
+msgstr "Privacy"
+
+#: .\blog\templates\blog\base.html:287
+msgid "Conditions"
+msgstr "Terms"
+
+#: .\blog\templates\blog\base.html:288
+msgid "Cookies"
+msgstr "Cookies"
+
+#: .\blog\templates\blog\base.html:289
+msgid "Mentions lgales"
+msgstr "Legal notices"
+
+#: .\blog\templates\blog\base.html:294
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: .\blog\templates\blog\base.html:295
+msgid "Restez inform des derniers articles"
+msgstr "Stay informed about the latest articles"
+
+#: .\blog\templates\blog\base.html:297
+msgid "Votre email"
+msgstr "Your email"
+
+#: .\blog\templates\blog\base.html:310
+msgid "MonBlog. Tous droits rservs."
+msgstr "MyBlog. All rights reserved."
+
+#: .\blog\templates\blog\base.html:315
+msgid "Fait avec"
+msgstr "Made with"
+
+#: .\blog\templates\blog\base.html:315
+msgid "par l'quipe MonBlog"
+msgstr "by the MyBlog team"
+
+#: .\blog\templates\blog\gerer_articles.html:19
+msgid "Grer les articles"
+msgstr "Manage articles"
+
+#: .\blog\templates\blog\gerer_articles.html:21
+#: .\blog\templates\blog\gerer_articles.html:148
+msgid "Ajouter un article"
+msgstr "Add an article"
+
+#: .\blog\templates\blog\gerer_articles.html:31
+msgid "Filtrer par catgorie"
+msgstr "Filter by category"
+
+#: .\blog\templates\blog\gerer_articles.html:34
+#: .\blog\templates\blog\home.html:40
+msgid "Toutes les catgories"
+msgstr "All categories"
+
+#: .\blog\templates\blog\gerer_articles.html:45
+msgid "Effacer le filtre"
+msgstr "Clear filter"
+
+#: .\blog\templates\blog\gerer_articles.html:106
+msgid "Aucune"
+msgstr "None"
+
+#: .\blog\templates\blog\gerer_articles.html:116
+msgid "Voir"
+msgstr "View"
+
+#: .\blog\templates\blog\gerer_articles.html:120
+#: .\blog\templates\blog\gerer_categories.html:67
+msgid "Modifier"
+msgstr "Edit"
+
+#: .\blog\templates\blog\gerer_articles.html:139
+msgid "Aucun article trouv"
+msgstr "No article found"
+
+#: .\blog\templates\blog\gerer_articles.html:142
+msgid "Aucun article dans cette catgorie."
+msgstr "No article in this category."
+
+#: .\blog\templates\blog\gerer_articles.html:144
+msgid "Commencez par crer votre premier article !"
+msgstr "Start by creating your first article!"
+
+#: .\blog\templates\blog\gerer_categories.html:8
+msgid "Gestion des catgories"
+msgstr "Category management"
+
+#: .\blog\templates\blog\gerer_categories.html:11
+#: .\blog\templates\blog\gerer_categories.html:92
+msgid "Ajouter une catgorie"
+msgstr "Add a category"
+
+#: .\blog\templates\blog\gerer_categories.html:29
+#, python-format
+msgid "Liste des catgories (%(count)s)"
+msgstr "Category list (%(count)s)"
+
+#: .\blog\templates\blog\gerer_categories.html:39
+msgid "Date de cration"
+msgstr "Creation date"
+
+#: .\blog\templates\blog\gerer_categories.html:40
+msgid "Nb d'articles"
+msgstr "Number of articles"
+
+#: .\blog\templates\blog\gerer_categories.html:41
+msgid "Actions"
+msgstr "Actions"
+
+#: .\blog\templates\blog\gerer_categories.html:54
+msgid "Aucune description"
+msgstr "No description"
+
+#: .\blog\templates\blog\gerer_categories.html:89
+msgid "Aucune catgorie trouve"
+msgstr "No category found"
+
+#: .\blog\templates\blog\gerer_categories.html:90
+msgid "Commencez par crer votre premire catgorie."
+msgstr "Start by creating your first category."
+
+#: .\blog\templates\blog\home.html:25
+msgid "Nouvelle Catgorie"
+msgstr "New Category"
+
+#: .\blog\templates\blog\home.html:31
+msgid "Grer Catgories"
+msgstr "Manage Categories"
+
+#: .\blog\templates\blog\home.html:59
+msgid "Articles rcents"
+msgstr "Recent articles"
+
+#: .\blog\templates\blog\home.html:104
+msgid "Lire"
+msgstr "Read"
+
+#: .\blog\templates\blog\home.html:127
+msgid "Aucun article pour le moment"
+msgstr "No articles yet"
+
+#: .\blog\templates\blog\home.html:128
+msgid "Commencez par crer votre premier article pour partager vos ides !"
+msgstr "Start by creating your first article to share your ideas!"
+
+#: .\blog\templates\blog\home.html:130
+msgid "Crer mon premier article"
+msgstr "Create my first article"
+
+#: .\blog\templates\blog\modifier_article.html:10
+#: .\blog\templates\blog\supprimer_article.html:10
+msgid "Retour  l'article"
+msgstr "Back to article"
+
+#: .\blog\templates\blog\modifier_article.html:33
+msgid "Modifier l'article"
+msgstr "Edit article"
+
+#: .\blog\templates\blog\modifier_article.html:43
+msgid "Titre"
+msgstr "Title"
+
+#: .\blog\templates\blog\modifier_article.html:55
+msgid "Contenu"
+msgstr "Content"
+
+#: .\blog\templates\blog\modifier_article.html:88
+msgid "Slectionnez une catgorie pour votre article"
+msgstr "Select a category for your article"
+
+#: .\blog\templates\blog\modifier_article.html:101
+msgid "Image actuelle"
+msgstr "Current image"
+
+#: .\blog\templates\blog\modifier_article.html:112
+msgid "Laissez vide pour conserver l'image actuelle"
+msgstr "Leave blank to keep current image"
+
+#: .\blog\templates\blog\modifier_article.html:121
+#: .\blog\templates\blog\modifier_categorie.html:60
+msgid "Enregistrer les modifications"
+msgstr "Save changes"
+
+#: .\blog\templates\blog\modifier_categorie.html:4
+msgid "Modifier la catgorie"
+msgstr "Edit category"
+
+#: .\blog\templates\blog\modifier_categorie.html:13
+msgid "Modifier la catgorie:"
+msgstr "Edit category:"
+
+#: .\blog\templates\blog\modifier_categorie.html:47
+msgid "Informations sur la catgorie"
+msgstr "Category information"
+
+#: .\blog\templates\blog\supprimer_article.html:4
+msgid "Supprimer l'article - Mon Blog Django"
+msgstr "Delete article - My Django Blog"
+
+#: .\blog\templates\blog\supprimer_article.html:22
+msgid "Supprimer l'article"
+msgstr "Delete article"
+
+#: .\blog\templates\blog\supprimer_article.html:28
+msgid "Attention !"
+msgstr "Warning!"
+
+#: .\blog\templates\blog\supprimer_article.html:28
+#: .\blog\templates\blog\supprimer_categorie.html:18
+msgid "Cette action est irrversible."
+msgstr "This action is irreversible."
+
+#: .\blog\templates\blog\supprimer_article.html:31
+msgid "tes-vous sr de vouloir supprimer l'article suivant ?"
+msgstr "Are you sure you want to delete the following article?"
+
+msgid ""
+"\n"
+"                                        Par %(auteur)s - "
+"%(date|date:\"d/m/Y  H:i\")s\n"
+"                                    "
+msgstr ""
+"\n"
+"                                        By %(auteur)s - "
+"%(date)s\n"
+"                               "
+
+#: .\blog\templates\blog\supprimer_article.html:58
+msgid "Supprimer dfinitivement"
+msgstr "Delete permanently"
+
+#: .\blog\templates\blog\supprimer_categorie.html:4
+#: .\blog\templates\blog\supprimer_categorie.html:12
+msgid "Supprimer la catgorie"
+msgstr "Delete category"
+
+#: .\blog\templates\blog\supprimer_categorie.html:18
+msgid "Attention!"
+msgstr "Warning!"
+
+#: .\blog\templates\blog\supprimer_categorie.html:21
+msgid "tes-vous sr de vouloir supprimer la catgorie suivante ?"
+msgstr "Are you sure you want to delete the following category?"
+
+#: .\blog\templates\blog\supprimer_categorie.html:30
+msgid "Date de cration:"
+msgstr "Creation date:"
+
+#: .\blog\templates\blog\supprimer_categorie.html:31
+msgid "Nombre d'articles associs:"
+msgstr "Number of associated articles:"
+
+#: .\blog\templates\blog\supprimer_categorie.html:37
+msgid "Note:"
+msgstr "Note:"
+
+#: .\blog\templates\blog\supprimer_categorie.html:37
+#, python-format
+msgid ""
+"Les %(count)s article%(count|pluralize)s associ%(count|pluralize)s  cette "
+"catgorie ne seront pas supprim%(count|pluralize)s, mais n'auront plus de "
+"catgorie assigne."
+msgstr ""
+"The %(count)s article%(count|pluralize)s associated with this category will "
+"not be deleted, but will no longer have an assigned category."
+
+#: .\blog\templates\blog\supprimer_categorie.html:48
+msgid "Confirmer la suppression"
+msgstr "Confirm deletion"
+
+#: .\blog\views.py:30
+msgid "Article ajout avec succs!"
+msgstr "Article successfully added!"
+
+#: .\blog\views.py:43
+msgid "Catgorie ajoute avec succs!"
+msgstr "Category successfully added!"
+
+#: .\blog\views.py:61
+msgid "Commentaire ajout avec succs!"
+msgstr "Comment successfully added"
+
+#: .\blog\views.py:92
+#, python-brace-format
+msgid "Catgorie \"{category.nom}\" modifie avec succs!"
+msgstr "Category “{category.nom}” successfully modified"
+
+#: .\blog\views.py:112
+#, python-brace-format
+msgid "Catgorie \"{category_name}\" supprime avec succs!"
+msgstr "Category “{category_name}” successfully deleted"
+
+#: .\blog\views.py:130
+#, python-brace-format
+msgid "Article \"{article.titre}\" modifi avec succs!"
+msgstr "Article “{article.titre}” successfully modified"
+
+msgid "Créer une nouvelle catégorie"
+msgstr "Create a new category"
+
+msgid "Catégorie"
+msgstr "Category"
+
+#: .\blog\templates\blog\ajouter_article.html:70
+msgid "Formats acceptés: JPG, PNG, GIF (optionnel)"
+msgstr "Accepted formats: JPG, PNG, GIF (optional)"
+
+msgid "Écrire un article"
+msgstr "Write an article"
+
+msgid "Découvrir"
+msgstr "Discover"
+
+msgid "Découvrez des articles passionnants et partagez vos idées avec notre communauté."
+msgstr "Discover exciting articles and share your ideas with our community."
+
+#: .\blog\templates\blog\home.html:59
+msgid "Articles récents"
+msgstr "Recent articles"
+
+msgid "Toutes les catégories"
+msgstr "All categories"
+
+msgid "Nouvelle Catégorie"
+msgstr "New categories"
+
+msgid "Gérer Articles"
+msgstr "Manage Articles"
+
+msgid "Gérer Catégories"
+msgstr "Manage categories"
+
+msgid "Écrire"
+msgstr "Write"
+
+msgid "Légal"
+msgstr "Legal"
+
+msgid "Confidentialité"
+msgstr "Privacy"
+
+msgid "Mentions légales"
+msgstr "Terms of use"
+
+msgid "Restez informé des derniers articles"
+msgstr "Keep up to date with the latest articles"
+
+msgid "MonBlog. Tous droits réservés."
+msgstr "MonBlog. All rights reserved."
+
+msgid "Filtrer par catégorie"
+msgstr "Filter by category"
+
+msgid "Gérer les articles"
+msgstr "Manage items"
+
+msgid "Gestion des catégories"
+msgstr "Category management"
+
+msgid "Liste des catégories"
+msgstr "List of categories"
+
+msgid "Ajouter une catégorie"
+msgstr "Add a category"
+
+msgid "Votre plateforme de blog moderne pour partager vos idées et découvrir de nouveaux contenus inspirants."
+msgstr "Your modern blog platform for sharing ideas and discovering inspiring new content."

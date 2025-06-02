@@ -1,0 +1,152 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+
+{% block hero %}{% endblock %}
+
+{% block content %}
+<!-- Messages -->
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle me-2"></i>{{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    {% endfor %}
+{% endif %}
+
+<!-- En-tête -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1><i class="bi bi-gear me-2"></i>{% trans "Gérer les articles" %}</h1>
+    <a href="{% url 'ajouter_article' %}" class="btn btn-primary">
+        <i class="bi bi-plus-circle me-1"></i>{% trans "Ajouter un article" %}
+    </a>
+</div>
+
+<!-- Filtres -->
+<div class="card mb-4 shadow-sm">
+    <div class="card-body">
+        <form method="get" class="row g-3">
+            <div class="col-md-4">
+                <label for="category" class="form-label fw-bold">
+                    <i class="bi bi-funnel me-1"></i>{% trans "Filtrer par catégorie" %}
+                </label>
+                <select name="category" id="category" class="form-select" onchange="this.form.submit()">
+                    <option value="">{% trans "Toutes les catégories" %}</option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}" {% if selected_category == category.id %}selected{% endif %}>
+                            {{ category.nom }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                {% if selected_category %}
+                    <a href="{% url 'gerer_articles' %}" class="btn btn-outline-secondary">
+                        <i class="bi bi-x-circle me-1"></i>{% trans "Effacer le filtre" %}
+                    </a>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Statistiques -->
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card text-center bg-primary text-white">
+            <div class="card-body">
+                <h5 class="card-title display-6">{{ articles.count }}</h5>
+                <p class="card-text">
+                    <i class="bi bi-journal-text me-1"></i>Article{{ articles.count|pluralize }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Liste des articles -->
+{% if articles %}
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th><i class="bi bi-image me-1"></i>Image</th>
+                    <th><i class="bi bi-type me-1"></i>Titre</th>
+                    <th><i class="bi bi-person me-1"></i>Auteur</th>
+                    <th><i class="bi bi-tags me-1"></i>Catégorie</th>
+                    <th><i class="bi bi-calendar me-1"></i>Date de création</th>
+                    <th><i class="bi bi-chat me-1"></i>Commentaires</th>
+                    <th><i class="bi bi-gear me-1"></i>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                    <tr>
+                        <td>
+                            {% if article.image %}
+                                <img src="{{ article.image.url }}" alt="{{ article.titre }}" 
+                                     class="img-thumbnail rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
+                            {% else %}
+                                <div class="bg-light d-flex align-items-center justify-content-center rounded-circle" 
+                                     style="width: 60px; height: 60px;">
+                                    <i class="bi bi-journal-text text-muted"></i>
+                                </div>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <strong>{{ article.titre }}</strong>
+                            <br>
+                            <small class="text-muted">{{ article.contenu|truncatewords:10 }}</small>
+                        </td>
+                        <td>{{ article.auteur }}</td>
+                        <td>
+                            {% if article.category %}
+                                <span class="badge bg-primary">{{ article.category.nom }}</span>
+                            {% else %}
+                                <span class="text-muted">{% trans "Aucune" %}</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ article.date_creation|date:"d/m/Y H:i" }}</td>
+                        <td>
+                            <span class="badge bg-info">{{ article.comments.count }}</span>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a href="{% url 'article_detail' article.id %}" 
+                                   class="btn btn-outline-primary btn-sm" title="{% trans 'Voir' %}">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <a href="{% url 'modifier_article' article.id %}" 
+                                   class="btn btn-outline-warning btn-sm" title="{% trans 'Modifier' %}">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a href="{% url 'supprimer_article' article.id %}" 
+                                   class="btn btn-outline-danger btn-sm" title="{% trans 'Supprimer' %}">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% else %}
+    <div class="text-center py-5">
+        <div class="mb-4">
+            <i class="bi bi-journal-x text-muted" style="font-size: 4rem;"></i>
+        </div>
+        <h4>{% trans "Aucun article trouvé" %}</h4>
+        <p class="text-muted mb-4">
+            {% if selected_category %}
+                {% trans "Aucun article dans cette catégorie." %}
+            {% else %}
+                {% trans "Commencez par créer votre premier article !" %}
+            {% endif %}
+        </p>
+        <a href="{% url 'ajouter_article' %}" class="btn btn-primary btn-lg">
+            <i class="bi bi-plus-circle me-2"></i>{% trans "Ajouter un article" %}
+        </a>
+    </div>
+{% endif %}
+{% endblock %}

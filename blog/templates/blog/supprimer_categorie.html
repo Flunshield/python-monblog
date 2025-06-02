@@ -1,0 +1,58 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Supprimer la catégorie" %}{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+        <div class="row justify-content-center">            <div class="col-md-8">
+                <div class="card border-danger shadow">
+                    <div class="card-header bg-danger text-white">
+                        <h3 class="card-title mb-0">
+                            <i class="bi bi-exclamation-triangle me-2"></i>{% trans "Supprimer la catégorie" %}
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-warning" role="alert">
+                            <i class="bi bi-info-circle me-2"></i>
+                            <strong>{% trans "Attention!" %}</strong> {% trans "Cette action est irréversible." %}
+                        </div>
+
+                        <p>{% trans "Êtes-vous sûr de vouloir supprimer la catégorie suivante ?" %}</p>
+                        
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ category.nom }}</h5>
+                                {% if category.description %}
+                                    <p class="card-text">{{ category.description }}</p>
+                                {% endif %}
+                                <ul class="list-unstyled">
+                                    <li><strong>{% trans "Date de création:" %}</strong> {{ category.date_creation|date:"d/m/Y à H:i" }}</li>
+                                    <li><strong>{% trans "Nombre d'articles associés:" %}</strong> {{ category.article_set.count }}</li>
+                                </ul>
+                            </div>
+                        </div>                        {% if category.article_set.count > 0 %}
+                            <div class="alert alert-info mt-3" role="alert">
+                                <i class="bi bi-info-circle me-2"></i>
+                                <strong>{% trans "Note:" %}</strong> {% blocktrans with count=category.article_set.count %}Les {{ count }} article{{ count|pluralize }} associé{{ count|pluralize }} à cette catégorie ne seront pas supprimé{{ count|pluralize }}, mais n'auront plus de catégorie assignée.{% endblocktrans %}
+                            </div>
+                        {% endif %}
+
+                        <form method="post" class="mt-4">
+                            {% csrf_token %}
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <a href="{% url 'gerer_categories' %}" class="btn btn-outline-secondary me-md-2">
+                                    <i class="bi bi-arrow-left me-2"></i>{% trans "Annuler" %}
+                                </a>
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="bi bi-trash me-2"></i>{% trans "Confirmer la suppression" %}
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

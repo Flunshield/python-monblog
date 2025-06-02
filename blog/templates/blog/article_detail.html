@@ -1,0 +1,170 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+
+{% block hero %}{% endblock %}
+
+{% block content %}
+<!-- Navigation d'article -->
+<nav class="mb-4 d-flex justify-content-between align-items-center">
+    <a href="{% url 'home' %}" class="btn btn-secondary">
+        <i class="bi bi-arrow-left me-1"></i>{% trans "Retour à l'accueil" %}
+    </a>
+    <div class="d-flex gap-2">
+        <a href="{% url 'modifier_article' article.id %}" class="btn btn-warning">
+            <i class="bi bi-pencil me-1"></i>{% trans "Modifier cet article" %}
+        </a>
+        <a href="{% url 'supprimer_article' article.id %}" class="btn btn-danger">
+            <i class="bi bi-trash me-1"></i>{% trans "Supprimer" %}
+        </a>
+    </div>
+</nav>
+
+<!-- Messages de succès -->
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle me-2"></i>{{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    {% endfor %}
+{% endif %}
+
+<!-- Article -->
+<div class="card mb-4 shadow-sm">
+    {% if article.image %}
+        <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.titre }}" style="max-height: 400px; object-fit: cover;">
+    {% endif %}
+    <div class="card-header">
+        <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+            {% if article.category %}
+                <span class="badge bg-primary fs-6">
+                    <i class="bi bi-tag me-1"></i>{{ article.category.nom }}
+                </span>
+            {% endif %}
+        </div>
+        <h1 class="mb-2">{{ article.titre }}</h1>
+        <div class="text-muted">
+            <i class="bi bi-person me-1"></i>{{ article.auteur }}
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar me-1"></i>{{ article.date_creation|date:"d/m/Y à H:i" }}
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="article-content">
+            {{ article.contenu|linebreaks }}
+        </div>
+    </div>
+</div>
+
+<!-- Section des commentaires -->
+<div class="row">
+    <div class="col-md-8">
+        <h3 class="mb-4">
+            <i class="bi bi-chat me-2"></i>
+            {% blocktrans count comments_count=comments.count %}Commentaire ({{ comments_count }}){% plural %}Commentaires ({{ comments_count }}){% endblocktrans %}
+        </h3>
+
+        <!-- Liste des commentaires -->
+        {% if comments %}
+            {% for comment in comments %}
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h6 class="card-title mb-0">
+                                <i class="bi bi-person-circle me-1"></i>{{ comment.nom }}
+                            </h6>
+                            <small class="text-muted">
+                                <i class="bi bi-clock me-1"></i>{{ comment.date_creation|date:"d/m/Y à H:i" }}
+                            </small>
+                        </div>
+                        <p class="card-text">{{ comment.contenu|linebreaks }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="text-center py-4">
+                <i class="bi bi-chat-dots text-muted" style="font-size: 3rem;"></i>
+                <p class="text-muted mt-3">{% trans "Aucun commentaire pour le moment. Soyez le premier à commenter !" %}</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Formulaire d'ajout de commentaire -->
+    <div class="col-md-4">
+        <div class="card shadow-sm sticky-top" style="top: 1rem;">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">
+                    <i class="bi bi-pencil-square me-2"></i>{% trans "Ajouter un commentaire" %}
+                </h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="{{ comment_form.nom.id_for_label }}" class="form-label fw-bold">
+                            <i class="bi bi-person me-1"></i>{% trans "Nom" %} *
+                        </label>
+                        {{ comment_form.nom }}
+                        {% if comment_form.nom.errors %}
+                            <div class="text-danger mt-1">
+                                <i class="bi bi-exclamation-circle me-1"></i>{{ comment_form.nom.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="{{ comment_form.email.id_for_label }}" class="form-label fw-bold">
+                            <i class="bi bi-envelope me-1"></i>{% trans "Email" %} *
+                        </label>
+                        {{ comment_form.email }}
+                        <div class="form-text">
+                            <i class="bi bi-shield-check me-1"></i>{% trans "Votre email ne sera pas publié" %}
+                        </div>
+                        {% if comment_form.email.errors %}
+                            <div class="text-danger mt-1">
+                                <i class="bi bi-exclamation-circle me-1"></i>{{ comment_form.email.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="{{ comment_form.contenu.id_for_label }}" class="form-label fw-bold">
+                            <i class="bi bi-chat-quote me-1"></i>{% trans "Commentaire" %} *
+                        </label>
+                        {{ comment_form.contenu }}
+                        {% if comment_form.contenu.errors %}
+                            <div class="text-danger mt-1">
+                                <i class="bi bi-exclamation-circle me-1"></i>{{ comment_form.contenu.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="bi bi-send me-1"></i>{% trans "Publier le commentaire" %}
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .sticky-top {
+        position: relative !important;
+        top: auto !important;
+    }
+}
+</style>
+{% endblock %}
+
