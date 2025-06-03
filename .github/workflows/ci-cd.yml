@@ -77,6 +77,6 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t flusnhield/monBlog:latest -t flusnhield/monBlog:${{ github.sha }} .
-          docker push flusnhield/monBlog:latest
-          docker push flusnhield/monBlog:${{ github.sha }}
+          docker build -t flusnhield/monblog:latest -t flusnhield/monblog:${{ github.sha }} .
+          docker push flusnhield/monblog:latest
+          docker push flusnhield/monblog:${{ github.sha }}
