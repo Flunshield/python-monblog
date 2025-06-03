@@ -84,16 +84,19 @@
             opacity: 0.9;
             margin-bottom: 2rem;
         }
+          .language-selector .dropdown-toggle {
+            border: 1px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+        }
         
-        .language-selector .dropdown-toggle {
-            border: none;
-            background: rgba(255,255,255,0.1);
+        .language-selector .dropdown-toggle:hover {
+            background: var(--primary-color);
             color: white;
-            backdrop-filter: blur(10px);
         }
         
         .language-selector .dropdown-toggle:focus {
-            box-shadow: 0 0 0 0.25rem rgba(255,255,255,0.25);
+            box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
         }
         
         main {
@@ -185,14 +188,24 @@
                     </div>
                     
                     <div class="dropdown">
-                        <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-person me-1"></i>{% trans "Profil" %}
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person me-1"></i>
+                            {% if user.is_authenticated %}
+                                {{ user.username }}
+                            {% else %}
+                                {% trans "Account" %}
+                            {% endif %}
                         </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>{% trans "Mon Profil" %}</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>{% trans "Paramètres" %}</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>{% trans "Déconnexion" %}</a></li>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            {% if user.is_authenticated %}
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>{% trans "My Profile" %}</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>{% trans "Settings" %}</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{% url 'logout' %}"><i class="bi bi-box-arrow-right me-2"></i>{% trans "Logout" %}</a></li>
+                            {% else %}
+                                <li><a class="dropdown-item" href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right me-2"></i>{% trans "Login" %}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'register' %}"><i class="bi bi-person-plus me-2"></i>{% trans "Register" %}</a></li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
@@ -209,9 +222,6 @@
                     <h1 class="hero-title">{% trans "Bienvenue sur MonBlog" %}</h1>
                     <p class="hero-subtitle">{% trans "Découvrez des articles passionnants et partagez vos idées avec notre communauté." %}</p>
                     <div class="d-flex gap-3">
-                        <a href="{% url 'ajouter_article' %}" class="btn btn-light btn-lg">
-                            <i class="bi bi-plus-circle me-2"></i>{% trans "Écrire un article" %}
-                        </a>
                         <a href="#articles" class="btn btn-outline-light btn-lg">
                             <i class="bi bi-arrow-down me-2"></i>{% trans "Découvrir" %}
                         </a>

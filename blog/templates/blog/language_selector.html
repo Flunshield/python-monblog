@@ -1,59 +1,29 @@
 {% load i18n %}
 
-<div class="dropdown">
-    <button class="btn btn-outline-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="bi bi-globe me-1"></i>
-        {% get_current_language as LANGUAGE_CODE %}
-        {% if LANGUAGE_CODE == 'fr' %}
-            <span class="flag-emoji">🇫🇷</span> FR
-        {% elif LANGUAGE_CODE == 'en' %}
-            <span class="flag-emoji">🇺🇸</span> EN
-        {% else %}
-            {{ LANGUAGE_CODE|upper }}
-        {% endif %}
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-        {% get_language_info_list for LANGUAGES as languages %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+<form action="{% url 'set_language' %}" method="post" class="d-inline">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ request.get_full_path }}">
+    <select name="language" class="form-select" onchange="this.form.submit()">
         {% for lang in languages %}
-            <li>
-                <form action="{% url 'set_language' %}" method="post" class="m-0">
-                    {% csrf_token %}
-                    <input name="next" type="hidden" value="{{ request.get_full_path }}">
-                    <input name="language" type="hidden" value="{{ lang.code }}">
-                    <button type="submit" class="dropdown-item {% if lang.code == LANGUAGE_CODE %}active{% endif %}">
-                        {% if lang.code == 'fr' %}
-                            <span class="flag-emoji me-2">🇫🇷</span>Français
-                        {% elif lang.code == 'en' %}
-                            <span class="flag-emoji me-2">🇺🇸</span>English
-                        {% else %}
-                            {{ lang.name_local }}
-                        {% endif %}
-                        {% if lang.code == LANGUAGE_CODE %}
-                            <i class="bi bi-check float-end"></i>
-                        {% endif %}
-                    </button>
-                </form>
-            </li>
+            <option value="{{ lang.code }}" {% if lang.code == LANGUAGE_CODE %}selected{% endif %}>
+                {% if lang.code == 'fr' %}
+                    🇫🇷 Français
+                {% elif lang.code == 'en' %}
+                    🇺🇸 English
+                {% else %}
+                    {{ lang.name_local }}
+                {% endif %}
+            </option>
         {% endfor %}
-    </ul>
-</div>
+    </select>
+</form>
 
 <style>
 .flag-emoji {
     font-size: 1.1em;
-}
-
-.dropdown-item.active {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.dropdown-item:hover {
-    background-color: var(--bg-light);
-}
-
-.dropdown-item.active:hover {
-    background-color: var(--primary-color);
-    opacity: 0.9;
 }
 </style>

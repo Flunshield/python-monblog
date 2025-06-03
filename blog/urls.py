@@ -12,4 +12,8 @@ urlpatterns = [
     path('articles/<int:article_id>/', views.article_detail, name='article_detail'),
     path('modifier-article/<int:article_id>/', views.modifier_article, name='modifier_article'),
     path('supprimer-article/<int:article_id>/', views.supprimer_article, name='supprimer_article'),
+    path('supprimer-article/<int:article_id>/', views.supprimer_article, name='supprimer_article'),
+    path('register/', views.register_view, name='register'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
 ]

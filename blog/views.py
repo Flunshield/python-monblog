@@ -2,6 +2,8 @@ from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.utils.translation import gettext_lazy as _
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from .forms import ArticleForm, CommentForm, CategoryForm
 from .models import Article, Category
 
@@ -174,3 +176,46 @@ def gerer_articles(request):
     return render(request, 'blog/gerer_articles.html', context)
 
 # Create your views here.
+
+def register_view(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            messages.success(request, _('Registration successful!'))
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+
+    # Ajoute les langues dans le contexte
+    languages = get_language_info_list(settings.LANGUAGES)
+
+    return render(request, 'blog/auth/register.html', {
+        'form': form,
+        'languages': languages,  # Ajoute ça
+    })
+
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                messages.success(request, _(f'Welcome, {username}! You are now logged in.'))
+                return redirect('home')
+            else:
+                messages.error(request, _('Invalid username or password.'))
+        else:
+            messages.error(request, _('Invalid username or password.'))
+    else:
+        form = AuthenticationForm()
+    return render(request, 'blog/auth/login.html', {'form': form})
+
+def logout_view(request):
+    logout(request)
+    messages.info(request, _('You have been logged out.'))
+    return render(request, 'blog/auth/logout.html')

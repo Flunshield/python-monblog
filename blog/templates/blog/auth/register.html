@@ -1,157 +1,26 @@
 {% extends 'blog/base.html' %}
 {% load i18n %}
 
-{% block title %}{% trans "Inscription" %}{% endblock %}
+{% block title %}{% translate "Register" %}{% endblock %}
 
 {% block content %}
-<div class="container my-5">
+<div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card shadow">
-                <div class="card-header bg-success text-white">
-                    <h3 class="card-title mb-0">
-                        <i class="bi bi-person-plus me-2"></i>{% trans "Inscription" %}
-                    </h3>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">{% translate "Register" %}</h3>
                 </div>
                 <div class="card-body">
-                    {% if messages %}
-                        {% for message in messages %}
-                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                                {{ message }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-
-                    <form method="post" class="needs-validation" novalidate>
+                    <form method="post">
                         {% csrf_token %}
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="id_username" class="form-label">
-                                        <i class="bi bi-person me-2"></i>{% trans "Nom d'utilisateur" %}
-                                    </label>
-                                    <input type="text" class="form-control" id="id_username" name="username" required>
-                                    <div class="invalid-feedback">
-                                        {% trans "Veuillez saisir un nom d'utilisateur." %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="id_email" class="form-label">
-                                        <i class="bi bi-envelope me-2"></i>{% trans "Email" %}
-                                    </label>
-                                    <input type="email" class="form-control" id="id_email" name="email" required>
-                                    <div class="invalid-feedback">
-                                        {% trans "Veuillez saisir une adresse email valide." %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="id_first_name" class="form-label">
-                                        <i class="bi bi-person-badge me-2"></i>{% trans "Prénom" %}
-                                    </label>
-                                    <input type="text" class="form-control" id="id_first_name" name="first_name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="id_last_name" class="form-label">
-                                        <i class="bi bi-person-badge me-2"></i>{% trans "Nom" %}
-                                    </label>
-                                    <input type="text" class="form-control" id="id_last_name" name="last_name">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="id_password1" class="form-label">
-                                        <i class="bi bi-lock me-2"></i>{% trans "Mot de passe" %}
-                                    </label>
-                                    <input type="password" class="form-control" id="id_password1" name="password1" required>
-                                    <div class="invalid-feedback">
-                                        {% trans "Veuillez saisir un mot de passe." %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="id_password2" class="form-label">
-                                        <i class="bi bi-lock-fill me-2"></i>{% trans "Confirmer le mot de passe" %}
-                                    </label>
-                                    <input type="password" class="form-control" id="id_password2" name="password2" required>
-                                    <div class="invalid-feedback">
-                                        {% trans "Veuillez confirmer votre mot de passe." %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="alert alert-info">
-                            <i class="bi bi-info-circle me-2"></i>
-                            <strong>{% trans "Conseils pour le mot de passe :" %}</strong>
-                            <ul class="mb-0 mt-2">
-                                <li>{% trans "Au moins 8 caractères" %}</li>
-                                <li>{% trans "Ne doit pas être entièrement numérique" %}</li>
-                                <li>{% trans "Ne doit pas être trop commun" %}</li>
-                            </ul>
-                        </div>
-
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-between">
-                            <a href="{% url 'home' %}" class="btn btn-outline-secondary">
-                                <i class="bi bi-arrow-left me-2"></i>{% trans "Retour" %}
-                            </a>
-                            <div>
-                                <a href="{% url 'login' %}" class="btn btn-outline-primary me-2">
-                                    {% trans "Se connecter" %}
-                                </a>
-                                <button type="submit" class="btn btn-success">
-                                    <i class="bi bi-person-plus me-2"></i>{% trans "S'inscrire" %}
-                                </button>
-                            </div>
-                        </div>
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary btn-block">{% translate "Register" %}</button>
                     </form>
+                    <p class="text-center mt-3">{% translate "Already have an account?" %} <a href="{% url 'login' %}">{% translate "Login here" %}</a></p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-// Bootstrap form validation
-(function() {
-    'use strict';
-    window.addEventListener('load', function() {
-        var forms = document.getElementsByClassName('needs-validation');
-        var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    }, false);
-})();
-
-// Password confirmation validation
-document.getElementById('id_password2').addEventListener('input', function() {
-    var password1 = document.getElementById('id_password1').value;
-    var password2 = this.value;
-    
-    if (password2 && password1 !== password2) {
-        this.setCustomValidity('{% trans "Les mots de passe ne correspondent pas." %}');
-    } else {
-        this.setCustomValidity('');
-    }
-});
-</script>
 {% endblock %}
