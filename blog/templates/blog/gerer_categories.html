@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %}
 {% load i18n %}
+{% load role_tags %}
 
 {% block hero %}{% endblock %}
 
@@ -7,9 +8,15 @@
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2><i class="bi bi-tags me-2"></i>{% trans "Gestion des catégories" %}</h2>
     <div>
-        <a href="{% url 'ajouter_categorie' %}" class="btn btn-primary">
-            <i class="bi bi-plus-circle me-1"></i>{% trans "Ajouter une catégorie" %}
-        </a>
+        {% if user|is_admin %}
+            <a href="{% url 'ajouter_categorie' %}" class="btn btn-primary">
+                <i class="bi bi-plus-circle me-1"></i>{% trans "Ajouter une catégorie" %}
+            </a>
+        {% else %}
+            <span class="badge bg-info">
+                <i class="bi bi-eye me-1"></i>{% trans "Mode consultation" %}
+            </span>
+        {% endif %}
     </div>
 </div>
 
@@ -59,20 +66,25 @@
                                 </td>
                                 <td>
                                     <span class="badge bg-info">{{ category.article_set.count }} article{{ category.article_set.count|pluralize }}</span>
-                                </td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <a href="{% url 'modifier_categorie' category.id %}" 
-                                           class="btn btn-sm btn-outline-primary" 
-                                           title="{% trans 'Modifier' %}">
-                                            <i class="bi bi-pencil"></i>
-                                        </a>
-                                        <a href="{% url 'supprimer_categorie' category.id %}" 
-                                           class="btn btn-sm btn-outline-danger" 
-                                           title="{% trans 'Supprimer' %}">
-                                            <i class="bi bi-trash"></i>
-                                        </a>
-                                    </div>
+                                </td>                                <td>
+                                    {% if user|is_admin %}
+                                        <div class="btn-group" role="group">
+                                            <a href="{% url 'modifier_categorie' category.id %}" 
+                                               class="btn btn-sm btn-outline-primary" 
+                                               title="{% trans 'Modifier' %}">
+                                                <i class="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="{% url 'supprimer_categorie' category.id %}" 
+                                               class="btn btn-sm btn-outline-danger" 
+                                               title="{% trans 'Supprimer' %}">
+                                                <i class="bi bi-trash"></i>
+                                            </a>
+                                        </div>
+                                    {% else %}
+                                        <span class="text-muted">
+                                            <i class="bi bi-eye-fill me-1"></i>{% trans "Consultation" %}
+                                        </span>
+                                    {% endif %}
                                 </td>
                             </tr>
                         {% endfor %}
@@ -87,10 +99,14 @@
             <i class="bi bi-folder2-open text-muted" style="font-size: 4rem;"></i>
         </div>
         <h4 class="mb-3">{% trans "Aucune catégorie trouvée" %}</h4>
-        <p class="text-muted mb-4">{% trans "Commencez par créer votre première catégorie." %}</p>
-        <a href="{% url 'ajouter_categorie' %}" class="btn btn-primary btn-lg">
-            <i class="bi bi-plus-circle me-2"></i>{% trans "Ajouter une catégorie" %}
-        </a>
+        {% if user|is_admin %}
+            <p class="text-muted mb-4">{% trans "Commencez par créer votre première catégorie." %}</p>
+            <a href="{% url 'ajouter_categorie' %}" class="btn btn-primary btn-lg">
+                <i class="bi bi-plus-circle me-2"></i>{% trans "Ajouter une catégorie" %}
+            </a>
+        {% else %}
+            <p class="text-muted mb-4">{% trans "Aucune catégorie n'a encore été créée." %}</p>
+        {% endif %}
     </div>
 {% endif %}
 {% endblock %}

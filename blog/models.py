@@ -1,5 +1,9 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.conf import settings
 
 
 class Category(models.Model):
@@ -43,3 +47,36 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['date_creation']
+
+
+class UserProfile(models.Model):
+    ROLE_CHOICES = [
+        ('lecteur', 'Lecteur'),
+        ('journaliste', 'Journaliste'),
+        ('admin', 'Admin'),
+    ]
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='lecteur')
+    date_creation = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f'Profil de {self.user.username} - {self.get_role_display()}'
+
+    class Meta:
+        verbose_name = "Profil utilisateur"
+        verbose_name_plural = "Profils utilisateurs"
+
+
+# Signaux pour créer automatiquement un profil utilisateur
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        UserProfile.objects.create(user=instance)
+
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    if hasattr(instance, 'profile'):
+        instance.profile.save()
+    else:
+        UserProfile.objects.create(user=instance)

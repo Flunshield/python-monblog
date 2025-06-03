@@ -1,0 +1,142 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Page Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="text-primary">
+                    <i class="fas fa-user-shield"></i> Panneau d'Administration
+                </h2>
+                <span class="badge badge-danger badge-lg">Accès Admin</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Gestion des Articles -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-newspaper"></i> Articles
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Gérer tous les articles du blog</p>
+                    <div class="btn-group-vertical w-100">
+                        <a href="{% url 'gerer_articles' %}" class="btn btn-outline-primary mb-2">
+                            <i class="fas fa-list"></i> Voir tous les articles
+                        </a>
+                        <a href="{% url 'ajouter_article' %}" class="btn btn-outline-success">
+                            <i class="fas fa-plus"></i> Ajouter un article
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gestion des Catégories -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-tags"></i> Catégories
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Organiser les catégories d'articles</p>
+                    <div class="btn-group-vertical w-100">
+                        <a href="{% url 'gerer_categories' %}" class="btn btn-outline-success mb-2">
+                            <i class="fas fa-list"></i> Voir les catégories
+                        </a>
+                        <a href="{% url 'ajouter_categorie' %}" class="btn btn-outline-primary">
+                            <i class="fas fa-plus"></i> Ajouter une catégorie
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gestion des Utilisateurs -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-users"></i> Utilisateurs
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Gérer les utilisateurs et leurs rôles</p>
+                    <div class="btn-group-vertical w-100">
+                        <a href="/admin/" class="btn btn-outline-warning mb-2" target="_blank">
+                            <i class="fas fa-cog"></i> Interface Admin Django
+                        </a>
+                        <button class="btn btn-outline-info" onclick="showUserStats()">
+                            <i class="fas fa-chart-bar"></i> Statistiques
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistiques rapides -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-line"></i> Aperçu du système
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h3 class="text-primary">{{ total_articles|default:0 }}</h3>
+                                    <p class="text-muted">Articles publiés</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h3 class="text-success">{{ total_categories|default:0 }}</h3>
+                                    <p class="text-muted">Catégories</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h3 class="text-warning">{{ total_users|default:0 }}</h3>
+                                    <p class="text-muted">Utilisateurs</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h3 class="text-info">{{ total_comments|default:0 }}</h3>
+                                    <p class="text-muted">Commentaires</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function showUserStats() {
+    alert('Fonctionnalité de statistiques à venir !');
+}
+</script>
+{% endblock %}
