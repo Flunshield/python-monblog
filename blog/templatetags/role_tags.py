@@ -44,3 +44,37 @@ def is_lecteur(user):
     if not user.is_authenticated or not hasattr(user, 'profile'):
         return True
     return user.profile.role == 'lecteur'
+
+@register.filter
+def can_edit_article(user, article):
+    """Vérifie si l'utilisateur peut modifier un article."""
+    if not user.is_authenticated or not hasattr(user, 'profile'):
+        return False
+    
+    # Les admins peuvent modifier tous les articles
+    if user.profile.role == 'admin':
+        return True
+    
+    # Les journalistes peuvent modifier leurs propres articles
+    if user.profile.role == 'journaliste':
+        return article.auteur.lower() == user.username.lower()
+    
+    # Les lecteurs ne peuvent rien modifier
+    return False
+
+@register.filter
+def can_delete_article(user, article):
+    """Vérifie si l'utilisateur peut supprimer un article."""
+    if not user.is_authenticated or not hasattr(user, 'profile'):
+        return False
+    
+    # Les admins peuvent supprimer tous les articles
+    if user.profile.role == 'admin':
+        return True
+    
+    # Les journalistes peuvent supprimer leurs propres articles
+    if user.profile.role == 'journaliste':
+        return article.auteur.lower() == user.username.lower()
+    
+    # Les lecteurs ne peuvent rien supprimer
+    return False

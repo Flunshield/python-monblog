@@ -13,6 +13,13 @@ class ArticleForm(forms.ModelForm):
             'category': forms.Select(attrs={'class': 'form-control'}),
             'image': forms.FileInput(attrs={'class': 'form-control', 'accept': 'image/*'}),
         }
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Si le champ auteur a une valeur initiale, le rendre en lecture seule
+        if self.initial.get('auteur'):
+            self.fields['auteur'].widget.attrs['readonly'] = True
+            self.fields['auteur'].help_text = "Ce champ est automatiquement rempli avec votre nom d'utilisateur."
 
 
 class CategoryForm(forms.ModelForm):

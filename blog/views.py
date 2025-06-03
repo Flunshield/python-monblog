@@ -34,7 +34,11 @@ def ajouter_article(request):
             messages.success(request, _('Article ajouté avec succès!'))
             return redirect('home')
     else:
-        form = ArticleForm()
+        # Pré-remplir le champ auteur avec l'username de l'utilisateur connecté
+        initial_data = {}
+        if request.user.is_authenticated:
+            initial_data['auteur'] = request.user.username
+        form = ArticleForm(initial=initial_data)
 
     return render(request, 'blog/ajouter_article.html', {'form': form})
 
@@ -162,10 +166,24 @@ def supprimer_categorie(request, category_id):
     return render(request, 'blog/supprimer_categorie.html', context)
 
 
+@login_required
 def modifier_article(request, article_id):
     """Vue pour modifier un article existant"""
-    # Translating the docstring for consistency
+    # Vérifier que l'utilisateur est journaliste ou administrateur
+    try:
+        profile = request.user.profile
+        if profile.role not in ['journaliste', 'admin']:
+            return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent modifier les articles.")
+    except UserProfile.DoesNotExist:
+        UserProfile.objects.create(user=request.user, role='lecteur')
+        return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent modifier les articles.")
+    
     article = get_object_or_404(Article, id=article_id)
+    
+    # Si l'utilisateur est journaliste, vérifier qu'il est l'auteur de l'article
+    if profile.role == 'journaliste':
+        if article.auteur.lower() != request.user.username.lower():
+            return HttpResponseForbidden("Accès interdit : vous ne pouvez modifier que vos propres articles.")
     
     if request.method == 'POST':
         form = ArticleForm(request.POST, request.FILES, instance=article)
@@ -183,10 +201,24 @@ def modifier_article(request, article_id):
     return render(request, 'blog/modifier_article.html', context)
 
 
+@login_required
 def supprimer_article(request, article_id):
     """Vue pour supprimer un article"""
-    # Translating the docstring for consistency
+    # Vérifier que l'utilisateur est journaliste ou administrateur
+    try:
+        profile = request.user.profile
+        if profile.role not in ['journaliste', 'admin']:
+            return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent supprimer les articles.")
+    except UserProfile.DoesNotExist:
+        UserProfile.objects.create(user=request.user, role='lecteur')
+        return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent supprimer les articles.")
+    
     article = get_object_or_404(Article, id=article_id)
+    
+    # Si l'utilisateur est journaliste, vérifier qu'il est l'auteur de l'article
+    if profile.role == 'journaliste':
+        if article.auteur.lower() != request.user.username.lower():
+            return HttpResponseForbidden("Accès interdit : vous ne pouvez supprimer que vos propres articles.")
     
     if request.method == 'POST':
         article_title = article.titre
@@ -200,9 +232,18 @@ def supprimer_article(request, article_id):
     return render(request, 'blog/supprimer_article.html', context)
 
 
+@login_required
 def gerer_articles(request):
     """Vue pour afficher la liste des articles avec options de gestion"""
-    # Translating the docstring for consistency
+    # Vérifier que l'utilisateur est journaliste ou administrateur
+    try:
+        profile = request.user.profile
+        if profile.role not in ['journaliste', 'admin']:
+            return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent gérer les articles.")
+    except UserProfile.DoesNotExist:
+        UserProfile.objects.create(user=request.user, role='lecteur')
+        return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent gérer les articles.")
+    
     articles = Article.objects.all().order_by('-date_creation')
     categories = Category.objects.all()
     category_filter = request.GET.get('category')
@@ -309,7 +350,43 @@ def page_journaliste(request):
         UserProfile.objects.create(user=request.user, role='lecteur')
         return HttpResponseForbidden("Accès interdit : vous devez être journaliste ou administrateur pour accéder à cette page.")
     
-    return render(request, 'blog/admin/page_journaliste.html', {
+    # Calcul des statistiques pour le journaliste
+    from django.utils import timezone
+    from datetime import datetime, timedelta
+    from .models import Comment
+    
+    # Articles de l'utilisateur actuel (si journaliste) ou tous les articles (si admin)
+    if profile.role == 'journaliste':
+        # Pour un journaliste, on cherche les articles qui correspondent à son nom d'utilisateur 
+        # ou aux variations possibles de son nom
+        user_articles = Article.objects.filter(
+            auteur__icontains=request.user.username
+        ) or Article.objects.filter(
+            auteur__icontains=request.user.first_name
+        ) or Article.objects.filter(
+            auteur__icontains=request.user.last_name
+        )
+        # Si aucun article trouvé avec ces critères, utiliser le nom d'utilisateur exact
+        if not user_articles.exists():
+            user_articles = Article.objects.filter(auteur=request.user.username)
+    else:
+        # Pour un admin, afficher tous les articles
+        user_articles = Article.objects.all()
+    
+    # Articles créés ce mois-ci
+    current_month = timezone.now().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+    recent_articles = user_articles.filter(date_creation__gte=current_month)
+    
+    # Commentaires reçus sur les articles de l'utilisateur
+    user_comments = Comment.objects.filter(article__in=user_articles)
+    
+    context = {
         'title': 'Espace Journaliste',
-        'message': 'Bienvenue dans l\'espace journaliste !'
-    })
+        'message': 'Bienvenue dans l\'espace journaliste !',
+        'user_articles': user_articles.count(),
+        'recent_articles': recent_articles.count(),
+        'user_comments': user_comments.count(),
+        'user_role': profile.role,
+    }
+    
+    return render(request, 'blog/admin/page_journaliste.html', context)

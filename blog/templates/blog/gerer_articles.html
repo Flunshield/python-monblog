@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %}
 {% load i18n %}
+{% load role_tags %}
 
 {% block hero %}{% endblock %}
 
@@ -109,21 +110,24 @@
                         <td>{{ article.date_creation|date:"d/m/Y H:i" }}</td>
                         <td>
                             <span class="badge bg-info">{{ article.comments.count }}</span>
-                        </td>
-                        <td>
+                        </td>                        <td>
                             <div class="btn-group" role="group">
                                 <a href="{% url 'article_detail' article.id %}" 
                                    class="btn btn-outline-primary btn-sm" title="{% trans 'Voir' %}">
                                     <i class="bi bi-eye"></i>
                                 </a>
-                                <a href="{% url 'modifier_article' article.id %}" 
-                                   class="btn btn-outline-warning btn-sm" title="{% trans 'Modifier' %}">
-                                    <i class="bi bi-pencil"></i>
-                                </a>
-                                <a href="{% url 'supprimer_article' article.id %}" 
-                                   class="btn btn-outline-danger btn-sm" title="{% trans 'Supprimer' %}">
-                                    <i class="bi bi-trash"></i>
-                                </a>
+                                {% if user|can_edit_article:article %}
+                                    <a href="{% url 'modifier_article' article.id %}" 
+                                       class="btn btn-outline-warning btn-sm" title="{% trans 'Modifier' %}">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                {% endif %}
+                                {% if user|can_delete_article:article %}
+                                    <a href="{% url 'supprimer_article' article.id %}" 
+                                       class="btn btn-outline-danger btn-sm" title="{% trans 'Supprimer' %}">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                {% endif %}
                             </div>
                         </td>
                     </tr>
