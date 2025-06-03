@@ -4,10 +4,10 @@
 {% block hero %}{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
+<div class="row justify-content-center fade-in-up">
     <div class="col-md-8">
-        <div class="card shadow-sm">
-            <div class="card-header bg-primary text-white">
+        <div class="premium-card">
+            <div class="card-header bg-gradient-premium text-white">
                 <h2 class="card-title mb-0">
                     <i class="bi bi-pencil-square me-2"></i>{% trans "Ajouter un Nouvel Article" %}
                 </h2>
@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="{{ form.auteur.id_for_label }}" class="form-label fw-bold">
+                        <label for="{{ form.auteur.id_for_label }}" class="form-label">
                             <i class="bi bi-person me-1"></i>{% trans "Auteur" %}
                         </label>
                         {{ form.auteur }}
@@ -66,7 +66,7 @@
                                 <i class="bi bi-exclamation-circle me-1"></i>{{ form.image.errors }}
                             </div>
                         {% endif %}
-                        <div class="form-text">
+                        <div class="premium-badge">
                             <i class="bi bi-info-circle me-1"></i>{% trans "Formats acceptés: JPG, PNG, GIF (optionnel)" %}
                         </div>
                     </div>
@@ -81,10 +81,8 @@
                                 <i class="bi bi-exclamation-circle me-1"></i>{{ form.contenu.errors }}
                             </div>
                         {% endif %}
-                    </div>
-
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a href="{% url 'home' %}" class="btn btn-secondary me-md-2">
+                    </div>                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{% url 'home' %}" class="btn btn-primary me-md-2">
                             <i class="bi bi-x-circle me-1"></i>{% trans "Annuler" %}
                         </a>
                         <button type="submit" class="btn btn-primary">

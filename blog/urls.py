@@ -14,9 +14,9 @@ urlpatterns = [
     path('supprimer-article/<int:article_id>/', views.supprimer_article, name='supprimer_article'),
     path('supprimer-article/<int:article_id>/', views.supprimer_article, name='supprimer_article'),
     path('register/', views.register_view, name='register'),
-    path('login/', views.login_view, name='login'),
-    path('logout/', views.logout_view, name='logout'),
+    path('login/', views.login_view, name='login'),    path('logout/', views.logout_view, name='logout'),
     path('set-role/', views.set_role, name='set_role'),
     path('admin-page/', views.page_admin, name='page_admin'),
     path('journaliste-page/', views.page_journaliste, name='page_journaliste'),
+    path('diagnostic-images/', views.diagnostic_images, name='diagnostic_images'),  # Diagnostic Django complet
 ]

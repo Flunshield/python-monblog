@@ -1,0 +1,774 @@
+/* ================================================
+   THÈME PREMIUM MODERNE ET SENSUEL
+   ================================================ */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ================================================
+   VARIABLES CSS PERSONNALISÉES
+   ================================================ */
+:root {
+    /* Couleurs principales - Thème noir/rouge/doré */
+    --color-black: #0a0a0a;
+    --color-dark-gray: #1a1a1a;
+    --color-medium-gray: #2a2a2a;
+    --color-light-gray: #3a3a3a;
+    --color-red-primary: #dc2626;
+    --color-red-secondary: #ef4444;
+    --color-red-accent: #f87171;
+    --color-gold: #fbbf24;
+    --color-gold-light: #fcd34d;
+    --color-white: #ffffff;
+    --color-off-white: #f8fafc;
+    
+    /* Dégradés sensuel */
+    --gradient-primary: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-gray) 50%, var(--color-red-primary) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--color-red-primary) 0%, var(--color-red-secondary) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+    
+    /* Ombres portées premium */
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.25);
+    --shadow-red: 0 4px 20px rgba(220, 38, 38, 0.3);
+    --shadow-gold: 0 4px 20px rgba(251, 191, 36, 0.3);
+    
+    /* Bordures arrondies */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    
+    /* Transitions fluides */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-medium: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+    
+    /* Typographie */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+}
+
+/* ================================================
+   TYPOGRAPHIE PREMIUM
+   ================================================ */
+* {
+    font-family: var(--font-secondary);
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.card-title,
+.btn,
+.badge {
+    font-family: var(--font-primary) !important;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+/* ================================================
+   BODY ET ARRIÈRE-PLAN GLOBAL
+   ================================================ */
+body {
+    background: var(--gradient-primary) !important;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--color-white);
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+}
+
+/* Overlay texture subtile */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(220, 38, 38, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ================================================
+   NAVIGATION BAR PREMIUM
+   ================================================ */
+.navbar {
+    background: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+    box-shadow: var(--shadow-medium);
+    padding: 1rem 0;
+    transition: all var(--transition-medium);
+}
+
+.navbar-brand {
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+}
+
+.navbar-brand i {
+    color: var(--color-red-primary);
+    margin-right: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-white) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-gold) !important;
+    background: rgba(220, 38, 38, 0.1);
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-gold);
+    transition: all var(--transition-fast);
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 80%;
+}
+
+/* ================================================
+   BOUTONS PREMIUM
+   ================================================ */
+.btn {
+    border-radius: var(--border-radius-md) !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1.5rem !important;
+    border: none !important;
+    transition: all var(--transition-medium) !important;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Bouton Principal - Rouge sensuel */
+.btn-primary {
+    background: var(--gradient-secondary) !important;
+    color: var(--color-white) !important;
+    box-shadow: var(--shadow-red);
+}
+
+.btn-primary:hover {
+    background: var(--color-red-primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+}
+
+/* Bouton Secondaire - Doré premium */
+.btn-secondary {
+    background: var(--gradient-gold) !important;
+    color: var(--color-black) !important;
+    box-shadow: var(--shadow-gold);
+}
+
+.btn-secondary:hover {
+    background: var(--color-gold) !important;
+    color: var(--color-black) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+}
+
+/* Boutons Outline - Style luxueux */
+.btn-outline-primary {
+    border: 2px solid var(--color-red-primary) !important;
+    color: var(--color-red-primary) !important;
+    background: transparent !important;
+}
+
+.btn-outline-primary:hover {
+    background: var(--gradient-secondary) !important;
+    color: var(--color-white) !important;
+    border-color: var(--color-red-primary) !important;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-red);
+}
+
+.btn-outline-secondary {
+    border: 2px solid var(--color-white) !important;
+    color: var(--color-white) !important;
+    background: transparent !important;
+}
+
+.btn-outline-secondary:hover {
+    background: var(--color-white) !important;
+    color: var(--color-black) !important;
+    transform: translateY(-3px);
+}
+
+/* Effets lumineux sur les boutons */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all var(--transition-medium);
+    z-index: 0;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn span, .btn i {
+    position: relative;
+    z-index: 1;
+}
+
+/* ================================================
+   CARTES PREMIUM ET SENSUEL
+   ================================================ */
+.card {
+    background: rgba(26, 26, 26, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(220, 38, 38, 0.2) !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: var(--shadow-heavy);
+    transition: all var(--transition-medium);
+    overflow: hidden;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-gold);
+    opacity: 0;
+    transition: all var(--transition-medium);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(220, 38, 38, 0.5) !important;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-header {
+    background: var(--gradient-secondary) !important;
+    border-bottom: 1px solid rgba(220, 38, 38, 0.3) !important;
+    color: var(--color-white) !important;
+    padding: 1.25rem !important;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0 !important;
+}
+
+.card-body {
+    background: rgba(26, 26, 26, 0.95) !important;
+    color: var(--color-white) !important;
+    padding: 1.5rem !important;
+}
+
+.card-title {
+    color: var(--color-white) !important;
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
+}
+
+.card-text {
+    color: rgba(255, 255, 255, 0.85) !important;
+    line-height: 1.6;
+}
+
+/* Effet hover pour les cartes d'articles */
+.hover-card {
+    transition: all var(--transition-medium) !important;
+}
+
+.hover-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
+}
+
+.hover-card:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* ================================================
+   IMAGES ET MEDIA
+   ================================================ */
+.card-img-top {
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+    object-fit: cover !important;
+    height: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+}
+
+/* Images dans les articles */
+.premium-card img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/* Conteneur d'images pour articles */
+.article-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    background: var(--premium-gray);
+}
+
+/* Placeholder pour images manquantes */
+.image-placeholder {
+    background: linear-gradient(135deg, var(--premium-gray), var(--premium-black)) !important;
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+}
+
+/* Images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Images dans les détails d'articles */
+.article-detail img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--premium-shadow);
+    margin: 1rem 0;
+}
+
+/* ================================================
+   BADGES PREMIUM
+   ================================================ */
+.badge {
+    border-radius: var(--border-radius-sm) !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.badge.bg-primary {
+    background: var(--gradient-secondary) !important;
+    box-shadow: var(--shadow-red);
+}
+
+.badge.bg-info {
+    background: var(--gradient-gold) !important;
+    color: var(--color-black) !important;
+    box-shadow: var(--shadow-gold);
+}
+
+.badge.bg-success {
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%) !important;
+}
+
+/* ================================================
+   FORMULAIRES PREMIUM
+   ================================================ */
+.form-control, .form-select {
+    background: rgba(42, 42, 42, 0.95) !important;
+    border: 2px solid rgba(220, 38, 38, 0.2) !important;
+    border-radius: var(--border-radius-md) !important;
+    color: var(--color-white) !important;
+    padding: 0.75rem 1rem !important;
+    transition: all var(--transition-fast);
+    backdrop-filter: blur(10px);
+}
+
+.form-control:focus, .form-select:focus {
+    background: rgba(42, 42, 42, 1) !important;
+    border-color: var(--color-red-primary) !important;
+    color: var(--color-white) !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 38, 38, 0.25) !important;
+    transform: translateY(-2px);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.form-label {
+    color: var(--color-white) !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.75rem !important;
+}
+
+/* ================================================
+   TABLES PREMIUM
+   ================================================ */
+.table {
+    background: rgba(26, 26, 26, 0.95) !important;
+    border-radius: var(--border-radius-lg) !important;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.table thead th {
+    background: var(--gradient-secondary) !important;
+    color: var(--color-white) !important;
+    border: none !important;
+    padding: 1rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table tbody td {
+    background: rgba(26, 26, 26, 0.95) !important;
+    color: var(--color-white) !important;
+    border-color: rgba(220, 38, 38, 0.1) !important;
+    padding: 1rem !important;
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background: rgba(42, 42, 42, 0.95) !important;
+    transform: scale(1.01);
+    transition: all var(--transition-fast);
+}
+
+/* ================================================
+   HERO SECTION SENSUEL
+   ================================================ */
+.hero-section {
+    background: var(--gradient-primary);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%);
+    animation: heroAnimation 10s ease-in-out infinite;
+}
+
+@keyframes heroAnimation {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(1deg); }
+}
+
+.hero-title {
+    font-size: 3.5rem !important;
+    font-weight: 900 !important;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* ================================================
+   FOOTER PREMIUM
+   ================================================ */
+.footer-dark {
+    background: var(--color-black) !important;
+    border-top: 1px solid rgba(220, 38, 38, 0.2);
+    position: relative;
+}
+
+.footer-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-gold);
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.footer-link:hover {
+    color: var(--color-gold) !important;
+    transform: translateX(5px);
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(220, 38, 38, 0.1);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all var(--transition-medium);
+    margin: 0 0.25rem;
+}
+
+.social-icon:hover {
+    background: var(--gradient-secondary);
+    color: var(--color-white);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: var(--shadow-red);
+}
+
+/* ================================================
+   ALERTES PREMIUM
+   ================================================ */
+.alert {
+    border: none !important;
+    border-radius: var(--border-radius-md) !important;
+    padding: 1rem 1.5rem !important;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.alert-success {
+    background: rgba(16, 185, 129, 0.1) !important;
+    border-left: 4px solid #10b981 !important;
+    color: #34d399 !important;
+}
+
+.alert-danger {
+    background: rgba(220, 38, 38, 0.1) !important;
+    border-left: 4px solid var(--color-red-primary) !important;
+    color: var(--color-red-accent) !important;
+}
+
+/* ================================================
+   ANIMATIONS ET EFFETS SPECIAUX
+   ================================================ */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Effet shimmer pour les éléments premium */
+.shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 200px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem !important;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* ================================================
+   CUSTOM SCROLLBAR PREMIUM
+   ================================================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-dark-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-red-primary);
+}
+
+/* ================================================
+   CLASSES UTILITAIRES PREMIUM
+   ================================================ */
+.text-premium {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-premium {
+    box-shadow: var(--shadow-heavy) !important;
+}
+
+.border-premium {
+    border: 2px solid rgba(220, 38, 38, 0.3) !important;
+    border-radius: var(--border-radius-lg) !important;
+}
+
+.bg-premium {
+    background: var(--gradient-primary) !important;
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(20px);
+}
+
+/* ================================================
+   PERSONNALISATIONS SPÉCIFIQUES AUX COMPOSANTS
+   ================================================ */
+
+/* Dropdown menus */
+.dropdown-menu {
+    background: rgba(26, 26, 26, 0.95) !important;
+    border: 1px solid rgba(220, 38, 38, 0.2) !important;
+    border-radius: var(--border-radius-md) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.dropdown-item {
+    color: var(--color-white) !important;
+    transition: all var(--transition-fast);
+}
+
+.dropdown-item:hover {
+    background: rgba(220, 38, 38, 0.1) !important;
+    color: var(--color-gold) !important;
+}
+
+/* Breadcrumb premium */
+.breadcrumb {
+    background: rgba(26, 26, 26, 0.95) !important;
+    border-radius: var(--border-radius-md) !important;
+    padding: 1rem !important;
+}
+
+.breadcrumb-item a {
+    color: var(--color-gold) !important;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: var(--color-white) !important;
+}
+
+/* Pagination premium */
+.page-link {
+    background: rgba(26, 26, 26, 0.95) !important;
+    border: 1px solid rgba(220, 38, 38, 0.2) !important;
+    color: var(--color-white) !important;
+    transition: all var(--transition-fast);
+}
+
+.page-link:hover {
+    background: var(--gradient-secondary) !important;
+    border-color: var(--color-red-primary) !important;
+    color: var(--color-white) !important;
+    transform: translateY(-2px);
+}
+
+.page-item.active .page-link {
+    background: var(--gradient-secondary) !important;
+    border-color: var(--color-red-primary) !important;
+}

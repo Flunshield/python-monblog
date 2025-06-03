@@ -1,0 +1,97 @@
+2025-06-03 13:40:52 [WARNING] monprojet.middleware: [c6564558] Réponse 404 en 0.061s - Taille: 2326 bytes
+2025-06-03 13:41:34 [WARNING] monprojet.middleware: [8068779a] Réponse 403 en 0.043s - Taille: 94 bytes
+2025-06-03 13:41:41 [WARNING] monprojet.middleware: [568c44bd] Réponse 403 en 0.045s - Taille: 93 bytes
+2025-06-03 13:41:44 [WARNING] monprojet.middleware: [d0ba859e] Réponse 403 en 0.047s - Taille: 88 bytes
+2025-06-03 13:53:31 [WARNING] monprojet.middleware: [c29eb471] Réponse 404 en 0.171s - Taille: 2326 bytes
+2025-06-03 13:53:37 [WARNING] monprojet.middleware: [7806320f] Réponse 404 en 0.003s - Taille: 2403 bytes
+2025-06-03 13:53:45 [WARNING] monprojet.middleware: [70b982ea] Réponse 404 en 0.048s - Taille: 2488 bytes
+2025-06-03 13:54:23 [WARNING] monprojet.middleware: [8a636f2e] Réponse 404 en 0.089s - Taille: 2488 bytes
+2025-06-03 13:54:49 [WARNING] monprojet.middleware: [ae157fc8] Réponse 404 en 0.077s - Taille: 2488 bytes
+2025-06-03 13:55:15 [WARNING] monprojet.middleware: [021a29b9] Réponse 404 en 0.051s - Taille: 2488 bytes
+2025-06-03 13:55:43 [WARNING] monprojet.middleware: [a156d401] Réponse 404 en 0.090s - Taille: 2488 bytes
+2025-06-03 13:56:16 [WARNING] monprojet.middleware: [62fef02e] Réponse 404 en 0.077s - Taille: 2488 bytes
+2025-06-03 13:56:59 [WARNING] monprojet.middleware: [3511ce43] Réponse 404 en 0.187s - Taille: 2488 bytes
+2025-06-03 13:57:16 [WARNING] blog.models: Suppression de l'article 'Chat Gpt remplace les devs !' (ID: 20)
+2025-06-03 14:02:14 [WARNING] monprojet.middleware: [ce3cd524] Réponse 404 en 0.192s - Taille: 2488 bytes
+2025-06-03 14:02:47 [WARNING] monprojet.middleware: [97cdb058] Réponse 404 en 0.087s - Taille: 2488 bytes
+2025-06-03 14:03:06 [WARNING] monprojet.middleware: [64bc24a2] Réponse 404 en 0.081s - Taille: 2488 bytes
+2025-06-03 14:04:07 [WARNING] monprojet.middleware: [aa33da04] Réponse 404 en 0.081s - Taille: 2488 bytes
+2025-06-03 14:04:07 [WARNING] monprojet.middleware: [d26c9ab0] Réponse 404 en 0.078s - Taille: 9083 bytes
+2025-06-03 14:04:07 [WARNING] monprojet.middleware: [8bc9e14b] Réponse 404 en 0.084s - Taille: 9041 bytes
+2025-06-03 14:04:07 [WARNING] monprojet.middleware: [67cf73c4] Réponse 404 en 0.190s - Taille: 9270 bytes
+2025-06-03 14:04:14 [WARNING] monprojet.middleware: [7c32374e] Réponse 404 en 0.085s - Taille: 2488 bytes
+2025-06-03 14:05:14 [WARNING] monprojet.middleware: [d2c0f6db] Réponse 404 en 0.085s - Taille: 2488 bytes
+2025-06-03 14:07:01 [WARNING] monprojet.middleware: [74e2334c] Réponse 404 en 0.077s - Taille: 2488 bytes
+2025-06-03 14:08:44 [WARNING] monprojet.middleware: [c7a3f016] Réponse 404 en 0.082s - Taille: 2488 bytes
+2025-06-03 14:08:50 [WARNING] monprojet.middleware: [a6e7acc6] Réponse 404 en 0.079s - Taille: 2488 bytes
+2025-06-03 14:08:54 [WARNING] monprojet.middleware: [bbb0e175] Réponse 404 en 0.165s - Taille: 2488 bytes
+2025-06-03 14:09:06 [WARNING] monprojet.middleware: [a90ae2df] Réponse 404 en 0.060s - Taille: 2326 bytes
+2025-06-03 14:09:14 [WARNING] monprojet.middleware: [55f22f13] Réponse 404 en 0.003s - Taille: 2403 bytes
+2025-06-03 14:09:18 [WARNING] monprojet.middleware: [f65321ef] Réponse 404 en 0.055s - Taille: 2488 bytes
+2025-06-03 14:11:10 [WARNING] monprojet.middleware: [ca7121e8] Réponse 404 en 0.089s - Taille: 2488 bytes
+2025-06-03 14:12:49 [WARNING] monprojet.middleware: [31269a3b] Réponse 404 en 0.156s - Taille: 2488 bytes
+2025-06-03 14:13:04 [WARNING] monprojet.middleware: [c94b6e61] Réponse 404 en 0.065s - Taille: 2488 bytes
+2025-06-03 14:13:13 [WARNING] monprojet.middleware: [d4d7e515] Réponse 404 en 0.186s - Taille: 2488 bytes
+2025-06-03 14:13:27 [WARNING] monprojet.middleware: [ce522d04] Réponse 404 en 0.004s - Taille: 2377 bytes
+2025-06-03 14:13:43 [WARNING] monprojet.middleware: [96c3db46] Réponse 404 en 0.185s - Taille: 2488 bytes
+2025-06-03 14:13:52 [WARNING] monprojet.middleware: [27d6ec96] Réponse 404 en 0.139s - Taille: 2488 bytes
+2025-06-03 14:13:58 [WARNING] monprojet.middleware: [459c8bd3] Réponse 404 en 0.081s - Taille: 2488 bytes
+2025-06-03 14:14:03 [WARNING] monprojet.middleware: [1c1311d1] Réponse 404 en 0.059s - Taille: 2488 bytes
+2025-06-03 14:14:06 [WARNING] monprojet.middleware: [8b698538] Réponse 404 en 0.169s - Taille: 2488 bytes
+2025-06-03 14:14:08 [WARNING] monprojet.middleware: [30ad464b] Réponse 404 en 0.059s - Taille: 2488 bytes
+2025-06-03 14:14:10 [WARNING] monprojet.middleware: [ae8fd394] Réponse 404 en 0.058s - Taille: 2488 bytes
+2025-06-03 14:14:17 [WARNING] monprojet.middleware: [a96948bb] Réponse 404 en 0.077s - Taille: 2488 bytes
+2025-06-03 14:14:30 [WARNING] monprojet.middleware: [1e7c7048] Réponse 404 en 0.060s - Taille: 2488 bytes
+2025-06-03 14:16:46 [WARNING] monprojet.middleware: [c004ce43] Réponse 404 en 0.002s - Taille: 2403 bytes
+2025-06-03 14:16:54 [WARNING] monprojet.middleware: [e118b108] Réponse 404 en 0.167s - Taille: 2488 bytes
+2025-06-03 14:17:25 [WARNING] monprojet.middleware: [4fcb150c] Réponse 404 en 0.073s - Taille: 2488 bytes
+2025-06-03 14:20:04 [ERROR] monprojet.middleware: [fd4923bd] Exception non gérée: Http404: Directory indexes are not allowed here.
+Traceback (most recent call last):
+  File "C:\Users\jbert\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jbert\AppData\Roaming\Python\Python312\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: Directory indexes are not allowed here.
+2025-06-03 14:20:04 [WARNING] monprojet.middleware: [fd4923bd] Réponse 404 en 0.021s - Taille: 2569 bytes
+2025-06-03 14:20:07 [WARNING] monprojet.middleware: [7314470c] Réponse 404 en 0.003s - Taille: 2403 bytes
+2025-06-03 14:21:32 [WARNING] monprojet.middleware: [f00c0592] Réponse 404 en 0.007s - Taille: 2457 bytes
+2025-06-03 14:21:35 [WARNING] monprojet.middleware: [af55b677] Réponse 404 en 0.181s - Taille: 2380 bytes
+2025-06-03 14:23:51 [WARNING] monprojet.middleware: [611bf7eb] Réponse 404 en 0.065s - Taille: 2488 bytes
+2025-06-03 14:24:34 [WARNING] monprojet.middleware: [7ec4640d] Réponse 404 en 0.083s - Taille: 2488 bytes
+2025-06-03 14:26:02 [WARNING] monprojet.middleware: [49cd7239] Réponse 404 en 0.164s - Taille: 2362 bytes
+2025-06-03 14:26:19 [WARNING] monprojet.middleware: [29c09316] Réponse 403 en 0.183s - Taille: 2526 bytes
+2025-06-03 14:27:23 [WARNING] monprojet.middleware: [457b7d1d] Réponse 403 en 0.163s - Taille: 78 bytes
+2025-06-03 14:27:29 [WARNING] monprojet.middleware: [fb8e87b6] Réponse 403 en 0.045s - Taille: 78 bytes
+2025-06-03 14:27:33 [WARNING] monprojet.middleware: [da5c3c8e] Réponse 403 en 0.044s - Taille: 2526 bytes
+2025-06-03 14:28:01 [WARNING] monprojet.middleware: [c8294c0b] Réponse 404 en 0.004s - Taille: 2475 bytes
+2025-06-03 14:28:05 [WARNING] monprojet.middleware: [2958b757] Réponse 404 en 0.004s - Taille: 2403 bytes
+2025-06-03 14:33:48 [WARNING] monprojet.middleware: [c4c90c5f] Réponse 404 en 0.004s - Taille: 2475 bytes
+2025-06-03 14:33:51 [WARNING] monprojet.middleware: [22f80767] Réponse 404 en 0.003s - Taille: 2403 bytes
+2025-06-03 14:34:41 [WARNING] monprojet.middleware: [3e13cd17] Réponse 404 en 0.007s - Taille: 2394 bytes
+2025-06-03 14:34:41 [WARNING] monprojet.middleware: [e989d687] Réponse 404 en 0.003s - Taille: 2322 bytes
+2025-06-03 14:35:56 [ERROR] monprojet.middleware: [b17cb74c] Exception non gérée: Http404: Directory indexes are not allowed here.
+Traceback (most recent call last):
+  File "C:\Users\jbert\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jbert\AppData\Roaming\Python\Python312\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: Directory indexes are not allowed here.
+2025-06-03 14:35:56 [WARNING] monprojet.middleware: [b17cb74c] Réponse 404 en 0.005s - Taille: 2646 bytes
+2025-06-03 14:36:00 [ERROR] monprojet.middleware: [27ac470c] Exception non gérée: Http404: Il n’est pas autorisé d’afficher le contenu de ce répertoire.
+Traceback (most recent call last):
+  File "C:\Users\jbert\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jbert\AppData\Roaming\Python\Python312\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: Il n’est pas autorisé d’afficher le contenu de ce répertoire.
+2025-06-03 14:36:00 [WARNING] monprojet.middleware: [27ac470c] Réponse 404 en 0.078s - Taille: 2597 bytes
+2025-06-03 14:36:52 [WARNING] monprojet.middleware: [b0397a06] Réponse 404 en 0.054s - Taille: 2488 bytes
+2025-06-03 14:37:18 [WARNING] monprojet.middleware: [1bbfa2d0] Réponse 404 en 0.171s - Taille: 2488 bytes
+2025-06-03 14:40:01 [WARNING] monprojet.middleware: [5b6b1b41] Réponse 404 en 0.079s - Taille: 2488 bytes
+2025-06-03 14:40:28 [WARNING] monprojet.middleware: [e122b9e7] Réponse 404 en 0.095s - Taille: 2488 bytes
+2025-06-03 14:40:41 [WARNING] monprojet.middleware: [8830a00a] Réponse 404 en 0.102s - Taille: 2488 bytes
+2025-06-03 14:43:58 [WARNING] monprojet.middleware: [f0b7192b] Réponse 403 en 0.048s - Taille: 75 bytes
+2025-06-03 14:50:56 [WARNING] monprojet.middleware: [95eda072] Réponse 404 en 0.060s - Taille: 2326 bytes

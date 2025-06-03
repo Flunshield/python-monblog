@@ -48,35 +48,37 @@
         <span class="badge bg-primary fs-6">{{ articles.count }}</span>
     </div>
 
-    <!-- Liste des articles -->
-    {% if articles %}
+    <!-- Liste des articles -->    {% if articles %}
         <div class="row g-4">
             {% for article in articles %}
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card h-100 shadow-sm border-0 hover-card">
-                        {% if article.image %}
+                <div class="col-lg-6 col-xl-4 fade-in-up">
+                    <div class="premium-card h-100 hover-card">                        {% if article.image %}
                             <div class="position-relative overflow-hidden" style="height: 200px;">
-                                <img src="{{ article.image.url }}" class="card-img-top h-100" alt="{{ article.titre }}" style="object-fit: cover; transition: transform 0.3s ease;">
+                                <!-- Image optimisée pour l'affichage de la liste des articles -->
+                                <img src="{{ article.image.url }}" 
+                                     class="card-img-top h-100 w-100 img-fluid" 
+                                     alt="{{ article.titre }}" 
+                                     loading="lazy"
+                                     style="object-fit: cover; transition: transform 0.3s ease;">
                                 {% if article.category %}
-                                    <span class="position-absolute top-0 start-0 m-2 badge bg-primary">
+                                    <span class="position-absolute top-0 start-0 m-2 premium-badge">
                                         {{ article.category.nom }}
                                     </span>
                                 {% endif %}
                             </div>
                         {% else %}
-                            <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center position-relative" style="height: 200px;">
                                 <i class="bi bi-image text-muted" style="font-size: 3rem;"></i>
                                 {% if article.category %}
-                                    <span class="position-absolute top-0 start-0 m-2 badge bg-primary">
+                                    <span class="position-absolute top-0 start-0 m-2 premium-badge">
                                         {{ article.category.nom }}
                                     </span>
                                 {% endif %}
                             </div>
                         {% endif %}
-                        
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold mb-2">{{ article.titre }}</h5>
-                            <div class="text-muted small mb-3">
+                          <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold mb-2 text-gold">{{ article.titre }}</h5>
+                            <div class="premium-badge small mb-3">
                                 <i class="bi bi-person me-1"></i>{{ article.auteur }}
                                 <span class="mx-2">•</span>
                                 <i class="bi bi-calendar me-1"></i>{{ article.date_creation|date:"d/m/Y" }}
@@ -90,12 +92,12 @@
                                         <i class="bi bi-eye me-1"></i>{% trans "Lire" %}
                                     </a>
                                     {% if user|can_edit_article:article %}
-                                        <a href="{% url 'modifier_article' article.id %}" class="btn btn-outline-warning btn-sm">
+                                        <a href="{% url 'modifier_article' article.id %}" class="btn btn-primary btn-sm">
                                             <i class="bi bi-pencil"></i>
                                         </a>
                                     {% endif %}
                                     {% if user|can_delete_article:article %}
-                                        <a href="{% url 'supprimer_article' article.id %}" class="btn btn-outline-danger btn-sm">
+                                        <a href="{% url 'supprimer_article' article.id %}" class="btn btn-outline-danger btn-sm btn-primary">
                                             <i class="bi bi-trash"></i>
                                         </a>
                                     {% endif %}
@@ -113,32 +115,11 @@
         <div class="text-center py-5">
             <div class="mb-4">
                 <i class="bi bi-journal-x text-muted" style="font-size: 4rem;"></i>
-            </div>
-            <h4 class="mb-3">{% trans "Aucun article pour le moment" %}</h4>
+            </div>            <h4 class="mb-3 text-gold">{% trans "Aucun article pour le moment" %}</h4>
             <p class="text-muted mb-4">{% trans "Commencez par créer votre premier article pour partager vos idées !" %}</p>
-            <a href="{% url 'ajouter_article' %}" class="btn btn-primary btn-lg">
+            <a href="{% url 'ajouter_article' %}" class="btn premium-btn btn-lg">
                 <i class="bi bi-plus-circle me-2"></i>{% trans "Créer mon premier article" %}
-            </a>
-        </div>
+            </a></div>
     {% endif %}
 </section>
-
-<style>
-.hover-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.hover-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-
-.hover-card:hover img {
-    transform: scale(1.05);
-}
-
-.badge {
-    font-weight: 500;
-}
-</style>
 {% endblock %}

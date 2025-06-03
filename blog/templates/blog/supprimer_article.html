@@ -29,10 +29,13 @@
                         </div>
                         
                         <p>{% trans "Êtes-vous sûr de vouloir supprimer l'article suivant ?" %}</p>
-                        
-                        <div class="card mb-3">
+                          <div class="card mb-3">
                             {% if article.image %}
-                                <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.titre }}" 
+                                <!-- Image optimisée pour la confirmation de suppression -->
+                                <img src="{{ article.image.url }}" 
+                                     class="card-img-top img-fluid" 
+                                     alt="{{ article.titre }}"
+                                     loading="lazy"
                                      style="max-height: 200px; object-fit: cover;">
                             {% endif %}
                             <div class="card-body">

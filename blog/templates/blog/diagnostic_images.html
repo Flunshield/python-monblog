@@ -1,0 +1,409 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}Diagnostic des Images{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h1 class="text-gold mb-4">
+                <i class="bi bi-bug me-3"></i>{% trans "Diagnostic des Images" %}
+            </h1>
+            <p class="lead text-muted">
+                {% trans "Vérification complète de l'affichage des images du blog avec Django" %}
+            </p>
+        </div>
+    </div>
+
+    <!-- Statistiques globales -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="premium-card text-center">
+                <div class="card-body">
+                    <h3 class="text-primary">{{ stats.total_tests }}</h3>
+                    <p class="text-muted mb-0">{% trans "Images testées" %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="premium-card text-center">
+                <div class="card-body">
+                    <h3 class="text-success">{{ stats.successful_tests }}</h3>
+                    <p class="text-muted mb-0">{% trans "Succès" %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="premium-card text-center">
+                <div class="card-body">
+                    <h3 class="text-warning">{{ stats.warning_tests }}</h3>
+                    <p class="text-muted mb-0">{% trans "Avertissements" %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="premium-card text-center">
+                <div class="card-body">
+                    <h3 class="text-danger">{{ stats.error_tests }}</h3>
+                    <p class="text-muted mb-0">{% trans "Erreurs" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Informations système -->
+    <div class="premium-card mb-4">
+        <div class="card-header bg-gradient-premium text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-info-circle me-2"></i>{% trans "Informations Système" %}
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td><strong>{% trans "Total d'articles" %}:</strong></td>
+                            <td>{{ system_info.total_articles }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>{% trans "Articles avec images" %}:</strong></td>
+                            <td>{{ system_info.articles_with_images }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>{% trans "Mode debug" %}:</strong></td>
+                            <td>
+                                {% if system_info.debug_mode %}
+                                    <span class="badge bg-warning">{% trans "Activé" %}</span>
+                                {% else %}
+                                    <span class="badge bg-success">{% trans "Désactivé" %}</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td><strong>MEDIA_ROOT:</strong></td>
+                            <td><code>{{ system_info.media_root }}</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>MEDIA_URL:</strong></td>
+                            <td><code>{{ system_info.media_url }}</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>{% trans "Dossier articles" %}:</strong></td>
+                            <td>
+                                {% if directory_info.exists %}
+                                    <span class="badge bg-success">
+                                        <i class="bi bi-check-circle me-1"></i>{% trans "Accessible" %}
+                                    </span>
+                                {% else %}
+                                    <span class="badge bg-danger">
+                                        <i class="bi bi-x-circle me-1"></i>{% trans "Introuvable" %}
+                                    </span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test des images d'articles -->
+    <div class="premium-card mb-4">
+        <div class="card-header bg-gradient-premium text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-image me-2"></i>{% trans "Test des Images d'Articles" %}
+            </h4>
+        </div>
+        <div class="card-body">
+            {% if image_tests %}
+                {% for test in image_tests %}
+                    <div class="row mb-4 p-3 border rounded">
+                        <div class="col-md-4">
+                            <h6 class="text-gold">{{ test.article_title }}</h6>
+                            
+                            <!-- Affichage de l'image -->
+                            <div class="image-container mb-3" style="height: 200px; border: 2px solid #f59e0b; border-radius: 8px; overflow: hidden;">
+                                {% if test.status == 'success' %}
+                                    <img src="{{ test.image_url }}" 
+                                         class="w-100 h-100" 
+                                         style="object-fit: cover;" 
+                                         alt="{{ test.article_title }}"
+                                         loading="lazy">
+                                {% else %}
+                                    <div class="w-100 h-100 bg-secondary d-flex align-items-center justify-content-center">
+                                        <div class="text-center">
+                                            <i class="bi bi-exclamation-triangle text-warning" style="font-size: 3rem;"></i>
+                                            <p class="text-muted mt-2">{% trans "Image non disponible" %}</p>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            
+                            <!-- Statut global -->
+                            <div class="text-center">
+                                {% if test.status == 'success' %}
+                                    <span class="badge bg-success">
+                                        <i class="bi bi-check-circle me-1"></i>{% trans "OK" %}
+                                    </span>
+                                {% elif test.status == 'warning' %}
+                                    <span class="badge bg-warning">
+                                        <i class="bi bi-exclamation-triangle me-1"></i>{% trans "Attention" %}
+                                    </span>
+                                {% else %}
+                                    <span class="badge bg-danger">
+                                        <i class="bi bi-x-circle me-1"></i>{% trans "Erreur" %}
+                                    </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <h6>{% trans "Détails techniques" %}</h6>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <table class="table table-sm table-borderless">
+                                        <tr>
+                                            <td><strong>{% trans "Nom du fichier" %}:</strong></td>
+                                            <td><code>{{ test.image_name }}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>{% trans "URL" %}:</strong></td>
+                                            <td><code>{{ test.image_url }}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>{% trans "Fichier existe" %}:</strong></td>
+                                            <td>
+                                                {% if test.file_exists %}
+                                                    <span class="text-success">
+                                                        <i class="bi bi-check-circle me-1"></i>{% trans "Oui" %}
+                                                    </span>
+                                                {% else %}
+                                                    <span class="text-danger">
+                                                        <i class="bi bi-x-circle me-1"></i>{% trans "Non" %}
+                                                    </span>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>{% trans "Taille" %}:</strong></td>
+                                            <td>{{ test.file_size_human }}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    <table class="table table-sm table-borderless">
+                                        <tr>
+                                            <td><strong>{% trans "Type MIME" %}:</strong></td>
+                                            <td><code>{{ test.mime_type }}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>{% trans "Lisible" %}:</strong></td>
+                                            <td>
+                                                {% if test.is_readable %}
+                                                    <span class="text-success">
+                                                        <i class="bi bi-check-circle me-1"></i>{% trans "Oui" %}
+                                                    </span>
+                                                {% else %}
+                                                    <span class="text-danger">
+                                                        <i class="bi bi-x-circle me-1"></i>{% trans "Non" %}
+                                                    </span>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>{% trans "Encodage URL" %}:</strong></td>
+                                            <td>
+                                                {% if test.url_encoded_correctly %}
+                                                    <span class="text-success">
+                                                        <i class="bi bi-check-circle me-1"></i>{% trans "OK" %}
+                                                    </span>
+                                                {% else %}
+                                                    <span class="text-warning">
+                                                        <i class="bi bi-exclamation-triangle me-1"></i>{% trans "Attention" %}
+                                                    </span>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>{% trans "Chemin complet" %}:</strong></td>
+                                            <td><small><code>{{ test.image_path }}</code></small></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            {% if test.error_message %}
+                                <div class="alert alert-danger mt-2">
+                                    <i class="bi bi-exclamation-triangle me-2"></i>
+                                    <strong>{% trans "Erreur" %}:</strong> {{ test.error_message }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="text-center py-4">
+                    <i class="bi bi-image text-muted" style="font-size: 4rem;"></i>
+                    <h5 class="mt-3 text-muted">{% trans "Aucune image à tester" %}</h5>
+                    <p class="text-muted">{% trans "Aucun article avec image n'a été trouvé dans la base de données." %}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Informations sur le dossier media -->
+    <div class="premium-card mb-4">
+        <div class="card-header bg-gradient-premium text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-folder me-2"></i>{% trans "Contenu du Dossier Media" %}
+            </h4>
+        </div>
+        <div class="card-body">
+            {% if directory_info.exists %}
+                <p><strong>{% trans "Chemin" %}:</strong> <code>{{ directory_info.path }}</code></p>
+                <p><strong>{% trans "Écriture autorisée" %}:</strong> 
+                    {% if directory_info.is_writable %}
+                        <span class="text-success">
+                            <i class="bi bi-check-circle me-1"></i>{% trans "Oui" %}
+                        </span>
+                    {% else %}
+                        <span class="text-warning">
+                            <i class="bi bi-exclamation-triangle me-1"></i>{% trans "Non" %}
+                        </span>
+                    {% endif %}
+                </p>
+                
+                {% if directory_info.files %}
+                    <h6 class="mt-4">{% trans "Fichiers trouvés" %} ({{ directory_info.files|length }})</h6>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>{% trans "Nom du fichier" %}</th>
+                                    <th>{% trans "Taille" %}</th>
+                                    <th>{% trans "Utilisé" %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for file in directory_info.files %}
+                                    <tr>
+                                        <td><code>{{ file.name }}</code></td>
+                                        <td>{{ file.size_human }}</td>
+                                        <td>
+                                            {% if file.is_used %}
+                                                <span class="badge bg-success">{% trans "Oui" %}</span>
+                                            {% else %}
+                                                <span class="badge bg-warning">{% trans "Non utilisé" %}</span>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        {% trans "Le dossier articles est vide." %}
+                    </div>
+                {% endif %}
+                
+                {% if directory_info.error %}
+                    <div class="alert alert-danger">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        <strong>{% trans "Erreur" %}:</strong> {{ directory_info.error }}
+                    </div>
+                {% endif %}
+            {% else %}
+                <div class="alert alert-danger">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    {% trans "Le dossier media/articles/ n'existe pas!" %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Actions recommandées -->
+    <div class="premium-card">
+        <div class="card-header bg-gradient-premium text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-lightbulb me-2"></i>{% trans "Actions Recommandées" %}
+            </h4>
+        </div>
+        <div class="card-body">
+            {% if stats.error_tests > 0 %}
+                <div class="alert alert-danger">
+                    <h6><i class="bi bi-exclamation-triangle me-2"></i>{% trans "Problèmes détectés" %}</h6>
+                    <ul class="mb-0">
+                        <li>{% trans "Vérifiez que les fichiers d'images existent physiquement" %}</li>
+                        <li>{% trans "Assurez-vous que les permissions de lecture sont correctes" %}</li>
+                        <li>{% trans "Vérifiez la configuration MEDIA_ROOT et MEDIA_URL dans settings.py" %}</li>
+                    </ul>
+                </div>
+            {% endif %}
+            
+            {% if stats.warning_tests > 0 %}
+                <div class="alert alert-warning">
+                    <h6><i class="bi bi-info-circle me-2"></i>{% trans "Améliorations possibles" %}</h6>
+                    <ul class="mb-0">
+                        <li>{% trans "Optimisez la taille des images pour améliorer les performances" %}</li>
+                        <li>{% trans "Vérifiez l'encodage des noms de fichiers avec des caractères spéciaux" %}</li>
+                    </ul>
+                </div>
+            {% endif %}
+            
+            {% if stats.successful_tests == stats.total_tests and stats.total_tests > 0 %}
+                <div class="alert alert-success">
+                    <h6><i class="bi bi-check-circle me-2"></i>{% trans "Excellent!" %}</h6>
+                    <p class="mb-0">{% trans "Toutes les images sont correctement configurées et accessibles." %}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="text-center mt-5">
+        <a href="{% url 'home' %}" class="btn btn-primary">
+            <i class="bi bi-arrow-left me-2"></i>{% trans "Retour à l'accueil" %}
+        </a>
+        {% if debug_mode %}
+            <a href="{% url 'gerer_articles' %}" class="btn btn-secondary ms-2">
+                <i class="bi bi-gear me-2"></i>{% trans "Gérer les articles" %}
+            </a>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+.image-container {
+    background: repeating-conic-gradient(#ddd 0% 25%, #fff 0% 50%) 50% / 20px 20px;
+}
+
+.table-borderless td {
+    border: none !important;
+    padding: 0.25rem 0.5rem;
+}
+
+.badge {
+    font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .image-container {
+        height: 150px !important;
+    }
+}
+</style>
+{% endblock %}

@@ -415,3 +415,138 @@ def page_journaliste(request):
     }
     
     return render(request, 'blog/admin/page_journaliste.html', context)
+
+
+def diagnostic_images(request):
+    """Vue Django complète pour le diagnostic des images - Remplace le JavaScript"""
+    logger.info(f"Diagnostic des images demandé par l'utilisateur {request.user}")
+    
+    import os
+    from urllib.parse import unquote
+    import mimetypes
+    
+    # Récupération des articles avec images
+    articles = Article.objects.exclude(image='')
+    
+    # Informations système
+    system_info = {
+        'total_articles': Article.objects.count(),
+        'articles_with_images': articles.count(),
+        'media_root': settings.MEDIA_ROOT,
+        'media_url': settings.MEDIA_URL,
+        'debug_mode': settings.DEBUG,
+    }
+    
+    # Test de chaque image
+    image_tests = []
+    for article in articles:
+        if article.image:
+            # Chemin physique du fichier
+            image_path = os.path.join(settings.MEDIA_ROOT, article.image.name)
+            
+            # Tests de validation
+            test_result = {
+                'article_title': article.titre,
+                'image_name': article.image.name,
+                'image_url': article.image.url,
+                'image_path': image_path,
+                'file_exists': os.path.exists(image_path),
+                'file_size': 0,
+                'file_size_human': '0 B',
+                'mime_type': 'unknown',
+                'is_readable': False,
+                'url_encoded_correctly': False,
+                'status': 'unknown'
+            }
+            
+            # Vérification de l'existence du fichier
+            if test_result['file_exists']:
+                try:
+                    # Taille du fichier
+                    test_result['file_size'] = os.path.getsize(image_path)
+                    test_result['file_size_human'] = format_file_size(test_result['file_size'])
+                    
+                    # Type MIME
+                    mime_type, _ = mimetypes.guess_type(image_path)
+                    test_result['mime_type'] = mime_type or 'unknown'
+                    
+                    # Test de lecture
+                    test_result['is_readable'] = os.access(image_path, os.R_OK)
+                    
+                    # Test d'encodage URL
+                    decoded_url = unquote(article.image.url)
+                    test_result['url_encoded_correctly'] = decoded_url == article.image.url
+                    
+                    # Statut global
+                    if test_result['is_readable'] and test_result['file_size'] > 0:
+                        test_result['status'] = 'success'
+                    else:
+                        test_result['status'] = 'warning'
+                        
+                except Exception as e:
+                    logger.error(f"Erreur lors du test de l'image {article.image.name}: {e}")
+                    test_result['status'] = 'error'
+                    test_result['error_message'] = str(e)
+            else:
+                test_result['status'] = 'error'
+                test_result['error_message'] = 'Fichier non trouvé'
+            
+            image_tests.append(test_result)
+    
+    # Vérification du dossier media/articles
+    articles_dir = os.path.join(settings.MEDIA_ROOT, 'articles')
+    directory_info = {
+        'path': articles_dir,
+        'exists': os.path.exists(articles_dir),
+        'is_writable': os.access(articles_dir, os.W_OK) if os.path.exists(articles_dir) else False,
+        'files': []
+    }
+    
+    if directory_info['exists']:
+        try:
+            files = os.listdir(articles_dir)
+            for file in files:
+                file_path = os.path.join(articles_dir, file)
+                if os.path.isfile(file_path):
+                    file_size = os.path.getsize(file_path)
+                    directory_info['files'].append({
+                        'name': file,
+                        'size': file_size,
+                        'size_human': format_file_size(file_size),
+                        'is_used': any(test['image_name'].endswith(file) for test in image_tests)
+                    })
+        except Exception as e:
+            logger.error(f"Erreur lors de la lecture du dossier media: {e}")
+            directory_info['error'] = str(e)
+    
+    # Statistiques globales
+    stats = {
+        'total_tests': len(image_tests),
+        'successful_tests': len([t for t in image_tests if t['status'] == 'success']),
+        'warning_tests': len([t for t in image_tests if t['status'] == 'warning']),
+        'error_tests': len([t for t in image_tests if t['status'] == 'error']),
+    }
+    
+    context = {
+        'system_info': system_info,
+        'image_tests': image_tests,
+        'directory_info': directory_info,
+        'stats': stats,
+        'debug_mode': settings.DEBUG,
+    }
+    
+    logger.info(f"Diagnostic terminé: {stats['successful_tests']}/{stats['total_tests']} images OK")
+    
+    return render(request, 'blog/diagnostic_images.html', context)
+
+
+def format_file_size(size_bytes):
+    """Formate la taille de fichier en format humain"""
+    if size_bytes == 0:
+        return "0 B"
+    size_names = ["B", "KB", "MB", "GB"]
+    import math
+    i = int(math.floor(math.log(size_bytes, 1024)))
+    p = math.pow(1024, i)
+    s = round(size_bytes / p, 2)
+    return f"{s} {size_names[i]}"

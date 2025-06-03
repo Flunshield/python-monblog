@@ -5,19 +5,26 @@
 
 {% block content %}
 <div class="container mt-5">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center fade-in-up">
         <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="text-center">{% translate "Login" %}</h3>
+            <div class="premium-card">
+                <div class="card-header bg-gradient-premium text-white text-center">
+                    <h3 class="mb-0">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>{% translate "Login" %}
+                    </h3>
                 </div>
                 <div class="card-body">
                     <form method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <button type="submit" class="btn btn-primary btn-block">{% translate "Login" %}</button>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="bi bi-box-arrow-in-right me-1"></i>{% translate "Login" %}
+                        </button>
                     </form>
-                    <p class="text-center mt-3">{% translate "Don't have an account?" %} <a href="{% url 'register' %}">{% translate "Register here" %}</a></p>
+                    <p class="text-center mt-3">
+                        {% translate "Don't have an account?" %} 
+                        <a href="{% url 'register' %}" class="text-gold">{% translate "Register here" %}</a>
+                    </p>
                 </div>
             </div>
         </div>

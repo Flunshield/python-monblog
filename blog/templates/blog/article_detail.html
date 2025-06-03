@@ -6,13 +6,13 @@
 
 {% block content %}
 <!-- Navigation d'article -->
-<nav class="mb-4 d-flex justify-content-between align-items-center">
-    <a href="{% url 'home' %}" class="btn btn-secondary">
+<nav class="mb-4 d-flex justify-content-between align-items-center fade-in-up">
+    <a href="{% url 'home' %}" class="btn btn-primary">
         <i class="bi bi-arrow-left me-1"></i>{% trans "Retour à l'accueil" %}
     </a>
     <div class="d-flex gap-2">
         {% if user|can_edit_article:article %}
-            <a href="{% url 'modifier_article' article.id %}" class="btn btn-warning">
+            <a href="{% url 'modifier_article' article.id %}" class="btn btn-primary">
                 <i class="bi bi-pencil me-1"></i>{% trans "Modifier cet article" %}
             </a>
         {% endif %}
@@ -35,19 +35,25 @@
 {% endif %}
 
 <!-- Article -->
-<div class="card mb-4 shadow-sm">
+<div class="premium-card mb-4 fade-in-up">
     {% if article.image %}
-        <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.titre }}" style="max-height: 400px; object-fit: cover;">
+        <div class="article-image-container position-relative overflow-hidden">
+            <img src="{{ article.image.url }}" 
+                 class="card-img-top w-100 img-fluid" 
+                 alt="{{ article.titre }}" 
+                 loading="lazy"
+                 style="max-height: 400px; object-fit: cover; display: block;">
+        </div>
     {% endif %}
     <div class="card-header">
         <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
             {% if article.category %}
-                <span class="badge bg-primary fs-6">
+                <span class="badge premium-badge fs-6">
                     <i class="bi bi-tag me-1"></i>{{ article.category.nom }}
                 </span>
             {% endif %}
         </div>
-        <h1 class="mb-2">{{ article.titre }}</h1>
+        <h1 class="mb-2 text-gold">{{ article.titre }}</h1>
         <div class="text-muted">
             <i class="bi bi-person me-1"></i>{{ article.auteur }}
             <span class="mx-2">•</span>
@@ -67,15 +73,13 @@
         <h3 class="mb-4">
             <i class="bi bi-chat me-2"></i>
             {% blocktrans count comments_count=comments.count %}Commentaire ({{ comments_count }}){% plural %}Commentaires ({{ comments_count }}){% endblocktrans %}
-        </h3>
-
-        <!-- Liste des commentaires -->
+        </h3>        <!-- Liste des commentaires -->
         {% if comments %}
             {% for comment in comments %}
-                <div class="card mb-3 shadow-sm">
+                <div class="premium-card mb-3 fade-in-left">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="card-title mb-0">
+                            <h6 class="card-title mb-0 text-gold">
                                 <i class="bi bi-person-circle me-1"></i>{{ comment.nom }}
                             </h6>
                             <small class="text-muted">
@@ -92,12 +96,10 @@
                 <p class="text-muted mt-3">{% trans "Aucun commentaire pour le moment. Soyez le premier à commenter !" %}</p>
             </div>
         {% endif %}
-    </div>
-
-    <!-- Formulaire d'ajout de commentaire -->
+    </div>    <!-- Formulaire d'ajout de commentaire -->
     <div class="col-md-4">
-        <div class="card shadow-sm sticky-top" style="top: 1rem;">
-            <div class="card-header bg-primary text-white">
+        <div class="premium-card sticky-top fade-in-right" style="top: 1rem;">
+            <div class="card-header bg-gradient-premium text-white">
                 <h4 class="mb-0">
                     <i class="bi bi-pencil-square me-2"></i>{% trans "Ajouter un commentaire" %}
                 </h4>
@@ -143,9 +145,7 @@
                                 <i class="bi bi-exclamation-circle me-1"></i>{{ comment_form.contenu.errors }}
                             </div>
                         {% endif %}
-                    </div>
-
-                    <button type="submit" class="btn btn-primary w-100">
+                    </div>                    <button type="submit" class="btn btn-primary w-100">
                         <i class="bi bi-send me-1"></i>{% trans "Publier le commentaire" %}
                     </button>
                 </form>

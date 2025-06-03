@@ -16,15 +16,15 @@
 {% endif %}
 
 <!-- En-tête -->
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h1><i class="bi bi-gear me-2"></i>{% trans "Gérer les articles" %}</h1>
+<div class="d-flex justify-content-between align-items-center mb-4 fade-in-up">
+    <h1 class="text-gold"><i class="bi bi-gear me-2"></i>{% trans "Gérer les articles" %}</h1>
     <a href="{% url 'ajouter_article' %}" class="btn btn-primary">
         <i class="bi bi-plus-circle me-1"></i>{% trans "Ajouter un article" %}
     </a>
 </div>
 
 <!-- Filtres -->
-<div class="card mb-4 shadow-sm">
+<div class="premium-card mb-4 fade-in-left">
     <div class="card-body">
         <form method="get" class="row g-3">
             <div class="col-md-4">
@@ -40,9 +40,8 @@
                     {% endfor %}
                 </select>
             </div>
-            <div class="col-md-2 d-flex align-items-end">
-                {% if selected_category %}
-                    <a href="{% url 'gerer_articles' %}" class="btn btn-outline-secondary">
+            <div class="col-md-2 d-flex align-items-end">                {% if selected_category %}
+                    <a href="{% url 'gerer_articles' %}" class="btn btn-primary">
                         <i class="bi bi-x-circle me-1"></i>{% trans "Effacer le filtre" %}
                     </a>
                 {% endif %}
@@ -52,9 +51,9 @@
 </div>
 
 <!-- Statistiques -->
-<div class="row mb-4">
+<div class="row mb-4 fade-in-right">
     <div class="col-md-3">
-        <div class="card text-center bg-primary text-white">
+        <div class="premium-card text-center bg-gradient-premium text-white">
             <div class="card-body">
                 <h5 class="card-title display-6">{{ articles.count }}</h5>
                 <p class="card-text">
@@ -67,9 +66,9 @@
 
 <!-- Liste des articles -->
 {% if articles %}
-    <div class="table-responsive">
-        <table class="table table-hover">
-            <thead class="table-dark">
+    <div class="table-responsive fade-in-up">
+        <table class="table premium-table">
+            <thead class="premium-table-header">
                 <tr>
                     <th><i class="bi bi-image me-1"></i>Image</th>
                     <th><i class="bi bi-type me-1"></i>Titre</th>
@@ -82,35 +81,36 @@
             </thead>
             <tbody>
                 {% for article in articles %}
-                    <tr>
-                        <td>
+                    <tr>                        <td>
                             {% if article.image %}
-                                <img src="{{ article.image.url }}" alt="{{ article.titre }}" 
-                                     class="img-thumbnail rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
+                                <!-- Image optimisée pour la liste de gestion des articles -->
+                                <img src="{{ article.image.url }}" 
+                                     alt="{{ article.titre }}" 
+                                     class="rounded-circle img-fluid"
+                                     loading="lazy"
+                                     style="width: 60px; height: 60px; object-fit: cover; display: block; box-shadow: var(--premium-shadow);">
                             {% else %}
-                                <div class="bg-light d-flex align-items-center justify-content-center rounded-circle" 
-                                     style="width: 60px; height: 60px;">
-                                    <i class="bi bi-journal-text text-muted"></i>
+                                <div class="bg-secondary d-flex align-items-center justify-content-center rounded-circle" 
+                                     style="width: 60px; height: 60px; box-shadow: var(--premium-shadow);">
+                                    <i class="bi bi-journal-text text-gold"></i>
                                 </div>
                             {% endif %}
                         </td>
                         <td>
-                            <strong>{{ article.titre }}</strong>
+                            <strong class="text-gold">{{ article.titre }}</strong>
                             <br>
                             <small class="text-muted">{{ article.contenu|truncatewords:10 }}</small>
                         </td>
                         <td>{{ article.auteur }}</td>
-                        <td>
-                            {% if article.category %}
-                                <span class="badge bg-primary">{{ article.category.nom }}</span>
+                        <td>                            {% if article.category %}
+                                <span class="premium-badge">{{ article.category.nom }}</span>
                             {% else %}
                                 <span class="text-muted">{% trans "Aucune" %}</span>
                             {% endif %}
                         </td>
-                        <td>{{ article.date_creation|date:"d/m/Y H:i" }}</td>
-                        <td>
-                            <span class="badge bg-info">{{ article.comments.count }}</span>
-                        </td>                        <td>
+                        <td>{{ article.date_creation|date:"d/m/Y H:i" }}</td>                        <td>
+                            <span class="premium-badge">{{ article.comments.count }}</span>
+                        </td><td>
                             <div class="btn-group" role="group">
                                 <a href="{% url 'article_detail' article.id %}" 
                                    class="btn btn-outline-primary btn-sm" title="{% trans 'Voir' %}">
@@ -147,8 +147,7 @@
             {% else %}
                 {% trans "Commencez par créer votre premier article !" %}
             {% endif %}
-        </p>
-        <a href="{% url 'ajouter_article' %}" class="btn btn-primary btn-lg">
+        </p>        <a href="{% url 'ajouter_article' %}" class="btn btn-primary btn-lg">
             <i class="bi bi-plus-circle me-2"></i>{% trans "Ajouter un article" %}
         </a>
     </div>

@@ -53,12 +53,26 @@ class RequestLoggingMiddleware(MiddlewareMixin):
                 log_level = logging.WARNING
             else:
                 log_level = logging.INFO
-            
-            logger.log(
-                log_level,
-                f"[{request_id}] Réponse {response.status_code} "
-                f"en {duration:.3f}s - Taille: {len(response.content)} bytes"
-            )
+              # Gestion des différents types de réponse
+            try:
+                if hasattr(response, 'content'):
+                    content_size = len(response.content)
+                elif hasattr(response, 'streaming_content'):
+                    content_size = "streaming"
+                else:
+                    content_size = "unknown"
+                
+                logger.log(
+                    log_level,
+                    f"[{request_id}] Réponse {response.status_code} "
+                    f"en {duration:.3f}s - Taille: {content_size} bytes"
+                )
+            except Exception as e:
+                logger.log(
+                    log_level,
+                    f"[{request_id}] Réponse {response.status_code} "
+                    f"en {duration:.3f}s - Erreur taille: {e}"
+                )
         
         return response
     

@@ -4,10 +4,10 @@
 {% block hero %}{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
+<div class="row justify-content-center fade-in-up">
     <div class="col-md-8">
-        <div class="card shadow-sm">
-            <div class="card-header bg-primary text-white">
+        <div class="premium-card">
+            <div class="card-header bg-gradient-premium text-white">
                 <h3 class="card-title mb-0">
                     <i class="bi bi-plus-circle me-2"></i>{% trans "Ajouter une nouvelle catégorie" %}
                 </h3>
@@ -47,15 +47,14 @@
                             </div>
                         {% endif %}
                     </div>
-                    
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a href="{% url 'gerer_categories' %}" class="btn btn-outline-secondary me-md-2">
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{% url 'gerer_categories' %}" class="btn premium-btn-outline me-md-2">
                             <i class="bi bi-list me-1"></i>{% trans "Gérer les catégories" %}
                         </a>
-                        <a href="{% url 'home' %}" class="btn btn-secondary me-md-2">
+                        <a href="{% url 'home' %}" class="btn premium-btn-outline me-md-2">
                             <i class="bi bi-x-circle me-1"></i>{% trans "Annuler" %}
                         </a>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn premium-btn">
                             <i class="bi bi-plus-circle me-1"></i>{% trans "Ajouter la catégorie" %}
                         </button>
                     </div>
