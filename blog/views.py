@@ -6,9 +6,11 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from django.http import JsonResponse
+from django.views.decorators.http import require_POST
 import logging
 from .forms import ArticleForm, CommentForm, CategoryForm
-from .models import Article, Category, UserProfile
+from .models import Article, Category, UserProfile, Like
 
 # Configuration du logger pour ce module
 logger = logging.getLogger('blog')
@@ -550,3 +552,67 @@ def format_file_size(size_bytes):
     p = math.pow(1024, i)
     s = round(size_bytes / p, 2)
     return f"{s} {size_names[i]}"
+
+
+@login_required
+@require_POST
+def toggle_like(request, article_id):
+    """
+    Vue pour liker/unliker un article.
+    Redirige vers la page d'origine avec un message de confirmation.
+    """
+    try:
+        article = get_object_or_404(Article, id=article_id)
+        like, created = Like.objects.get_or_create(
+            user=request.user,
+            article=article
+        )
+        
+        if not created:
+            # L'utilisateur avait déjà liké, on supprime le like
+            like.delete()
+            message = _("Like retiré")
+            logger.info(f"Utilisateur {request.user.username} a retiré son like de l'article '{article.titre}'")
+        else:
+            # Nouveau like créé
+            message = _("Article liké")
+            logger.info(f"Utilisateur {request.user.username} a liké l'article '{article.titre}'")
+        
+        # Ajouter le message de succès
+        messages.success(request, message)
+        
+        # Rediriger vers la page précédente ou vers l'article
+        redirect_url = request.META.get('HTTP_REFERER')
+        if redirect_url:
+            return redirect(redirect_url)
+        else:
+            return redirect('article_detail', article_id=article.id)
+        
+    except Exception as e:
+        logger.error(f"Erreur lors du toggle like pour l'article {article_id}: {e}")
+        messages.error(request, _("Une erreur s'est produite lors du like"))
+        # Rediriger vers la page précédente ou vers l'article en cas d'erreur
+        redirect_url = request.META.get('HTTP_REFERER')
+        if redirect_url:
+            return redirect(redirect_url)
+        else:
+            return redirect('article_detail', article_id=article.id)
+
+
+def test_like_debug(request):
+    """Vue de debug pour tester la fonctionnalité Like"""
+    if not request.user.is_authenticated:
+        return redirect('login')
+    
+    # Récupérer le premier article pour le test
+    article = Article.objects.first()
+    if not article:
+        return HttpResponse("Aucun article trouvé. Créez d'abord un article.")
+    
+    context = {
+        'article': article,
+        'is_liked': article.is_liked_by(request.user),
+        'total_likes': article.get_total_likes(),
+    }
+    
+    return render(request, 'blog/debug_like.html', context)

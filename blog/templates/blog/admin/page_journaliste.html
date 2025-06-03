@@ -1,7 +1,8 @@
 {% extends 'blog/base.html' %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Page Journaliste{% endblock %}
+{% block title %}{% trans "Page Journaliste" %}{% endblock %}
 
 {% block content %}
 <div class="container-fluid mt-4">
@@ -9,9 +10,9 @@
         <div class="col-12">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="text-success">
-                    <i class="fas fa-pen-fancy"></i> Espace Journaliste
+                    <i class="fas fa-pen-fancy"></i> {% trans "Espace Journaliste" %}
                 </h2>
-                <span class="badge badge-success badge-lg">Accès Journaliste</span>
+                <span class="badge badge-success badge-lg">{% trans "Accès Journaliste" %}</span>
             </div>
         </div>
     </div>
@@ -22,17 +23,17 @@
             <div class="card h-100 shadow-sm">
                 <div class="card-header bg-primary text-white">
                     <h5 class="card-title mb-0">
-                        <i class="fas fa-newspaper"></i> Mes Articles
+                        <i class="fas fa-newspaper"></i> {% trans "Mes Articles" %}
                     </h5>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">Créer et gérer vos articles</p>
+                    <p class="card-text">{% trans "Créer et gérer vos articles" %}</p>
                     <div class="btn-group-vertical w-100">
                         <a href="{% url 'gerer_articles' %}" class="btn btn-outline-primary mb-2">
-                            <i class="fas fa-list"></i> Voir mes articles
+                            <i class="fas fa-list"></i> {% trans "Voir mes articles" %}
                         </a>
                         <a href="{% url 'ajouter_article' %}" class="btn btn-outline-success">
-                            <i class="fas fa-plus"></i> Créer un article
+                            <i class="fas fa-plus"></i> {% trans "Créer un article" %}
                         </a>
                     </div>
                 </div>
@@ -44,18 +45,18 @@
             <div class="card h-100 shadow-sm">
                 <div class="card-header bg-info text-white">
                     <h5 class="card-title mb-0">
-                        <i class="fas fa-tags"></i> Catégories
+                        <i class="fas fa-tags"></i> {% trans "Catégories" %}
                     </h5>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">Consulter les catégories disponibles</p>
+                    <p class="card-text">{% trans "Consulter les catégories disponibles" %}</p>
                     <div class="btn-group-vertical w-100">
                         <a href="{% url 'gerer_categories' %}" class="btn btn-outline-info mb-2">
-                            <i class="fas fa-eye"></i> Voir les catégories
+                            <i class="fas fa-eye"></i> {% trans "Voir les catégories" %}
                         </a>
                         <button class="btn btn-outline-secondary" disabled>
-                            <i class="fas fa-lock"></i> Créer une catégorie
-                            <small class="d-block text-muted">(Réservé aux admins)</small>
+                            <i class="fas fa-lock"></i> {% trans "Créer une catégorie" %}
+                            <small class="d-block text-muted">{% trans "(Réservé aux admins)" %}</small>
                         </button>
                     </div>
                 </div>
@@ -69,7 +70,7 @@
             <div class="card">
                 <div class="card-header bg-success text-white">
                     <h5 class="card-title mb-0">
-                        <i class="fas fa-chart-bar"></i> Mes statistiques
+                        <i class="fas fa-chart-bar"></i> {% trans "Mes statistiques" %}
                     </h5>
                 </div>
                 <div class="card-body">
@@ -78,7 +79,7 @@
                             <div class="card bg-light">
                                 <div class="card-body">
                                     <h3 class="text-primary">{{ user_articles|default:0 }}</h3>
-                                    <p class="text-muted">Mes articles</p>
+                                    <p class="">{% trans "Mes articles" %}</p>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +87,7 @@
                             <div class="card bg-light">
                                 <div class="card-body">
                                     <h3 class="text-success">{{ recent_articles|default:0 }}</h3>
-                                    <p class="text-muted">Articles ce mois-ci</p>
+                                    <p class="">{% trans "Articles ce mois-ci" %}</p>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +95,7 @@
                             <div class="card bg-light">
                                 <div class="card-body">
                                     <h3 class="text-info">{{ user_comments|default:0 }}</h3>
-                                    <p class="text-muted">Commentaires reçus</p>
+                                    <p class="">{% trans "Commentaires reçus" %}</p>
                                 </div>
                             </div>
                         </div>
@@ -110,26 +111,26 @@
             <div class="card">
                 <div class="card-header bg-warning text-dark">
                     <h5 class="card-title mb-0">
-                        <i class="fas fa-lightbulb"></i> Guide rapide
+                        <i class="fas fa-lightbulb"></i> {% trans "Guide rapide" %}
                     </h5>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <h6><i class="fas fa-check-circle text-success"></i> Ce que vous pouvez faire :</h6>
+                            <h6><i class="fas fa-check-circle text-success"></i> {% trans "Ce que vous pouvez faire :" %}</h6>
                             <ul class="list-unstyled">
-                                <li><i class="fas fa-chevron-right text-primary"></i> Créer et modifier vos articles</li>
-                                <li><i class="fas fa-chevron-right text-primary"></i> Voir toutes les catégories</li>
-                                <li><i class="fas fa-chevron-right text-primary"></i> Gérer vos publications</li>
-                                <li><i class="fas fa-chevron-right text-primary"></i> Consulter vos statistiques</li>
+                                <li><i class="fas fa-chevron-right text-primary"></i> {% trans "Créer et modifier vos articles" %}</li>
+                                <li><i class="fas fa-chevron-right text-primary"></i> {% trans "Voir toutes les catégories" %}</li>
+                                <li><i class="fas fa-chevron-right text-primary"></i> {% trans "Gérer vos publications" %}</li>
+                                <li><i class="fas fa-chevron-right text-primary"></i> {% trans "Consulter vos statistiques" %}</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <h6><i class="fas fa-times-circle text-danger"></i> Restrictions :</h6>
+                            <h6><i class="fas fa-times-circle text-danger"></i> {% trans "Restrictions :" %}</h6>
                             <ul class="list-unstyled">
-                                <li><i class="fas fa-chevron-right text-danger"></i> Pas de création de catégories</li>
-                                <li><i class="fas fa-chevron-right text-danger"></i> Pas d'accès à l'admin Django</li>
-                                <li><i class="fas fa-chevron-right text-danger"></i> Pas de gestion des utilisateurs</li>
+                                <li><i class="fas fa-chevron-right text-danger"></i> {% trans "Pas de création de catégories" %}</li>
+                                <li><i class="fas fa-chevron-right text-danger"></i> {% trans "Pas d'accès à l'admin Django" %}</li>
+                                <li><i class="fas fa-chevron-right text-danger"></i> {% trans "Pas de gestion des utilisateurs" %}</li>
                             </ul>
                         </div>
                     </div>

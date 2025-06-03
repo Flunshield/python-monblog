@@ -58,6 +58,16 @@ class Article(models.Model):
             logger.error(f"Erreur lors de la suppression de l'article '{self.titre}': {e}")
             raise
 
+    def get_total_likes(self):
+        """Retourne le nombre total de likes pour cet article"""
+        return self.likes.count()
+
+    def is_liked_by(self, user):
+        """Vérifie si un utilisateur a liké cet article"""
+        if not user.is_authenticated:
+            return False
+        return self.likes.filter(user=user).exists()
+
     def __str__(self):
         return self.titre
 
@@ -77,6 +87,26 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['date_creation']
+
+
+class Like(models.Model):
+    """
+    Modèle pour gérer les likes/bookmarks des articles.
+    Un utilisateur ne peut liker un article qu'une seule fois.
+    """
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='likes')
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='likes')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = ('user', 'article')  # Un utilisateur ne peut liker qu'une fois le même article
+        verbose_name = "Like"
+        verbose_name_plural = "Likes"
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f'{self.user.username} likes {self.article.titre}'
 
 
 class UserProfile(models.Model):

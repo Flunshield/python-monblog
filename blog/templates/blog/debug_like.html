@@ -1,0 +1,155 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+{% load role_tags %}
+
+{% block hero %}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3><i class="bi bi-bug me-2"></i>Debug - Test Fonctionnalité Like</h3>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h5>Article de test :</h5>
+                        <p><strong>{{ article.titre }}</strong></p>
+                        <p>{{ article.contenu|truncatewords:30 }}</p>
+                        
+                        <hr>
+                        
+                        <h6>État actuel :</h6>
+                        <ul>
+                            <li>Utilisateur connecté : <strong>{{ user.username }}</strong></li>
+                            <li>Article liké par vous : <strong id="liked-status">{{ is_liked|yesno:"Oui,Non" }}</strong></li>
+                            <li>Total likes : <strong id="total-likes">{{ total_likes }}</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-lg like-btn" 
+                                data-article-id="{{ article.id }}"
+                                data-liked="{% if is_liked %}true{% else %}false{% endif %}">
+                            <i class="bi bi-heart{% if is_liked %}-fill text-danger{% endif %} me-2"></i>
+                            <span class="like-text">{% if is_liked %}Liké{% else %}J'aime{% endif %}</span>
+                            (<span class="like-count">{{ total_likes }}</span>)
+                        </button>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h6>Console de debug :</h6>
+                        <div id="debug-console" class="alert alert-secondary" style="min-height: 100px; font-family: monospace; font-size: 12px;">
+                            <div>Prêt pour le debug...</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <button onclick="location.reload()" class="btn btn-secondary">Actualiser la page</button>
+                        <a href="{% url 'home' %}" class="btn btn-outline-primary">Retour à l'accueil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const debugConsole = document.getElementById('debug-console');
+    
+    function addDebugLog(message) {
+        const div = document.createElement('div');
+        div.textContent = new Date().toLocaleTimeString() + ': ' + message;
+        debugConsole.appendChild(div);
+        debugConsole.scrollTop = debugConsole.scrollHeight;
+    }
+    
+    addDebugLog('Page chargée');
+    addDebugLog('Recherche des boutons like...');
+    
+    const likeButtons = document.querySelectorAll('.like-btn');
+    addDebugLog(`${likeButtons.length} bouton(s) like trouvé(s)`);
+    
+    likeButtons.forEach(function(button, index) {
+        addDebugLog(`Configuration du bouton ${index + 1}`);
+        
+        button.addEventListener('click', function() {
+            const articleId = this.getAttribute('data-article-id');
+            const isLiked = this.getAttribute('data-liked') === 'true';
+            
+            addDebugLog(`Clic sur le bouton - Article ID: ${articleId}, Liké: ${isLiked}`);
+            
+            // Désactiver le bouton pendant la requête
+            this.disabled = true;
+            addDebugLog('Bouton désactivé');
+            
+            const csrfToken = document.querySelector('meta[name="csrf-token"]');
+            if (!csrfToken) {
+                addDebugLog('ERREUR: CSRF token non trouvé');
+                this.disabled = false;
+                return;
+            }
+            
+            addDebugLog(`Envoi de la requête vers /like/${articleId}/`);
+            
+            fetch(`/like/${articleId}/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken.getAttribute('content'),
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                addDebugLog(`Réponse reçue - Status: ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                addDebugLog(`Données reçues: ${JSON.stringify(data)}`);
+                
+                if (data.success) {
+                    // Mettre à jour l'état du bouton
+                    const heartIcon = this.querySelector('i');
+                    const likeCount = this.querySelector('.like-count');
+                    const likeText = this.querySelector('.like-text');
+                    
+                    addDebugLog(`Éléments trouvés - Icon: ${!!heartIcon}, Count: ${!!likeCount}, Text: ${!!likeText}`);
+                    
+                    if (data.liked) {
+                        heartIcon.className = 'bi bi-heart-fill text-danger me-2';
+                        this.setAttribute('data-liked', 'true');
+                        if (likeText) likeText.textContent = 'Liké';
+                    } else {
+                        heartIcon.className = 'bi bi-heart me-2';
+                        this.setAttribute('data-liked', 'false');
+                        if (likeText) likeText.textContent = 'J\'aime';
+                    }
+                    
+                    if (likeCount) {
+                        likeCount.textContent = data.total_likes;
+                        addDebugLog(`Compteur mis à jour: ${data.total_likes}`);
+                    }
+                    
+                    // Mettre à jour les indicateurs de la page
+                    document.getElementById('liked-status').textContent = data.liked ? 'Oui' : 'Non';
+                    document.getElementById('total-likes').textContent = data.total_likes;
+                    
+                    addDebugLog('Interface mise à jour avec succès');
+                } else {
+                    addDebugLog(`ERREUR: ${data.error}`);
+                }
+            })
+            .catch(error => {
+                addDebugLog(`ERREUR RÉSEAU: ${error}`);
+            })
+            .finally(() => {
+                // Réactiver le bouton
+                this.disabled = false;
+                addDebugLog('Bouton réactivé');
+            });
+        });
+    });
+});
+</script>
+{% endblock %}

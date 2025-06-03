@@ -95,3 +95,16 @@ django.http.response.Http404: Il n’est pas autorisé d’afficher le contenu d
 2025-06-03 14:40:41 [WARNING] monprojet.middleware: [8830a00a] Réponse 404 en 0.102s - Taille: 2488 bytes
 2025-06-03 14:43:58 [WARNING] monprojet.middleware: [f0b7192b] Réponse 403 en 0.048s - Taille: 75 bytes
 2025-06-03 14:50:56 [WARNING] monprojet.middleware: [95eda072] Réponse 404 en 0.060s - Taille: 2326 bytes
+2025-06-03 15:01:35 [WARNING] monprojet.middleware: [523056f6] Réponse 404 en 0.056s - Taille: 2488 bytes
+2025-06-03 15:02:35 [WARNING] blog.models: Suppression de l'article 'Article de test' (ID: 1)
+2025-06-03 15:02:57 [WARNING] monprojet.middleware: [642abc46] Réponse 404 en 0.003s - Taille: 2403 bytes
+2025-06-03 15:06:38 [WARNING] monprojet.middleware: [184c0d50] Réponse 404 en 0.028s - Taille: 2454 bytes
+2025-06-03 15:06:40 [WARNING] monprojet.middleware: [9329e2e5] Réponse 404 en 0.063s - Taille: 2377 bytes
+2025-06-03 15:06:42 [WARNING] monprojet.middleware: [33546bba] Réponse 404 en 0.057s - Taille: 2369 bytes
+2025-06-03 15:06:42 [WARNING] monprojet.middleware: [41e84cac] Réponse 405 en 0.056s - Taille: 0 bytes
+2025-06-03 15:06:45 [WARNING] monprojet.middleware: [6383f4cc] Réponse 404 en 0.060s - Taille: 2369 bytes
+2025-06-03 15:06:45 [WARNING] monprojet.middleware: [19f28be4] Réponse 405 en 0.156s - Taille: 0 bytes
+2025-06-03 15:08:52 [WARNING] monprojet.middleware: [1df71aa9] Réponse 404 en 0.051s - Taille: 2488 bytes
+2025-06-03 15:12:41 [WARNING] monprojet.middleware: [53045aef] Réponse 404 en 0.050s - Taille: 2488 bytes
+2025-06-03 15:13:27 [WARNING] monprojet.middleware: [149f3f66] Réponse 404 en 0.076s - Taille: 2488 bytes
+2025-06-03 15:24:08 [WARNING] monprojet.middleware: [dc37c7c8] Réponse 403 en 0.053s - Taille: 78 bytes

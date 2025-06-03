@@ -78,3 +78,10 @@ def can_delete_article(user, article):
     
     # Les lecteurs ne peuvent rien supprimer
     return False
+
+@register.filter
+def is_liked_by(article, user):
+    """Vérifie si un article est liké par l'utilisateur."""
+    if not user.is_authenticated:
+        return False
+    return article.is_liked_by(user)

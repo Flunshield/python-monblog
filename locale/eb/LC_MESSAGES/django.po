@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: .\blog\templates\blog\admin\page_admin.html:5
 msgid "Page Admin"
@@ -50,6 +50,7 @@ msgstr ""
 
 #: .\blog\templates\blog\admin\page_admin.html:48
 #: .\blog\templates\blog\admin\page_admin.html:111
+#: .\blog\templates\blog\admin\page_journaliste.html:48
 #: .\blog\templates\blog\base.html:54 .\blog\templates\blog\base.html:65
 #: .\blog\templates\blog\base.html:208
 msgid "Catégories"
@@ -60,6 +61,7 @@ msgid "Organiser les catégories d'articles"
 msgstr ""
 
 #: .\blog\templates\blog\admin\page_admin.html:55
+#: .\blog\templates\blog\admin\page_journaliste.html:55
 msgid "Voir les catégories"
 msgstr ""
 
@@ -100,6 +102,103 @@ msgstr ""
 
 #: .\blog\templates\blog\admin\page_admin.html:140
 msgid "Fonctionnalité de statistiques à venir !"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:5
+msgid "Page Journaliste"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:13
+msgid "Espace Journaliste"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:15
+msgid "Accès Journaliste"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:26
+#: .\blog\templates\blog\base.html:207
+msgid "Mes Articles"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:30
+msgid "Créer et gérer vos articles"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:33
+msgid "Voir mes articles"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:36
+msgid "Créer un article"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:52
+msgid "Consulter les catégories disponibles"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:58
+msgid "Créer une catégorie"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:59
+msgid "(Réservé aux admins)"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:73
+msgid "Mes statistiques"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:82
+msgid "Mes articles"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:90
+msgid "Articles ce mois-ci"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:98
+msgid "Commentaires reçus"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:114
+msgid "Guide rapide"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:120
+msgid "Ce que vous pouvez faire :"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:122
+msgid "Créer et modifier vos articles"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:123
+msgid "Voir toutes les catégories"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:124
+msgid "Gérer vos publications"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:125
+msgid "Consulter vos statistiques"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:129
+msgid "Restrictions :"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:131
+msgid "Pas de création de catégories"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:132
+msgid "Pas d'accès à l'admin Django"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:133
+msgid "Pas de gestion des utilisateurs"
 msgstr ""
 
 #: .\blog\templates\blog\ajouter_article.html:12
@@ -364,10 +463,6 @@ msgstr ""
 
 #: .\blog\templates\blog\base.html:206
 msgid "Écrire"
-msgstr ""
-
-#: .\blog\templates\blog\base.html:207
-msgid "Mes Articles"
 msgstr ""
 
 #: .\blog\templates\blog\base.html:213

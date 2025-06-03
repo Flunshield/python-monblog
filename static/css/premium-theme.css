@@ -278,7 +278,34 @@ body::before {
     position: relative;
 }
 
+/* Classe spécifique pour les cartes premium d'articles */
+.premium-card {
+    background: rgba(26, 26, 26, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(220, 38, 38, 0.2) !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: var(--shadow-heavy);
+    transition: all var(--transition-medium);
+    overflow: hidden;
+    position: relative;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
 .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-gold);
+    opacity: 0;
+    transition: all var(--transition-medium);
+}
+
+.premium-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -296,7 +323,14 @@ body::before {
     border-color: rgba(220, 38, 38, 0.5) !important;
 }
 
-.card:hover::before {
+.premium-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(220, 38, 38, 0.5) !important;
+}
+
+.card:hover::before,
+.premium-card:hover::before {
     opacity: 1;
 }
 

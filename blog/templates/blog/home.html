@@ -86,11 +86,18 @@
                             <p class="card-text flex-grow-1 text-muted">
                                 {{ article.contenu|truncatewords:20 }}
                             </p>
-                              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
-                                <div class="d-flex gap-1">
+                              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">                                <div class="d-flex gap-1">
                                     <a href="{% url 'article_detail' article.id %}" class="btn btn-primary btn-sm">
                                         <i class="bi bi-eye me-1"></i>{% trans "Lire" %}
-                                    </a>
+                                    </a>                                    {% if user.is_authenticated %}
+                                        <form method="post" action="{% url 'toggle_like' article.id %}" style="display: inline;">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-outline-secondary btn-sm">
+                                                <i class="bi bi-heart{% if article|is_liked_by:user %}-fill text-danger{% endif %} me-1"></i>
+                                                <span class="like-count">{{ article.get_total_likes }}</span>
+                                            </button>
+                                        </form>
+                                    {% endif %}
                                     {% if user|can_edit_article:article %}
                                         <a href="{% url 'modifier_article' article.id %}" class="btn btn-primary btn-sm">
                                             <i class="bi bi-pencil"></i>
@@ -102,9 +109,16 @@
                                         </a>
                                     {% endif %}
                                 </div>
-                                <small class="text-muted">
-                                    <i class="bi bi-chat me-1"></i>{{ article.comments.count }}
-                                </small>
+                                <div class="d-flex gap-2">
+                                    <small class="text-muted">
+                                        <i class="bi bi-chat me-1"></i>{{ article.comments.count }}
+                                    </small>
+                                    {% if not user.is_authenticated %}
+                                        <small class="text-muted">
+                                            <i class="bi bi-heart me-1"></i>{{ article.get_total_likes }}
+                                        </small>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
