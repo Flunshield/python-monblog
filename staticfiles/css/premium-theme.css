@@ -278,7 +278,34 @@ body::before {
     position: relative;
 }
 
+/* Classe spécifique pour les cartes premium d'articles */
+.premium-card {
+    background: rgba(26, 26, 26, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(220, 38, 38, 0.2) !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: var(--shadow-heavy);
+    transition: all var(--transition-medium);
+    overflow: hidden;
+    position: relative;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
 .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-gold);
+    opacity: 0;
+    transition: all var(--transition-medium);
+}
+
+.premium-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -296,7 +323,14 @@ body::before {
     border-color: rgba(220, 38, 38, 0.5) !important;
 }
 
-.card:hover::before {
+.premium-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(220, 38, 38, 0.5) !important;
+}
+
+.card:hover::before,
+.premium-card:hover::before {
     opacity: 1;
 }
 
@@ -362,8 +396,14 @@ body::before {
 .article-image-container {
     position: relative;
     overflow: hidden;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-    background: var(--premium-gray);
+    border-radius: var(--border-radius);
+}
+
+.article-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-medium) ease-out;
 }
 
 /* Placeholder pour images manquantes */
@@ -383,6 +423,36 @@ img {
     border-radius: var(--border-radius);
     box-shadow: var(--premium-shadow);
     margin: 1rem 0;
+}
+
+/* ================================================
+   THUMBNAILS ET IMAGES DE PROFIL
+   ================================================ */
+.rounded-circle {
+    border: 2px solid var(--premium-gold) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.rounded-circle:hover {
+    transform: scale(1.1) !important;
+    border-color: var(--premium-red) !important;
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3) !important;
+}
+
+/* Amélioration des images dans les cartes */
+.premium-card .card-img-top {
+    transition: transform var(--transition-medium) ease-out !important;
+    will-change: transform !important;
+}
+
+.premium-card:hover .card-img-top {
+    transform: scale(1.02) !important;
+}
+
+/* Images de fallback avec style premium */
+.image-placeholder i {
+    color: var(--premium-gold) !important;
+    opacity: 0.6;
 }
 
 /* ================================================
@@ -771,4 +841,88 @@ img {
 .page-item.active .page-link {
     background: var(--gradient-secondary) !important;
     border-color: var(--color-red-primary) !important;
+}
+
+/* ================================================
+   OPTIMISATIONS POUR LES IMAGES D'ARTICLES
+   ================================================ */
+
+/* Images optimisées pour le lazy loading */
+/* Note: Les images avec lazy loading sont maintenant visibles par défaut */
+img[loading="lazy"] {
+    transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Images responsives avec aspect ratio préservé */
+.article-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.article-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-medium) ease-out;
+}
+
+/* Responsive image containers */
+@media (max-width: 768px) {
+    .article-image-container {
+        max-height: 250px;
+    }
+    
+    .premium-card .card-img-top {
+        max-height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .article-image-container {
+        max-height: 200px;
+    }
+    
+    .premium-card .card-img-top {
+        max-height: 150px;
+    }
+}
+
+/* Amélioration des images circulaires dans les tableaux */
+.table img.rounded-circle {
+    border: 2px solid var(--premium-gold);
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.table img.rounded-circle:hover {
+    transform: scale(1.1);
+    border-color: var(--premium-red);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+/* Images de prévisualisation dans les formulaires */
+.img-thumbnail {
+    border: 2px solid var(--premium-gold);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+}
+
+.img-thumbnail:hover {
+    border-color: var(--premium-red);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    transform: scale(1.02);
+}
+
+/* Optimisation pour les écrans haute densité */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .premium-card img,
+    .article-image-container img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
 }

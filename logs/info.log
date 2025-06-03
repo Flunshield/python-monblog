@@ -1268,3 +1268,176 @@ django.http.response.Http404: Il n’est pas autorisé d’afficher le contenu d
 2025-06-03 15:27:36 [INFO] monprojet.middleware: [e6447073] Réponse 200 en 0.084s - Taille: 35843 bytes
 2025-06-03 15:27:43 [INFO] monprojet.middleware: [0cea62bb] GET /en/journaliste-page/ - Utilisateur: juju - IP: 127.0.0.1
 2025-06-03 15:27:43 [INFO] monprojet.middleware: [0cea62bb] Réponse 200 en 0.058s - Taille: 19804 bytes
+2025-06-03 15:38:24 [INFO] monprojet.middleware: [1b36a181] GET /en/journaliste-page/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:38:24 [INFO] monprojet.middleware: [1b36a181] Réponse 200 en 0.064s - Taille: 19839 bytes
+2025-06-03 15:38:27 [INFO] monprojet.middleware: [f6fefaa1] POST /en/set-role/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:38:27 [INFO] monprojet.middleware: [f6fefaa1] Réponse 302 en 0.160s - Taille: 0 bytes
+2025-06-03 15:38:27 [INFO] monprojet.middleware: [9ebb268b] GET /en/journaliste-page/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:38:27 [INFO] monprojet.middleware: [9ebb268b] Réponse 200 en 0.056s - Taille: 19831 bytes
+2025-06-03 15:38:28 [INFO] monprojet.middleware: [85111dbb] GET /en/admin-page/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:38:28 [INFO] monprojet.middleware: [85111dbb] Réponse 200 en 0.050s - Taille: 19413 bytes
+2025-06-03 15:52:56 [INFO] monprojet.middleware: [65b0dbc0] GET / - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:52:56 [WARNING] monprojet.middleware: [65b0dbc0] Réponse 404 en 0.162s - Taille: 2326 bytes
+2025-06-03 15:52:56 [INFO] monprojet.middleware: [75b5b231] GET /en/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:52:56 [INFO] blog: Accès à la page d'accueil par l'utilisateur juju
+2025-06-03 15:52:56 [INFO] monprojet.middleware: [75b5b231] Réponse 200 en 0.088s - Taille: 38941 bytes
+2025-06-03 15:52:57 [INFO] monprojet.middleware: [1e396295] GET /media/articles/MCD_HomeArt_Complet_4lcF2Mw.png - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:52:57 [INFO] monprojet.middleware: [1e396295] Réponse 304 en 0.065s - Taille: 0 bytes
+2025-06-03 15:52:57 [INFO] monprojet.middleware: [4b2bce61] GET /media/articles/agile_CIaRvAC.png - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:52:57 [INFO] monprojet.middleware: [4b2bce61] Réponse 200 en 0.123s - Taille: streaming bytes
+2025-06-03 15:52:57 [INFO] monprojet.middleware: [923eb37c] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_EWlajmd.png - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:52:57 [INFO] monprojet.middleware: [923eb37c] Réponse 200 en 0.164s - Taille: streaming bytes
+2025-06-03 15:53:07 [INFO] monprojet.middleware: [3c961570] GET /en/ajouter/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:07 [INFO] monprojet.middleware: [3c961570] Action importante: ajouter_article par l'utilisateur juju
+2025-06-03 15:53:07 [INFO] blog: Tentative d'ajout d'article par l'utilisateur juju
+2025-06-03 15:53:07 [INFO] monprojet.middleware: [3c961570] Réponse 200 en 0.073s - Taille: 16838 bytes
+2025-06-03 15:53:11 [INFO] monprojet.middleware: [606123bc] GET /en/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:11 [INFO] blog: Accès à la page d'accueil par l'utilisateur juju
+2025-06-03 15:53:11 [INFO] monprojet.middleware: [606123bc] Réponse 200 en 0.072s - Taille: 38628 bytes
+2025-06-03 15:53:20 [INFO] monprojet.middleware: [fad0255d] GET /en/supprimer-article/27/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:20 [INFO] monprojet.middleware: [fad0255d] Action importante: supprimer_article par l'utilisateur juju
+2025-06-03 15:53:20 [INFO] monprojet.middleware: [fad0255d] Réponse 200 en 0.088s - Taille: 16703 bytes
+2025-06-03 15:53:23 [INFO] monprojet.middleware: [893acfd1] POST /en/supprimer-article/27/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:23 [INFO] monprojet.middleware: [893acfd1] Action importante: supprimer_article par l'utilisateur juju
+2025-06-03 15:53:23 [WARNING] blog.models: Suppression de l'article 'Article de test 3' (ID: 27)
+2025-06-03 15:53:23 [INFO] blog.models: Article 'Article de test 3' supprimé avec succès
+2025-06-03 15:53:23 [INFO] monprojet.middleware: [893acfd1] Réponse 302 en 0.063s - Taille: 0 bytes
+2025-06-03 15:53:23 [INFO] monprojet.middleware: [9224a896] GET /en/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:23 [INFO] blog: Accès à la page d'accueil par l'utilisateur juju
+2025-06-03 15:53:23 [INFO] monprojet.middleware: [9224a896] Réponse 200 en 0.181s - Taille: 35282 bytes
+2025-06-03 15:53:25 [INFO] monprojet.middleware: [981e8f41] GET /en/supprimer-article/26/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:25 [INFO] monprojet.middleware: [981e8f41] Action importante: supprimer_article par l'utilisateur juju
+2025-06-03 15:53:25 [INFO] monprojet.middleware: [981e8f41] Réponse 200 en 0.052s - Taille: 16703 bytes
+2025-06-03 15:53:27 [INFO] monprojet.middleware: [40fba003] POST /en/supprimer-article/26/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:27 [INFO] monprojet.middleware: [40fba003] Action importante: supprimer_article par l'utilisateur juju
+2025-06-03 15:53:27 [WARNING] blog.models: Suppression de l'article 'Article de test 2' (ID: 26)
+2025-06-03 15:53:27 [INFO] blog.models: Article 'Article de test 2' supprimé avec succès
+2025-06-03 15:53:27 [INFO] monprojet.middleware: [40fba003] Réponse 302 en 0.056s - Taille: 0 bytes
+2025-06-03 15:53:27 [INFO] monprojet.middleware: [cfd2a461] GET /en/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:27 [INFO] blog: Accès à la page d'accueil par l'utilisateur juju
+2025-06-03 15:53:27 [INFO] monprojet.middleware: [cfd2a461] Réponse 200 en 0.077s - Taille: 31583 bytes
+2025-06-03 15:53:29 [INFO] monprojet.middleware: [e3bb7a69] GET /en/supprimer-article/25/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:29 [INFO] monprojet.middleware: [e3bb7a69] Action importante: supprimer_article par l'utilisateur juju
+2025-06-03 15:53:29 [INFO] monprojet.middleware: [e3bb7a69] Réponse 200 en 0.051s - Taille: 16703 bytes
+2025-06-03 15:53:31 [INFO] monprojet.middleware: [ab329310] POST /en/supprimer-article/25/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:31 [INFO] monprojet.middleware: [ab329310] Action importante: supprimer_article par l'utilisateur juju
+2025-06-03 15:53:31 [WARNING] blog.models: Suppression de l'article 'Article de test 1' (ID: 25)
+2025-06-03 15:53:31 [INFO] blog.models: Article 'Article de test 1' supprimé avec succès
+2025-06-03 15:53:31 [INFO] monprojet.middleware: [ab329310] Réponse 302 en 0.060s - Taille: 0 bytes
+2025-06-03 15:53:31 [INFO] monprojet.middleware: [12b56dd8] GET /en/ - Utilisateur: juju - IP: 127.0.0.1
+2025-06-03 15:53:31 [INFO] blog: Accès à la page d'accueil par l'utilisateur juju
+2025-06-03 15:53:31 [INFO] monprojet.middleware: [12b56dd8] Réponse 200 en 0.068s - Taille: 27884 bytes
+2025-06-03 14:50:34 [INFO] monprojet.middleware: [1e073cb6] GET /?id=7f7c2d3c-0d31-45fd-a591-f568e7e80f35&vscodeBrowserReqId=1748962234679 - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:50:34 [WARNING] monprojet.middleware: [1e073cb6] Réponse 404 en 0.016s - Taille: 2262 bytes
+2025-06-03 14:50:34 [INFO] monprojet.middleware: [efde3752] GET /en/?id=7f7c2d3c-0d31-45fd-a591-f568e7e80f35&vscodeBrowserReqId=1748962234679 - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:50:34 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-03 14:50:34 [INFO] monprojet.middleware: [efde3752] Réponse 200 en 0.054s - Taille: 11020 bytes
+2025-06-03 14:51:37 [INFO] monprojet.middleware: [b15fae8d] GET /fr - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:51:37 [WARNING] monprojet.middleware: [b15fae8d] Réponse 404 en 0.011s - Taille: 2209 bytes
+2025-06-03 14:51:37 [INFO] monprojet.middleware: [a4c019fb] GET /fr/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:51:37 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-03 14:51:37 [INFO] monprojet.middleware: [a4c019fb] Réponse 200 en 0.047s - Taille: 10961 bytes
+2025-06-03 14:51:37 [INFO] monprojet.middleware: [0968528b] GET /.well-known/appspecific/com.chrome.devtools.json - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:51:37 [WARNING] monprojet.middleware: [0968528b] Réponse 404 en 0.007s - Taille: 2347 bytes
+2025-06-03 14:51:37 [INFO] monprojet.middleware: [0c91237c] GET /static/css/animations.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:51:37 [INFO] monprojet.middleware: [27399825] GET /static/js/premium-theme.js - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:51:37 [WARNING] monprojet.middleware: [0c91237c] Réponse 404 en 0.009s - Taille: 2278 bytes
+2025-06-03 14:51:37 [INFO] monprojet.middleware: [9c922f64] GET /static/css/premium-theme.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:51:37 [WARNING] monprojet.middleware: [27399825] Réponse 404 en 0.006s - Taille: 2281 bytes
+2025-06-03 14:51:37 [WARNING] monprojet.middleware: [9c922f64] Réponse 404 en 0.014s - Taille: 2287 bytes
+2025-06-03 14:51:37 [INFO] monprojet.middleware: [4b2ff64d] GET /static/css/premium-theme.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:51:37 [WARNING] monprojet.middleware: [4b2ff64d] Réponse 404 en 0.009s - Taille: 2287 bytes
+2025-06-03 14:51:37 [INFO] monprojet.middleware: [a6c89677] GET /static/css/animations.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:51:37 [WARNING] monprojet.middleware: [a6c89677] Réponse 404 en 0.011s - Taille: 2278 bytes
+2025-06-03 14:51:38 [INFO] monprojet.middleware: [69d56e85] GET /favicon.ico - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:51:38 [WARNING] monprojet.middleware: [69d56e85] Réponse 404 en 0.012s - Taille: 2236 bytes
+2025-06-03 14:52:39 [INFO] monprojet.middleware: [6dbbd0b4] GET /fr/register/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:52:39 [INFO] monprojet.middleware: [6dbbd0b4] Réponse 200 en 0.052s - Taille: 11919 bytes
+2025-06-03 14:52:39 [INFO] monprojet.middleware: [ce5502ff] GET /static/css/premium-theme.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:52:39 [INFO] monprojet.middleware: [846cefb6] GET /static/css/animations.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:52:39 [WARNING] monprojet.middleware: [846cefb6] Réponse 404 en 0.005s - Taille: 2278 bytes
+2025-06-03 14:52:39 [WARNING] monprojet.middleware: [ce5502ff] Réponse 404 en 0.010s - Taille: 2287 bytes
+2025-06-03 14:52:39 [INFO] monprojet.middleware: [538f2e6f] GET /static/js/premium-theme.js - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:52:39 [WARNING] monprojet.middleware: [538f2e6f] Réponse 404 en 0.009s - Taille: 2281 bytes
+2025-06-03 14:52:39 [INFO] monprojet.middleware: [ca10c8e5] GET /static/css/animations.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:52:39 [WARNING] monprojet.middleware: [ca10c8e5] Réponse 404 en 0.009s - Taille: 2278 bytes
+2025-06-03 14:52:44 [INFO] monprojet.middleware: [494ba78f] GET /fr/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:52:44 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-03 14:52:44 [INFO] monprojet.middleware: [494ba78f] Réponse 200 en 0.019s - Taille: 10961 bytes
+2025-06-03 14:52:44 [INFO] monprojet.middleware: [fdcd446e] GET /static/css/premium-theme.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:52:44 [INFO] monprojet.middleware: [8f2b44d9] GET /static/js/premium-theme.js - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:52:44 [INFO] monprojet.middleware: [9404ad56] GET /static/css/animations.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:52:44 [WARNING] monprojet.middleware: [fdcd446e] Réponse 404 en 0.008s - Taille: 2287 bytes
+2025-06-03 14:52:44 [WARNING] monprojet.middleware: [8f2b44d9] Réponse 404 en 0.008s - Taille: 2281 bytes
+2025-06-03 14:52:44 [WARNING] monprojet.middleware: [9404ad56] Réponse 404 en 0.008s - Taille: 2278 bytes
+2025-06-03 14:55:25 [INFO] monprojet.middleware: [f9f3420f] GET /fr/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:55:25 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-03 14:55:25 [INFO] monprojet.middleware: [f9f3420f] Réponse 200 en 0.132s - Taille: 10961 bytes
+2025-06-03 14:55:25 [INFO] monprojet.middleware: [38a058b6] GET /static/css/animations.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:55:25 [INFO] monprojet.middleware: [f13af2bb] GET /static/css/premium-theme.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:55:25 [INFO] monprojet.middleware: [8b936ec0] GET /static/js/premium-theme.js - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:55:25 [WARNING] monprojet.middleware: [38a058b6] Réponse 404 en 0.040s - Taille: 2278 bytes
+2025-06-03 14:55:25 [WARNING] monprojet.middleware: [f13af2bb] Réponse 404 en 0.034s - Taille: 2287 bytes
+2025-06-03 14:55:25 [WARNING] monprojet.middleware: [8b936ec0] Réponse 404 en 0.021s - Taille: 2281 bytes
+2025-06-03 14:55:25 [INFO] monprojet.middleware: [c0838936] GET /static/css/animations.css - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:55:25 [WARNING] monprojet.middleware: [c0838936] Réponse 404 en 0.011s - Taille: 2278 bytes
+2025-06-03 14:56:12 [INFO] monprojet.middleware: [b6527d70] GET /fr/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:56:12 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-03 14:56:12 [INFO] monprojet.middleware: [b6527d70] Réponse 200 en 0.052s - Taille: 10961 bytes
+2025-06-03 14:56:24 [INFO] monprojet.middleware: [a4744ec5] GET /fr/ajouter/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:56:24 [INFO] monprojet.middleware: [a4744ec5] Action importante: ajouter_article par l'utilisateur anonyme
+2025-06-03 14:56:24 [INFO] blog: Tentative d'ajout d'article par l'utilisateur AnonymousUser
+2025-06-03 14:56:24 [INFO] monprojet.middleware: [a4744ec5] Réponse 200 en 0.045s - Taille: 12326 bytes
+2025-06-03 14:56:27 [INFO] monprojet.middleware: [1823ec9f] GET /fr/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:56:27 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-03 14:56:27 [INFO] monprojet.middleware: [1823ec9f] Réponse 200 en 0.042s - Taille: 10961 bytes
+2025-06-03 14:56:30 [INFO] monprojet.middleware: [651f08aa] GET /fr/register/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:56:30 [INFO] monprojet.middleware: [651f08aa] Réponse 200 en 0.045s - Taille: 11919 bytes
+2025-06-03 14:56:46 [INFO] monprojet.middleware: [f62102f9] POST /fr/register/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-03 14:56:47 [INFO] monprojet.middleware: [f62102f9] Réponse 302 en 0.233s - Taille: 0 bytes
+2025-06-03 14:56:47 [INFO] monprojet.middleware: [a4089a6e] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:56:47 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-03 14:56:47 [INFO] monprojet.middleware: [a4089a6e] Réponse 200 en 0.069s - Taille: 14165 bytes
+2025-06-03 14:56:52 [INFO] monprojet.middleware: [abd4cefb] POST /fr/set-role/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:56:52 [INFO] monprojet.middleware: [abd4cefb] Réponse 302 en 0.029s - Taille: 0 bytes
+2025-06-03 14:56:52 [INFO] monprojet.middleware: [02352737] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:56:52 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-03 14:56:52 [INFO] monprojet.middleware: [02352737] Réponse 200 en 0.059s - Taille: 15441 bytes
+2025-06-03 14:56:53 [INFO] monprojet.middleware: [feca9476] GET /fr/ajouter/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:56:53 [INFO] monprojet.middleware: [feca9476] Action importante: ajouter_article par l'utilisateur julien
+2025-06-03 14:56:53 [INFO] blog: Tentative d'ajout d'article par l'utilisateur julien
+2025-06-03 14:56:53 [INFO] monprojet.middleware: [feca9476] Réponse 200 en 0.044s - Taille: 16511 bytes
+2025-06-03 14:57:07 [INFO] monprojet.middleware: [f591fd66] POST /fr/ajouter/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:57:07 [INFO] monprojet.middleware: [f591fd66] Action importante: ajouter_article par l'utilisateur julien
+2025-06-03 14:57:07 [INFO] blog: Tentative d'ajout d'article par l'utilisateur julien
+2025-06-03 14:57:07 [INFO] blog.models: Création d'un nouvel article: 'Chat Gpt remplace les devs !' par julien
+2025-06-03 14:57:07 [INFO] blog.models: Article 'Chat Gpt remplace les devs !' créé avec succès (ID: 1)
+2025-06-03 14:57:07 [INFO] blog: Article 'Chat Gpt remplace les devs !' créé avec succès par julien
+2025-06-03 14:57:07 [INFO] monprojet.middleware: [f591fd66] Réponse 302 en 0.134s - Taille: 0 bytes
+2025-06-03 14:57:07 [INFO] monprojet.middleware: [7764c7e3] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:57:07 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-03 14:57:07 [INFO] monprojet.middleware: [7764c7e3] Réponse 200 en 0.065s - Taille: 18696 bytes
+2025-06-03 14:57:07 [INFO] monprojet.middleware: [00886cff] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_GdXrWBU.png - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:57:07 [INFO] monprojet.middleware: [00886cff] Réponse 200 en 0.017s - Taille: streaming bytes
+2025-06-03 14:57:13 [INFO] monprojet.middleware: [1e97cea2] GET /fr/supprimer-article/1/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:57:13 [INFO] monprojet.middleware: [1e97cea2] Action importante: supprimer_article par l'utilisateur julien
+2025-06-03 14:57:13 [INFO] monprojet.middleware: [1e97cea2] Réponse 200 en 0.044s - Taille: 16981 bytes
+2025-06-03 14:57:13 [INFO] monprojet.middleware: [03666dc3] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_GdXrWBU.png - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:57:13 [INFO] monprojet.middleware: [03666dc3] Réponse 304 en 0.022s - Taille: 0 bytes
+2025-06-03 14:57:16 [INFO] monprojet.middleware: [66cf1bc5] POST /fr/supprimer-article/1/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:57:16 [INFO] monprojet.middleware: [66cf1bc5] Action importante: supprimer_article par l'utilisateur julien
+2025-06-03 14:57:16 [WARNING] blog.models: Suppression de l'article 'Chat Gpt remplace les devs !' (ID: 1)
+2025-06-03 14:57:16 [INFO] blog.models: Article 'Chat Gpt remplace les devs !' supprimé avec succès
+2025-06-03 14:57:16 [INFO] monprojet.middleware: [66cf1bc5] Réponse 302 en 0.036s - Taille: 0 bytes
+2025-06-03 14:57:16 [INFO] monprojet.middleware: [7c77f816] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:57:16 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-03 14:57:16 [INFO] monprojet.middleware: [7c77f816] Réponse 200 en 0.060s - Taille: 15469 bytes
+2025-06-03 14:57:55 [INFO] monprojet.middleware: [08c9c849] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:57:55 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-03 14:57:55 [INFO] monprojet.middleware: [08c9c849] Réponse 200 en 0.059s - Taille: 15122 bytes
+2025-06-03 14:59:05 [INFO] monprojet.middleware: [9927966d] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:59:05 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-03 14:59:05 [INFO] monprojet.middleware: [9927966d] Réponse 200 en 0.081s - Taille: 15100 bytes
+2025-06-03 14:59:19 [INFO] monprojet.middleware: [9d1b2aff] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 14:59:19 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-03 14:59:19 [INFO] monprojet.middleware: [9d1b2aff] Réponse 200 en 0.056s - Taille: 15100 bytes

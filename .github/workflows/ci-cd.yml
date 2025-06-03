@@ -1,0 +1,82 @@
+name: Django CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_DB: blogDb
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: julien
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    env:
+      DB_NAME: blogDb
+      DB_USER: postgres
+      DB_PASSWORD: julien
+      DB_HOST: localhost
+      DB_PORT: 5432
+      SECRET_KEY: dummy-key-for-ci
+      DEBUG: 'False'
+      ALLOWED_HOSTS: localhost,127.0.0.1
+      STATIC_ROOT: /home/runner/work/staticfiles
+      MEDIA_ROOT: /home/runner/work/media
+      EMAIL_HOST: smtp.example.com
+      EMAIL_PORT: 587
+      EMAIL_HOST_USER: your-email@example.com
+      EMAIL_HOST_PASSWORD: your-email-password
+      EMAIL_USE_TLS: 'True'
+      SECURE_HSTS_SECONDS: 0
+      SECURE_SSL_REDIRECT: 'False'
+      CSRF_COOKIE_SECURE: 'False'
+      SESSION_COOKIE_SECURE: 'False'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run migrations
+        run: |
+          python manage.py migrate
+      - name: Collect static files
+        run: |
+          python manage.py collectstatic --noinput
+      - name: Run tests
+        run: |
+          python manage.py test
+  build-and-push:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t flusnhield/monBlog:latest -t flusnhield/monBlog:${{ github.sha }} .
+          docker push flusnhield/monBlog:latest
+          docker push flusnhield/monBlog:${{ github.sha }}

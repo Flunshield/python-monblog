@@ -3366,3 +3366,690 @@ Traceback (most recent call last):
   File "C:\Users\jbert\AppData\Roaming\Python\Python312\site-packages\django\http\response.py", line 464, in content
     raise AttributeError(
 AttributeError: This FileResponse instance has no `content` attribute. Use `streaming_content` instead.
+[2025-06-03 14:24:10 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-03 14:24:10 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-03 14:24:10 +0000] [1] [INFO] Using worker: sync
+[2025-06-03 14:24:10 +0000] [8] [INFO] Booting worker with pid: 8
+[2025-06-03 14:24:10 +0000] [9] [INFO] Booting worker with pid: 9
+[2025-06-03 14:24:10 +0000] [10] [INFO] Booting worker with pid: 10
+[2025-06-03 14:24:10 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-03 14:24:10 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-03 14:24:10 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-03 14:24:10 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-03 14:24:10 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-03 14:24:10 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-03 14:24:10 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-03 14:24:10 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-03 14:24:10 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-03 14:24:10 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-03 14:24:10 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-03 14:24:11 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-03 14:24:11 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-03 14:24:11 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-03 14:24:11 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-03 14:24:11 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-03 14:24:11 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-03 14:24:11 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-03 14:24:11 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-03 14:24:11 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-03 14:24:11 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-03 14:24:11 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-03 14:24:11 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-03 14:24:11 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-03 14:24:11 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-03 14:24:11 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-03 14:24:11 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-03 14:24:11 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-03 14:24:12 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-03 14:24:12 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-03 14:25:13 +0000] [1] [CRITICAL] WORKER TIMEOUT (pid:27)
+[2025-06-03 14:25:13 +0000] [27] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-03 14:25:13 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-03 14:25:13 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-03 14:25:26 +0000] [1] [CRITICAL] WORKER TIMEOUT (pid:9)
+[2025-06-03 14:25:26 +0000] [9] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-03 14:25:26 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2025-06-03 14:25:26 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-03 14:25:55 +0000] [1] [CRITICAL] WORKER TIMEOUT (pid:15)
+[2025-06-03 14:25:55 +0000] [15] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-03 14:25:55 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-03 14:25:55 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-03 14:27:01 +0000] [1] [CRITICAL] WORKER TIMEOUT (pid:20)
+[2025-06-03 14:27:01 +0000] [20] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-03 14:27:01 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-03 14:27:02 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-03 14:27:20 +0000] [1] [INFO] Handling signal: term
+[2025-06-03 14:27:20 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-03 14:27:20 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-03 14:27:20 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-03 14:27:20 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-03 14:27:20 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-03 14:27:20 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-03 14:27:20 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-03 14:27:20 +0000] [8] [INFO] Worker exiting (pid: 8)
+[2025-06-03 14:27:20 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-03 14:27:20 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-03 14:27:20 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-03 14:27:20 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-03 14:27:20 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-03 14:27:20 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-03 14:27:20 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-03 14:27:20 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-03 14:27:20 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-03 14:27:20 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-03 14:27:20 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-03 14:27:20 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-03 14:27:20 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-03 14:27:20 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-03 14:27:20 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-03 14:27:20 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2025-06-03 14:27:20 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-03 14:27:20 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-03 14:27:20 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-03 14:27:20 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-03 14:27:20 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-03 14:27:20 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-03 14:27:28 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-03 14:27:40 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-03 14:27:40 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-03 14:27:40 +0000] [1] [INFO] Using worker: sync
+[2025-06-03 14:27:40 +0000] [7] [INFO] Booting worker with pid: 7
+[2025-06-03 14:27:40 +0000] [8] [INFO] Booting worker with pid: 8
+[2025-06-03 14:27:40 +0000] [9] [INFO] Booting worker with pid: 9
+[2025-06-03 14:27:40 +0000] [10] [INFO] Booting worker with pid: 10
+[2025-06-03 14:27:40 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-03 14:27:40 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-03 14:27:40 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-03 14:27:40 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-03 14:27:40 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-03 14:27:40 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-03 14:27:41 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-03 14:27:41 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-03 14:27:41 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-03 14:27:41 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-03 14:27:41 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-03 14:27:41 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-03 14:27:41 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-03 14:27:41 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-03 14:27:41 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-03 14:27:41 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-03 14:27:41 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-03 14:27:41 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-03 14:27:41 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-03 14:27:41 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-03 14:27:41 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-03 14:27:41 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-03 14:27:41 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-03 14:27:42 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-03 14:27:42 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-03 14:27:42 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-03 14:27:42 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-03 14:27:42 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-03 14:27:42 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-03 14:28:46 +0000] [1] [CRITICAL] WORKER TIMEOUT (pid:36)
+[2025-06-03 14:28:46 +0000] [1] [CRITICAL] WORKER TIMEOUT (pid:38)
+[2025-06-03 14:28:46 +0000] [36] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-03 14:28:46 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-03 14:28:46 +0000] [38] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-03 14:28:46 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-03 14:28:46 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-03 14:28:46 +0000] [1] [ERROR] Worker (pid:38) was sent SIGKILL! Perhaps out of memory?
+[2025-06-03 14:28:46 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-03 14:30:19 +0000] [1] [INFO] Handling signal: term
+[2025-06-03 14:30:19 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-03 14:30:19 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2025-06-03 14:30:19 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2025-06-03 14:30:19 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-03 14:30:19 +0000] [8] [INFO] Worker exiting (pid: 8)
+[2025-06-03 14:30:19 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-03 14:30:19 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-03 14:30:19 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-03 14:30:19 +0000] [7] [INFO] Worker exiting (pid: 7)
+[2025-06-03 14:30:19 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-03 14:30:19 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-03 14:30:19 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-03 14:30:19 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-03 14:30:19 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-03 14:30:19 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-03 14:30:19 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-03 14:30:19 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-03 14:30:19 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-03 14:30:19 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-03 14:30:19 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-03 14:30:19 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-03 14:30:19 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-03 14:30:19 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-03 14:30:19 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-03 14:30:19 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-03 14:30:19 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-03 14:30:19 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-03 14:30:19 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-03 14:30:19 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-03 14:30:19 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-03 14:30:19 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-03 14:30:19 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-03 14:30:19 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-03 14:30:20 +0000] [1] [INFO] Shutting down: Master
+[2025-06-03 14:45:53 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-03 14:45:53 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-03 14:45:53 +0000] [1] [INFO] Using worker: sync
+[2025-06-03 14:45:53 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-03 14:45:53 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-03 14:45:53 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-03 14:45:53 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-03 14:45:53 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-03 14:45:53 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-03 14:45:53 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-03 14:45:53 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-03 14:45:53 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-03 14:45:53 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-03 14:45:54 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-03 14:45:54 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-03 14:45:54 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-03 14:45:54 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-03 14:45:54 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-03 14:45:54 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-03 14:45:54 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-03 14:45:54 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-03 14:45:54 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-03 14:45:54 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-03 14:45:54 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-03 14:45:54 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-03 14:45:54 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-03 14:45:54 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-03 14:45:54 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-03 14:45:54 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-03 14:45:54 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-03 14:45:54 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-03 14:45:54 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-03 14:45:54 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-03 14:45:55 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-03 14:45:55 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-03 14:45:55 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-03 14:45:55 +0000] [15] [WARNING] Invalid request from ip=172.21.0.1: Invalid HTTP method: '\x16\x03\x01\x06ò\x01\x00\x06î\x03\x03_Èe\x18\x11ïu\x19´l0²\x81ê\x92Ï\x10\nï\x89}\x80JÈ½\x0eé½\x8e§+i'
+[2025-06-03 14:49:12 +0000] [1] [INFO] Handling signal: term
+[2025-06-03 14:49:12 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-03 14:49:12 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-03 14:49:12 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-03 14:49:12 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-03 14:49:12 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-03 14:49:12 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-03 14:49:12 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-03 14:49:12 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-03 14:49:12 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-03 14:49:12 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-03 14:49:12 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-03 14:49:12 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-03 14:49:12 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-03 14:49:12 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-03 14:49:12 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-03 14:49:12 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-03 14:49:12 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-03 14:49:12 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-03 14:49:12 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-03 14:49:12 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-03 14:49:12 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-03 14:49:12 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-03 14:49:12 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-03 14:49:12 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-03 14:49:12 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-03 14:49:12 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-03 14:49:12 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-03 14:49:12 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-03 14:49:12 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-03 14:49:12 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-03 14:49:12 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-03 14:49:15 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-03 14:49:15 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-03 14:49:15 +0000] [1] [INFO] Shutting down: Master
+[2025-06-03 14:50:12 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-03 14:50:12 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-03 14:50:12 +0000] [1] [INFO] Using worker: sync
+[2025-06-03 14:50:12 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-03 14:50:12 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-03 14:50:12 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-03 14:50:12 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-03 14:50:12 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-03 14:50:12 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-03 14:50:12 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-03 14:50:12 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-03 14:50:12 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-03 14:50:13 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-03 14:50:13 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-03 14:50:13 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-03 14:50:13 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-03 14:50:13 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-03 14:50:13 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-03 14:50:13 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-03 14:50:13 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-03 14:50:13 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-03 14:50:13 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-03 14:50:13 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-03 14:50:13 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-03 14:50:13 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-03 14:50:13 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-03 14:50:13 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-03 14:50:14 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-03 14:50:14 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-03 14:50:14 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-03 14:50:14 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-03 14:50:14 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-03 14:50:14 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-03 14:50:14 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-03 14:50:14 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-03 14:50:14 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-03 14:51:23 +0000] [1] [CRITICAL] WORKER TIMEOUT (pid:26)
+[2025-06-03 14:51:23 +0000] [1] [CRITICAL] WORKER TIMEOUT (pid:31)
+[2025-06-03 14:51:23 +0000] [31] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-03 14:51:23 +0000] [26] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-03 14:51:23 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-03 14:51:23 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-03 14:51:23 +0000] [45] [INFO] Booting worker with pid: 45
+[2025-06-03 14:51:23 +0000] [46] [INFO] Booting worker with pid: 46
+[2025-06-03 14:55:15 +0000] [1] [INFO] Handling signal: term
+[2025-06-03 14:55:15 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-03 14:55:15 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-03 14:55:15 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-03 14:55:15 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-03 14:55:15 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-03 14:55:15 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-03 14:55:15 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-03 14:55:15 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-03 14:55:15 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-03 14:55:15 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-03 14:55:15 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-03 14:55:15 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-03 14:55:15 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-03 14:55:15 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-03 14:55:15 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-03 14:55:15 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-03 14:55:15 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-03 14:55:15 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-03 14:55:15 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-03 14:55:15 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-03 14:55:15 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-03 14:55:15 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-03 14:55:15 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-03 14:55:15 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-03 14:55:15 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-03 14:55:15 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-03 14:55:15 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-03 14:55:15 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-03 14:55:15 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-03 14:55:15 +0000] [46] [INFO] Worker exiting (pid: 46)
+[2025-06-03 14:55:15 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-03 14:55:15 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-03 14:55:15 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-03 14:55:16 +0000] [1] [INFO] Shutting down: Master
+[2025-06-03 14:55:24 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-03 14:55:24 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-03 14:55:24 +0000] [1] [INFO] Using worker: sync
+[2025-06-03 14:55:24 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-03 14:55:24 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-03 14:55:24 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-03 14:55:24 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-03 14:55:24 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-03 14:55:25 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-03 14:55:25 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-03 14:55:25 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-03 14:55:25 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-03 14:55:25 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-03 14:55:25 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-03 14:55:25 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-03 14:55:25 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-03 14:55:25 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-03 14:55:25 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-03 14:55:25 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-03 14:55:25 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-03 14:55:25 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-03 14:55:25 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-03 14:55:25 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-03 14:55:25 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-03 14:55:25 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-03 14:55:25 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-03 14:55:26 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-03 14:55:26 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-03 14:55:26 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-03 14:55:26 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-03 14:55:26 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-03 14:55:26 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-03 14:55:26 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-03 14:55:26 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-03 14:55:26 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-03 14:55:26 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-03 14:55:53 +0000] [1] [INFO] Handling signal: term
+[2025-06-03 14:55:53 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-03 14:55:53 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-03 14:55:53 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-03 14:55:53 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-03 14:55:53 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-03 14:55:53 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-03 14:55:53 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-03 14:55:53 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-03 14:55:53 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-03 14:55:53 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-03 14:55:53 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-03 14:55:53 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-03 14:55:53 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-03 14:55:53 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-03 14:55:53 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-03 14:55:53 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-03 14:55:53 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-03 14:55:53 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-03 14:55:53 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-03 14:55:53 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-03 14:55:53 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-03 14:55:53 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-03 14:55:53 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-03 14:55:53 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-03 14:55:53 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-03 14:55:53 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-03 14:55:53 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-03 14:55:53 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-03 14:55:53 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-03 14:55:53 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-03 14:55:53 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-03 14:55:53 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-03 14:55:53 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-03 14:55:53 +0000] [1] [INFO] Shutting down: Master
+[2025-06-03 14:56:09 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-03 14:56:09 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-03 14:56:09 +0000] [1] [INFO] Using worker: sync
+[2025-06-03 14:56:09 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-03 14:56:09 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-03 14:56:09 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-03 14:56:09 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-03 14:56:09 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-03 14:56:09 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-03 14:56:09 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-03 14:56:09 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-03 14:56:09 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-03 14:56:09 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-03 14:56:09 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-03 14:56:09 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-03 14:56:09 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-03 14:56:09 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-03 14:56:09 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-03 14:56:09 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-03 14:56:09 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-03 14:56:09 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-03 14:56:09 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-03 14:56:09 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-03 14:56:09 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-03 14:56:10 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-03 14:56:10 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-03 14:56:10 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-03 14:56:10 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-03 14:56:10 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-03 14:56:10 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-03 14:56:10 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-03 14:56:10 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-03 14:56:10 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-03 14:56:10 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-03 14:56:10 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-03 14:56:10 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-03 14:58:30 +0000] [1] [INFO] Handling signal: term
+[2025-06-03 14:58:30 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-03 14:58:30 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-03 14:58:30 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-03 14:58:30 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-03 14:58:30 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-03 14:58:30 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-03 14:58:30 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-03 14:58:30 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-03 14:58:30 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-03 14:58:30 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-03 14:58:30 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-03 14:58:30 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-03 14:58:30 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-03 14:58:30 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-03 14:58:30 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-03 14:58:30 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-03 14:58:30 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-03 14:58:30 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-03 14:58:30 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-03 14:58:30 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-03 14:58:30 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-03 14:58:30 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-03 14:58:30 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-03 14:58:30 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-03 14:58:30 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-03 14:58:30 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-03 14:58:30 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-03 14:58:30 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-03 14:58:30 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-03 14:58:30 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-03 14:58:30 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-03 14:58:30 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-03 14:58:30 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-03 14:58:31 +0000] [1] [INFO] Shutting down: Master
+[2025-06-03 14:58:49 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-03 14:58:49 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-03 14:58:49 +0000] [1] [INFO] Using worker: sync
+[2025-06-03 14:58:49 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-03 14:58:49 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-03 14:58:49 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-03 14:58:49 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-03 14:58:49 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-03 14:58:49 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-03 14:58:49 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-03 14:58:49 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-03 14:58:49 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-03 14:58:49 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-03 14:58:49 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-03 14:58:49 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-03 14:58:49 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-03 14:58:49 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-03 14:58:49 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-03 14:58:49 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-03 14:58:49 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-03 14:58:49 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-03 14:58:49 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-03 14:58:49 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-03 14:58:49 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-03 14:58:50 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-03 14:58:50 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-03 14:58:50 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-03 14:58:50 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-03 14:58:50 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-03 14:58:50 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-03 14:58:50 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-03 14:58:50 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-03 14:58:50 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-03 14:58:50 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-03 14:58:50 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-03 14:58:50 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-03 14:59:22 +0000] [1] [INFO] Handling signal: term
+[2025-06-03 14:59:22 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-03 14:59:22 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-03 14:59:22 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-03 14:59:22 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-03 14:59:22 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-03 14:59:22 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-03 14:59:22 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-03 14:59:22 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-03 14:59:22 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-03 14:59:22 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-03 14:59:22 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-03 14:59:22 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-03 14:59:22 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-03 14:59:22 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-03 14:59:22 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-03 14:59:22 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-03 14:59:22 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-03 14:59:22 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-03 14:59:22 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-03 14:59:22 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-03 14:59:22 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-03 14:59:22 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-03 14:59:22 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-03 14:59:22 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-03 14:59:22 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-03 14:59:22 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-03 14:59:22 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-03 14:59:22 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-03 14:59:22 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-03 14:59:22 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-03 14:59:22 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-03 14:59:22 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-03 14:59:22 +0000] [36] [INFO] Worker exiting (pid: 36)

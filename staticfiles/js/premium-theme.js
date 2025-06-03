@@ -299,12 +299,80 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ================================================
-    // INITIALISATION DE TOUS LES EFFETS
+    // OPTIMISATION DU CHARGEMENT DES IMAGES
     // ================================================
-    function initializePremiumTheme() {
+    function setupImageOptimization() {
+        // Gestion du lazy loading pour les navigateurs qui ne le supportent pas nativement
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        
+        if ('loading' in HTMLImageElement.prototype) {
+            // Le navigateur supporte le lazy loading natif
+            lazyImages.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.classList.add('loaded');
+                });
+            });
+        } else {
+            // Fallback avec Intersection Observer
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            lazyImages.forEach(img => imageObserver.observe(img));
+        }
+
+        // Préchargement d'images critiques
+        const criticalImages = document.querySelectorAll('img[data-critical]');
+        criticalImages.forEach(img => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = img.src;
+            document.head.appendChild(link);
+        });
+
+        // Gestion des erreurs d'images
+        const allImages = document.querySelectorAll('img');
+        allImages.forEach(img => {
+            img.addEventListener('error', function() {
+                // Remplace par une image de fallback ou un placeholder
+                this.style.display = 'none';
+                const fallback = document.createElement('div');
+                fallback.className = 'image-placeholder bg-secondary d-flex align-items-center justify-content-center';
+                fallback.style.height = this.style.height || '200px';
+                fallback.style.borderRadius = 'var(--border-radius)';
+                fallback.innerHTML = '<i class="bi bi-image text-muted" style="font-size: 3rem;"></i>';
+                this.parentNode.insertBefore(fallback, this);
+            });
+        });
+
+        // Animation de hover pour les images dans les cartes
+        const cardImages = document.querySelectorAll('.premium-card img, .hover-card img');
+        cardImages.forEach(img => {
+            const card = img.closest('.premium-card, .hover-card');
+            if (card) {
+                card.addEventListener('mouseenter', () => {
+                    img.style.transform = 'scale(1.05)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    img.style.transform = 'scale(1)';
+                });
+            }
+        });
+    }
+
+    // ================================================
+    // INITIALISATION DE TOUS LES EFFETS
+    // ================================================    function initializePremiumTheme() {
         setupScrollReveal();
-        setupMouseLight();
-        setupStaggeredAnimation();
+        setupMouseLight();        setupStaggeredAnimation();
         createFloatingParticles();
         setupTypingEffect();
         setupSmoothScroll();
@@ -316,6 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupPremiumTooltips();
         setupLoadingEffects();
         setupImageEffects();
+        setupImageOptimization(); // Optimisation des images d'articles
         
         console.log('🌟 Thème Premium initialisé avec succès !');
     }

@@ -1,0 +1,47 @@
+services:
+  web:
+    build: .
+    container_name: monprojet_web
+    command: gunicorn monprojet.wsgi --config gunicorn_config.py
+    volumes:
+      - ./staticfiles:/app/staticfiles
+      - ./media:/app/media
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    environment:
+      DJANGO_SETTINGS_MODULE: monprojet.settings
+      POSTGRES_DB: ${DB_NAME:-blogDb}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-julien}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT:-5432}
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - django_network
+    restart: always
+
+  db:
+    image: postgres:13
+    container_name: monprojet_db
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${DB_NAME:-blogDb}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-julien}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    networks:
+      - django_network
+    restart: always
+
+volumes:
+  postgres_data:
+
+networks:
+  django_network:
+    driver: bridge
