@@ -1,0 +1,16 @@
+2025-06-03 12:18:38 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-03 12:18:42 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-03 12:18:48 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-03 12:21:52 [INFO] monprojet.middleware: [486ecb0b] GET /fr/ - Utilisateur: thomas - IP: 127.0.0.1
+2025-06-03 12:21:52 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-03 12:21:52 [INFO] monprojet.middleware: [486ecb0b] Réponse 200 en 0.109s - Taille: 26827 bytes
+2025-06-03 12:21:52 [INFO] monprojet.middleware: [009d8938] GET /media/articles/agile_CIaRvAC.png - Utilisateur: thomas - IP: 127.0.0.1
+2025-06-03 12:21:52 [INFO] monprojet.middleware: [009d8938] Réponse 304 en 0.073s - Taille: 0 bytes
+2025-06-03 12:21:52 [INFO] monprojet.middleware: [b6e530cb] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_EWlajmd.png - Utilisateur: thomas - IP: 127.0.0.1
+2025-06-03 12:21:52 [INFO] monprojet.middleware: [b6e530cb] Réponse 304 en 0.156s - Taille: 0 bytes
+2025-06-03 12:24:11 [INFO] monprojet.middleware: [fd0a1466] GET /fr/articles/21/ - Utilisateur: thomas - IP: 127.0.0.1
+2025-06-03 12:24:11 [INFO] monprojet.middleware: [fd0a1466] Réponse 200 en 0.200s - Taille: 20857 bytes
+2025-06-03 12:24:17 [INFO] monprojet.middleware: [9193163f] POST /fr/articles/21/ - Utilisateur: thomas - IP: 127.0.0.1
+2025-06-03 12:24:17 [INFO] monprojet.middleware: [9193163f] Réponse 302 en 0.197s - Taille: 0 bytes
+2025-06-03 12:24:17 [INFO] monprojet.middleware: [0de52ee1] GET /fr/articles/21/ - Utilisateur: thomas - IP: 127.0.0.1
+2025-06-03 12:24:17 [INFO] monprojet.middleware: [0de52ee1] Réponse 200 en 0.061s - Taille: 21581 bytes

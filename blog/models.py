@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.conf import settings
+import logging
+
+# Configuration du logger pour les modèles
+logger = logging.getLogger('blog.models')
 
 
 class Category(models.Model):
@@ -27,6 +31,32 @@ class Article(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Catégorie")
     image = models.ImageField(upload_to='articles/', blank=True, null=True, verbose_name="Image")
     date_creation = models.DateTimeField(default=timezone.now)
+
+    def save(self, *args, **kwargs):
+        is_new = self.pk is None
+        if is_new:
+            logger.info(f"Création d'un nouvel article: '{self.titre}' par {self.auteur}")
+        else:
+            logger.info(f"Modification de l'article ID {self.pk}: '{self.titre}'")
+        
+        try:
+            super().save(*args, **kwargs)
+            if is_new:
+                logger.info(f"Article '{self.titre}' créé avec succès (ID: {self.pk})")
+            else:
+                logger.info(f"Article '{self.titre}' modifié avec succès")
+        except Exception as e:
+            logger.error(f"Erreur lors de la sauvegarde de l'article '{self.titre}': {e}")
+            raise
+
+    def delete(self, *args, **kwargs):
+        logger.warning(f"Suppression de l'article '{self.titre}' (ID: {self.pk})")
+        try:
+            super().delete(*args, **kwargs)
+            logger.info(f"Article '{self.titre}' supprimé avec succès")
+        except Exception as e:
+            logger.error(f"Erreur lors de la suppression de l'article '{self.titre}': {e}")
+            raise
 
     def __str__(self):
         return self.titre

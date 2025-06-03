@@ -6,38 +6,63 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+import logging
 from .forms import ArticleForm, CommentForm, CategoryForm
 from .models import Article, Category, UserProfile
 
+# Configuration du logger pour ce module
+logger = logging.getLogger('blog')
+
 
 def home(request):
-    articles = Article.objects.all()
-    categories = Category.objects.all()
-    category_filter = request.GET.get('category')
+    logger.info(f"Accès à la page d'accueil par l'utilisateur {request.user}")
     
-    if category_filter:
-        articles = articles.filter(category_id=category_filter)
+    try:
+        articles = Article.objects.all()
+        categories = Category.objects.all()
+        category_filter = request.GET.get('category')
+        
+        if category_filter:
+            logger.debug(f"Filtrage par catégorie: {category_filter}")
+            articles = articles.filter(category_id=category_filter)
+        
+        logger.debug(f"Nombre d'articles trouvés: {articles.count()}")
+        
+        context = {
+            'articles': articles,
+            'categories': categories,
+            'selected_category': int(category_filter) if category_filter else None
+        }
+        return render(request, 'blog/home.html', context)
     
-    context = {
-        'articles': articles,
-        'categories': categories,
-        'selected_category': int(category_filter) if category_filter else None
-    }
-    return render(request, 'blog/home.html', context)
+    except Exception as e:
+        logger.error(f"Erreur lors du chargement de la page d'accueil: {e}")
+        messages.error(request, _('Une erreur est survenue lors du chargement de la page.'))
+        return render(request, 'blog/home.html', {'articles': [], 'categories': []})
 
 
 def ajouter_article(request):
+    logger.info(f"Tentative d'ajout d'article par l'utilisateur {request.user}")
+    
     if request.method == 'POST':
         form = ArticleForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            messages.success(request, _('Article ajouté avec succès!'))
-            return redirect('home')
+            try:
+                article = form.save()
+                logger.info(f"Article '{article.titre}' créé avec succès par {request.user}")
+                messages.success(request, _('Article ajouté avec succès!'))
+                return redirect('home')
+            except Exception as e:
+                logger.error(f"Erreur lors de la sauvegarde de l'article: {e}")
+                messages.error(request, _('Erreur lors de la sauvegarde de l\'article.'))
+        else:
+            logger.warning(f"Formulaire d'article invalide pour l'utilisateur {request.user}: {form.errors}")
     else:
         # Pré-remplir le champ auteur avec l'username de l'utilisateur connecté
         initial_data = {}
         if request.user.is_authenticated:
             initial_data['auteur'] = request.user.username
+            logger.debug(f"Pré-remplissage du formulaire avec l'auteur: {request.user.username}")
         form = ArticleForm(initial=initial_data)
 
     return render(request, 'blog/ajouter_article.html', {'form': form})
