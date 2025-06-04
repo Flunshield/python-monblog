@@ -1,0 +1,223 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load search_tags %}
+
+{% block title %}{% trans "Résultats de recherche" %}{% if query %} - "{{ query }}"{% endif %}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- Header de recherche -->
+            <div class="search-header mb-4">
+                <h1 class="h2 mb-3">
+                    <i class="bi bi-search text-primary me-2"></i>
+                    {% trans "Résultats de recherche" %}
+                </h1>
+                
+                <!-- Formulaire de recherche -->
+                <div class="search-form-container bg-light p-4 rounded-3 mb-4">
+                    <form method="get" action="{% url 'search' %}" class="d-flex">
+                        <div class="input-group">
+                            {{ form.query }}
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-search me-1"></i>{% trans "Rechercher" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Statistiques des résultats -->
+                {% if query %}
+                    <div class="search-stats mb-4">
+                        <p class="text-muted mb-0">
+                            {% search_stats total_results query %}
+                        </p>
+                    </div>
+                {% endif %}
+            </div>
+            
+            <!-- Résultats de recherche -->
+            {% if articles %}
+                <div class="search-results">
+                    {% for article in articles %}
+                        <article class="search-result-item bg-white rounded-3 shadow-sm p-4 mb-4 border-start border-primary border-4">
+                            <div class="row">
+                                {% if article.image %}
+                                    <div class="col-md-3 mb-3 mb-md-0">
+                                        <img src="{{ article.image.url }}" 
+                                             alt="{{ article.titre }}" 
+                                             class="img-fluid rounded search-result-image"
+                                             style="height: 120px; width: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-md-9">
+                                {% else %}
+                                    <div class="col-12">
+                                {% endif %}
+                                    <!-- Titre de l'article -->
+                                    <h3 class="h5 mb-2">
+                                        <a href="{% url 'article_detail' article.id %}" 
+                                           class="text-decoration-none search-result-title">
+                                            {{ article.titre|highlight_search:search_terms }}
+                                        </a>
+                                    </h3>
+                                    
+                                    <!-- Métadonnées -->
+                                    <div class="search-result-meta mb-2">
+                                        <small class="text-muted">
+                                            <i class="bi bi-person me-1"></i>{{ article.auteur|highlight_search:search_terms }}
+                                            <span class="mx-2">•</span>
+                                            <i class="bi bi-calendar3 me-1"></i>{{ article.date_creation|date:"d F Y" }}
+                                            {% if article.category %}
+                                                <span class="mx-2">•</span>
+                                                <i class="bi bi-tag me-1"></i>{{ article.category.nom }}
+                                            {% endif %}
+                                            {% if article.total_likes > 0 %}
+                                                <span class="mx-2">•</span>
+                                                <i class="bi bi-heart-fill text-danger me-1"></i>{{ article.total_likes }}
+                                            {% endif %}
+                                        </small>
+                                    </div>
+                                    
+                                    <!-- Extrait du contenu -->
+                                    <div class="search-result-excerpt text-muted">
+                                        <p class="mb-2">
+                                            {% search_excerpt article.contenu search_terms %}
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Actions -->
+                                    <div class="search-result-actions">
+                                        <a href="{% url 'article_detail' article.id %}" 
+                                           class="btn btn-outline-primary btn-sm">
+                                            {% trans "Lire l'article" %} <i class="bi bi-arrow-right ms-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %}
+                </div>
+                
+                <!-- Pagination -->
+                {% if page_obj.has_other_pages %}
+                    <nav aria-label="{% trans 'Navigation des résultats de recherche' %}" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            {% if page_obj.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?query={{ query }}&page={{ page_obj.previous_page_number }}">
+                                        <i class="bi bi-chevron-left"></i> {% trans "Précédent" %}
+                                    </a>
+                                </li>
+                            {% endif %}
+                            
+                            {% for num in page_obj.paginator.page_range %}
+                                {% if page_obj.number == num %}
+                                    <li class="page-item active">
+                                        <span class="page-link">{{ num }}</span>
+                                    </li>
+                                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?query={{ query }}&page={{ num }}">{{ num }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                            
+                            {% if page_obj.has_next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?query={{ query }}&page={{ page_obj.next_page_number }}">
+                                        {% trans "Suivant" %} <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                {% endif %}
+                
+            {% elif query %}
+                <!-- Aucun résultat trouvé -->
+                <div class="no-results text-center py-5">
+                    <div class="mb-4">
+                        <i class="bi bi-search display-1 text-muted"></i>
+                    </div>
+                    <h3 class="h4 mb-3">{% trans "Aucun résultat trouvé" %}</h3>
+                    <p class="text-muted mb-4">
+                        {% blocktrans %}
+                            Votre recherche "<strong>{{ query }}</strong>" n'a donné aucun résultat.
+                        {% endblocktrans %}
+                    </p>
+                    <div class="suggestions">
+                        <h5 class="h6 mb-3">{% trans "Suggestions :" %}</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-1">• {% trans "Vérifiez l'orthographe de vos mots-clés" %}</li>
+                            <li class="mb-1">• {% trans "Essayez des termes plus généraux" %}</li>
+                            <li class="mb-1">• {% trans "Utilisez moins de mots-clés" %}</li>
+                        </ul>
+                    </div>
+                    <a href="{% url 'home' %}" class="btn btn-primary mt-3">
+                        <i class="bi bi-house-door me-1"></i>{% trans "Retour à l'accueil" %}
+                    </a>
+                </div>
+            {% else %}
+                <!-- Affichage initial (pas de recherche effectuée) -->
+                <div class="search-welcome text-center py-5">
+                    <div class="mb-4">
+                        <i class="bi bi-search display-1 text-primary"></i>
+                    </div>
+                    <h3 class="h4 mb-3">{% trans "Recherchez parmi nos articles" %}</h3>
+                    <p class="text-muted">
+                        {% trans "Utilisez le formulaire ci-dessus pour rechercher des articles par titre, contenu ou auteur." %}
+                    </p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Styles pour le surlignage et l'amélioration visuelle -->
+<style>
+.search-highlight {
+    background-color: #fff3cd;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 500;
+    color: #856404;
+}
+
+.search-result-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-result-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+}
+
+.search-result-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.search-result-title:hover {
+    color: #3498db;
+}
+
+.search-result-image {
+    border-radius: 8px;
+}
+
+.search-form-container {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.search-result-excerpt {
+    line-height: 1.6;
+}
+
+.no-results, .search-welcome {
+    background: rgba(248, 249, 250, 0.5);
+    border-radius: 15px;
+}
+</style>
+{% endblock %}

@@ -40,3 +40,26 @@ class CommentForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Votre email'}),
             'contenu': forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Votre commentaire'}),
         }
+
+class SearchForm(forms.Form):
+    """Formulaire de recherche pour les articles"""
+    query = forms.CharField(
+        max_length=200,
+        widget=forms.TextInput(attrs={
+            'placeholder': 'Rechercher des articles...',
+            'class': 'form-control',
+            'aria-label': 'Recherche'
+        }),
+        label='',
+        required=False
+    )
+    
+    def clean_query(self):
+        """Nettoie et valide la requête de recherche"""
+        query = self.cleaned_data.get('query', '').strip()
+        
+        # Limiter la longueur de la requête pour éviter les abus
+        if len(query) > 200:
+            raise forms.ValidationError("La requête de recherche est trop longue.")
+        
+        return query

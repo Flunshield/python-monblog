@@ -1,0 +1,15 @@
+{% load i18n %}
+<form method="get" action="{% url 'search' %}" class="search-form d-flex">
+    <div class="input-group">
+        <input type="text" 
+               name="query" 
+               class="form-control search-input" 
+               placeholder="{{ placeholder }}"
+               value="{{ current_query }}"
+               aria-label="{% trans 'Recherche' %}"
+               autocomplete="off">
+        <button class="btn btn-outline-primary search-btn" type="submit" title="{% trans 'Rechercher' %}">
+            <i class="bi bi-search"></i>
+        </button>
+    </div>
+</form>

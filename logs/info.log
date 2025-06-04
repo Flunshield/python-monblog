@@ -2432,3 +2432,121 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 106: '
 2025-06-04 10:47:04 [INFO] monprojet.middleware: [ae50a625] GET /es/ - Utilisateur: marine - IP: 172.21.0.1
 2025-06-04 10:47:04 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
 2025-06-04 10:47:04 [INFO] monprojet.middleware: [ae50a625] Réponse 200 en 0.044s - Taille: 25290 bytes
+2025-06-04 11:34:29 [INFO] monprojet.middleware: [274bb9be] GET / - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:34:29 [WARNING] monprojet.middleware: [274bb9be] Réponse 404 en 0.041s - Taille: 2185 bytes
+2025-06-04 11:34:29 [INFO] monprojet.middleware: [cf9656f6] GET /es/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:34:29 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 11:34:30 [INFO] monprojet.middleware: [cf9656f6] Réponse 200 en 0.104s - Taille: 25803 bytes
+2025-06-04 11:34:30 [INFO] monprojet.middleware: [111bfd48] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:34:30 [INFO] monprojet.middleware: [9a9c4009] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:34:30 [INFO] monprojet.middleware: [111bfd48] Réponse 304 en 0.030s - Taille: 0 bytes
+2025-06-04 11:34:30 [INFO] monprojet.middleware: [9a9c4009] Réponse 200 en 0.032s - Taille: streaming bytes
+2025-06-04 11:34:37 [INFO] monprojet.middleware: [0223c936] GET /es/recherche/?query=chat - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:34:37 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:34:37 [INFO] monprojet.middleware: [0223c936] Réponse 200 en 0.080s - Taille: 22828 bytes
+2025-06-04 11:34:49 [INFO] monprojet.middleware: [a7257d24] POST /es/i18n/setlang/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:34:49 [INFO] monprojet.middleware: [a7257d24] Réponse 302 en 0.029s - Taille: 0 bytes
+2025-06-04 11:34:49 [INFO] monprojet.middleware: [758b20f7] GET /fr/recherche/?query=chat - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:34:49 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:34:49 [INFO] monprojet.middleware: [758b20f7] Réponse 200 en 0.079s - Taille: 22821 bytes
+2025-06-04 11:34:54 [INFO] monprojet.middleware: [03cb900d] POST /fr/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:34:54 [INFO] monprojet.middleware: [03cb900d] Réponse 302 en 0.031s - Taille: 0 bytes
+2025-06-04 11:34:54 [INFO] monprojet.middleware: [cdfc9fc2] GET /fr/recherche/?query=chat - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:34:54 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:34:54 [INFO] monprojet.middleware: [cdfc9fc2] Réponse 200 en 0.070s - Taille: 24077 bytes
+2025-06-04 11:35:04 [INFO] monprojet.middleware: [a2dc6485] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:04 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 11:35:04 [INFO] monprojet.middleware: [a2dc6485] Réponse 200 en 0.111s - Taille: 28990 bytes
+2025-06-04 11:35:08 [INFO] monprojet.middleware: [b617f5b7] GET /fr/ajouter/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:08 [INFO] monprojet.middleware: [b617f5b7] Action importante: ajouter_article par l'utilisateur marine
+2025-06-04 11:35:08 [INFO] blog: Tentative d'ajout d'article par l'utilisateur marine
+2025-06-04 11:35:08 [INFO] monprojet.middleware: [b617f5b7] Réponse 200 en 0.068s - Taille: 17476 bytes
+2025-06-04 11:35:20 [INFO] monprojet.middleware: [29a3bdc9] POST /fr/ajouter/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:20 [INFO] monprojet.middleware: [29a3bdc9] Action importante: ajouter_article par l'utilisateur marine
+2025-06-04 11:35:20 [INFO] blog: Tentative d'ajout d'article par l'utilisateur marine
+2025-06-04 11:35:20 [INFO] blog.models: Création d'un nouvel article: 'coucou' par marine
+2025-06-04 11:35:20 [INFO] blog.models: Article 'coucou' créé avec succès (ID: 4)
+2025-06-04 11:35:20 [INFO] blog: Article 'coucou' créé avec succès par marine
+2025-06-04 11:35:20 [INFO] monprojet.middleware: [29a3bdc9] Réponse 302 en 0.156s - Taille: 0 bytes
+2025-06-04 11:35:20 [INFO] monprojet.middleware: [c81e7240] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:20 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 11:35:20 [INFO] monprojet.middleware: [c81e7240] Réponse 200 en 0.082s - Taille: 34487 bytes
+2025-06-04 11:35:20 [INFO] monprojet.middleware: [eaf89076] GET /media/articles/MCD_HomeArt_Complet_7raRWEc.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:20 [INFO] monprojet.middleware: [eaf89076] Réponse 200 en 0.020s - Taille: streaming bytes
+2025-06-04 11:35:26 [INFO] monprojet.middleware: [fd0a8436] GET /fr/recherche/?query=test - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:26 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:35:27 [INFO] monprojet.middleware: [fd0a8436] Réponse 200 en 0.073s - Taille: 20268 bytes
+2025-06-04 11:35:27 [INFO] monprojet.middleware: [5b774940] GET /media/articles/MCD_HomeArt_Complet_7raRWEc.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:27 [INFO] monprojet.middleware: [5b774940] Réponse 304 en 0.023s - Taille: 0 bytes
+2025-06-04 11:35:33 [INFO] monprojet.middleware: [725003e2] GET /fr/recherche/?query=coucou - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:33 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:35:33 [INFO] monprojet.middleware: [725003e2] Réponse 200 en 0.066s - Taille: 20314 bytes
+2025-06-04 11:35:33 [INFO] monprojet.middleware: [3fc3ffdd] GET /media/articles/MCD_HomeArt_Complet_7raRWEc.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:33 [INFO] monprojet.middleware: [3fc3ffdd] Réponse 304 en 0.027s - Taille: 0 bytes
+2025-06-04 11:35:37 [INFO] monprojet.middleware: [ce00e4aa] GET /fr/recherche/?query=chat - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:37 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:35:37 [INFO] monprojet.middleware: [ce00e4aa] Réponse 200 en 0.040s - Taille: 24077 bytes
+2025-06-04 11:35:42 [INFO] monprojet.middleware: [6d5898ee] GET /fr/recherche/?query=chat+remplace - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:35:42 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:35:42 [INFO] monprojet.middleware: [6d5898ee] Réponse 200 en 0.074s - Taille: 24189 bytes
+2025-06-04 11:38:47 [INFO] monprojet.middleware: [9497c89c] GET /fr/recherche/?query=chat+remplace - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:38:47 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:38:48 [INFO] monprojet.middleware: [9497c89c] Réponse 200 en 0.110s - Taille: 26005 bytes
+2025-06-04 11:38:48 [INFO] monprojet.middleware: [00b5fef6] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:38:48 [INFO] monprojet.middleware: [00b5fef6] Réponse 200 en 0.027s - Taille: streaming bytes
+2025-06-04 11:38:48 [INFO] monprojet.middleware: [7209b90f] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:38:48 [INFO] monprojet.middleware: [7209b90f] Réponse 200 en 0.051s - Taille: streaming bytes
+2025-06-04 11:38:52 [INFO] monprojet.middleware: [d7ead108] POST /fr/i18n/setlang/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:38:52 [INFO] monprojet.middleware: [d7ead108] Réponse 302 en 0.030s - Taille: 0 bytes
+2025-06-04 11:38:52 [INFO] monprojet.middleware: [470ca8ff] GET /en/recherche/?query=chat+remplace - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:38:52 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:38:52 [INFO] monprojet.middleware: [470ca8ff] Réponse 200 en 0.077s - Taille: 26003 bytes
+2025-06-04 11:38:55 [INFO] monprojet.middleware: [4bff7250] POST /en/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:38:55 [INFO] monprojet.middleware: [4bff7250] Réponse 302 en 0.035s - Taille: 0 bytes
+2025-06-04 11:38:55 [INFO] monprojet.middleware: [cd2eafa4] GET /en/recherche/?query=chat+remplace - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:38:55 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:38:55 [INFO] monprojet.middleware: [cd2eafa4] Réponse 200 en 0.091s - Taille: 24751 bytes
+2025-06-04 11:39:01 [INFO] monprojet.middleware: [c0065bed] POST /en/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:01 [INFO] monprojet.middleware: [c0065bed] Réponse 302 en 0.031s - Taille: 0 bytes
+2025-06-04 11:39:01 [INFO] monprojet.middleware: [9072b4da] GET /en/recherche/?query=chat+remplace - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:01 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:39:01 [INFO] monprojet.middleware: [9072b4da] Réponse 200 en 0.075s - Taille: 26003 bytes
+2025-06-04 11:39:09 [INFO] monprojet.middleware: [7af9f5fb] GET /.well-known/appspecific/com.chrome.devtools.json - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:09 [WARNING] monprojet.middleware: [7af9f5fb] Réponse 404 en 0.028s - Taille: 2347 bytes
+2025-06-04 11:39:22 [INFO] monprojet.middleware: [c21aeff6] GET /en/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:22 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 11:39:22 [INFO] monprojet.middleware: [c21aeff6] Réponse 200 en 0.086s - Taille: 36571 bytes
+2025-06-04 11:39:22 [INFO] monprojet.middleware: [8db50cfc] GET /media/articles/MCD_HomeArt_Complet_7raRWEc.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:22 [INFO] monprojet.middleware: [8db50cfc] Réponse 200 en 0.019s - Taille: streaming bytes
+2025-06-04 11:39:22 [INFO] monprojet.middleware: [dbb38189] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:22 [INFO] monprojet.middleware: [9c5b9638] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:22 [INFO] monprojet.middleware: [9c5b9638] Réponse 200 en 0.029s - Taille: streaming bytes
+2025-06-04 11:39:22 [INFO] monprojet.middleware: [dbb38189] Réponse 200 en 0.025s - Taille: streaming bytes
+2025-06-04 11:39:39 [INFO] monprojet.middleware: [8d8582e6] GET /en/recherche/?query=chat - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:39 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:39:39 [INFO] monprojet.middleware: [8d8582e6] Réponse 200 en 0.071s - Taille: 25891 bytes
+2025-06-04 11:39:43 [INFO] monprojet.middleware: [59426e38] GET /en/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:43 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 11:39:43 [INFO] monprojet.middleware: [59426e38] Réponse 200 en 0.054s - Taille: 36027 bytes
+2025-06-04 11:39:45 [INFO] monprojet.middleware: [c1fe947b] POST /en/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:45 [INFO] monprojet.middleware: [c1fe947b] Réponse 302 en 0.032s - Taille: 0 bytes
+2025-06-04 11:39:45 [INFO] monprojet.middleware: [d6f8c915] GET /en/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:45 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 11:39:45 [INFO] monprojet.middleware: [d6f8c915] Réponse 200 en 0.096s - Taille: 36292 bytes
+2025-06-04 11:39:49 [INFO] monprojet.middleware: [d7c3b978] GET /en/recherche/?query= - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:49 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:39:49 [INFO] monprojet.middleware: [d7c3b978] Réponse 200 en 0.060s - Taille: 19104 bytes
+2025-06-04 11:39:54 [INFO] monprojet.middleware: [730b424b] GET /en/recherche/?query=coucou - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:54 [INFO] blog: Recherche effectuée par l'utilisateur marine
+2025-06-04 11:39:54 [INFO] monprojet.middleware: [730b424b] Réponse 200 en 0.077s - Taille: 22120 bytes
+2025-06-04 11:39:55 [INFO] monprojet.middleware: [d24ab4aa] GET /media/articles/MCD_HomeArt_Complet_7raRWEc.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:39:55 [INFO] monprojet.middleware: [d24ab4aa] Réponse 304 en 0.023s - Taille: 0 bytes
+2025-06-04 11:40:04 [INFO] monprojet.middleware: [89babc7a] GET /en/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:40:04 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 11:40:04 [INFO] monprojet.middleware: [89babc7a] Réponse 200 en 0.088s - Taille: 36019 bytes
+2025-06-04 11:40:10 [INFO] monprojet.middleware: [a9905316] POST /en/like/3/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:40:10 [INFO] blog: Utilisateur marine a liké l'article 'Chat Gpt remplace les devs !'
+2025-06-04 11:40:10 [INFO] monprojet.middleware: [a9905316] Réponse 302 en 0.033s - Taille: 0 bytes
+2025-06-04 11:40:10 [INFO] monprojet.middleware: [077041fa] GET /en/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 11:40:10 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 11:40:10 [INFO] monprojet.middleware: [077041fa] Réponse 200 en 0.103s - Taille: 36301 bytes

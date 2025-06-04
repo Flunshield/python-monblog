@@ -9,8 +9,11 @@ from django.conf import settings
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from django.db import models
+from django.db.models import Q, Count, Case, When, IntegerField
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import logging
-from .forms import ArticleForm, CommentForm, CategoryForm
+import re
+from .forms import ArticleForm, CommentForm, CategoryForm, SearchForm
 from .models import Article, Category, UserProfile, Like, Comment
 
 # Configuration du logger pour ce module
@@ -726,3 +729,132 @@ def profile_view(request):
         logger.error(f"Erreur lors du chargement du profil pour {request.user}: {e}")
         messages.error(request, _('Une erreur est survenue lors du chargement de votre profil.'))
         return redirect('home')
+
+
+def search_view(request):
+    """
+    Vue de recherche avancée pour les articles avec pagination et tri par pertinence
+    """
+    logger.info(f"Recherche effectuée par l'utilisateur {request.user}")
+    
+    form = SearchForm(request.GET or None)
+    articles = []
+    query = ""
+    total_results = 0
+    page_obj = None
+    
+    if form.is_valid():
+        query = form.cleaned_data.get('query', '').strip()
+        
+        if query:
+            logger.debug(f"Requête de recherche: '{query}'")
+            
+            # Diviser la requête en mots individuels pour une recherche plus flexible
+            search_terms = [term.strip() for term in query.split() if term.strip()]
+            
+            if search_terms:
+                # Construction de la requête Q pour rechercher dans plusieurs champs
+                q_objects = Q()
+                
+                for term in search_terms:
+                    # Recherche dans le titre, contenu et auteur
+                    term_query = (
+                        Q(titre__icontains=term) |
+                        Q(contenu__icontains=term) |
+                        Q(auteur__icontains=term)
+                    )
+                    q_objects &= term_query
+                
+                # Récupération des articles avec calcul de pertinence
+                articles_queryset = Article.objects.filter(q_objects).select_related('category').annotate(
+                    # Calcul du score de pertinence
+                    relevance_score=Count(
+                        Case(
+                            # Titre : poids plus élevé
+                            *[When(titre__icontains=term, then=1) for term in search_terms],
+                            # Contenu : poids moyen  
+                            *[When(contenu__icontains=term, then=1) for term in search_terms],
+                            # Auteur : poids plus faible
+                            *[When(auteur__icontains=term, then=1) for term in search_terms],
+                            output_field=IntegerField(),
+                        )
+                    ),
+                    # Ajout du nombre de likes pour affichage
+                    total_likes=Count('likes')
+                ).order_by('-relevance_score', '-date_creation').distinct()
+                
+                total_results = articles_queryset.count()
+                logger.debug(f"Nombre de résultats trouvés: {total_results}")
+                
+                # Pagination avec 10 résultats par page
+                paginator = Paginator(articles_queryset, 10)
+                page_number = request.GET.get('page', 1)
+                
+                try:
+                    page_obj = paginator.get_page(page_number)
+                    articles = page_obj.object_list
+                except (PageNotAnInteger, EmptyPage):
+                    logger.warning(f"Numéro de page invalide: {page_number}")
+                    page_obj = paginator.get_page(1)
+                    articles = page_obj.object_list
+            else:
+                logger.debug("Requête de recherche vide après nettoyage")
+        else:
+            logger.debug("Aucune requête de recherche fournie")
+    else:
+        logger.debug("Formulaire de recherche invalide")
+    
+    # Préparation du contexte
+    context = {
+        'form': form,
+        'articles': articles,
+        'query': query,
+        'total_results': total_results,
+        'page_obj': page_obj,
+        'search_terms': query.split() if query else [],
+    }
+    
+    return render(request, 'blog/search_results.html', context)
+
+
+def highlight_search_terms(text, search_terms, max_length=200):
+    """
+    Fonction utilitaire pour surligner les termes de recherche dans le texte
+    et créer un extrait pertinent
+    """
+    if not search_terms or not text:
+        return text[:max_length] + '...' if len(text) > max_length else text
+    
+    # Trouver la première occurrence d'un terme de recherche
+    text_lower = text.lower()
+    first_match_pos = len(text)
+    
+    for term in search_terms:
+        term_lower = term.lower()
+        pos = text_lower.find(term_lower)
+        if pos != -1 and pos < first_match_pos:
+            first_match_pos = pos
+    
+    # Si aucun terme trouvé, retourner le début du texte
+    if first_match_pos == len(text):
+        return text[:max_length] + '...' if len(text) > max_length else text
+    
+    # Créer un extrait centré sur la première occurrence
+    start = max(0, first_match_pos - 50)
+    end = min(len(text), start + max_length)
+    excerpt = text[start:end]
+    
+    # Ajouter des points de suspension si nécessaire
+    if start > 0:
+        excerpt = '...' + excerpt
+    if end < len(text):
+        excerpt = excerpt + '...'
+    
+    # Surligner les termes de recherche
+    for term in search_terms:
+        if term:
+            # Utiliser une regex insensible à la casse
+            pattern = re.compile(re.escape(term), re.IGNORECASE)
+            excerpt = pattern.sub(f'<mark class="search-highlight">{term}</mark>', excerpt)
+    
+    return excerpt
