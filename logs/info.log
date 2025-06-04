@@ -1441,3 +1441,8 @@ django.http.response.Http404: Il n’est pas autorisé d’afficher le contenu d
 2025-06-03 14:59:19 [INFO] monprojet.middleware: [9d1b2aff] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
 2025-06-03 14:59:19 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
 2025-06-03 14:59:19 [INFO] monprojet.middleware: [9d1b2aff] Réponse 200 en 0.056s - Taille: 15100 bytes
+2025-06-03 15:14:39 [INFO] monprojet.middleware: [63831424] GET /fr - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 15:14:39 [WARNING] monprojet.middleware: [63831424] Réponse 404 en 0.024s - Taille: 2209 bytes
+2025-06-03 15:14:40 [INFO] monprojet.middleware: [73cd9288] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-03 15:14:40 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-03 15:14:40 [INFO] monprojet.middleware: [73cd9288] Réponse 200 en 0.062s - Taille: 15100 bytes

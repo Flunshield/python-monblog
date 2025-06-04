@@ -1,6 +1,6 @@
 services:
   web:
-    build: .
+    image: flusnhield/monblog:latest
     container_name: monprojet_web
     command: gunicorn monprojet.wsgi --config gunicorn_config.py
     volumes:
@@ -22,7 +22,16 @@ services:
       - db
     networks:
       - django_network
+      - traefik_proxy
     restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.monblog.rule=Host(`monblog.jbertrand.fr`)"
+      - "traefik.http.routers.monblog.entrypoints=websecure"
+      - "traefik.http.routers.monblog.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.monblog.service=monblog"
+      - "traefik.http.services.monblog.loadbalancer.server.port=8000"
+      - "traefik.docker.network=traefik_proxy"
 
   db:
     image: postgres:13
@@ -45,3 +54,5 @@ volumes:
 networks:
   django_network:
     driver: bridge
+  traefik_proxy:
+    external: true

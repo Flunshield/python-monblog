@@ -133,3 +133,4 @@ django.http.response.Http404: Il n’est pas autorisé d’afficher le contenu d
 2025-06-03 14:55:25 [WARNING] monprojet.middleware: [8b936ec0] Réponse 404 en 0.021s - Taille: 2281 bytes
 2025-06-03 14:55:25 [WARNING] monprojet.middleware: [c0838936] Réponse 404 en 0.011s - Taille: 2278 bytes
 2025-06-03 14:57:16 [WARNING] blog.models: Suppression de l'article 'Chat Gpt remplace les devs !' (ID: 1)
+2025-06-03 15:14:39 [WARNING] monprojet.middleware: [63831424] Réponse 404 en 0.024s - Taille: 2209 bytes
