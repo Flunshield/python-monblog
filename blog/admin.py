@@ -1,5 +1,12 @@
 from django.contrib import admin
-from .models import Article, Comment, Category, UserProfile, Like
+from .models import Article, Comment, Category, UserProfile, Like, Role
+
+
+@admin.register(Role)
+class RoleAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+    ordering = ('name',)
 
 
 @admin.register(Category)
@@ -40,8 +47,12 @@ class LikeAdmin(admin.ModelAdmin):
 
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'role', 'date_creation')
-    list_filter = ('role', 'date_creation')
-    search_fields = ('user__username', 'user__email')
+    list_display = ('user', 'get_role_name', 'date_creation')
+    list_filter = ('role__name', 'date_creation')
+    search_fields = ('user__username', 'user__email', 'role__name')
     ordering = ('-date_creation',)
     readonly_fields = ('date_creation',)
+    
+    def get_role_name(self, obj):
+        return obj.role.name
+    get_role_name.short_description = 'Rôle'

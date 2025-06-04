@@ -7,7 +7,7 @@ register = template.Library()
 def user_role(user):
     """Retourne le rôle de l'utilisateur."""
     if user.is_authenticated and hasattr(user, 'profile'):
-        return user.profile.role
+        return user.profile.role.name
     return 'lecteur'
 
 @register.filter
@@ -15,35 +15,35 @@ def has_role(user, role):
     """Vérifie si l'utilisateur a un rôle spécifique."""
     if not user.is_authenticated or not hasattr(user, 'profile'):
         return False
-    return user.profile.role == role
+    return user.profile.role.name == role
 
 @register.filter
 def can_access_admin(user):
     """Vérifie si l'utilisateur peut accéder aux fonctions admin."""
     if not user.is_authenticated or not hasattr(user, 'profile'):
         return False
-    return user.profile.role in ['admin', 'journaliste']
+    return user.profile.role.name in ['admin', 'journaliste']
 
 @register.filter
 def is_admin(user):
     """Vérifie si l'utilisateur est admin."""
     if not user.is_authenticated or not hasattr(user, 'profile'):
         return False
-    return user.profile.role == 'admin'
+    return user.profile.role.name == 'admin'
 
 @register.filter
 def is_journaliste(user):
     """Vérifie si l'utilisateur est journaliste."""
     if not user.is_authenticated or not hasattr(user, 'profile'):
         return False
-    return user.profile.role == 'journaliste'
+    return user.profile.role.name == 'journaliste'
 
 @register.filter
 def is_lecteur(user):
     """Vérifie si l'utilisateur est lecteur."""
     if not user.is_authenticated or not hasattr(user, 'profile'):
         return True
-    return user.profile.role == 'lecteur'
+    return user.profile.role.name == 'lecteur'
 
 @register.filter
 def can_edit_article(user, article):
@@ -52,11 +52,11 @@ def can_edit_article(user, article):
         return False
     
     # Les admins peuvent modifier tous les articles
-    if user.profile.role == 'admin':
+    if user.profile.role.name == 'admin':
         return True
     
     # Les journalistes peuvent modifier leurs propres articles
-    if user.profile.role == 'journaliste':
+    if user.profile.role.name == 'journaliste':
         return article.auteur.lower() == user.username.lower()
     
     # Les lecteurs ne peuvent rien modifier
@@ -69,11 +69,11 @@ def can_delete_article(user, article):
         return False
     
     # Les admins peuvent supprimer tous les articles
-    if user.profile.role == 'admin':
+    if user.profile.role.name == 'admin':
         return True
     
     # Les journalistes peuvent supprimer leurs propres articles
-    if user.profile.role == 'journaliste':
+    if user.profile.role.name == 'journaliste':
         return article.auteur.lower() == user.username.lower()
     
     # Les lecteurs ne peuvent rien supprimer
@@ -93,4 +93,4 @@ def can_create_article(user):
         return False
     
     # Les admins et journalistes peuvent créer des articles
-    return user.profile.role in ['admin', 'journaliste']
+    return user.profile.role.name in ['admin', 'journaliste']

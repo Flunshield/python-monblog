@@ -106,43 +106,13 @@
                     <div class="language-selector me-3">
                         {% include 'blog/language_selector.html' %}
                     </div>
-                    
-                    <!-- Role Selector -->
-                    {% if user.is_authenticated %}<div class="dropdown me-3">
-                            <button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <!-- User Role Display (read-only) -->
+                    {% if user.is_authenticated %}
+                        <div class="me-3">
+                            <span class="badge bg-primary">
                                 <i class="bi bi-person-badge me-1"></i>
                                 {% user_role user as current_role %}{{ current_role|capfirst }}
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><h6 class="dropdown-header">{% trans "Changer de rôle" %}</h6></li>
-                                <li>
-                                    <form method="post" action="{% url 'set_role' %}" class="dropdown-item-form">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="role" value="lecteur">
-                                        <button type="submit" class="dropdown-item {% if user|is_lecteur %}active{% endif %}">
-                                            <i class="bi bi-eye me-2"></i>{% trans "Lecteur" %}
-                                        </button>
-                                    </form>
-                                </li>
-                                <li>
-                                    <form method="post" action="{% url 'set_role' %}" class="dropdown-item-form">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="role" value="journaliste">
-                                        <button type="submit" class="dropdown-item {% if user|is_journaliste %}active{% endif %}">
-                                            <i class="bi bi-pen me-2"></i>{% trans "Journaliste" %}
-                                        </button>
-                                    </form>
-                                </li>
-                                <li>
-                                    <form method="post" action="{% url 'set_role' %}" class="dropdown-item-form">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="role" value="admin">
-                                        <button type="submit" class="dropdown-item {% if user|is_admin %}active{% endif %}">
-                                            <i class="bi bi-shield-check me-2"></i>{% trans "Admin" %}
-                                        </button>
-                                    </form>
-                                </li>
-                            </ul>
+                            </span>
                         </div>
                     {% endif %}
                       <div class="dropdown">

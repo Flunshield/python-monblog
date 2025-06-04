@@ -10,6 +10,33 @@ import logging
 logger = logging.getLogger('blog.models')
 
 
+class Role(models.Model):
+    """
+    Modèle pour gérer les rôles des utilisateurs de manière dynamique
+    """
+    name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Rôle"
+        verbose_name_plural = "Rôles"
+        ordering = ['name']
+
+    @classmethod
+    def get_default_roles(cls):
+        """Créer et retourner les rôles par défaut"""
+        lecteur_role, _ = cls.objects.get_or_create(name='lecteur')
+        journaliste_role, _ = cls.objects.get_or_create(name='journaliste') 
+        admin_role, _ = cls.objects.get_or_create(name='admin')
+        return {
+            'lecteur': lecteur_role,
+            'journaliste': journaliste_role,
+            'admin': admin_role
+        }
+
+
 class Category(models.Model):
     nom = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
@@ -125,28 +152,32 @@ class Like(models.Model):
 
 
 class UserProfile(models.Model):
-    ROLE_CHOICES = [
-        ('lecteur', 'Lecteur'),
-        ('journaliste', 'Journaliste'),
-        ('admin', 'Admin'),
-    ]
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
-    role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='lecteur')
+    role = models.ForeignKey(Role, on_delete=models.PROTECT, null=False, blank=False)
     date_creation = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return f'Profil de {self.user.username} - {self.get_role_display()}'
+        return f'Profil de {self.user.username} - {self.role.name}'
 
     class Meta:
         verbose_name = "Profil utilisateur"
         verbose_name_plural = "Profils utilisateurs"
+
+    def save(self, *args, **kwargs):
+        # Si aucun rôle n'est défini, attribuer le rôle "lecteur" par défaut
+        if not self.role_id:
+            default_roles = Role.get_default_roles()
+            self.role = default_roles['lecteur']
+        super().save(*args, **kwargs)
 
 
 # Signaux pour créer automatiquement un profil utilisateur
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
-        UserProfile.objects.create(user=instance)
+        # Assurer que les rôles par défaut existent
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=instance, role=default_roles['lecteur'])
 
 
 @receiver(post_save, sender=User)
@@ -154,4 +185,6 @@ def save_user_profile(sender, instance, **kwargs):
     if hasattr(instance, 'profile'):
         instance.profile.save()
     else:
-        UserProfile.objects.create(user=instance)
+        # Assurer que les rôles par défaut existent
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=instance, role=default_roles['lecteur'])

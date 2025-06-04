@@ -127,14 +127,15 @@ def ajouter_article(request):
 
 
 @login_required
-def ajouter_categorie(request):
-    # Vérifier que l'utilisateur est administrateur
+def ajouter_categorie(request):    # Vérifier que l'utilisateur est administrateur
     try:
         profile = request.user.profile
-        if profile.role != 'admin':
+        if profile.role.name != 'admin':
             return HttpResponseForbidden("Accès interdit : seuls les administrateurs peuvent gérer les catégories.")
     except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user, role='lecteur')
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
         return HttpResponseForbidden("Accès interdit : seuls les administrateurs peuvent gérer les catégories.")
     
     if request.method == 'POST':
@@ -151,16 +152,15 @@ def ajouter_categorie(request):
 
 def article_detail(request, article_id):
     article = get_object_or_404(Article, id=article_id)
-    
-    # Afficher seulement les commentaires approuvés aux visiteurs
+      # Afficher seulement les commentaires approuvés aux visiteurs
     # Les modérateurs peuvent voir tous les commentaires
     if request.user.is_authenticated:
         try:
             profile = request.user.profile
-            if profile.role in ['journaliste', 'admin']:
+            if profile.role.name in ['journaliste', 'admin']:
                 # Les journalistes voient tous les commentaires sur leurs articles
                 # Les admins voient tous les commentaires
-                if profile.role == 'admin' or article.auteur.lower() == request.user.username.lower():
+                if profile.role.name == 'admin' or article.auteur.lower() == request.user.username.lower():
                     comments = article.comments.all()
                 else:
                     comments = article.comments.filter(is_approved=True)
@@ -194,34 +194,36 @@ def article_detail(request, article_id):
 
 @login_required
 def gerer_categories(request):
-    """Vue pour afficher la liste des catégories avec options de gestion"""
-    # Vérifier que l'utilisateur est journaliste ou administrateur
+    """Vue pour afficher la liste des catégories avec options de gestion"""    # Vérifier que l'utilisateur est journaliste ou administrateur
     try:
         profile = request.user.profile
-        if profile.role not in ['journaliste', 'admin']:
+        if profile.role.name not in ['journaliste', 'admin']:
             return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent consulter les catégories.")
     except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user, role='lecteur')
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
         return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent consulter les catégories.")
     
     categories = Category.objects.all()
     context = {
         'categories': categories,
-        'user_role': profile.role,  # Passer le rôle pour contrôler l'affichage des boutons
+        'user_role': profile.role.name,  # Passer le rôle pour contrôler l'affichage des boutons
     }
     return render(request, 'blog/gerer_categories.html', context)
 
 
 @login_required
 def modifier_categorie(request, category_id):
-    """Vue pour modifier une catégorie existante"""
-    # Vérifier que l'utilisateur est administrateur
+    """Vue pour modifier une catégorie existante"""    # Vérifier que l'utilisateur est administrateur
     try:
         profile = request.user.profile
-        if profile.role != 'admin':
+        if profile.role.name != 'admin':
             return HttpResponseForbidden("Accès interdit : seuls les administrateurs peuvent modifier les catégories.")
     except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user, role='lecteur')
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
         return HttpResponseForbidden("Accès interdit : seuls les administrateurs peuvent modifier les catégories.")
     
     category = get_object_or_404(Category, id=category_id)
@@ -244,14 +246,15 @@ def modifier_categorie(request, category_id):
 
 @login_required
 def supprimer_categorie(request, category_id):
-    """Vue pour supprimer une catégorie"""
-    # Vérifier que l'utilisateur est administrateur
+    """Vue pour supprimer une catégorie"""    # Vérifier que l'utilisateur est administrateur
     try:
         profile = request.user.profile
-        if profile.role != 'admin':
+        if profile.role.name != 'admin':
             return HttpResponseForbidden("Accès interdit : seuls les administrateurs peuvent supprimer les catégories.")
     except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user, role='lecteur')
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
         return HttpResponseForbidden("Accès interdit : seuls les administrateurs peuvent supprimer les catégories.")
     
     # Translating the docstring for consistency
@@ -271,20 +274,21 @@ def supprimer_categorie(request, category_id):
 
 @login_required
 def modifier_article(request, article_id):
-    """Vue pour modifier un article existant"""
-    # Vérifier que l'utilisateur est journaliste ou administrateur
+    """Vue pour modifier un article existant"""    # Vérifier que l'utilisateur est journaliste ou administrateur
     try:
         profile = request.user.profile
-        if profile.role not in ['journaliste', 'admin']:
+        if profile.role.name not in ['journaliste', 'admin']:
             return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent modifier les articles.")
     except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user, role='lecteur')
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
         return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent modifier les articles.")
     
     article = get_object_or_404(Article, id=article_id)
     
     # Si l'utilisateur est journaliste, vérifier qu'il est l'auteur de l'article
-    if profile.role == 'journaliste':
+    if profile.role.name == 'journaliste':
         if article.auteur.lower() != request.user.username.lower():
             return HttpResponseForbidden("Accès interdit : vous ne pouvez modifier que vos propres articles.")
     
@@ -306,20 +310,21 @@ def modifier_article(request, article_id):
 
 @login_required
 def supprimer_article(request, article_id):
-    """Vue pour supprimer un article"""
-    # Vérifier que l'utilisateur est journaliste ou administrateur
+    """Vue pour supprimer un article"""    # Vérifier que l'utilisateur est journaliste ou administrateur
     try:
         profile = request.user.profile
-        if profile.role not in ['journaliste', 'admin']:
+        if profile.role.name not in ['journaliste', 'admin']:
             return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent supprimer les articles.")
     except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user, role='lecteur')
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
         return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent supprimer les articles.")
     
     article = get_object_or_404(Article, id=article_id)
     
     # Si l'utilisateur est journaliste, vérifier qu'il est l'auteur de l'article
-    if profile.role == 'journaliste':
+    if profile.role.name == 'journaliste':
         if article.auteur.lower() != request.user.username.lower():
             return HttpResponseForbidden("Accès interdit : vous ne pouvez supprimer que vos propres articles.")
     
@@ -337,14 +342,15 @@ def supprimer_article(request, article_id):
 
 @login_required
 def gerer_articles(request):
-    """Vue pour afficher la liste des articles avec options de gestion"""
-    # Vérifier que l'utilisateur est journaliste ou administrateur
+    """Vue pour afficher la liste des articles avec options de gestion"""    # Vérifier que l'utilisateur est journaliste ou administrateur
     try:
         profile = request.user.profile
-        if profile.role not in ['journaliste', 'admin']:
+        if profile.role.name not in ['journaliste', 'admin']:
             return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent gérer les articles.")
     except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user, role='lecteur')
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
         return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent gérer les articles.")
     
     articles = Article.objects.all().order_by('-date_creation')
@@ -405,33 +411,21 @@ def logout_view(request):
     return render(request, 'blog/auth/logout.html')
 
 
-@login_required
-def set_role(request):
-    """Vue pour changer le rôle de l'utilisateur connecté"""
-    if request.method == 'POST':
-        role = request.POST.get('role')
-        if role in ['lecteur', 'journaliste', 'admin']:
-            # Créer ou récupérer le profil utilisateur
-            profile, created = UserProfile.objects.get_or_create(user=request.user)
-            profile.role = role
-            profile.save()
-            messages.success(request, _(f'Votre rôle a été changé pour {role}'))
-    return redirect(request.META.get('HTTP_REFERER', '/'))
-
 
 def page_admin(request):
     """Vue réservée aux administrateurs"""
     if not request.user.is_authenticated:
         return redirect('login')
-    
-    # Vérifier le rôle de l'utilisateur
+      # Vérifier le rôle de l'utilisateur
     try:
         profile = request.user.profile
-        if profile.role != 'admin':
+        if profile.role.name != 'admin':
             return HttpResponseForbidden("Accès interdit : vous devez être administrateur pour accéder à cette page.")
     except UserProfile.DoesNotExist:
         # Créer un profil par défaut si il n'existe pas
-        UserProfile.objects.create(user=request.user, role='lecteur')
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
         return HttpResponseForbidden("Accès interdit : vous devez être administrateur pour accéder à cette page.")
     
     return render(request, 'blog/admin/page_admin.html', {
@@ -447,19 +441,20 @@ def page_journaliste(request):
     
     try:
         profile = request.user.profile
-        if profile.role not in ['journaliste', 'admin']:
+        if profile.role.name not in ['journaliste', 'admin']:
             return HttpResponseForbidden("Accès interdit : vous devez être journaliste ou administrateur pour accéder à cette page.")
     except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user, role='lecteur')
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
         return HttpResponseForbidden("Accès interdit : vous devez être journaliste ou administrateur pour accéder à cette page.")
-    
-    # Calcul des statistiques pour le journaliste
+      # Calcul des statistiques pour le journaliste
     from django.utils import timezone
     from datetime import datetime, timedelta
     from .models import Comment
     
     # Articles de l'utilisateur actuel (si journaliste) ou tous les articles (si admin)
-    if profile.role == 'journaliste':
+    if profile.role.name == 'journaliste':
         # Pour un journaliste, on cherche les articles qui correspondent à son nom d'utilisateur 
         # ou aux variations possibles de son nom
         user_articles = Article.objects.filter(
@@ -489,7 +484,7 @@ def page_journaliste(request):
         'user_articles': user_articles.count(),
         'recent_articles': recent_articles.count(),
         'user_comments': user_comments.count(),
-        'user_role': profile.role,
+        'user_role': profile.role.name,
     }
     
     return render(request, 'blog/admin/page_journaliste.html', context)
@@ -886,14 +881,15 @@ def comment_moderation_view(request):
     Vue pour la modération des commentaires.
     Les admins peuvent voir tous les commentaires.
     Les journalistes ne peuvent voir que les commentaires sur leurs articles.
-    """
-    # Vérifier que l'utilisateur est journaliste ou administrateur
+    """    # Vérifier que l'utilisateur est journaliste ou administrateur
     try:
         profile = request.user.profile
-        if profile.role not in ['journaliste', 'admin']:
+        if profile.role.name not in ['journaliste', 'admin']:
             return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent modérer les commentaires.")
     except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=request.user, role='lecteur')
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
         return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent modérer les commentaires.")
     
     # Traitement des actions POST
@@ -904,9 +900,8 @@ def comment_moderation_view(request):
         if comment_id:
             try:
                 comment = Comment.objects.select_related('article').get(id=comment_id)
-                
-                # Vérifier les permissions pour les journalistes
-                if profile.role == 'journaliste':
+                  # Vérifier les permissions pour les journalistes
+                if profile.role.name == 'journaliste':
                     if comment.article.auteur.lower() != request.user.username.lower():
                         return HttpResponseForbidden("Vous ne pouvez modérer que les commentaires sur vos propres articles.")
                 
@@ -951,9 +946,8 @@ def comment_moderation_view(request):
     
     # Récupération et filtrage des commentaires
     comments_query = Comment.objects.select_related('article', 'parent').prefetch_related('replies')
-    
-    # Filtrage selon le rôle
-    if profile.role == 'journaliste':
+      # Filtrage selon le rôle
+    if profile.role.name == 'journaliste':
         # Les journalistes ne voient que les commentaires sur leurs articles (auteur = username exact, insensible à la casse)
         user_articles = Article.objects.filter(auteur__iexact=request.user.username)
         comments_query = comments_query.filter(article__in=user_articles)
