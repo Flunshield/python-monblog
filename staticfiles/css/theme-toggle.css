@@ -1,0 +1,88 @@
+/* Thème clair (par défaut) */
+body {
+  background: #fff !important;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+.premium-navbar,
+.footer-dark {
+  background: #fff !important;
+  color: #222 !important;
+}
+.premium-navbar .nav-link,
+.premium-navbar .navbar-brand,
+.footer-dark .footer-link,
+.footer-dark .social-icon {
+  color: #222 !important;
+}
+.premium-navbar .nav-link i,
+.premium-navbar .navbar-brand i,
+.footer-dark .social-icon i,
+.footer-dark .footer-link i {
+  color: #222 !important;
+}
+
+/* Thème sombre */
+body.dark-mode {
+  background: #181a1b !important;
+  color: #e0e0e0;
+}
+body.dark-mode .premium-navbar,
+body.dark-mode .footer-dark {
+  background: #181a1b !important;
+  color: #e0e0e0 !important;
+}
+body.dark-mode .premium-navbar .nav-link,
+body.dark-mode .premium-navbar .navbar-brand,
+body.dark-mode .footer-dark .footer-link,
+body.dark-mode .footer-dark .social-icon {
+  color: #e0e0e0 !important;
+}
+body.dark-mode .premium-navbar .nav-link i,
+body.dark-mode .premium-navbar .navbar-brand i,
+body.dark-mode .footer-dark .social-icon i,
+body.dark-mode .footer-dark .footer-link i {
+  color: #e0e0e0 !important;
+}
+
+/* Titres et sous-titres */
+.premium-navbar .navbar-nav .nav-link,
+.premium-navbar .navbar-brand,
+.hero-title,
+.hero-subtitle,
+.section-title,
+.footer-dark h5,
+.footer-dark h6 {
+  color: #222 !important;
+}
+body.dark-mode .premium-navbar .navbar-nav .nav-link,
+body.dark-mode .premium-navbar .navbar-brand,
+body.dark-mode .hero-title,
+body.dark-mode .hero-subtitle,
+body.dark-mode .section-title,
+body.dark-mode .footer-dark h5,
+body.dark-mode .footer-dark h6 {
+  color: #e0e0e0 !important;
+}
+
+/* Bouton de bascule */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode .theme-toggle-btn {
+  background: #eee;
+  color: #222;
+}

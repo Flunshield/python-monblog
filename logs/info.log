@@ -3213,3 +3213,156 @@ django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg �
 2025-06-04 14:05:02 [INFO] monprojet.middleware: [42dffcd2] Réponse 302 en 0.019s - Taille: 0 bytes
 2025-06-04 14:05:02 [INFO] monprojet.middleware: [5f844aa5] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
 2025-06-04 14:05:02 [INFO] monprojet.middleware: [5f844aa5] Réponse 200 en 0.040s - Taille: 28818 bytes
+2025-06-04 14:09:09 [INFO] monprojet.middleware: [05878423] GET / - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:09:09 [WARNING] monprojet.middleware: [05878423] Réponse 404 en 0.035s - Taille: 2185 bytes
+2025-06-04 14:09:09 [INFO] monprojet.middleware: [86a18a71] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:09:09 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:09:09 [INFO] monprojet.middleware: [86a18a71] Réponse 200 en 0.116s - Taille: 31117 bytes
+2025-06-04 14:09:09 [INFO] monprojet.middleware: [e7f90481] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:09:09 [ERROR] monprojet.middleware: [e7f90481] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:09:09 [INFO] monprojet.middleware: [c9ccd41d] GET /media/articles/928538.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:09:09 [WARNING] monprojet.middleware: [e7f90481] Réponse 404 en 0.032s - Taille: 2512 bytes
+2025-06-04 14:09:09 [INFO] monprojet.middleware: [c9ccd41d] Réponse 200 en 0.030s - Taille: streaming bytes
+2025-06-04 14:10:42 [INFO] monprojet.middleware: [4719ea56] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:10:42 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:10:42 [INFO] monprojet.middleware: [4719ea56] Réponse 200 en 0.207s - Taille: 31366 bytes
+2025-06-04 14:10:43 [INFO] monprojet.middleware: [9b1eff87] GET /media/articles/928538.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:10:43 [INFO] monprojet.middleware: [5228dbec] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:10:43 [ERROR] monprojet.middleware: [5228dbec] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:10:43 [INFO] monprojet.middleware: [9b1eff87] Réponse 304 en 0.070s - Taille: 0 bytes
+2025-06-04 14:10:43 [WARNING] monprojet.middleware: [5228dbec] Réponse 404 en 0.154s - Taille: 2512 bytes
+2025-06-04 14:11:54 [INFO] monprojet.middleware: [eb9ac10e] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:11:54 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:11:54 [INFO] monprojet.middleware: [eb9ac10e] Réponse 200 en 0.277s - Taille: 31366 bytes
+2025-06-04 14:11:55 [INFO] monprojet.middleware: [2b066721] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:11:55 [ERROR] monprojet.middleware: [2b066721] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:11:55 [WARNING] monprojet.middleware: [2b066721] Réponse 404 en 0.051s - Taille: 2512 bytes
+2025-06-04 14:13:01 [INFO] monprojet.middleware: [4540e117] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:13:01 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:13:01 [INFO] monprojet.middleware: [4540e117] Réponse 200 en 0.131s - Taille: 31366 bytes
+2025-06-04 14:13:01 [INFO] monprojet.middleware: [8f01ef02] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:13:01 [INFO] monprojet.middleware: [d3c349e3] GET /media/articles/928538.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:13:01 [ERROR] monprojet.middleware: [8f01ef02] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:13:01 [INFO] monprojet.middleware: [d3c349e3] Réponse 304 en 0.024s - Taille: 0 bytes
+2025-06-04 14:13:01 [WARNING] monprojet.middleware: [8f01ef02] Réponse 404 en 0.036s - Taille: 2512 bytes
+2025-06-04 14:13:41 [INFO] monprojet.middleware: [69bde54f] GET /fr/ajouter/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:13:41 [INFO] monprojet.middleware: [69bde54f] Action importante: ajouter_article par l'utilisateur thomas
+2025-06-04 14:13:41 [INFO] blog: Tentative d'ajout d'article par l'utilisateur thomas
+2025-06-04 14:13:41 [INFO] monprojet.middleware: [69bde54f] Réponse 200 en 0.076s - Taille: 21194 bytes
+2025-06-04 14:13:45 [INFO] monprojet.middleware: [751e5cf6] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:13:45 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:13:45 [INFO] monprojet.middleware: [751e5cf6] Réponse 200 en 0.079s - Taille: 31366 bytes
+2025-06-04 14:13:45 [INFO] monprojet.middleware: [641b293d] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:13:45 [ERROR] monprojet.middleware: [641b293d] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:13:45 [WARNING] monprojet.middleware: [641b293d] Réponse 404 en 0.033s - Taille: 2512 bytes
+2025-06-04 14:14:30 [INFO] monprojet.middleware: [84f8e7bc] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:14:30 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:14:30 [INFO] monprojet.middleware: [84f8e7bc] Réponse 200 en 0.119s - Taille: 31366 bytes
+2025-06-04 14:14:30 [INFO] monprojet.middleware: [33d39bf0] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:14:30 [ERROR] monprojet.middleware: [33d39bf0] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:14:30 [WARNING] monprojet.middleware: [33d39bf0] Réponse 404 en 0.051s - Taille: 2512 bytes
+2025-06-04 14:14:48 [INFO] monprojet.middleware: [05dc5cc2] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:14:48 [INFO] monprojet.middleware: [05dc5cc2] Réponse 200 en 0.078s - Taille: 30136 bytes
+2025-06-04 14:14:53 [INFO] monprojet.middleware: [880b61b7] GET /fr/ajouter/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:14:53 [INFO] monprojet.middleware: [880b61b7] Action importante: ajouter_article par l'utilisateur thomas
+2025-06-04 14:14:53 [INFO] blog: Tentative d'ajout d'article par l'utilisateur thomas
+2025-06-04 14:14:53 [INFO] monprojet.middleware: [880b61b7] Réponse 200 en 0.057s - Taille: 21194 bytes
+2025-06-04 14:14:54 [INFO] monprojet.middleware: [a2ecd5cf] GET /fr/gerer-articles/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:14:54 [INFO] monprojet.middleware: [a2ecd5cf] Réponse 200 en 0.058s - Taille: 24550 bytes
+2025-06-04 14:14:54 [INFO] monprojet.middleware: [c50008f8] GET /media/articles/928538.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:14:54 [INFO] monprojet.middleware: [c50008f8] Réponse 304 en 0.019s - Taille: 0 bytes
+2025-06-04 14:14:54 [INFO] monprojet.middleware: [f7d65e2b] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:14:54 [ERROR] monprojet.middleware: [f7d65e2b] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:14:54 [WARNING] monprojet.middleware: [f7d65e2b] Réponse 404 en 0.036s - Taille: 2512 bytes
+2025-06-04 14:14:56 [INFO] monprojet.middleware: [c579a829] GET /fr/journaliste-page/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:14:56 [INFO] monprojet.middleware: [c579a829] Réponse 200 en 0.054s - Taille: 25644 bytes
+2025-06-04 14:14:58 [INFO] monprojet.middleware: [53863880] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:14:58 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:14:58 [INFO] monprojet.middleware: [53863880] Réponse 200 en 0.094s - Taille: 31366 bytes
+2025-06-04 14:14:58 [INFO] monprojet.middleware: [948e5431] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:14:58 [ERROR] monprojet.middleware: [948e5431] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:14:58 [WARNING] monprojet.middleware: [948e5431] Réponse 404 en 0.038s - Taille: 2512 bytes
+2025-06-04 14:15:57 [INFO] monprojet.middleware: [51f846cd] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:15:57 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:15:57 [INFO] monprojet.middleware: [51f846cd] Réponse 200 en 0.085s - Taille: 31370 bytes
+2025-06-04 14:15:57 [INFO] monprojet.middleware: [14f1e89e] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:15:57 [ERROR] monprojet.middleware: [14f1e89e] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:15:57 [WARNING] monprojet.middleware: [14f1e89e] Réponse 404 en 0.033s - Taille: 2512 bytes
+2025-06-04 14:16:01 [INFO] monprojet.middleware: [ec6bb06f] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:16:01 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:16:01 [INFO] monprojet.middleware: [ec6bb06f] Réponse 200 en 0.122s - Taille: 31370 bytes
+2025-06-04 14:16:01 [INFO] monprojet.middleware: [bca9b406] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:16:01 [ERROR] monprojet.middleware: [bca9b406] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:16:01 [WARNING] monprojet.middleware: [bca9b406] Réponse 404 en 0.032s - Taille: 2512 bytes
+2025-06-04 14:16:03 [INFO] monprojet.middleware: [c30ad530] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:16:03 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:16:03 [INFO] monprojet.middleware: [c30ad530] Réponse 200 en 0.077s - Taille: 31370 bytes
+2025-06-04 14:16:04 [INFO] monprojet.middleware: [3302340c] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:16:04 [ERROR] monprojet.middleware: [3302340c] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:16:04 [WARNING] monprojet.middleware: [3302340c] Réponse 404 en 0.027s - Taille: 2512 bytes
