@@ -10,7 +10,7 @@ services:
       - ./media:/app/media
       - ./logs:/app/logs
     env_file:
-      - .env
+      - .env    
     environment:
       DJANGO_SETTINGS_MODULE: monprojet.settings
       POSTGRES_DB: ${DB_NAME:-blogDb}
@@ -18,6 +18,8 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD:-julien}
       DB_HOST: ${DB_HOST}
       DB_PORT: ${DB_PORT:-5432}
+      DJANGO_ADMIN_PASSWORD: ${DJANGO_ADMIN_PASSWORD:-ProdAdmin2024!}
+      DJANGO_DEBUG: ${DEBUG:-False}
     ports:
       - "8000:8000"
     depends_on:

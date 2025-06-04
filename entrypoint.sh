@@ -12,6 +12,10 @@ echo "Base de données prête !"
 echo "Application des migrations..."
 python manage.py migrate
 
+# Seeding des données essentielles pour la production
+echo "Seeding des données de production..."
+python manage.py seed_production --skip-if-exists --admin-password "${DJANGO_ADMIN_PASSWORD:-ProdAdmin2024!}"
+
 # Collecter les fichiers statiques
 echo "Collection des fichiers statiques..."
 python manage.py collectstatic --noinput

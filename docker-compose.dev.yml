@@ -1,0 +1,54 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: monprojet_web_dev
+    volumes:
+      - .:/app
+      - ./staticfiles:/app/staticfiles
+      - ./media:/app/media
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    environment:
+      DJANGO_SETTINGS_MODULE: monprojet.settings
+      POSTGRES_DB: ${DB_NAME:-blogDb}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-julien}
+      DB_HOST: db
+      DB_PORT: 5432
+      DJANGO_DEBUG: True
+      DJANGO_ADMIN_PASSWORD: ${DJANGO_ADMIN_PASSWORD:-DevAdmin123!}
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - django_network
+    restart: always
+    entrypoint: ["/entrypoint-with-seeding.sh"]
+
+  db:
+    image: postgres:13
+    container_name: monprojet_db_dev
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${DB_NAME:-blogDb}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-julien}
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data/
+    networks:
+      - django_network
+    restart: always
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data_dev:
+
+networks:
+  django_network:
+    driver: bridge

@@ -67,11 +67,28 @@ cd monprojet
   - Adapter les autres variables si besoin (voir commentaires dans `.env.example`)
 
 ### 3. Lancer le projet avec Docker Compose (recommandé pour la prod ou tests rapides)
+
+#### Mode Production :
 ```bash
+# Démarrage avec seeding minimal (rôles, catégories, compte admin)
 docker compose up --build
+
+# Avec mot de passe admin personnalisé
+DJANGO_ADMIN_PASSWORD="MonMotDePasseSecurise123!" docker compose up --build
 ```
+
+#### Mode Développement :
+```bash
+# Démarrage avec données de test complètes (utilisateurs, articles, commentaires, likes)
+docker compose -f docker-compose.dev.yml up --build
+
+# Avec mot de passe personnalisé pour les comptes de test
+DJANGO_ADMIN_PASSWORD="DevPassword123!" docker compose -f docker-compose.dev.yml up --build
+```
+
 - Le projet sera accessible sur http://localhost:8000
-- Pour arrêter : `docker compose down`
+- Pour arrêter : `docker compose down`
+- **Seeding automatique** : Les données sont créées automatiquement au premier démarrage
 
 ### 4. (Alternative) Installation manuelle (en local, sans Docker)
 
@@ -124,6 +141,49 @@ python manage.py runserver
   python manage.py collectstatic
   ```
 
+### 🌱 Commandes de Seeding (Données de test)
+
+Le projet inclut un système complet de seeders pour initialiser la base de données avec des données de test :
+
+#### Seeding global :
+```bash
+# Seeding complet pour développement (tout en une fois)
+python manage.py seed_all
+
+# Seeding minimal pour production
+python manage.py seed_production --admin-password "MotDePasseSecurise123!"
+```
+
+#### Seeding par composant :
+```bash
+# Créer les rôles de base (lecteur, journaliste, admin)
+python manage.py seed_roles
+
+# Créer des catégories d'articles
+python manage.py seed_categories
+
+# Créer des utilisateurs de test avec différents rôles
+python manage.py seed_users --password "testpass123"
+
+# Créer des articles d'exemple
+python manage.py seed_articles --count 15
+
+# Créer des commentaires sur les articles
+python manage.py seed_comments --count 30
+
+# Créer des likes sur les articles
+python manage.py seed_likes --count 50
+
+# Nettoyer toutes les données de test
+python manage.py clear_seed_data --confirm
+```
+
+#### 🐳 Seeding automatique avec Docker :
+- **Production** (`docker-compose.yml`) : Seeding minimal automatique au premier démarrage
+- **Développement** (`docker-compose.dev.yml`) : Seeding complet avec données de test
+
+Voir le [Guide des Seeders](SEEDING_GUIDE.md) pour plus de détails.
+
 ---
 
 ## Structure du projet
@@ -171,7 +231,20 @@ monprojet/
 - 📝 **Logging avancé** (logs séparés par niveau dans /logs)
 - 🐳 **Déploiement Dockerisé & Procfile Heroku/Render**
 - 🧪 **Tests unitaires et d'intégration étendus**
+- 🌱 **Système de seeding complet** (données de test automatisées)
 - 💄 **UI/UX moderne et responsive** (navbar, footer, etc.)
+
+### 🔑 Comptes de test (mode développement)
+
+Lors du lancement en mode développement (`docker-compose.dev.yml`), les comptes suivants sont automatiquement créés :
+
+| Username | Email | Rôle | Mot de passe | Fonctionnalités |
+|----------|-------|------|--------------|-----------------|
+| `admin_test` | admin@test.com | Admin | `DevAdmin123!`* | Accès complet à l'administration |
+| `journaliste_test` | journaliste@test.com | Journaliste | `DevAdmin123!`* | Création/modification d'articles |
+| `lecteur_test` | lecteur@test.com | Lecteur | `DevAdmin123!`* | Lecture, commentaires, likes |
+
+_*Le mot de passe peut être personnalisé via `DJANGO_ADMIN_PASSWORD`_
 
 ### Exemples d'utilisation
 - Un journaliste peut créer et gérer ses propres articles, mais ne peut pas gérer les utilisateurs.
