@@ -2550,3 +2550,576 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 106: '
 2025-06-04 11:40:10 [INFO] monprojet.middleware: [077041fa] GET /en/ - Utilisateur: marine - IP: 172.21.0.1
 2025-06-04 11:40:10 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
 2025-06-04 11:40:10 [INFO] monprojet.middleware: [077041fa] Réponse 200 en 0.103s - Taille: 36301 bytes
+2025-06-04 13:48:56 [INFO] monprojet.middleware: [4eb20344] GET / - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:48:56 [WARNING] monprojet.middleware: [4eb20344] Réponse 404 en 0.024s - Taille: 2185 bytes
+2025-06-04 13:48:57 [INFO] monprojet.middleware: [968c31f0] GET /en/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:48:57 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-04 13:48:57 [INFO] monprojet.middleware: [968c31f0] Réponse 200 en 0.069s - Taille: 18559 bytes
+2025-06-04 13:48:57 [INFO] monprojet.middleware: [5f8c9742] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:48:57 [ERROR] monprojet.middleware: [5f8c9742] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:48:57 [WARNING] monprojet.middleware: [5f8c9742] Réponse 404 en 0.015s - Taille: 2510 bytes
+2025-06-04 13:48:59 [INFO] monprojet.middleware: [50e9f37c] GET /en/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:48:59 [INFO] monprojet.middleware: [50e9f37c] Réponse 200 en 0.037s - Taille: 13815 bytes
+2025-06-04 13:49:10 [INFO] monprojet.middleware: [b9e0010b] POST /en/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:49:10 [INFO] monprojet.middleware: [b9e0010b] Réponse 302 en 0.381s - Taille: 0 bytes
+2025-06-04 13:49:10 [INFO] monprojet.middleware: [1c1223d6] GET /en/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:10 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 13:49:10 [INFO] monprojet.middleware: [1c1223d6] Réponse 200 en 0.076s - Taille: 24652 bytes
+2025-06-04 13:49:10 [INFO] monprojet.middleware: [ea253316] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:10 [ERROR] monprojet.middleware: [ea253316] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:49:10 [WARNING] monprojet.middleware: [ea253316] Réponse 404 en 0.024s - Taille: 2510 bytes
+2025-06-04 13:49:13 [INFO] monprojet.middleware: [3e3d90f9] GET /en/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:13 [INFO] monprojet.middleware: [3e3d90f9] Réponse 200 en 0.064s - Taille: 21497 bytes
+2025-06-04 13:49:18 [INFO] monprojet.middleware: [5fcf6967] GET /en/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:18 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 13:49:18 [INFO] monprojet.middleware: [5fcf6967] Réponse 200 en 0.070s - Taille: 24378 bytes
+2025-06-04 13:49:19 [INFO] monprojet.middleware: [1c7cde25] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:19 [ERROR] monprojet.middleware: [1c7cde25] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:49:19 [WARNING] monprojet.middleware: [1c7cde25] Réponse 404 en 0.024s - Taille: 2510 bytes
+2025-06-04 13:49:20 [INFO] monprojet.middleware: [70735e3b] GET /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:21 [INFO] monprojet.middleware: [70735e3b] Réponse 200 en 0.064s - Taille: 21402 bytes
+2025-06-04 13:49:21 [INFO] monprojet.middleware: [4c9548ec] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:21 [ERROR] monprojet.middleware: [4c9548ec] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:49:21 [WARNING] monprojet.middleware: [4c9548ec] Réponse 404 en 0.020s - Taille: 2510 bytes
+2025-06-04 13:49:27 [INFO] monprojet.middleware: [909a280a] POST /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:27 [ERROR] monprojet.middleware: [909a280a] Exception non gérée: IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (2, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:27.061391+00, 1, null, f, null, null).
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (2, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:27.061391+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 177, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (2, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:27.061391+00, 1, null, f, null, null).
+
+2025-06-04 13:49:27 [ERROR] monprojet.middleware: [909a280a] Réponse 500 en 0.121s - Taille: 133890 bytes
+2025-06-04 13:49:32 [INFO] monprojet.middleware: [b6fa4fd4] POST /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:32 [ERROR] monprojet.middleware: [b6fa4fd4] Exception non gérée: IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (3, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:32.678576+00, 1, null, f, null, null).
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (3, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:32.678576+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 177, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (3, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:32.678576+00, 1, null, f, null, null).
+
+2025-06-04 13:49:32 [ERROR] monprojet.middleware: [b6fa4fd4] Réponse 500 en 0.087s - Taille: 134025 bytes
+2025-06-04 13:49:32 [INFO] monprojet.middleware: [db9bf077] GET /favicon.ico - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:32 [WARNING] monprojet.middleware: [db9bf077] Réponse 404 en 0.017s - Taille: 2236 bytes
+2025-06-04 13:49:36 [INFO] monprojet.middleware: [dd0df17d] POST /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:49:36 [ERROR] monprojet.middleware: [dd0df17d] Exception non gérée: IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (4, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:36.617701+00, 1, null, f, null, null).
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (4, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:36.617701+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 177, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (4, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:36.617701+00, 1, null, f, null, null).
+
+2025-06-04 13:49:36 [ERROR] monprojet.middleware: [dd0df17d] Réponse 500 en 0.076s - Taille: 133897 bytes
+2025-06-04 13:50:29 [INFO] monprojet.middleware: [292eb1f3] GET / - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:50:29 [WARNING] monprojet.middleware: [292eb1f3] Réponse 404 en 0.033s - Taille: 2185 bytes
+2025-06-04 13:50:29 [INFO] monprojet.middleware: [a44a24ff] GET /en/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:50:29 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 13:50:29 [INFO] monprojet.middleware: [a44a24ff] Réponse 200 en 0.092s - Taille: 24381 bytes
+2025-06-04 13:50:29 [INFO] monprojet.middleware: [5a11b4e4] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:50:29 [ERROR] monprojet.middleware: [5a11b4e4] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:50:29 [WARNING] monprojet.middleware: [5a11b4e4] Réponse 404 en 0.031s - Taille: 2510 bytes
+2025-06-04 13:50:33 [INFO] monprojet.middleware: [8bdeef14] GET /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:50:33 [INFO] monprojet.middleware: [8bdeef14] Réponse 200 en 0.069s - Taille: 21405 bytes
+2025-06-04 13:50:33 [INFO] monprojet.middleware: [f2c4bc08] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:50:33 [ERROR] monprojet.middleware: [f2c4bc08] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:50:33 [WARNING] monprojet.middleware: [f2c4bc08] Réponse 404 en 0.018s - Taille: 2510 bytes
+2025-06-04 13:50:37 [INFO] monprojet.middleware: [11ac8187] POST /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:50:37 [ERROR] monprojet.middleware: [11ac8187] Exception non gérée: IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (5, pages bertrand, piggercraft@gmail.com, dtgdrg, 2025-06-04 13:50:37.47949+00, 1, null, f, null, null).
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (5, pages bertrand, piggercraft@gmail.com, dtgdrg, 2025-06-04 13:50:37.47949+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 181, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (5, pages bertrand, piggercraft@gmail.com, dtgdrg, 2025-06-04 13:50:37.47949+00, 1, null, f, null, null).
+
+2025-06-04 13:50:37 [ERROR] monprojet.middleware: [11ac8187] Réponse 500 en 0.105s - Taille: 133823 bytes
+2025-06-04 13:54:20 [INFO] monprojet.middleware: [43f31132] GET /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:20 [INFO] monprojet.middleware: [43f31132] Réponse 200 en 0.066s - Taille: 21405 bytes
+2025-06-04 13:54:20 [INFO] monprojet.middleware: [9a1ba410] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:20 [ERROR] monprojet.middleware: [9a1ba410] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:54:20 [WARNING] monprojet.middleware: [9a1ba410] Réponse 404 en 0.029s - Taille: 2510 bytes
+2025-06-04 13:54:25 [INFO] monprojet.middleware: [81676851] POST /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:25 [INFO] monprojet.middleware: [81676851] Réponse 302 en 0.037s - Taille: 0 bytes
+2025-06-04 13:54:25 [INFO] monprojet.middleware: [dd623738] GET /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:26 [INFO] monprojet.middleware: [dd623738] Réponse 200 en 0.072s - Taille: 22180 bytes
+2025-06-04 13:54:26 [INFO] monprojet.middleware: [eb3e1f18] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:26 [ERROR] monprojet.middleware: [eb3e1f18] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:54:26 [WARNING] monprojet.middleware: [eb3e1f18] Réponse 404 en 0.028s - Taille: 2510 bytes
+2025-06-04 13:54:28 [INFO] monprojet.middleware: [06c7bdc7] GET /en/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:28 [INFO] monprojet.middleware: [06c7bdc7] Réponse 200 en 0.068s - Taille: 28295 bytes
+2025-06-04 13:54:34 [INFO] monprojet.middleware: [6f07beef] POST /en/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:34 [INFO] blog: Utilisateur thomas a supprimé le commentaire 'efesfe...' de pages bertrand
+2025-06-04 13:54:34 [INFO] monprojet.middleware: [6f07beef] Réponse 302 en 0.042s - Taille: 0 bytes
+2025-06-04 13:54:34 [INFO] monprojet.middleware: [3496d841] GET /en/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:35 [INFO] monprojet.middleware: [3496d841] Réponse 200 en 0.097s - Taille: 21809 bytes
+2025-06-04 13:54:38 [INFO] monprojet.middleware: [fe812313] GET /en/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:38 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 13:54:38 [INFO] monprojet.middleware: [fe812313] Réponse 200 en 0.074s - Taille: 24381 bytes
+2025-06-04 13:54:38 [INFO] monprojet.middleware: [412e6d3f] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:38 [ERROR] monprojet.middleware: [412e6d3f] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:54:38 [WARNING] monprojet.middleware: [412e6d3f] Réponse 404 en 0.021s - Taille: 2510 bytes
+2025-06-04 13:54:41 [INFO] monprojet.middleware: [4936d433] GET /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:41 [INFO] monprojet.middleware: [4936d433] Réponse 200 en 0.058s - Taille: 21405 bytes
+2025-06-04 13:54:41 [INFO] monprojet.middleware: [d3f00a6d] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:41 [ERROR] monprojet.middleware: [d3f00a6d] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:54:41 [WARNING] monprojet.middleware: [d3f00a6d] Réponse 404 en 0.022s - Taille: 2510 bytes
+2025-06-04 13:54:44 [INFO] monprojet.middleware: [b665ee03] POST /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:44 [INFO] monprojet.middleware: [b665ee03] Réponse 302 en 0.021s - Taille: 0 bytes
+2025-06-04 13:54:45 [INFO] monprojet.middleware: [4131870c] GET /en/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:45 [INFO] monprojet.middleware: [4131870c] Réponse 200 en 0.084s - Taille: 22180 bytes
+2025-06-04 13:54:45 [INFO] monprojet.middleware: [2a95a22b] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:45 [ERROR] monprojet.middleware: [2a95a22b] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:54:45 [WARNING] monprojet.middleware: [2a95a22b] Réponse 404 en 0.024s - Taille: 2510 bytes
+2025-06-04 13:54:47 [INFO] monprojet.middleware: [dd798911] GET /en/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:47 [INFO] monprojet.middleware: [dd798911] Réponse 200 en 0.068s - Taille: 28295 bytes
+2025-06-04 13:54:55 [INFO] monprojet.middleware: [42963285] POST /en/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:55 [INFO] blog: Utilisateur thomas a répondu au commentaire 7
+2025-06-04 13:54:55 [INFO] monprojet.middleware: [42963285] Réponse 302 en 0.020s - Taille: 0 bytes
+2025-06-04 13:54:55 [INFO] monprojet.middleware: [67d2dac0] GET /en/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:54:55 [INFO] monprojet.middleware: [67d2dac0] Réponse 200 en 0.102s - Taille: 35698 bytes
+2025-06-04 13:55:05 [INFO] monprojet.middleware: [ec19ffee] POST /en/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:05 [INFO] blog: Utilisateur thomas a supprimé le commentaire 'sfesfe...' de pages bertrand
+2025-06-04 13:55:05 [INFO] monprojet.middleware: [ec19ffee] Réponse 302 en 0.050s - Taille: 0 bytes
+2025-06-04 13:55:06 [INFO] monprojet.middleware: [8955f832] GET /en/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:06 [INFO] monprojet.middleware: [8955f832] Réponse 200 en 0.112s - Taille: 21809 bytes
+2025-06-04 13:55:10 [INFO] monprojet.middleware: [4bb47eff] GET /en/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:10 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 13:55:10 [INFO] monprojet.middleware: [4bb47eff] Réponse 200 en 0.043s - Taille: 24381 bytes
+2025-06-04 13:55:11 [INFO] monprojet.middleware: [0f8d024b] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:11 [ERROR] monprojet.middleware: [0f8d024b] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:55:11 [WARNING] monprojet.middleware: [0f8d024b] Réponse 404 en 0.029s - Taille: 2510 bytes
+2025-06-04 13:55:12 [INFO] monprojet.middleware: [c2b904b4] POST /en/set-role/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:12 [INFO] monprojet.middleware: [c2b904b4] Réponse 302 en 0.022s - Taille: 0 bytes
+2025-06-04 13:55:12 [INFO] monprojet.middleware: [d6082415] GET /en/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:12 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 13:55:12 [INFO] monprojet.middleware: [d6082415] Réponse 200 en 0.052s - Taille: 22186 bytes
+2025-06-04 13:55:12 [INFO] monprojet.middleware: [155aac24] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:12 [ERROR] monprojet.middleware: [155aac24] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:55:12 [WARNING] monprojet.middleware: [155aac24] Réponse 404 en 0.025s - Taille: 2510 bytes
+2025-06-04 13:55:14 [INFO] monprojet.middleware: [c7afd7db] POST /en/i18n/setlang/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:14 [INFO] monprojet.middleware: [c7afd7db] Réponse 302 en 0.018s - Taille: 0 bytes
+2025-06-04 13:55:15 [INFO] monprojet.middleware: [6522b5d8] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:15 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 13:55:15 [INFO] monprojet.middleware: [6522b5d8] Réponse 200 en 0.049s - Taille: 21919 bytes
+2025-06-04 13:55:15 [INFO] monprojet.middleware: [b31f2f6f] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:15 [ERROR] monprojet.middleware: [b31f2f6f] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:55:15 [WARNING] monprojet.middleware: [b31f2f6f] Réponse 404 en 0.025s - Taille: 2512 bytes
+2025-06-04 13:55:16 [INFO] monprojet.middleware: [0a13064d] GET /fr/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:16 [INFO] monprojet.middleware: [0a13064d] Réponse 200 en 0.066s - Taille: 19539 bytes
+2025-06-04 13:55:16 [INFO] monprojet.middleware: [ede71e30] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:16 [ERROR] monprojet.middleware: [ede71e30] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:55:16 [WARNING] monprojet.middleware: [ede71e30] Réponse 404 en 0.026s - Taille: 2512 bytes
+2025-06-04 13:55:21 [INFO] monprojet.middleware: [61f313cc] POST /fr/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:22 [INFO] monprojet.middleware: [61f313cc] Réponse 302 en 0.037s - Taille: 0 bytes
+2025-06-04 13:55:22 [INFO] monprojet.middleware: [8e1ff86d] GET /fr/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:22 [INFO] monprojet.middleware: [8e1ff86d] Réponse 200 en 0.043s - Taille: 19855 bytes
+2025-06-04 13:55:22 [INFO] monprojet.middleware: [30ab7c03] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:22 [ERROR] monprojet.middleware: [30ab7c03] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:55:22 [WARNING] monprojet.middleware: [30ab7c03] Réponse 404 en 0.026s - Taille: 2512 bytes
+2025-06-04 13:55:25 [INFO] monprojet.middleware: [03eb61f7] POST /fr/set-role/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:25 [INFO] monprojet.middleware: [03eb61f7] Réponse 302 en 0.015s - Taille: 0 bytes
+2025-06-04 13:55:25 [INFO] monprojet.middleware: [bd9732fc] GET /fr/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:25 [INFO] monprojet.middleware: [bd9732fc] Réponse 200 en 0.026s - Taille: 22168 bytes
+2025-06-04 13:55:25 [INFO] monprojet.middleware: [7a6d56e1] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:25 [ERROR] monprojet.middleware: [7a6d56e1] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:55:25 [WARNING] monprojet.middleware: [7a6d56e1] Réponse 404 en 0.025s - Taille: 2512 bytes
+2025-06-04 13:55:26 [INFO] monprojet.middleware: [f14e3326] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:26 [INFO] monprojet.middleware: [f14e3326] Réponse 200 en 0.049s - Taille: 28314 bytes
+2025-06-04 13:55:27 [INFO] monprojet.middleware: [b835ae70] POST /fr/set-role/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:27 [INFO] monprojet.middleware: [b835ae70] Réponse 302 en 0.024s - Taille: 0 bytes
+2025-06-04 13:55:27 [INFO] monprojet.middleware: [04e213b8] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:27 [WARNING] monprojet.middleware: [04e213b8] Réponse 403 en 0.015s - Taille: 94 bytes
+2025-06-04 13:55:34 [INFO] monprojet.middleware: [e742921b] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:34 [WARNING] monprojet.middleware: [e742921b] Réponse 403 en 0.011s - Taille: 94 bytes
+2025-06-04 13:55:37 [INFO] monprojet.middleware: [ad1a320f] POST /fr/set-role/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:37 [INFO] monprojet.middleware: [ad1a320f] Réponse 302 en 0.032s - Taille: 0 bytes
+2025-06-04 13:55:37 [INFO] monprojet.middleware: [601db7b6] GET /fr/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:37 [INFO] monprojet.middleware: [601db7b6] Réponse 200 en 0.033s - Taille: 22449 bytes
+2025-06-04 13:55:37 [INFO] monprojet.middleware: [cac61abf] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:37 [ERROR] monprojet.middleware: [cac61abf] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:55:37 [WARNING] monprojet.middleware: [cac61abf] Réponse 404 en 0.029s - Taille: 2512 bytes
+2025-06-04 13:55:42 [INFO] monprojet.middleware: [a48dfa68] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:42 [INFO] monprojet.middleware: [a48dfa68] Réponse 200 en 0.067s - Taille: 28314 bytes
+2025-06-04 13:55:46 [INFO] monprojet.middleware: [e4b75023] POST /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:46 [INFO] blog: Utilisateur thomas a approuvé le commentaire 9
+2025-06-04 13:55:46 [INFO] monprojet.middleware: [e4b75023] Réponse 302 en 0.017s - Taille: 0 bytes
+2025-06-04 13:55:46 [INFO] monprojet.middleware: [47037231] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:46 [INFO] monprojet.middleware: [47037231] Réponse 200 en 0.073s - Taille: 28636 bytes
+2025-06-04 13:55:53 [INFO] monprojet.middleware: [f03651d2] POST /fr/set-role/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:53 [INFO] monprojet.middleware: [f03651d2] Réponse 302 en 0.034s - Taille: 0 bytes
+2025-06-04 13:55:53 [INFO] monprojet.middleware: [89675ef0] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:53 [INFO] monprojet.middleware: [89675ef0] Réponse 200 en 0.099s - Taille: 28621 bytes
+2025-06-04 13:55:56 [INFO] monprojet.middleware: [09e535fb] POST /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:56 [INFO] blog: Utilisateur thomas a désapprouvé le commentaire 9
+2025-06-04 13:55:56 [INFO] monprojet.middleware: [09e535fb] Réponse 302 en 0.019s - Taille: 0 bytes
+2025-06-04 13:55:56 [INFO] monprojet.middleware: [7e002f08] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:56 [INFO] monprojet.middleware: [7e002f08] Réponse 200 en 0.050s - Taille: 28608 bytes
+2025-06-04 13:55:59 [INFO] monprojet.middleware: [8b823b49] POST /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:59 [INFO] blog: Utilisateur thomas a approuvé le commentaire 9
+2025-06-04 13:55:59 [INFO] monprojet.middleware: [8b823b49] Réponse 302 en 0.030s - Taille: 0 bytes
+2025-06-04 13:55:59 [INFO] monprojet.middleware: [b4076d1f] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:55:59 [INFO] monprojet.middleware: [b4076d1f] Réponse 200 en 0.030s - Taille: 28617 bytes
+2025-06-04 13:56:04 [INFO] monprojet.middleware: [36e641dd] GET /fr/ajouter/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:04 [INFO] monprojet.middleware: [36e641dd] Action importante: ajouter_article par l'utilisateur thomas
+2025-06-04 13:56:04 [INFO] blog: Tentative d'ajout d'article par l'utilisateur thomas
+2025-06-04 13:56:04 [INFO] monprojet.middleware: [36e641dd] Réponse 200 en 0.025s - Taille: 19548 bytes
+2025-06-04 13:56:16 [INFO] monprojet.middleware: [aa1b2f68] POST /fr/ajouter/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:16 [INFO] monprojet.middleware: [aa1b2f68] Action importante: ajouter_article par l'utilisateur thomas
+2025-06-04 13:56:16 [INFO] blog: Tentative d'ajout d'article par l'utilisateur thomas
+2025-06-04 13:56:16 [INFO] blog.models: Création d'un nouvel article: 'Chat Gpt remplace les devs !' par thomas
+2025-06-04 13:56:16 [INFO] blog.models: Article 'Chat Gpt remplace les devs !' créé avec succès (ID: 2)
+2025-06-04 13:56:16 [INFO] blog: Article 'Chat Gpt remplace les devs !' créé avec succès par thomas
+2025-06-04 13:56:16 [INFO] monprojet.middleware: [aa1b2f68] Réponse 302 en 0.142s - Taille: 0 bytes
+2025-06-04 13:56:16 [INFO] monprojet.middleware: [f7b0b9bb] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:16 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 13:56:16 [INFO] monprojet.middleware: [f7b0b9bb] Réponse 200 en 0.069s - Taille: 29984 bytes
+2025-06-04 13:56:16 [INFO] monprojet.middleware: [57247308] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:16 [INFO] monprojet.middleware: [50745cd4] GET /media/articles/928538.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:16 [ERROR] monprojet.middleware: [57247308] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:16 [INFO] monprojet.middleware: [50745cd4] Réponse 200 en 0.019s - Taille: streaming bytes
+2025-06-04 13:56:16 [WARNING] monprojet.middleware: [57247308] Réponse 404 en 0.023s - Taille: 2512 bytes
+2025-06-04 13:56:21 [INFO] monprojet.middleware: [86d71a75] GET /fr/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:21 [INFO] monprojet.middleware: [86d71a75] Réponse 200 en 0.066s - Taille: 21868 bytes
+2025-06-04 13:56:22 [INFO] monprojet.middleware: [a83be315] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:22 [ERROR] monprojet.middleware: [a83be315] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:22 [WARNING] monprojet.middleware: [a83be315] Réponse 404 en 0.021s - Taille: 2512 bytes
+2025-06-04 13:56:27 [INFO] monprojet.middleware: [05a340bb] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:27 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 13:56:27 [INFO] monprojet.middleware: [05a340bb] Réponse 200 en 0.062s - Taille: 29720 bytes
+2025-06-04 13:56:27 [INFO] monprojet.middleware: [cfdbcaf9] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:27 [INFO] monprojet.middleware: [798ed6cb] GET /media/articles/928538.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:27 [ERROR] monprojet.middleware: [cfdbcaf9] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:27 [INFO] monprojet.middleware: [798ed6cb] Réponse 304 en 0.019s - Taille: 0 bytes
+2025-06-04 13:56:27 [WARNING] monprojet.middleware: [cfdbcaf9] Réponse 404 en 0.029s - Taille: 2512 bytes
+2025-06-04 13:56:32 [INFO] monprojet.middleware: [8cb80427] GET /fr/articles/2/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:32 [INFO] monprojet.middleware: [8cb80427] Réponse 200 en 0.046s - Taille: 21401 bytes
+2025-06-04 13:56:32 [INFO] monprojet.middleware: [4056279c] GET /media/articles/928538.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:32 [INFO] monprojet.middleware: [4056279c] Réponse 304 en 0.018s - Taille: 0 bytes
+2025-06-04 13:56:34 [INFO] monprojet.middleware: [131c189a] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:34 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 13:56:34 [INFO] monprojet.middleware: [131c189a] Réponse 200 en 0.088s - Taille: 29720 bytes
+2025-06-04 13:56:34 [INFO] monprojet.middleware: [390059c9] GET /media/articles/928538.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:34 [INFO] monprojet.middleware: [4296eb2a] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:34 [ERROR] monprojet.middleware: [4296eb2a] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:34 [INFO] monprojet.middleware: [390059c9] Réponse 304 en 0.013s - Taille: 0 bytes
+2025-06-04 13:56:34 [WARNING] monprojet.middleware: [4296eb2a] Réponse 404 en 0.017s - Taille: 2512 bytes
+2025-06-04 13:56:35 [INFO] monprojet.middleware: [6f27d9bb] GET /fr/articles/1/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:35 [INFO] monprojet.middleware: [6f27d9bb] Réponse 200 en 0.058s - Taille: 21868 bytes
+2025-06-04 13:56:36 [INFO] monprojet.middleware: [068d4958] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:36 [ERROR] monprojet.middleware: [068d4958] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:36 [WARNING] monprojet.middleware: [068d4958] Réponse 404 en 0.022s - Taille: 2512 bytes
+2025-06-04 13:56:44 [INFO] monprojet.middleware: [79027d84] GET /fr/recherche/?query=chat - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:44 [INFO] blog: Recherche effectuée par l'utilisateur thomas
+2025-06-04 13:56:44 [INFO] monprojet.middleware: [79027d84] Réponse 200 en 0.035s - Taille: 25180 bytes
+2025-06-04 13:56:44 [INFO] monprojet.middleware: [193da503] GET /media/articles/928538.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:44 [INFO] monprojet.middleware: [91b60900] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:56:44 [ERROR] monprojet.middleware: [91b60900] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:44 [INFO] monprojet.middleware: [193da503] Réponse 304 en 0.017s - Taille: 0 bytes
+2025-06-04 13:56:44 [WARNING] monprojet.middleware: [91b60900] Réponse 404 en 0.021s - Taille: 2512 bytes
+2025-06-04 13:57:09 [INFO] monprojet.middleware: [189ef922] GET /fr/logout/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 13:57:09 [INFO] monprojet.middleware: [189ef922] Réponse 200 en 0.025s - Taille: 12800 bytes
+2025-06-04 13:57:10 [INFO] monprojet.middleware: [f70e6408] GET /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:57:10 [INFO] monprojet.middleware: [f70e6408] Réponse 200 en 0.037s - Taille: 13829 bytes
+2025-06-04 13:57:18 [INFO] monprojet.middleware: [484c9a86] POST /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:57:19 [INFO] monprojet.middleware: [484c9a86] Réponse 200 en 0.221s - Taille: 14063 bytes
+2025-06-04 13:57:23 [INFO] monprojet.middleware: [9f0cbdfa] GET /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:57:23 [INFO] monprojet.middleware: [9f0cbdfa] Réponse 200 en 0.010s - Taille: 13829 bytes
+2025-06-04 13:57:29 [INFO] monprojet.middleware: [1e548d98] POST /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:57:29 [INFO] monprojet.middleware: [1e548d98] Réponse 200 en 0.221s - Taille: 14063 bytes
+2025-06-04 13:57:34 [INFO] monprojet.middleware: [fd33023e] POST /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:57:34 [INFO] monprojet.middleware: [fd33023e] Réponse 200 en 0.191s - Taille: 14063 bytes

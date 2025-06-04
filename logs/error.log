@@ -7425,3 +7425,712 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 106: '
 [2025-06-04 11:40:19 +0000] [33] [INFO] Worker exiting (pid: 33)
 [2025-06-04 11:40:19 +0000] [29] [INFO] Worker exiting (pid: 29)
 [2025-06-04 11:40:20 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 13:48:44 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 13:48:44 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 13:48:44 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 13:48:44 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 13:48:45 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 13:48:45 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 13:48:45 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 13:48:45 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 13:48:45 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 13:48:45 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 13:48:45 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 13:48:45 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 13:48:45 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 13:48:45 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 13:48:45 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 13:48:45 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 13:48:45 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 13:48:45 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 13:48:45 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 13:48:45 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 13:48:45 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 13:48:46 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 13:48:46 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 13:48:46 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 13:48:46 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 13:48:46 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 13:48:46 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 13:48:46 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 13:48:46 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 13:48:46 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 13:48:46 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 13:48:46 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 13:48:46 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 13:48:46 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 13:48:46 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 13:48:46 +0000] [45] [INFO] Booting worker with pid: 45
+2025-06-04 13:48:57 [ERROR] monprojet.middleware: [5f8c9742] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:49:10 [ERROR] monprojet.middleware: [ea253316] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:49:19 [ERROR] monprojet.middleware: [1c7cde25] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:49:21 [ERROR] monprojet.middleware: [4c9548ec] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:49:27 [ERROR] monprojet.middleware: [909a280a] Exception non gérée: IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (2, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:27.061391+00, 1, null, f, null, null).
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (2, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:27.061391+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 177, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (2, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:27.061391+00, 1, null, f, null, null).
+
+2025-06-04 13:49:27 [ERROR] django.request: Internal Server Error: /en/articles/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (2, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:27.061391+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 177, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (2, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:27.061391+00, 1, null, f, null, null).
+
+2025-06-04 13:49:27 [ERROR] monprojet.middleware: [909a280a] Réponse 500 en 0.121s - Taille: 133890 bytes
+2025-06-04 13:49:32 [ERROR] monprojet.middleware: [b6fa4fd4] Exception non gérée: IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (3, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:32.678576+00, 1, null, f, null, null).
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (3, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:32.678576+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 177, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (3, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:32.678576+00, 1, null, f, null, null).
+
+2025-06-04 13:49:32 [ERROR] django.request: Internal Server Error: /en/articles/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (3, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:32.678576+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 177, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (3, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:32.678576+00, 1, null, f, null, null).
+
+2025-06-04 13:49:32 [ERROR] monprojet.middleware: [b6fa4fd4] Réponse 500 en 0.087s - Taille: 134025 bytes
+2025-06-04 13:49:36 [ERROR] monprojet.middleware: [dd0df17d] Exception non gérée: IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (4, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:36.617701+00, 1, null, f, null, null).
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (4, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:36.617701+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 177, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (4, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:36.617701+00, 1, null, f, null, null).
+
+2025-06-04 13:49:36 [ERROR] django.request: Internal Server Error: /en/articles/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (4, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:36.617701+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 177, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (4, pages bertrand, piggercraft@gmail.com, jfjdkdkkf, 2025-06-04 13:49:36.617701+00, 1, null, f, null, null).
+
+2025-06-04 13:49:36 [ERROR] monprojet.middleware: [dd0df17d] Réponse 500 en 0.076s - Taille: 133897 bytes
+[2025-06-04 13:49:50 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 13:49:50 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 13:49:50 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 13:49:50 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 13:49:50 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 13:49:50 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 13:49:50 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 13:49:50 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 13:49:50 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 13:49:50 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 13:49:50 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 13:49:50 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 13:49:50 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 13:49:50 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 13:49:50 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 13:49:50 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 13:49:50 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 13:49:50 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 13:49:50 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 13:49:50 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 13:49:50 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 13:49:50 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 13:49:50 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 13:49:50 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 13:49:50 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 13:49:50 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 13:49:50 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 13:49:50 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 13:49:50 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 13:49:50 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 13:49:50 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 13:49:50 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 13:50:26 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 13:50:26 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 13:50:26 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 13:50:26 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 13:50:26 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 13:50:26 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 13:50:26 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 13:50:26 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 13:50:26 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 13:50:26 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 13:50:26 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 13:50:26 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 13:50:26 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 13:50:26 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 13:50:26 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 13:50:26 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 13:50:26 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 13:50:26 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 13:50:26 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 13:50:27 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 13:50:27 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 13:50:27 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 13:50:27 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 13:50:27 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 13:50:27 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 13:50:27 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 13:50:27 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 13:50:27 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 13:50:27 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 13:50:27 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 13:50:27 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 13:50:27 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 13:50:27 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 13:50:27 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 13:50:27 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 13:50:27 +0000] [45] [INFO] Booting worker with pid: 45
+2025-06-04 13:50:29 [ERROR] monprojet.middleware: [5a11b4e4] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:50:33 [ERROR] monprojet.middleware: [f2c4bc08] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:50:37 [ERROR] monprojet.middleware: [11ac8187] Exception non gérée: IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (5, pages bertrand, piggercraft@gmail.com, dtgdrg, 2025-06-04 13:50:37.47949+00, 1, null, f, null, null).
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (5, pages bertrand, piggercraft@gmail.com, dtgdrg, 2025-06-04 13:50:37.47949+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 181, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (5, pages bertrand, piggercraft@gmail.com, dtgdrg, 2025-06-04 13:50:37.47949+00, 1, null, f, null, null).
+
+2025-06-04 13:50:37 [ERROR] django.request: Internal Server Error: /en/articles/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (5, pages bertrand, piggercraft@gmail.com, dtgdrg, 2025-06-04 13:50:37.47949+00, 1, null, f, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 181, in article_detail
+    comment.save()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "is_deleted" of relation "blog_comment" violates not-null constraint
+DETAIL:  Failing row contains (5, pages bertrand, piggercraft@gmail.com, dtgdrg, 2025-06-04 13:50:37.47949+00, 1, null, f, null, null).
+
+2025-06-04 13:50:37 [ERROR] monprojet.middleware: [11ac8187] Réponse 500 en 0.105s - Taille: 133823 bytes
+[2025-06-04 13:50:59 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 13:50:59 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 13:50:59 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 13:50:59 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 13:50:59 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 13:50:59 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 13:50:59 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 13:50:59 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 13:50:59 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 13:50:59 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 13:50:59 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 13:50:59 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 13:50:59 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 13:50:59 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 13:50:59 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 13:50:59 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 13:50:59 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 13:50:59 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 13:50:59 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 13:50:59 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 13:50:59 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 13:50:59 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 13:50:59 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 13:50:59 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 13:50:59 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 13:50:59 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 13:50:59 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 13:50:59 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 13:50:59 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 13:50:59 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 13:50:59 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 13:50:59 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 13:50:59 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 13:54:17 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 13:54:17 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 13:54:17 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 13:54:17 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 13:54:17 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 13:54:17 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 13:54:17 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 13:54:17 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 13:54:17 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 13:54:17 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 13:54:17 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 13:54:17 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 13:54:18 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 13:54:18 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 13:54:18 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 13:54:18 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 13:54:18 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 13:54:18 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 13:54:18 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 13:54:18 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 13:54:18 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 13:54:18 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 13:54:18 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 13:54:18 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 13:54:18 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 13:54:18 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 13:54:18 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 13:54:18 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 13:54:18 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 13:54:19 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 13:54:19 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 13:54:19 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 13:54:19 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 13:54:19 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 13:54:19 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 13:54:19 +0000] [45] [INFO] Booting worker with pid: 45
+2025-06-04 13:54:20 [ERROR] monprojet.middleware: [9a1ba410] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:54:26 [ERROR] monprojet.middleware: [eb3e1f18] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:54:38 [ERROR] monprojet.middleware: [412e6d3f] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:54:41 [ERROR] monprojet.middleware: [d3f00a6d] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:54:45 [ERROR] monprojet.middleware: [2a95a22b] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:55:11 [ERROR] monprojet.middleware: [0f8d024b] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:55:12 [ERROR] monprojet.middleware: [155aac24] Exception non gérée: Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/app/media/articles/IMG_20250119_203402.jpg” does not exist
+2025-06-04 13:55:15 [ERROR] monprojet.middleware: [b31f2f6f] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:55:16 [ERROR] monprojet.middleware: [ede71e30] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:55:22 [ERROR] monprojet.middleware: [30ab7c03] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:55:25 [ERROR] monprojet.middleware: [7a6d56e1] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:55:37 [ERROR] monprojet.middleware: [cac61abf] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:16 [ERROR] monprojet.middleware: [57247308] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:22 [ERROR] monprojet.middleware: [a83be315] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:27 [ERROR] monprojet.middleware: [cfdbcaf9] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:34 [ERROR] monprojet.middleware: [4296eb2a] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:36 [ERROR] monprojet.middleware: [068d4958] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:56:44 [ERROR] monprojet.middleware: [91b60900] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas

@@ -83,6 +83,28 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modération des Commentaires -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-comments"></i> {% trans "Commentaires" %}
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{% trans "Modérer tous les commentaires de la plateforme" %}</p>
+                    <div class="btn-group-vertical w-100">
+                        <a href="{% url 'comment_moderation' %}" class="btn btn-outline-info mb-2">
+                            <i class="fas fa-shield-alt"></i> {% trans "Interface de modération" %}
+                        </a>
+                        <a href="{% url 'comment_moderation' %}?status=pending" class="btn btn-outline-warning">
+                            <i class="fas fa-clock"></i> {% trans "Commentaires en attente" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Statistiques rapides -->

@@ -1,0 +1,352 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+{% load role_tags %}
+
+{% block title %}{% trans "Modération des commentaires" %}{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <!-- En-tête -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="text-primary">
+                    <i class="bi bi-shield-check me-2"></i>{% trans "Modération des commentaires" %}
+                </h2>
+                <div class="d-flex gap-2">
+                    {% if user|is_admin %}
+                        <span class="badge bg-danger">{% trans "Admin" %}</span>
+                    {% elif user|is_journaliste %}
+                        <span class="badge bg-warning">{% trans "Journaliste" %}</span>
+                    {% endif %}
+                    <span class="badge bg-info">{{ total_comments }} {% trans "commentaires" %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Messages -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="bi bi-check-circle me-2"></i>{{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Statistiques -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card bg-primary text-white">
+                <div class="card-body text-center">
+                    <h3>{{ total_comments }}</h3>
+                    <p class="mb-0">{% trans "Total commentaires" %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-warning text-dark">
+                <div class="card-body text-center">
+                    <h3>{{ pending_comments }}</h3>
+                    <p class="mb-0">{% trans "En attente" %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-success text-white">
+                <div class="card-body text-center">
+                    <h3>{{ approved_comments }}</h3>
+                    <p class="mb-0">{% trans "Approuvés" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filtres -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0">
+                <i class="bi bi-funnel me-2"></i>{% trans "Filtres" %}
+            </h5>
+        </div>
+        <div class="card-body">
+            <form method="get" class="row g-3">
+                <div class="col-md-4">
+                    <label for="status" class="form-label">{% trans "Statut" %}</label>
+                    <select name="status" id="status" class="form-select" onchange="this.form.submit()">
+                        <option value="">{% trans "Tous" %}</option>
+                        <option value="pending" {% if selected_status == 'pending' %}selected{% endif %}>{% trans "En attente" %}</option>
+                        <option value="approved" {% if selected_status == 'approved' %}selected{% endif %}>{% trans "Approuvés" %}</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="article" class="form-label">{% trans "Article" %}</label>
+                    <select name="article" id="article" class="form-select" onchange="this.form.submit()">
+                        <option value="">{% trans "Tous les articles" %}</option>
+                        {% for article in available_articles %}
+                            <option value="{{ article.id }}" {% if selected_article == article.id %}selected{% endif %}>
+                                {{ article.titre|truncatechars:50 }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    {% if selected_status or selected_article %}
+                        <a href="{% url 'comment_moderation' %}" class="btn btn-secondary">
+                            <i class="bi bi-x-circle me-1"></i>{% trans "Réinitialiser" %}
+                        </a>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Liste des commentaires -->
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">
+                <i class="bi bi-chat-dots me-2"></i>{% trans "Commentaires" %}
+                {% if comments %}({{ comments.paginator.count }}){% endif %}
+            </h5>
+        </div>
+        <div class="card-body p-0">
+            {% if comments %}
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th width="150">{% trans "Auteur" %}</th>
+                                <th>{% trans "Article" %}</th>
+                                <th width="120">{% trans "Date" %}</th>
+                                <th>{% trans "Commentaire" %}</th>
+                                <th width="100">{% trans "Statut" %}</th>
+                                <th width="200">{% trans "Actions" %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for comment in comments %}
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-person-circle me-2"></i>
+                                            <div>
+                                                <strong>{{ comment.nom }}</strong>
+                                                {% if comment.parent %}
+                                                    <br><small class="text-muted">
+                                                        <i class="bi bi-reply me-1"></i>{% trans "Réponse à" %} {{ comment.parent.nom }}
+                                                    </small>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'article_detail' comment.article.id %}" class="text-decoration-none" target="_blank">
+                                            {{ comment.article.titre|truncatechars:40 }}
+                                            <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <small>{{ comment.date_creation|date:"d/m/Y" }}<br>{{ comment.date_creation|time:"H:i" }}</small>
+                                    </td>
+                                    <td>
+                                        <div class="comment-preview">
+                                            {{ comment.contenu|truncatechars:100 }}
+                                        </div>
+                                        {% if comment.replies.exists %}
+                                            <small class="text-info">
+                                                <i class="bi bi-chat-left-dots me-1"></i>{{ comment.replies.count }} {% trans "réponse(s)" %}
+                                            </small>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if comment.is_approved %}
+                                            <span class="badge bg-success">
+                                                <i class="bi bi-check-circle me-1"></i>{% trans "Approuvé" %}
+                                            </span>
+                                        {% else %}
+                                            <span class="badge bg-warning">
+                                                <i class="bi bi-clock me-1"></i>{% trans "En attente" %}
+                                            </span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="btn-group-vertical btn-group-sm w-100">
+                                            <!-- Approuver/Désapprouver -->
+                                            {% if comment.is_approved %}
+                                                <form method="post" style="display: inline;">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="action" value="disapprove">
+                                                    <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                                                    <button type="submit" class="btn btn-outline-warning btn-sm" title="{% trans 'Désapprouver' %}">
+                                                        <i class="bi bi-x-circle me-1"></i>{% trans "Désapprouver" %}
+                                                    </button>
+                                                </form>
+                                            {% else %}
+                                                <form method="post" style="display: inline;">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="action" value="approve">
+                                                    <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                                                    <button type="submit" class="btn btn-outline-success btn-sm" title="{% trans 'Approuver' %}">
+                                                        <i class="bi bi-check-circle me-1"></i>{% trans "Approuver" %}
+                                                    </button>
+                                                </form>
+                                            {% endif %}
+
+                                            <!-- Répondre -->
+                                            <button type="button" class="btn btn-outline-primary btn-sm" 
+                                                    data-bs-toggle="collapse" 
+                                                    data-bs-target="#reply-{{ comment.id }}"
+                                                    title="{% trans 'Répondre' %}">
+                                                <i class="bi bi-reply me-1"></i>{% trans "Répondre" %}
+                                            </button>
+
+                                            <!-- Supprimer -->
+                                            <form method="post" style="display: inline;" 
+                                                  onsubmit="return confirm('{% trans "Êtes-vous sûr de vouloir supprimer ce commentaire ?" %}')">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="action" value="delete">
+                                                <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                                                <button type="submit" class="btn btn-outline-danger btn-sm" title="{% trans 'Supprimer' %}">
+                                                    <i class="bi bi-trash me-1"></i>{% trans "Supprimer" %}
+                                                </button>
+                                            </form>
+                                        </div>
+
+                                        <!-- Zone de réponse (cachée par défaut) -->
+                                        <div class="collapse mt-2" id="reply-{{ comment.id }}">
+                                            <form method="post" class="border rounded p-2 bg-light">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="action" value="reply">
+                                                <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                                                <div class="mb-2">
+                                                    <textarea name="reply_content" class="form-control" rows="2" 
+                                                              placeholder="{% trans 'Votre réponse...' %}" required></textarea>
+                                                </div>
+                                                <div class="d-flex gap-1">
+                                                    <button type="submit" class="btn btn-primary btn-sm">
+                                                        <i class="bi bi-send me-1"></i>{% trans "Envoyer" %}
+                                                    </button>
+                                                    <button type="button" class="btn btn-secondary btn-sm" 
+                                                            data-bs-toggle="collapse" 
+                                                            data-bs-target="#reply-{{ comment.id }}">
+                                                        {% trans "Annuler" %}
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                {% if is_paginated %}
+                    <div class="card-footer">
+                        <nav aria-label="{% trans 'Navigation des commentaires' %}">
+                            <ul class="pagination pagination-sm justify-content-center mb-0">
+                                {% if comments.has_previous %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ comments.previous_page_number }}{% if selected_status %}&status={{ selected_status }}{% endif %}{% if selected_article %}&article={{ selected_article }}{% endif %}">
+                                            <i class="bi bi-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                {% endif %}
+
+                                {% for num in comments.paginator.page_range %}
+                                    {% if num == comments.number %}
+                                        <li class="page-item active">
+                                            <span class="page-link">{{ num }}</span>
+                                        </li>
+                                    {% elif num > comments.number|add:'-3' and num < comments.number|add:'3' %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="?page={{ num }}{% if selected_status %}&status={{ selected_status }}{% endif %}{% if selected_article %}&article={{ selected_article }}{% endif %}">{{ num }}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if comments.has_next %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ comments.next_page_number }}{% if selected_status %}&status={{ selected_status }}{% endif %}{% if selected_article %}&article={{ selected_article }}{% endif %}">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                {% endif %}
+            {% else %}
+                <div class="text-center py-5">
+                    <i class="bi bi-chat-dots text-muted" style="font-size: 4rem;"></i>
+                    <h4 class="text-muted mt-3">{% trans "Aucun commentaire trouvé" %}</h4>
+                    <p class="text-muted">
+                        {% if selected_status or selected_article %}
+                            {% trans "Aucun commentaire ne correspond aux filtres sélectionnés." %}
+                        {% else %}
+                            {% if user|is_journaliste %}
+                                {% trans "Aucun commentaire sur vos articles pour le moment." %}
+                            {% else %}
+                                {% trans "Aucun commentaire sur la plateforme pour le moment." %}
+                            {% endif %}
+                        {% endif %}
+                    </p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="d-flex gap-2">
+                <a href="{% url 'home' %}" class="btn btn-secondary">
+                    <i class="bi bi-house me-1"></i>{% trans "Accueil" %}
+                </a>
+                {% if user|is_admin %}
+                    <a href="{% url 'page_admin' %}" class="btn btn-primary">
+                        <i class="bi bi-shield-check me-1"></i>{% trans "Admin" %}
+                    </a>
+                {% elif user|is_journaliste %}
+                    <a href="{% url 'page_journaliste' %}" class="btn btn-warning">
+                        <i class="bi bi-pen me-1"></i>{% trans "Journaliste" %}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.comment-preview {
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn-group-vertical .btn {
+    margin-bottom: 2px;
+}
+
+.badge {
+    font-size: 0.75em;
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .btn-group-vertical .btn {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
+</style>
+{% endblock %}

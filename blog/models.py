@@ -93,6 +93,9 @@ class Comment(models.Model):
     email = models.EmailField()
     contenu = models.TextField()
     date_creation = models.DateTimeField(auto_now_add=True)
+    is_approved = models.BooleanField(default=False, verbose_name="Approuvé")
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='replies', verbose_name="Commentaire parent")
+    is_deleted = models.BooleanField(default=False, verbose_name="Supprimé")
 
     def __str__(self):
         return f'Commentaire de {self.nom} sur {self.article.titre}'

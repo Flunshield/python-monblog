@@ -63,3 +63,20 @@ class SearchForm(forms.Form):
             raise forms.ValidationError("La requête de recherche est trop longue.")
         
         return query
+
+class CommentReplyForm(forms.ModelForm):
+    """Formulaire pour répondre à un commentaire (pour les modérateurs)"""
+    class Meta:
+        model = Comment
+        fields = ['contenu']
+        widgets = {
+            'contenu': forms.Textarea(attrs={
+                'class': 'form-control', 
+                'rows': 3, 
+                'placeholder': 'Votre réponse...',
+                'required': True
+            }),
+        }
+        labels = {
+            'contenu': 'Réponse'
+        }

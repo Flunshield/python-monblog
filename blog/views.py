@@ -13,7 +13,7 @@ from django.db.models import Q, Count, Case, When, IntegerField
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import logging
 import re
-from .forms import ArticleForm, CommentForm, CategoryForm, SearchForm
+from .forms import ArticleForm, CommentForm, CategoryForm, SearchForm, CommentReplyForm
 from .models import Article, Category, UserProfile, Like, Comment
 
 # Configuration du logger pour ce module
@@ -151,15 +151,35 @@ def ajouter_categorie(request):
 
 def article_detail(request, article_id):
     article = get_object_or_404(Article, id=article_id)
-    comments = article.comments.all()
+    
+    # Afficher seulement les commentaires approuvés aux visiteurs
+    # Les modérateurs peuvent voir tous les commentaires
+    if request.user.is_authenticated:
+        try:
+            profile = request.user.profile
+            if profile.role in ['journaliste', 'admin']:
+                # Les journalistes voient tous les commentaires sur leurs articles
+                # Les admins voient tous les commentaires
+                if profile.role == 'admin' or article.auteur.lower() == request.user.username.lower():
+                    comments = article.comments.all()
+                else:
+                    comments = article.comments.filter(is_approved=True)
+            else:
+                comments = article.comments.filter(is_approved=True)
+        except UserProfile.DoesNotExist:
+            comments = article.comments.filter(is_approved=True)
+    else:
+        comments = article.comments.filter(is_approved=True)
 
     if request.method == 'POST':
         comment_form = CommentForm(request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.article = article
+            # Les nouveaux commentaires nécessitent une approbation
+            comment.is_approved = False
             comment.save()
-            messages.success(request, _('Commentaire ajouté avec succès!'))
+            messages.success(request, _('Commentaire ajouté avec succès! Il sera visible après modération.'))
             return redirect('article_detail', article_id=article.id)
     else:
         comment_form = CommentForm()
@@ -858,3 +878,131 @@ def highlight_search_terms(text, search_terms, max_length=200):
             excerpt = pattern.sub(f'<mark class="search-highlight">{term}</mark>', excerpt)
     
     return excerpt
+
+
+@login_required
+def comment_moderation_view(request):
+    """
+    Vue pour la modération des commentaires.
+    Les admins peuvent voir tous les commentaires.
+    Les journalistes ne peuvent voir que les commentaires sur leurs articles.
+    """
+    # Vérifier que l'utilisateur est journaliste ou administrateur
+    try:
+        profile = request.user.profile
+        if profile.role not in ['journaliste', 'admin']:
+            return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent modérer les commentaires.")
+    except UserProfile.DoesNotExist:
+        UserProfile.objects.create(user=request.user, role='lecteur')
+        return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent modérer les commentaires.")
+    
+    # Traitement des actions POST
+    if request.method == 'POST':
+        action = request.POST.get('action')
+        comment_id = request.POST.get('comment_id')
+        
+        if comment_id:
+            try:
+                comment = Comment.objects.select_related('article').get(id=comment_id)
+                
+                # Vérifier les permissions pour les journalistes
+                if profile.role == 'journaliste':
+                    if comment.article.auteur.lower() != request.user.username.lower():
+                        return HttpResponseForbidden("Vous ne pouvez modérer que les commentaires sur vos propres articles.")
+                
+                if action == 'approve':
+                    comment.is_approved = True
+                    comment.save()
+                    messages.success(request, _('Commentaire approuvé avec succès'))
+                    logger.info(f"Utilisateur {request.user.username} a approuvé le commentaire {comment_id}")
+                    
+                elif action == 'disapprove':
+                    comment.is_approved = False
+                    comment.save()
+                    messages.success(request, _('Commentaire désapprouvé avec succès'))
+                    logger.info(f"Utilisateur {request.user.username} a désapprouvé le commentaire {comment_id}")
+                    
+                elif action == 'delete':
+                    comment_info = f"'{comment.contenu[:50]}...' de {comment.nom}"
+                    comment.delete()
+                    messages.success(request, _('Commentaire supprimé avec succès'))
+                    logger.info(f"Utilisateur {request.user.username} a supprimé le commentaire {comment_info}")
+                    
+                elif action == 'reply':
+                    reply_content = request.POST.get('reply_content', '').strip()
+                    if reply_content:
+                        Comment.objects.create(
+                            article=comment.article,
+                            nom=f"{request.user.username} (Modérateur)",
+                            email=request.user.email or 'moderateur@blog.com',
+                            contenu=reply_content,
+                            parent=comment,
+                            is_approved=True  # Les réponses des modérateurs sont automatiquement approuvées
+                        )
+                        messages.success(request, _('Réponse ajoutée avec succès'))
+                        logger.info(f"Utilisateur {request.user.username} a répondu au commentaire {comment_id}")
+                    else:
+                        messages.error(request, _('Le contenu de la réponse ne peut pas être vide'))
+                        
+            except Comment.DoesNotExist:
+                messages.error(request, _('Commentaire introuvable'))
+        
+        return redirect('comment_moderation')
+    
+    # Récupération et filtrage des commentaires
+    comments_query = Comment.objects.select_related('article', 'parent').prefetch_related('replies')
+    
+    # Filtrage selon le rôle
+    if profile.role == 'journaliste':
+        # Les journalistes ne voient que les commentaires sur leurs articles
+        user_articles = Article.objects.filter(
+            models.Q(auteur__icontains=request.user.username) |
+            models.Q(auteur__icontains=request.user.first_name) |
+            models.Q(auteur__icontains=request.user.last_name)
+        )
+        comments_query = comments_query.filter(article__in=user_articles)
+        available_articles = user_articles
+    else:
+        # Les admins voient tous les commentaires
+        available_articles = Article.objects.all()
+    
+    # Filtres de l'interface
+    status_filter = request.GET.get('status', '')
+    article_filter = request.GET.get('article', '')
+    
+    # Appliquer les filtres
+    if status_filter == 'pending':
+        comments_query = comments_query.filter(is_approved=False)
+    elif status_filter == 'approved':
+        comments_query = comments_query.filter(is_approved=True)
+    
+    if article_filter:
+        comments_query = comments_query.filter(article_id=article_filter)
+    
+    # Tri par date de création (plus récents en premier)
+    comments_query = comments_query.order_by('-date_creation')
+    
+    # Pagination
+    from django.core.paginator import Paginator
+    paginator = Paginator(comments_query, 20)  # 20 commentaires par page
+    page_number = request.GET.get('page')
+    comments = paginator.get_page(page_number)
+    
+    # Statistiques
+    total_comments = Comment.objects.count() if profile.role == 'admin' else Comment.objects.filter(article__in=available_articles).count()
+    pending_comments = Comment.objects.filter(is_approved=False).count() if profile.role == 'admin' else Comment.objects.filter(article__in=available_articles, is_approved=False).count()
+    approved_comments = Comment.objects.filter(is_approved=True).count() if profile.role == 'admin' else Comment.objects.filter(article__in=available_articles, is_approved=True).count()
+    
+    context = {
+        'comments': comments,
+        'available_articles': available_articles,
+        'selected_status': status_filter,
+        'selected_article': int(article_filter) if article_filter else None,
+        'user_role': profile.role,
+        'total_comments': total_comments,
+        'pending_comments': pending_comments,
+        'approved_comments': approved_comments,
+        'is_paginated': comments.has_other_pages(),
+    }
+    
+    return render(request, 'blog/moderation.html', context)

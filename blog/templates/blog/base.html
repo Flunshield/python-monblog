@@ -43,10 +43,14 @@
                                 <a class="nav-link" href="{% url 'ajouter_article' %}">
                                     <i class="bi bi-plus-circle me-1"></i>{% trans "Nouvel Article" %}
                                 </a>
-                            </li>
-                            <li class="nav-item">
+                            </li>                            <li class="nav-item">
                                 <a class="nav-link" href="{% url 'gerer_articles' %}">
                                     <i class="bi bi-gear me-1"></i>{% trans "Gérer Articles" %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'comment_moderation' %}">
+                                    <i class="bi bi-chat-square-dots me-1"></i>{% trans "Modération" %}
                                 </a>
                             </li>                            {% if user|is_admin %}
                                 <li class="nav-item">
