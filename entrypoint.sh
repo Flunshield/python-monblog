@@ -24,6 +24,9 @@ python manage.py collectstatic --noinput
 echo "Compilation des traductions..."
 python manage.py compilemessages || true
 
+# Correction des permissions sur les logs (utile si volume monté)
+chown -R django:django /app/logs || true
+
 # Démarrer Gunicorn
 echo "Démarrage de Gunicorn..."
 exec gunicorn monprojet.wsgi --config gunicorn_config.py

@@ -1,12 +1,11 @@
 # Dockerfile pour MonProjet Django Blog (production)
 FROM python:3.10-slim
 
-# Variables d'environnement de production
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-ENV DJANGO_DEBUG=False
-ENV DJANGO_ADMIN_PASSWORD=ProdAdmin2024!
-ENV DJANGO_SETTINGS_MODULE=monprojet.settings
+# Variables d'environnement de base
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV DJANGO_DEBUG False
+ENV DJANGO_ADMIN_PASSWORD ProdAdmin2024!
 
 # Définir le répertoire de travail
 WORKDIR /app
@@ -26,15 +25,8 @@ RUN pip install --upgrade pip && \
 # Copier le reste du code de l'application
 COPY . .
 
-# Créer un utilisateur non-root pour la sécurité en production
-RUN groupadd -r django && useradd -r -g django django
-
-# Créer le dossier des logs avec permissions appropriées
-RUN mkdir -p logs && chmod 755 logs
-
-# Créer les fichiers de logs nécessaires et donner les droits à django
-RUN touch logs/critical.log logs/error.log logs/warning.log logs/info.log logs/debug.log logs/access.log \
-    && chown django:django logs/*.log
+# Créer le dossier des logs si besoin
+RUN mkdir -p logs
 
 # Préparer les seeders au build (validation syntaxique)
 RUN python manage.py check --deploy || echo "Warning: Check failed, continuing..."
@@ -43,19 +35,13 @@ RUN python manage.py check --deploy || echo "Warning: Check failed, continuing..
 RUN python manage.py collectstatic --noinput --settings=monprojet.settings_build || true
 RUN python manage.py compilemessages || true
 
-# Définir les permissions pour l'utilisateur django
-RUN chown -R django:django /app
-
 # Port exposé
 EXPOSE 8000
 
-# Scripts d'entrée pour la production
+# Scripts d'entrée pour les migrations, seeding et démarrage
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh && chown django:django /entrypoint.sh
+COPY entrypoint-with-seeding.sh /entrypoint-with-seeding.sh
+RUN chmod +x /entrypoint.sh /entrypoint-with-seeding.sh
 
-# Basculer vers l'utilisateur non-root
-USER django
-
-# Commande de démarrage en mode production
-# Crée automatiquement : admin, journaliste, lecteur avec mot de passe ${DJANGO_ADMIN_PASSWORD}
+# Commande de démarrage
 ENTRYPOINT ["/entrypoint.sh"]
