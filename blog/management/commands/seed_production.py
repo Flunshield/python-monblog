@@ -71,43 +71,104 @@ class Command(BaseCommand):
                 self.stdout.write(f'  ✅ Catégorie créée: {category.nom}')
             else:
                 self.stdout.write(f'  ⚠️ Catégorie existante: {category.nom}')
+          # 3. Créer les comptes essentiels pour la production
+        from blog.models import UserProfile
         
-        # 3. Créer un compte admin si aucun superuser n'existe
-        if not User.objects.filter(is_superuser=True).exists():
-            self.stdout.write('👑 Création du compte administrateur...')
-            
-            admin_user = User.objects.create_user(
-                username='admin',
-                email='admin@monprojet.com',
-                password=admin_password,
-                first_name='Admin',
-                last_name='Principal',
-                is_staff=True,
-                is_superuser=True,
-                is_active=True,
-                date_joined=timezone.now()
-            )
-            
-            # Créer le profil avec le rôle admin
-            from blog.models import UserProfile
-            admin_role = Role.objects.get(name='admin')
-            UserProfile.objects.create(
-                user=admin_user,
-                role=admin_role,
-                date_creation=timezone.now()
-            )
-            
+        # Données des utilisateurs essentiels
+        essential_users = [
+            {
+                'username': 'admin',
+                'email': 'admin@monprojet.com',
+                'first_name': 'Admin',
+                'last_name': 'Principal',
+                'role': 'admin',
+                'is_staff': True,
+                'is_superuser': True
+            },
+            {
+                'username': 'journaliste',
+                'email': 'journaliste@monprojet.com',
+                'first_name': 'Jean',
+                'last_name': 'Journaliste',
+                'role': 'journaliste',
+                'is_staff': True,
+                'is_superuser': False
+            },
+            {
+                'username': 'lecteur',
+                'email': 'lecteur@monprojet.com',
+                'first_name': 'Marie',
+                'last_name': 'Lectrice',
+                'role': 'lecteur',
+                'is_staff': False,
+                'is_superuser': False
+            }
+        ]
+        
+        self.stdout.write('👥 Création des comptes essentiels...')
+        
+        created_users = []
+        existing_users = []
+        
+        for user_data in essential_users:
+            # Vérifier si l'utilisateur existe déjà
+            if not User.objects.filter(username=user_data['username']).exists():
+                # Créer l'utilisateur
+                user = User.objects.create_user(
+                    username=user_data['username'],
+                    email=user_data['email'],
+                    password=admin_password,
+                    first_name=user_data['first_name'],
+                    last_name=user_data['last_name'],
+                    is_staff=user_data['is_staff'],
+                    is_superuser=user_data['is_superuser'],
+                    is_active=True,
+                    date_joined=timezone.now()
+                )
+                
+                # Créer le profil avec le bon rôle
+                role = Role.objects.get(name=user_data['role'])
+                UserProfile.objects.create(
+                    user=user,
+                    role=role,
+                    date_creation=timezone.now()
+                )
+                
+                created_users.append(user_data)
+                self.stdout.write(
+                    self.style.SUCCESS(
+                        f'  ✅ Compte créé: {user_data["username"]} ({user_data["role"]})'
+                    )
+                )
+                logger.info(f"Compte créé en production: {user_data['username']} avec rôle {user_data['role']}")
+            else:
+                existing_users.append(user_data)
+                self.stdout.write(
+                    self.style.WARNING(
+                        f'  ⚠️ Compte existant: {user_data["username"]}'
+                    )
+                )
+        
+        # Afficher le résumé
+        if created_users:
             self.stdout.write(
                 self.style.SUCCESS(
-                    f'  ✅ Compte admin créé:\n'
-                    f'     - Username: admin\n'
-                    f'     - Email: admin@monprojet.com\n'
-                    f'     - Password: {admin_password}'
+                    f'\n📊 Comptes créés ({len(created_users)}):\n' +
+                    '\n'.join([
+                        f'   - {user["username"]} ({user["email"]}) - Rôle: {user["role"]}'
+                        for user in created_users
+                    ]) +
+                    f'\n   - Mot de passe pour tous: {admin_password}'
                 )
             )
-            logger.info(f"Compte admin créé en production: admin")
-        else:
-            self.stdout.write('  ⚠️ Un superuser existe déjà')
+        
+        if existing_users:
+            self.stdout.write(
+                self.style.WARNING(
+                    f'\n⚠️ Comptes existants ignorés ({len(existing_users)}): ' +
+                    ', '.join([user['username'] for user in existing_users])
+                )
+            )
         
         self.stdout.write(
             self.style.SUCCESS(

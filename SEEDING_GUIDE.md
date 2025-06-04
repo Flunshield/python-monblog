@@ -5,10 +5,10 @@ Ce guide explique comment utiliser les seeders automatiquement lors du déploiem
 ## 📋 Configurations disponibles
 
 ### 🚀 Production (`docker-compose.yml`)
-- **Seeding minimal** : Rôles essentiels, catégories de base, compte admin uniquement
+- **Seeding minimal** : Rôles essentiels, catégories de base, comptes essentiels
 - **Script** : `entrypoint.sh` → `seed_production`
 - **Données** : Minimum nécessaire pour démarrer
-- **Utilisateur créé** : `admin` / `${DJANGO_ADMIN_PASSWORD}`
+- **Utilisateurs créés** : `admin`, `journaliste`, `lecteur` / `${DJANGO_ADMIN_PASSWORD}`
 
 ### 🛠️ Développement (`docker-compose.dev.yml`)
 - **Seeding complet** : Données de test complètes
@@ -49,7 +49,7 @@ DJANGO_ADMIN_PASSWORD="DevPassword123!" docker-compose -f docker-compose.dev.yml
 ### Production (`seed_production`)
 - **Rôles** : lecteur, journaliste, admin
 - **Catégories** : Actualités, Technologie, Économie
-- **Utilisateurs** : 1 compte admin
+- **Utilisateurs** : 3 comptes essentiels (admin, journaliste, lecteur)
 - **Articles** : Aucun
 
 ### Développement (`seed_all`)
@@ -60,8 +60,16 @@ DJANGO_ADMIN_PASSWORD="DevPassword123!" docker-compose -f docker-compose.dev.yml
 - **Commentaires** : 30 commentaires + réponses
 - **Likes** : 50 likes aléatoires
 
-## 🔑 Comptes de test (développement)
+## 🔑 Comptes créés
 
+### Production (`seed_production`)
+| Username | Email | Rôle | Mot de passe |
+|----------|-------|------|--------------|
+| `admin` | admin@monprojet.com | admin | `${DJANGO_ADMIN_PASSWORD}` |
+| `journaliste` | journaliste@monprojet.com | journaliste | `${DJANGO_ADMIN_PASSWORD}` |
+| `lecteur` | lecteur@monprojet.com | lecteur | `${DJANGO_ADMIN_PASSWORD}` |
+
+### Développement (comptes de test)
 | Username | Email | Rôle | Mot de passe |
 |----------|-------|------|--------------|
 | `admin_test` | admin@test.com | admin | `${DJANGO_ADMIN_PASSWORD}` |
