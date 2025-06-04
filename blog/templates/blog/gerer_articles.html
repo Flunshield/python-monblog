@@ -95,17 +95,16 @@
                                     <i class="bi bi-journal-text text-gold"></i>
                                 </div>
                             {% endif %}
-                        </td>
-                        <td>
+                        </td>                        <td>
                             <strong class="text-gold">{{ article.titre }}</strong>
                             <br>
-                            <small class="text-muted">{{ article.contenu|truncatewords:10 }}</small>
+                            <small>{{ article.contenu|truncatewords:10 }}</small>
                         </td>
                         <td>{{ article.auteur }}</td>
                         <td>                            {% if article.category %}
                                 <span class="premium-badge">{{ article.category.nom }}</span>
                             {% else %}
-                                <span class="text-muted">{% trans "Aucune" %}</span>
+                                <span>{% trans "Aucune" %}</span>
                             {% endif %}
                         </td>
                         <td>{{ article.date_creation|date:"d/m/Y H:i" }}</td>                        <td>

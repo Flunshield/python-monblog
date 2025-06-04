@@ -2050,3 +2050,278 @@ django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '
 2025-06-04 09:31:58 [INFO] monprojet.middleware: [9b6711f6] GET /es/ - Utilisateur: marine - IP: 172.21.0.1
 2025-06-04 09:31:58 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
 2025-06-04 09:31:58 [INFO] monprojet.middleware: [9b6711f6] Réponse 200 en 0.048s - Taille: 13949 bytes
+2025-06-04 09:58:35 [INFO] monprojet.middleware: [c1c584df] GET /es/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 09:58:35 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 09:58:35 [INFO] monprojet.middleware: [c1c584df] Réponse 200 en 0.231s - Taille: 22060 bytes
+2025-06-04 09:58:36 [INFO] monprojet.middleware: [1bb6a62b] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 09:58:36 [INFO] monprojet.middleware: [1bb6a62b] Réponse 304 en 0.026s - Taille: 0 bytes
+2025-06-04 09:58:40 [INFO] monprojet.middleware: [1d74abea] GET /es/articles/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 09:58:40 [INFO] blog: Accès à la liste complète des articles par l'utilisateur marine
+2025-06-04 09:58:40 [INFO] monprojet.middleware: [1d74abea] Réponse 200 en 0.063s - Taille: 19017 bytes
+2025-06-04 09:58:48 [INFO] monprojet.middleware: [eb330de2] GET /es/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 09:58:48 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 09:58:48 [INFO] monprojet.middleware: [eb330de2] Réponse 200 en 0.075s - Taille: 22060 bytes
+2025-06-04 09:58:54 [INFO] monprojet.middleware: [c3d4ead2] POST /es/like/2/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 09:58:54 [INFO] blog: Utilisateur marine a liké l'article 'Chat Gpt remplace les devs !'
+2025-06-04 09:58:54 [INFO] monprojet.middleware: [c3d4ead2] Réponse 302 en 0.032s - Taille: 0 bytes
+2025-06-04 09:58:54 [INFO] monprojet.middleware: [101ff5cd] GET /es/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 09:58:54 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 09:58:54 [INFO] monprojet.middleware: [101ff5cd] Réponse 200 en 0.033s - Taille: 22342 bytes
+2025-06-04 09:59:02 [INFO] monprojet.middleware: [c6202c65] POST /es/i18n/setlang/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 09:59:02 [INFO] monprojet.middleware: [c6202c65] Réponse 302 en 0.028s - Taille: 0 bytes
+2025-06-04 09:59:02 [INFO] monprojet.middleware: [b02220f2] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 09:59:02 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 09:59:02 [INFO] monprojet.middleware: [b02220f2] Réponse 200 en 0.083s - Taille: 22078 bytes
+2025-06-04 10:00:38 [INFO] monprojet.middleware: [76fe7531] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:00:38 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:00:38 [INFO] monprojet.middleware: [76fe7531] Réponse 200 en 0.083s - Taille: 22078 bytes
+2025-06-04 10:00:38 [INFO] monprojet.middleware: [073f4d2f] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:00:38 [INFO] monprojet.middleware: [073f4d2f] Réponse 304 en 0.020s - Taille: 0 bytes
+2025-06-04 10:01:30 [INFO] monprojet.middleware: [c90965f0] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:01:30 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:01:30 [INFO] monprojet.middleware: [c90965f0] Réponse 200 en 0.069s - Taille: 22078 bytes
+2025-06-04 10:01:45 [INFO] monprojet.middleware: [028eeea8] POST /fr/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:01:45 [INFO] monprojet.middleware: [028eeea8] Réponse 302 en 0.027s - Taille: 0 bytes
+2025-06-04 10:01:45 [INFO] monprojet.middleware: [99cc0d51] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:01:45 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:01:45 [INFO] monprojet.middleware: [99cc0d51] Réponse 200 en 0.070s - Taille: 20362 bytes
+2025-06-04 10:01:49 [INFO] monprojet.middleware: [35d38d4f] GET /fr/ajouter/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:01:49 [INFO] monprojet.middleware: [35d38d4f] Action importante: ajouter_article par l'utilisateur marine
+2025-06-04 10:01:49 [INFO] blog: Tentative d'ajout d'article par l'utilisateur marine
+2025-06-04 10:01:49 [INFO] monprojet.middleware: [35d38d4f] Réponse 200 en 0.055s - Taille: 15421 bytes
+2025-06-04 10:02:59 [INFO] monprojet.middleware: [9e7b0eb9] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:02:59 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:02:59 [ERROR] blog: Erreur lors du chargement de la page d'accueil: Invalid block tag on line 106: 'endif', expected 'endblock'. Did you forget to register or load this tag?
+2025-06-04 10:02:59 [ERROR] monprojet.middleware: [9e7b0eb9] Exception non gérée: TemplateSyntaxError: Invalid block tag on line 106: 'endif', expected 'endblock'. Did you forget to register or load this tag?
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/blog/views.py", line 56, in home
+    return render(request, 'blog/home.html', context)
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 106: 'endif', expected 'endblock'. Did you forget to register or load this tag?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 61, in home
+    return render(request, 'blog/home.html', {
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 106: 'endif', expected 'endblock'. Did you forget to register or load this tag?
+2025-06-04 10:02:59 [ERROR] monprojet.middleware: [9e7b0eb9] Réponse 500 en 0.195s - Taille: 296618 bytes
+2025-06-04 10:03:36 [INFO] monprojet.middleware: [e9b50f61] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:03:36 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:03:36 [INFO] monprojet.middleware: [e9b50f61] Réponse 200 en 0.118s - Taille: 20509 bytes
+2025-06-04 10:03:36 [INFO] monprojet.middleware: [6b46d8b4] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:03:36 [INFO] monprojet.middleware: [6b46d8b4] Réponse 304 en 0.030s - Taille: 0 bytes
+2025-06-04 10:04:06 [INFO] monprojet.middleware: [c93cced7] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:04:06 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:04:06 [INFO] monprojet.middleware: [c93cced7] Réponse 200 en 0.067s - Taille: 19938 bytes
+2025-06-04 10:04:34 [INFO] monprojet.middleware: [cc652418] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:04:34 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:04:34 [INFO] monprojet.middleware: [cc652418] Réponse 200 en 0.067s - Taille: 19665 bytes
+2025-06-04 10:04:43 [INFO] monprojet.middleware: [e2db8848] GET /fr/articles/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:04:43 [INFO] blog: Accès à la liste complète des articles par l'utilisateur marine
+2025-06-04 10:04:43 [INFO] monprojet.middleware: [e2db8848] Réponse 200 en 0.030s - Taille: 17405 bytes
+2025-06-04 10:04:47 [INFO] monprojet.middleware: [54102d93] GET /.well-known/appspecific/com.chrome.devtools.json - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:04:47 [WARNING] monprojet.middleware: [54102d93] Réponse 404 en 0.023s - Taille: 2347 bytes
+2025-06-04 10:07:08 [INFO] monprojet.middleware: [b674d405] GET /fr/articles/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:08 [INFO] blog: Accès à la liste complète des articles par l'utilisateur marine
+2025-06-04 10:07:08 [INFO] monprojet.middleware: [b674d405] Réponse 200 en 0.085s - Taille: 17273 bytes
+2025-06-04 10:07:08 [INFO] monprojet.middleware: [96137453] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:08 [INFO] monprojet.middleware: [96137453] Réponse 304 en 0.031s - Taille: 0 bytes
+2025-06-04 10:07:12 [INFO] monprojet.middleware: [88ba67c7] POST /fr/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:12 [INFO] monprojet.middleware: [88ba67c7] Réponse 302 en 0.028s - Taille: 0 bytes
+2025-06-04 10:07:12 [INFO] monprojet.middleware: [bd04f135] GET /fr/articles/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:12 [INFO] blog: Accès à la liste complète des articles par l'utilisateur marine
+2025-06-04 10:07:12 [INFO] monprojet.middleware: [bd04f135] Réponse 200 en 0.070s - Taille: 19339 bytes
+2025-06-04 10:07:14 [INFO] monprojet.middleware: [fdfafd33] POST /fr/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:14 [INFO] monprojet.middleware: [fdfafd33] Réponse 302 en 0.027s - Taille: 0 bytes
+2025-06-04 10:07:14 [INFO] monprojet.middleware: [f821e2cc] GET /fr/articles/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:14 [INFO] blog: Accès à la liste complète des articles par l'utilisateur marine
+2025-06-04 10:07:14 [INFO] monprojet.middleware: [f821e2cc] Réponse 200 en 0.068s - Taille: 19324 bytes
+2025-06-04 10:07:17 [INFO] monprojet.middleware: [c6a0de70] POST /fr/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:17 [INFO] monprojet.middleware: [c6a0de70] Réponse 302 en 0.027s - Taille: 0 bytes
+2025-06-04 10:07:17 [INFO] monprojet.middleware: [745783cf] GET /fr/articles/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:17 [INFO] blog: Accès à la liste complète des articles par l'utilisateur marine
+2025-06-04 10:07:17 [INFO] monprojet.middleware: [745783cf] Réponse 200 en 0.073s - Taille: 17548 bytes
+2025-06-04 10:07:23 [INFO] monprojet.middleware: [fff648c4] POST /fr/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:23 [INFO] monprojet.middleware: [fff648c4] Réponse 302 en 0.029s - Taille: 0 bytes
+2025-06-04 10:07:23 [INFO] monprojet.middleware: [e1a124a0] GET /fr/articles/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:23 [INFO] blog: Accès à la liste complète des articles par l'utilisateur marine
+2025-06-04 10:07:23 [INFO] monprojet.middleware: [e1a124a0] Réponse 200 en 0.070s - Taille: 19339 bytes
+2025-06-04 10:07:25 [INFO] monprojet.middleware: [0d106999] GET /fr/ajouter/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:25 [INFO] monprojet.middleware: [0d106999] Action importante: ajouter_article par l'utilisateur marine
+2025-06-04 10:07:25 [INFO] blog: Tentative d'ajout d'article par l'utilisateur marine
+2025-06-04 10:07:25 [INFO] monprojet.middleware: [0d106999] Réponse 200 en 0.046s - Taille: 16677 bytes
+2025-06-04 10:07:33 [INFO] monprojet.middleware: [f4f89bfb] GET /fr/ajouter-categorie/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:33 [INFO] monprojet.middleware: [f4f89bfb] Action importante: ajouter_categorie par l'utilisateur marine
+2025-06-04 10:07:33 [WARNING] monprojet.middleware: [f4f89bfb] Réponse 403 en 0.017s - Taille: 75 bytes
+2025-06-04 10:07:41 [INFO] monprojet.middleware: [da2d099a] POST /fr/ajouter/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:41 [INFO] monprojet.middleware: [da2d099a] Action importante: ajouter_article par l'utilisateur marine
+2025-06-04 10:07:41 [INFO] blog: Tentative d'ajout d'article par l'utilisateur marine
+2025-06-04 10:07:41 [INFO] blog.models: Création d'un nouvel article: 'Chat Gpt remplace les devs !' par marine
+2025-06-04 10:07:41 [INFO] blog.models: Article 'Chat Gpt remplace les devs !' créé avec succès (ID: 3)
+2025-06-04 10:07:41 [INFO] blog: Article 'Chat Gpt remplace les devs !' créé avec succès par marine
+2025-06-04 10:07:41 [INFO] monprojet.middleware: [da2d099a] Réponse 302 en 0.136s - Taille: 0 bytes
+2025-06-04 10:07:41 [INFO] monprojet.middleware: [08886220] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:41 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:07:41 [INFO] monprojet.middleware: [08886220] Réponse 200 en 0.069s - Taille: 28041 bytes
+2025-06-04 10:07:42 [INFO] monprojet.middleware: [dd80ab12] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:42 [INFO] monprojet.middleware: [dd80ab12] Réponse 200 en 0.019s - Taille: streaming bytes
+2025-06-04 10:07:52 [INFO] monprojet.middleware: [2573525b] GET /fr/modifier-article/3/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:52 [INFO] monprojet.middleware: [2573525b] Action importante: modifier_article par l'utilisateur marine
+2025-06-04 10:07:52 [INFO] monprojet.middleware: [2573525b] Réponse 200 en 0.053s - Taille: 17906 bytes
+2025-06-04 10:07:52 [INFO] monprojet.middleware: [133de0cf] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:07:52 [INFO] monprojet.middleware: [133de0cf] Réponse 304 en 0.021s - Taille: 0 bytes
+2025-06-04 10:08:03 [INFO] monprojet.middleware: [d7e551ea] POST /fr/modifier-article/3/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:08:03 [INFO] monprojet.middleware: [d7e551ea] Action importante: modifier_article par l'utilisateur marine
+2025-06-04 10:08:03 [INFO] blog.models: Modification de l'article ID 3: 'Chat Gpt remplace les devs !'
+2025-06-04 10:08:03 [INFO] blog.models: Article 'Chat Gpt remplace les devs !' modifié avec succès
+2025-06-04 10:08:03 [INFO] monprojet.middleware: [d7e551ea] Réponse 302 en 0.036s - Taille: 0 bytes
+2025-06-04 10:08:03 [INFO] monprojet.middleware: [837450ee] GET /fr/articles/3/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:08:03 [INFO] monprojet.middleware: [837450ee] Réponse 200 en 0.051s - Taille: 25839 bytes
+2025-06-04 10:08:03 [INFO] monprojet.middleware: [3ed9049a] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:08:03 [INFO] monprojet.middleware: [3ed9049a] Réponse 304 en 0.024s - Taille: 0 bytes
+2025-06-04 10:08:05 [INFO] monprojet.middleware: [de197b06] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:08:05 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:08:05 [INFO] monprojet.middleware: [de197b06] Réponse 200 en 0.067s - Taille: 28085 bytes
+2025-06-04 10:08:05 [INFO] monprojet.middleware: [050f75e2] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:08:05 [INFO] monprojet.middleware: [050f75e2] Réponse 304 en 0.016s - Taille: 0 bytes
+2025-06-04 10:08:16 [INFO] monprojet.middleware: [115007bd] GET /.well-known/appspecific/com.chrome.devtools.json - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:08:16 [WARNING] monprojet.middleware: [115007bd] Réponse 404 en 0.016s - Taille: 2347 bytes
+2025-06-04 10:17:00 [INFO] monprojet.middleware: [016787c3] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:17:00 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:17:00 [INFO] monprojet.middleware: [016787c3] Réponse 200 en 0.128s - Taille: 27912 bytes
+2025-06-04 10:17:00 [INFO] monprojet.middleware: [191d823f] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:17:00 [INFO] monprojet.middleware: [28fb1a12] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:17:00 [INFO] monprojet.middleware: [191d823f] Réponse 304 en 0.027s - Taille: 0 bytes
+2025-06-04 10:17:00 [INFO] monprojet.middleware: [28fb1a12] Réponse 304 en 0.027s - Taille: 0 bytes
+2025-06-04 10:17:08 [INFO] monprojet.middleware: [25cdada4] GET /fr/articles/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:17:08 [INFO] blog: Accès à la liste complète des articles par l'utilisateur marine
+2025-06-04 10:17:08 [INFO] monprojet.middleware: [25cdada4] Réponse 200 en 0.089s - Taille: 21884 bytes
+2025-06-04 10:17:15 [INFO] monprojet.middleware: [3836cdff] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:17:15 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:17:15 [INFO] monprojet.middleware: [3836cdff] Réponse 200 en 0.110s - Taille: 27912 bytes
+2025-06-04 10:18:31 [INFO] monprojet.middleware: [8cb88cd1] POST /fr/like/2/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:31 [INFO] blog: Utilisateur marine a retiré son like de l'article 'Chat Gpt remplace les devs !'
+2025-06-04 10:18:31 [INFO] monprojet.middleware: [8cb88cd1] Réponse 302 en 0.035s - Taille: 0 bytes
+2025-06-04 10:18:31 [INFO] monprojet.middleware: [186debd2] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:31 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:18:31 [INFO] monprojet.middleware: [186debd2] Réponse 200 en 0.080s - Taille: 28125 bytes
+2025-06-04 10:18:31 [INFO] monprojet.middleware: [efc99168] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:31 [INFO] monprojet.middleware: [efc99168] Réponse 304 en 0.019s - Taille: 0 bytes
+2025-06-04 10:18:34 [INFO] monprojet.middleware: [090ede96] POST /fr/like/2/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:34 [INFO] blog: Utilisateur marine a liké l'article 'Chat Gpt remplace les devs !'
+2025-06-04 10:18:34 [INFO] monprojet.middleware: [090ede96] Réponse 302 en 0.029s - Taille: 0 bytes
+2025-06-04 10:18:34 [INFO] monprojet.middleware: [6a8fd39a] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:34 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:18:34 [INFO] monprojet.middleware: [6a8fd39a] Réponse 200 en 0.075s - Taille: 28160 bytes
+2025-06-04 10:18:42 [INFO] monprojet.middleware: [4167d68e] POST /fr/like/2/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:42 [INFO] blog: Utilisateur marine a retiré son like de l'article 'Chat Gpt remplace les devs !'
+2025-06-04 10:18:42 [INFO] monprojet.middleware: [4167d68e] Réponse 302 en 0.027s - Taille: 0 bytes
+2025-06-04 10:18:42 [INFO] monprojet.middleware: [1180caaa] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:42 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:18:42 [INFO] monprojet.middleware: [1180caaa] Réponse 200 en 0.071s - Taille: 28125 bytes
+2025-06-04 10:18:45 [INFO] monprojet.middleware: [b68708d3] POST /fr/like/2/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:45 [INFO] blog: Utilisateur marine a liké l'article 'Chat Gpt remplace les devs !'
+2025-06-04 10:18:45 [INFO] monprojet.middleware: [b68708d3] Réponse 302 en 0.030s - Taille: 0 bytes
+2025-06-04 10:18:45 [INFO] monprojet.middleware: [aff2aa46] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:45 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:18:45 [INFO] monprojet.middleware: [aff2aa46] Réponse 200 en 0.075s - Taille: 28160 bytes
+2025-06-04 10:18:52 [INFO] monprojet.middleware: [79691439] POST /fr/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:52 [INFO] monprojet.middleware: [79691439] Réponse 302 en 0.025s - Taille: 0 bytes
+2025-06-04 10:18:52 [INFO] monprojet.middleware: [94361c6d] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:18:52 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:18:52 [INFO] monprojet.middleware: [94361c6d] Réponse 200 en 0.071s - Taille: 25269 bytes
+2025-06-04 10:19:08 [INFO] monprojet.middleware: [1ff73f9a] GET /fr/logout/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:19:08 [INFO] monprojet.middleware: [1ff73f9a] Réponse 200 en 0.041s - Taille: 10172 bytes
+2025-06-04 10:19:11 [INFO] monprojet.middleware: [ad98d481] GET /fr/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 10:19:11 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-04 10:19:11 [INFO] monprojet.middleware: [ad98d481] Réponse 200 en 0.065s - Taille: 21102 bytes
+2025-06-04 10:19:13 [INFO] monprojet.middleware: [07ad686a] GET /fr/register/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 10:19:13 [INFO] monprojet.middleware: [07ad686a] Réponse 200 en 0.037s - Taille: 12049 bytes

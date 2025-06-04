@@ -53,12 +53,11 @@
                             <tr>
                                 <td>
                                     <strong>{{ category.nom }}</strong>
-                                </td>
-                                <td>
+                                </td>                                <td>
                                     {% if category.description %}
                                         {{ category.description|truncatewords:10 }}
                                     {% else %}
-                                        <em class="text-muted">{% trans "Aucune description" %}</em>
+                                        <em>{% trans "Aucune description" %}</em>
                                     {% endif %}
                                 </td>
                                 <td>
@@ -81,7 +80,7 @@
                                             </a>
                                         </div>
                                     {% else %}
-                                        <span class="text-muted">
+                                        <span>
                                             <i class="bi bi-eye-fill me-1"></i>{% trans "Consultation" %}
                                         </span>
                                     {% endif %}

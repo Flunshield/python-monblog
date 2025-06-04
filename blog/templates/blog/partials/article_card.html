@@ -1,0 +1,92 @@
+{% load i18n %}
+{% load role_tags %}
+
+<div class="premium-card article-card-optimized h-100">
+    {% if article.image %}
+    <div class="position-relative overflow-hidden" style="height: 200px;">
+        <!-- Image optimisée pour l'affichage -->
+        <img src="{{ article.image.url }}"
+             class="card-img-top h-100 w-100 img-fluid"
+             alt="{{ article.titre }}"
+             loading="lazy"
+             style="object-fit: cover;">
+        {% if article.category %}
+        <span class="position-absolute top-0 start-0 m-2 premium-badge">
+            {{ article.category.nom }}
+        </span>
+        {% endif %}
+        {% if show_popularity %}
+        <span class="popularity-badge">
+            <i class="bi bi-fire me-1"></i>{{ article.get_total_likes }}
+        </span>
+        {% endif %}
+    </div>    {% else %}
+    <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center position-relative"
+         style="height: 200px;">
+        <i class="bi bi-image" style="font-size: 3rem;"></i>
+        {% if article.category %}
+        <span class="position-absolute top-0 start-0 m-2 premium-badge">
+            {{ article.category.nom }}
+        </span>
+        {% endif %}
+        {% if show_popularity %}
+        <span class="popularity-badge">
+            <i class="bi bi-fire me-1"></i>{{ article.get_total_likes }}
+        </span>
+        {% endif %}
+    </div>
+    {% endif %}
+    
+    <div class="card-body d-flex flex-column">
+        <h5 class="card-title fw-bold mb-2 text-gold">{{ article.titre }}</h5>        <div class="premium-badge small mb-3">
+            <i class="bi bi-person me-1"></i>{{ article.auteur }}
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar me-1"></i>{{ article.date_creation|date:"d/m/Y" }}
+            <span class="mx-2">•</span>
+            <i class="bi bi-clock me-1 reading-time"></i><span class="reading-time">{{ article.get_reading_time }} min</span>        </div>
+          <p class="card-text flex-grow-1">
+            {{ article.get_excerpt }}
+        </p>
+        
+        <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+            <div class="d-flex gap-1">
+                <a href="{% url 'article_detail' article.id %}" class="btn btn-primary btn-sm">
+                    <i class="bi bi-eye me-1"></i>{% trans "Lire" %}
+                </a>
+                
+                {% if user.is_authenticated %}
+                <form method="post" action="{% url 'toggle_like' article.id %}" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-secondary btn-sm">
+                        <i class="bi bi-heart{% if article|is_liked_by:user %}-fill text-danger{% endif %} me-1"></i>
+                        <span class="like-count">{{ article.get_total_likes }}</span>
+                    </button>
+                </form>
+                {% endif %}
+                
+                {% if user|can_edit_article:article %}
+                <a href="{% url 'modifier_article' article.id %}" class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-pencil"></i>
+                </a>
+                {% endif %}
+                
+                {% if user|can_delete_article:article %}
+                <a href="{% url 'supprimer_article' article.id %}"
+                   class="btn btn-outline-danger btn-sm">
+                    <i class="bi bi-trash"></i>
+                </a>
+                {% endif %}
+            </div>
+              <div class="d-flex gap-2">
+                <small>
+                    <i class="bi bi-chat me-1"></i>{{ article.comments.count }}
+                </small>
+                {% if not user.is_authenticated %}
+                <small>
+                    <i class="bi bi-heart me-1"></i>{{ article.get_total_likes }}
+                </small>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

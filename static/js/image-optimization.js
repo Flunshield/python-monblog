@@ -67,12 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Cache l'image défaillante
         img.style.display = 'none';
         
-        // Crée un placeholder
-        const fallback = document.createElement('div');
+        // Crée un placeholder        const fallback = document.createElement('div');
         fallback.className = 'image-placeholder bg-secondary d-flex align-items-center justify-content-center';
         fallback.style.height = img.style.height || '200px';
         fallback.style.borderRadius = 'var(--border-radius, 8px)';
-        fallback.innerHTML = '<i class="bi bi-image text-muted" style="font-size: 3rem;"></i>';
+        fallback.innerHTML = '<i class="bi bi-image" style="font-size: 3rem;"></i>';
         
         // Insère le placeholder
         if (img.parentNode) {

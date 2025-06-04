@@ -1,0 +1,95 @@
+{% extends '                                                 <h5 class="card-title">{{ article.titre }}</h5>
+                    <p class="card-text small mb-1">
+                        {% trans "Par" %} {{ article.auteur }} — {{ article.date_creation|date:'d/m/Y' %}
+                    </p>
+                    <p class="card-text">{{ article.contenu|truncatechars:150 }}</p>              <p class="card-text small mb-1">
+                        {% trans "Par" %} {{ article.auteur }} — {{ article.date_creation|date:'d/m/Y' %}
+                    </p>      <div class="card-body">
+                    <h5 class="card-title">{{ article.titre }}</h5>
+                    <p class="card-text small mb-1">
+                        {% trans "Par" %} {{ article.auteur }} — {{ article.date_creation|date:'d/m/Y' %}
+                    </p>
+                    <p class="card-text">{{ article.contenu|truncatechars:150 }}</p>     <div class="card-body">
+                    <h5 class="card-title">{{ article.titre }}</h5>
+                    <p class="card-text small mb-1">
+                        {% trans "Par" %} {{ article.auteur }} — {{ article.date_creation|date:'d/m/Y' %}
+                    </p>
+                    <p class="card-text">{{ article.contenu|truncatechars:150 }}</p>lass="card-body">                <div class="card-body">
+                    <h5 class="card-title">{{ article.titre }}</h5>
+                    <p class="card-text small mb-1">
+                        {% trans "Par" %} {{ article.auteur }} — {{ article.date_creation|date:'d/m/Y' %}
+                    </p>
+                    <p class="card-text">{{ article.contenu|truncatechars:150 }}</p>
+                    <span class="badge bg-success"><i class="bi bi-hand-thumbs-up"></i> {{ article.nombre_likes }}</span>              <h5 class="card-title">{{ article.titre }}</h5>
+                    <p class="card-text small mb-1">
+                        {% trans "Par" %} {{ article.auteur }} — {{ article.date_creation|date:'d/m/Y' %}
+                    </p>
+                    <p class="card-text">{{ article.contenu|truncatechars:150 }}</p>
+                    <a href="{% url 'article_detail' article.id %}" class="btn btn-outline-primary btn-sm">{% trans "Lire la suite" %}</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center py-5">}
+{% load i18n %}
+{% block content %}
+<section class="container py-4">
+    <h2 class="mb-4 text-primary">{% trans "Derniers articles publiés" %}</h2>
+    <div class="row g-4 mb-5">
+        {% for article in derniers_articles %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                {% if article.image %}
+                <img src="{{ article.image.url }}" class="card-img-top" style="object-fit:cover;max-height:180px;width:100%;" loading="lazy" alt="{{ article.titre }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.titre }}</h5>
+                    <p class="card-text small text-muted mb-1">
+                        {% trans "Par" %} {{ article.auteur }} — {{ article.date_creation|date:'d/m/Y' }}
+                    </p>
+                    <p class="card-text">{{ article.contenu|truncatechars:150 }}</p>
+                    <a href="{% url 'article_detail' article.id %}" class="btn btn-outline-primary btn-sm">{% trans "Lire la suite" %}</a>
+                </div>
+            </div>        </div>
+        {% empty %}
+        <div class="col-12 text-center py-5">
+            <i class="bi bi-journal-x" style="font-size: 3rem;"></i><br>
+            {% trans "Aucun article récent." %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="text-end mb-5">
+        <a href="{% url 'gerer_articles' %}" class="btn btn-primary">{% trans "Voir plus d'articles" %}</a>
+    </div>
+
+    <h2 class="mb-4 text-success">{% trans "Articles les plus populaires" %}</h2>
+    <div class="row g-4 mb-5">
+        {% for article in articles_populaires %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-success">
+                {% if article.image %}
+                <img src="{{ article.image.url }}" class="card-img-top" style="object-fit:cover;max-height:180px;width:100%;" loading="lazy" alt="{{ article.titre }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.titre }}</h5>
+                    <p class="card-text small text-muted mb-1">
+                        {% trans "Par" %} {{ article.auteur }} — {{ article.date_creation|date:'d/m/Y' }}
+                    </p>
+                    <p class="card-text">{{ article.contenu|truncatechars:150 }}</p>
+                    <span class="badge bg-success"><i class="bi bi-hand-thumbs-up"></i> {{ article.nombre_likes }}</span>
+                    <a href="{% url 'article_detail' article.id %}" class="btn btn-outline-success btn-sm float-end">{% trans "Lire la suite" %}</a>
+                </div>
+            </div>        </div>
+        {% empty %}
+        <div class="col-12 text-center py-5">
+            <i class="bi bi-star" style="font-size: 3rem;"></i><br>
+            {% trans "Aucun article populaire pour le moment." %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="text-end">
+        <a href="{% url 'gerer_articles' %}" class="btn btn-success">{% trans "Voir plus d'articles populaires" %}</a>
+    </div>
+</section>
+{% endblock %}
+

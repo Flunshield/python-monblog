@@ -343,12 +343,11 @@ document.addEventListener('DOMContentLoaded', function() {
         allImages.forEach(img => {
             img.addEventListener('error', function() {
                 // Remplace par une image de fallback ou un placeholder
-                this.style.display = 'none';
-                const fallback = document.createElement('div');
+                this.style.display = 'none';                const fallback = document.createElement('div');
                 fallback.className = 'image-placeholder bg-secondary d-flex align-items-center justify-content-center';
                 fallback.style.height = this.style.height || '200px';
                 fallback.style.borderRadius = 'var(--border-radius)';
-                fallback.innerHTML = '<i class="bi bi-image text-muted" style="font-size: 3rem;"></i>';
+                fallback.innerHTML = '<i class="bi bi-image" style="font-size: 3rem;"></i>';
                 this.parentNode.insertBefore(fallback, this);
             });
         });

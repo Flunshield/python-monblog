@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
+from django.db import models
 import logging
 from .forms import ArticleForm, CommentForm, CategoryForm
 from .models import Article, Category, UserProfile, Like
@@ -17,10 +18,61 @@ logger = logging.getLogger('blog')
 
 
 def home(request):
+    """
+    Page d'accueil optimisée avec articles récents et populaires
+    """
     logger.info(f"Accès à la page d'accueil par l'utilisateur {request.user}")
     
     try:
-        articles = Article.objects.all()
+        # Optimisation des requêtes avec select_related et prefetch_related
+        base_queryset = Article.objects.select_related('category').prefetch_related('likes', 'comments')
+        
+        # Articles récents (limite à 10)
+        articles_recents = base_queryset.order_by('-date_creation')[:10]
+        
+        # Articles populaires basés sur le nombre de likes (limite à 10)
+        articles_populaires = base_queryset.annotate(
+            total_likes=models.Count('likes')
+        ).order_by('-total_likes', '-date_creation')[:10]
+        
+        # Catégories pour le filtre
+        categories = Category.objects.all()
+        
+        # Filtrage par catégorie si demandé
+        category_filter = request.GET.get('category')
+        if category_filter:
+            logger.debug(f"Filtrage par catégorie: {category_filter}")
+            articles_recents = articles_recents.filter(category_id=category_filter)
+            articles_populaires = articles_populaires.filter(category_id=category_filter)
+        
+        logger.debug(f"Articles récents: {len(articles_recents)}, Articles populaires: {len(articles_populaires)}")
+        
+        context = {
+            'articles_recents': articles_recents,
+            'articles_populaires': articles_populaires,
+            'categories': categories,
+            'selected_category': int(category_filter) if category_filter else None,
+        }
+        return render(request, 'blog/home.html', context)
+    
+    except Exception as e:
+        logger.error(f"Erreur lors du chargement de la page d'accueil: {e}")
+        messages.error(request, _('Une erreur est survenue lors du chargement de la page.'))
+        return render(request, 'blog/home.html', {
+            'articles_recents': [],
+            'articles_populaires': [],
+            'categories': []
+        })
+
+
+def tous_les_articles(request):
+    """
+    Vue pour afficher tous les articles avec pagination
+    """
+    logger.info(f"Accès à la liste complète des articles par l'utilisateur {request.user}")
+    
+    try:
+        articles = Article.objects.select_related('category').prefetch_related('likes', 'comments')
         categories = Category.objects.all()
         category_filter = request.GET.get('category')
         
@@ -33,14 +85,15 @@ def home(request):
         context = {
             'articles': articles,
             'categories': categories,
-            'selected_category': int(category_filter) if category_filter else None
+            'selected_category': int(category_filter) if category_filter else None,
+            'page_title': _('Tous les articles')
         }
-        return render(request, 'blog/home.html', context)
+        return render(request, 'blog/tous_les_articles.html', context)
     
     except Exception as e:
-        logger.error(f"Erreur lors du chargement de la page d'accueil: {e}")
+        logger.error(f"Erreur lors du chargement de la liste des articles: {e}")
         messages.error(request, _('Une erreur est survenue lors du chargement de la page.'))
-        return render(request, 'blog/home.html', {'articles': [], 'categories': []})
+        return render(request, 'blog/tous_les_articles.html', {'articles': [], 'categories': []})
 
 
 def ajouter_article(request):

@@ -67,6 +67,18 @@ class Article(models.Model):
         if not user.is_authenticated:
             return False
         return self.likes.filter(user=user).exists()
+    
+    def get_excerpt(self, max_length=150):
+        """Retourne un extrait du contenu limité à max_length caractères"""
+        if len(self.contenu) <= max_length:
+            return self.contenu
+        return self.contenu[:max_length].rsplit(' ', 1)[0] + '...'
+    
+    def get_reading_time(self):
+        """Estime le temps de lecture en minutes (250 mots par minute)"""
+        word_count = len(self.contenu.split())
+        reading_time = max(1, round(word_count / 250))
+        return reading_time
 
     def __str__(self):
         return self.titre

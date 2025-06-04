@@ -85,3 +85,12 @@ def is_liked_by(article, user):
     if not user.is_authenticated:
         return False
     return article.is_liked_by(user)
+
+@register.filter
+def can_create_article(user):
+    """Vérifie si l'utilisateur peut créer un article."""
+    if not user.is_authenticated or not hasattr(user, 'profile'):
+        return False
+    
+    # Les admins et journalistes peuvent créer des articles
+    return user.profile.role in ['admin', 'journaliste']

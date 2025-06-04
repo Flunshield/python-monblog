@@ -7,11 +7,10 @@
 {% block content %}
 <div class="container py-5">
     <div class="row mb-5">
-        <div class="col-12 text-center">
-            <h1 class="text-gold mb-4">
+        <div class="col-12 text-center">            <h1 class="text-gold mb-4">
                 <i class="bi bi-bug me-3"></i>{% trans "Diagnostic des Images" %}
             </h1>
-            <p class="lead text-muted">
+            <p class="lead">
                 {% trans "Vérification complète de l'affichage des images du blog avec Django" %}
             </p>
         </div>
@@ -20,34 +19,30 @@
     <!-- Statistiques globales -->
     <div class="row mb-4">
         <div class="col-md-3">
-            <div class="premium-card text-center">
-                <div class="card-body">
+            <div class="premium-card text-center">                <div class="card-body">
                     <h3 class="text-primary">{{ stats.total_tests }}</h3>
-                    <p class="text-muted mb-0">{% trans "Images testées" %}</p>
+                    <p class="mb-0">{% trans "Images testées" %}</p>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="premium-card text-center">
-                <div class="card-body">
+            <div class="premium-card text-center">                <div class="card-body">
                     <h3 class="text-success">{{ stats.successful_tests }}</h3>
-                    <p class="text-muted mb-0">{% trans "Succès" %}</p>
+                    <p class="mb-0">{% trans "Succès" %}</p>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="premium-card text-center">
-                <div class="card-body">
+            <div class="premium-card text-center">                <div class="card-body">
                     <h3 class="text-warning">{{ stats.warning_tests }}</h3>
-                    <p class="text-muted mb-0">{% trans "Avertissements" %}</p>
+                    <p class="mb-0">{% trans "Avertissements" %}</p>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="premium-card text-center">
-                <div class="card-body">
+            <div class="premium-card text-center">                <div class="card-body">
                     <h3 class="text-danger">{{ stats.error_tests }}</h3>
-                    <p class="text-muted mb-0">{% trans "Erreurs" %}</p>
+                    <p class="mb-0">{% trans "Erreurs" %}</p>
                 </div>
             </div>
         </div>
@@ -136,11 +131,10 @@
                                          style="object-fit: cover;" 
                                          alt="{{ test.article_title }}"
                                          loading="lazy">
-                                {% else %}
-                                    <div class="w-100 h-100 bg-secondary d-flex align-items-center justify-content-center">
+                                {% else %}                                    <div class="w-100 h-100 bg-secondary d-flex align-items-center justify-content-center">
                                         <div class="text-center">
                                             <i class="bi bi-exclamation-triangle text-warning" style="font-size: 3rem;"></i>
-                                            <p class="text-muted mt-2">{% trans "Image non disponible" %}</p>
+                                            <p class="mt-2">{% trans "Image non disponible" %}</p>
                                         </div>
                                     </div>
                                 {% endif %}
@@ -248,12 +242,11 @@
                             {% endif %}
                         </div>
                     </div>
-                {% endfor %}
-            {% else %}
+                {% endfor %}            {% else %}
                 <div class="text-center py-4">
-                    <i class="bi bi-image text-muted" style="font-size: 4rem;"></i>
-                    <h5 class="mt-3 text-muted">{% trans "Aucune image à tester" %}</h5>
-                    <p class="text-muted">{% trans "Aucun article avec image n'a été trouvé dans la base de données." %}</p>
+                    <i class="bi bi-image" style="font-size: 4rem;"></i>
+                    <h5 class="mt-3">{% trans "Aucune image à tester" %}</h5>
+                    <p>{% trans "Aucun article avec image n'a été trouvé dans la base de données." %}</p>
                 </div>
             {% endif %}
         </div>

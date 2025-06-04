@@ -41,9 +41,8 @@
                             <div class="card-body">
                                 {% if article.category %}
                                     <span class="badge bg-primary mb-2">{{ article.category.nom }}</span>
-                                {% endif %}
-                                <h5 class="card-title">{{ article.titre }}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">
+                                {% endif %}                                <h5 class="card-title">{{ article.titre }}</h5>
+                                <h6 class="card-subtitle mb-2">
                                     {% blocktrans with auteur=article.auteur date=article.date_creation %}
                                         Par {{ auteur }} - {{ date|date:"d/m/Y à H:i" }}
                                     {% endblocktrans %}

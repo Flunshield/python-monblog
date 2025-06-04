@@ -3,8 +3,8 @@
 {% load role_tags %}
 
 {% block content %}
-<!-- Section Articles -->
-<section id="articles" class="py-4">
+<!-- Page d'accueil dynamique -->
+<section class="py-4">
     <!-- Messages de succès -->
     {% if messages %}
     {% for message in messages %}
@@ -15,131 +15,99 @@
     {% endfor %}
     {% endif %}
 
-    <!-- Barre d'actions et filtres -->
-    <div class="row mb-4">
-        <div class="col-lg-8">
-        </div>
-
-        <div class="col-lg-4">
-            <!-- Filtre par catégorie -->
-            <form method="get" class="d-flex gap-2">
-                <select name="category" class="form-select" onchange="this.form.submit()">
-                    <option value="">{% trans "Toutes les catégories" %}</option>
-                    {% for category in categories %}
-                        <option value="{{ category.id }}" {% if selected_category == category.id %}selected{% endif %}>
-                            {% trans category.nom %}
-                        </option>
-                    {% endfor %}
-                </select>
-                {% if selected_category %}
-                <a href="{% url 'home' %}" class="btn btn-outline-secondary">
-                    <i class="bi bi-x"></i>
-                </a>
-                {% endif %}
-            </form>
-        </div>
-    </div>
-
-    <!-- Titre de section -->
-    <div class="d-flex align-items-center mb-4">
-        <h2 class="me-3 mb-0">
-            <i class="bi bi-journal-text me-2"></i>{% trans "Articles récents" %}
-        </h2>
-        <span class="badge bg-primary fs-6">{{ articles.count }}</span>
-    </div>
-
-    <!-- Liste des articles -->
-    {% if articles %}
-    <div class="row g-4">
-        {% for article in articles %}
-        <div class="col-lg-6 col-xl-4 fade-in-up">
-            <div class="premium-card h-100 hover-card"> {% if article.image %}
-                <div class="position-relative overflow-hidden" style="height: 200px;">
-                    <!-- Image optimisée pour l'affichage de la liste des articles -->
-                    <img src="{{ article.image.url }}"
-                         class="card-img-top h-100 w-100 img-fluid"
-                         alt="{{ article.titre }}"
-                         loading="lazy"
-                         style="object-fit: cover; transition: transform 0.3s ease;">
-                    {% if article.category %}
-                    <span class="position-absolute top-0 start-0 m-2 premium-badge">
-                                        {{ article.category.nom }}
-                                    </span>
+    <!-- Section de bienvenue -->
+    <div class="home-welcome">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-5 fw-bold mb-3">
+                    <i class="bi bi-house-door me-3"></i>{% trans "Bienvenue sur notre blog" %}
+                </h1>
+                <p class="lead mb-0 opacity-90">{% trans "Découvrez nos derniers articles et contenus populaires" %}</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <!-- Filtre par catégorie -->
+                <form method="get" class="d-flex gap-2">
+                    <select name="category" class="form-select" onchange="this.form.submit()">
+                        <option value="">{% trans "Toutes les catégories" %}</option>
+                        {% for category in categories %}
+                            <option value="{{ category.id }}" {% if selected_category == category.id %}selected{% endif %}>
+                                {% trans category.nom %}
+                            </option>
+                        {% endfor %}
+                    </select>
+                    {% if selected_category %}
+                    <a href="{% url 'home' %}" class="btn btn-outline-light">
+                        <i class="bi bi-x"></i>
+                    </a>
                     {% endif %}
-                </div>
-                {% else %}
-                <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center position-relative"
-                     style="height: 200px;">
-                    <i class="bi bi-image text-muted" style="font-size: 3rem;"></i>
-                    {% if article.category %}
-                    <span class="position-absolute top-0 start-0 m-2 premium-badge">
-                                        {{ article.category.nom }}
-                                    </span>
-                    {% endif %}
-                </div>
-                {% endif %}
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold mb-2 text-gold">{{ article.titre }}</h5>
-                    <div class="premium-badge small mb-3">
-                        <i class="bi bi-person me-1"></i>{{ article.auteur }}
-                        <span class="mx-2">•</span>
-                        <i class="bi bi-calendar me-1"></i>{{ article.date_creation|date:"d/m/Y" }}
-                    </div>
-                    <p class="card-text flex-grow-1 text-muted">
-                        {{ article.contenu|truncatewords:20 }}
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
-                        <div class="d-flex gap-1">
-                            <a href="{% url 'article_detail' article.id %}" class="btn btn-primary btn-sm">
-                                <i class="bi bi-eye me-1"></i>{% trans "Lire" %}
-                            </a> {% if user.is_authenticated %}
-                            <form method="post" action="{% url 'toggle_like' article.id %}" style="display: inline;">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-outline-secondary btn-sm">
-                                    <i class="bi bi-heart{% if article|is_liked_by:user %}-fill text-danger{% endif %} me-1"></i>
-                                    <span class="like-count">{{ article.get_total_likes }}</span>
-                                </button>
-                            </form>
-                            {% endif %}
-                            {% if user|can_edit_article:article %}
-                            <a href="{% url 'modifier_article' article.id %}" class="btn btn-primary btn-sm">
-                                <i class="bi bi-pencil"></i>
-                            </a>
-                            {% endif %}
-                            {% if user|can_delete_article:article %}
-                            <a href="{% url 'supprimer_article' article.id %}"
-                               class="btn btn-outline-danger btn-sm btn-primary">
-                                <i class="bi bi-trash"></i>
-                            </a>
-                            {% endif %}
-                        </div>
-                        <div class="d-flex gap-2">
-                            <small class="text-muted">
-                                <i class="bi bi-chat me-1"></i>{{ article.comments.count }}
-                            </small>
-                            {% if not user.is_authenticated %}
-                            <small class="text-muted">
-                                <i class="bi bi-heart me-1"></i>{{ article.get_total_likes }}
-                            </small>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
-        {% endfor %}
     </div>
-    {% else %}
-    <div class="text-center py-5">
-        <div class="mb-4">
-            <i class="bi bi-journal-x" style="font-size: 4rem;"></i>
+
+    <!-- Section Articles Récents -->
+    <div class="articles-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="bi bi-clock"></i>{% trans "Articles récents" %}
+            </h2>
+            <a href="{% url 'tous_les_articles' %}" class="btn btn-outline-primary">
+                {% trans "Voir tous les articles" %} <i class="bi bi-arrow-right ms-1"></i>
+            </a>
         </div>
-        <h4 class="mb-3 text-gold">{% trans "Aucun article pour le moment" %}</h4>
-        <p class="mb-4">{% trans "Commencez par créer votre premier article pour partager vos idées" %} !</p>
-        <a href="{% url 'ajouter_article' %}" class="btn btn-primary btn-lg">
-            <i class="bi bi-plus-circle me-2"></i>{% trans "Créer mon premier article" %}
-        </a>
+
+        {% if articles_recents %}
+        <div class="row g-4">
+            {% for article in articles_recents|slice:":6" %}
+            <div class="col-lg-6 col-xl-4 fade-in-up">
+                {% include 'blog/partials/article_card.html' with article=article %}
+            </div>
+            {% endfor %}
+        </div>        {% else %}
+        <div class="text-center py-4">
+            <i class="bi bi-journal-x" style="font-size: 3rem;"></i>
+            <p class="mt-2">{% trans "Aucun article récent trouvé" %}</p>
+        </div>
+        {% endif %}
+    </div>    <!-- Section Articles Populaires -->
+    {% if articles_populaires %}
+    <div class="articles-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="bi bi-fire"></i>{% trans "Articles populaires" %}
+            </h2>
+            <span class="badge bg-danger fs-6">{{ articles_populaires|length }}</span>
+        </div>
+
+        <div class="row g-4">
+            {% for article in articles_populaires|slice:":6" %}
+            <div class="col-lg-6 col-xl-4 fade-in-up">
+                {% include 'blog/partials/article_card.html' with article=article show_popularity=True %}
+            </div>
+            {% endfor %}
+        </div>
     </div>
     {% endif %}
+
+    <!-- Call to Action -->
+    <div class="cta-section">
+        <i class="bi bi-pencil-square display-icon"></i>
+        <h3>{% trans "Rejoignez notre communauté" %}</h3>
+        <p>{% trans "Partagez vos idées et découvrez de nouveaux contenus passionnants" %}</p>
+        {% if user.is_authenticated %}
+            {% if user|can_create_article %}
+            <a href="{% url 'ajouter_article' %}" class="btn btn-home-primary btn-lg">
+                <i class="bi bi-plus-circle me-2"></i>{% trans "Créer un article" %}
+            </a>
+            {% endif %}
+        {% else %}
+        <a href="{% url 'register' %}" class="btn btn-home-primary btn-lg me-2">
+            <i class="bi bi-person-plus me-2"></i>{% trans "S'inscrire" %}
+        </a>
+        <a href="{% url 'login' %}" class="btn btn-outline-primary btn-lg">
+            <i class="bi bi-box-arrow-in-right me-2"></i>{% trans "Se connecter" %}
+        </a>
+        {% endif %}
+    </div>
 </section>
 {% endblock %}
