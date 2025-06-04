@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-03 15:25+0200\n"
+"POT-Creation-Date: 2025-06-04 11:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,64 +20,54 @@ msgstr ""
 
 #: .\blog\templates\blog\admin\page_admin.html:5
 msgid "Page Admin"
-msgstr ""
-
+msgstr "Page Admin"
 #: .\blog\templates\blog\admin\page_admin.html:13
 msgid "Panneau d'Administration"
-msgstr ""
-
+msgstr "Panneau d'Administration"
 #: .\blog\templates\blog\admin\page_admin.html:15
 msgid "Accès Admin"
-msgstr ""
-
+msgstr "Accès Admin"
 #: .\blog\templates\blog\admin\page_admin.html:26
 msgid "Articles"
-msgstr ""
-
+msgstr "Articles"
 #: .\blog\templates\blog\admin\page_admin.html:30
 msgid "Gérer tous les articles du blog"
-msgstr ""
-
+msgstr "Gérer tous les articles du blog"
 #: .\blog\templates\blog\admin\page_admin.html:33
 msgid "Voir tous les articles"
-msgstr ""
-
+msgstr "Voir tous les articles"
 #: .\blog\templates\blog\admin\page_admin.html:36
 #: .\blog\templates\blog\gerer_articles.html:22
 #: .\blog\templates\blog\gerer_articles.html:151
 msgid "Ajouter un article"
-msgstr ""
-
+msgstr "Ajouter un article"
 #: .\blog\templates\blog\admin\page_admin.html:48
 #: .\blog\templates\blog\admin\page_admin.html:111
+#: .\blog\templates\blog\admin\page_journaliste.html:48
 #: .\blog\templates\blog\base.html:54 .\blog\templates\blog\base.html:65
 #: .\blog\templates\blog\base.html:208
 msgid "Catégories"
-msgstr ""
-
+msgstr "Catégories"
 #: .\blog\templates\blog\admin\page_admin.html:52
 msgid "Organiser les catégories d'articles"
 msgstr ""
 
 #: .\blog\templates\blog\admin\page_admin.html:55
+#: .\blog\templates\blog\admin\page_journaliste.html:55
 msgid "Voir les catégories"
-msgstr ""
-
+msgstr "Voir les catégories"
 #: .\blog\templates\blog\admin\page_admin.html:58
 #: .\blog\templates\blog\gerer_categories.html:13
 #: .\blog\templates\blog\gerer_categories.html:105
 msgid "Ajouter une catégorie"
-msgstr ""
-
+msgstr "Ajouter une catégorie"
 #: .\blog\templates\blog\admin\page_admin.html:70
 #: .\blog\templates\blog\admin\page_admin.html:119
 msgid "Utilisateurs"
-msgstr ""
-
+msgstr "Utilisateurs"
 #: .\blog\templates\blog\admin\page_admin.html:74
 msgid "Gérer les utilisateurs et leurs rôles"
-msgstr ""
-
+msgstr "Gérer les utilisateurs et leurs rôles"
 #: .\blog\templates\blog\admin\page_admin.html:77
 msgid "Interface Admin Django"
 msgstr ""
@@ -102,41 +92,127 @@ msgstr ""
 msgid "Fonctionnalité de statistiques à venir !"
 msgstr ""
 
+#: .\blog\templates\blog\admin\page_journaliste.html:5
+msgid "Page Journaliste"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:13
+msgid "Espace Journaliste"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:15
+msgid "Accès Journaliste"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:26
+#: .\blog\templates\blog\base.html:207
+msgid "Mes Articles"
+msgstr "Mes Articles"
+#: .\blog\templates\blog\admin\page_journaliste.html:30
+#, fuzzy
+#| msgid "Créer mon premier article"
+msgid "Créer et gérer vos articles"
+msgstr "Créer mon premier article"
+
+#: .\blog\templates\blog\admin\page_journaliste.html:33
+#, fuzzy
+#| msgid "Retour à l'article"
+msgid "Voir mes articles"
+msgstr "Retour à l'article"
+
+#: .\blog\templates\blog\admin\page_journaliste.html:36
+#, fuzzy
+#| msgid "Créer mon premier article"
+msgid "Créer un article"
+msgstr "Créer mon premier article"
+
+#: .\blog\templates\blog\admin\page_journaliste.html:52
+msgid "Consulter les catégories disponibles"
+msgstr "Consulter les catégories disponibles"
+#: .\blog\templates\blog\admin\page_journaliste.html:58
+msgid "Créer une catégorie"
+msgstr "Créer une catégorie"
+#: .\blog\templates\blog\admin\page_journaliste.html:59
+msgid "(Réservé aux admins)"
+msgstr "(Réservé aux admins)"
+#: .\blog\templates\blog\admin\page_journaliste.html:73
+msgid "Mes statistiques"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:82
+msgid "Mes articles"
+msgstr ""
+
+#: .\blog\templates\blog\admin\page_journaliste.html:90
+#, fuzzy
+#| msgid "Articles récents"
+msgid "Articles ce mois-ci"
+msgstr "Articles récents"
+
+#: .\blog\templates\blog\admin\page_journaliste.html:98
+msgid "Commentaires reçus"
+msgstr "Commentaires reçus"
+#: .\blog\templates\blog\admin\page_journaliste.html:114
+msgid "Guide rapide"
+msgstr "Guide rapide"
+#: .\blog\templates\blog\admin\page_journaliste.html:120
+msgid "Ce que vous pouvez faire :"
+msgstr "Ce que vous pouvez faire :"
+#: .\blog\templates\blog\admin\page_journaliste.html:122
+#, fuzzy
+#| msgid "Créer mon premier article"
+msgid "Créer et modifier vos articles"
+msgstr "Créer mon premier article"
+
+#: .\blog\templates\blog\admin\page_journaliste.html:123
+msgid "Voir toutes les catégories"
+msgstr "Voir toutes les catégories"
+#: .\blog\templates\blog\admin\page_journaliste.html:124
+msgid "Gérer vos publications"
+msgstr "Gérer vos publications"
+#: .\blog\templates\blog\admin\page_journaliste.html:125
+msgid "Consulter vos statistiques"
+msgstr "Consulter vos statistiques"
+#: .\blog\templates\blog\admin\page_journaliste.html:129
+msgid "Restrictions :"
+msgstr "Restrictions :"
+#: .\blog\templates\blog\admin\page_journaliste.html:131
+msgid "Pas de création de catégories"
+msgstr "Pas de création de catégories"
+#: .\blog\templates\blog\admin\page_journaliste.html:132
+msgid "Pas d'accès à l'admin Django"
+msgstr "Pas d'accès à l'admin Django"
+#: .\blog\templates\blog\admin\page_journaliste.html:133
+msgid "Pas de gestion des utilisateurs"
+msgstr ""
+
 #: .\blog\templates\blog\ajouter_article.html:12
 msgid "Ajouter un Nouvel Article"
-msgstr ""
-
+msgstr "Ajouter un Nouvel Article"
 #: .\blog\templates\blog\ajouter_article.html:21
 msgid "Titre de l'article"
-msgstr ""
-
+msgstr "Titre de l'article"
 #: .\blog\templates\blog\ajouter_article.html:33
 #: .\blog\templates\blog\modifier_article.html:67
 msgid "Auteur"
-msgstr ""
-
+msgstr "Auteur"
 #: .\blog\templates\blog\ajouter_article.html:45
 #: .\blog\templates\blog\modifier_article.html:79
 msgid "Catégorie"
-msgstr ""
-
+msgstr "Catégorie"
 #: .\blog\templates\blog\ajouter_article.html:55
 msgid "Créer une nouvelle catégorie"
-msgstr ""
-
+msgstr "Créer une nouvelle catégorie"
 #: .\blog\templates\blog\ajouter_article.html:61
 #: .\blog\templates\blog\modifier_article.html:94
 msgid "Image"
-msgstr ""
-
+msgstr "Image"
 #: .\blog\templates\blog\ajouter_article.html:70
 msgid "Formats acceptés: JPG, PNG, GIF (optionnel)"
-msgstr ""
-
+msgstr "Formats acceptés : JPG, PNG, GIF (optionnel)"
 #: .\blog\templates\blog\ajouter_article.html:76
 msgid "Contenu de l'article"
-msgstr ""
-
+msgstr "Contenu de l'article"
 #: .\blog\templates\blog\ajouter_article.html:86
 #: .\blog\templates\blog\ajouter_categorie.html:55
 #: .\blog\templates\blog\modifier_article.html:121
@@ -144,12 +220,10 @@ msgstr ""
 #: .\blog\templates\blog\supprimer_article.html:58
 #: .\blog\templates\blog\supprimer_categorie.html:45
 msgid "Annuler"
-msgstr ""
-
+msgstr "Annuler"
 #: .\blog\templates\blog\ajouter_article.html:89
 msgid "Ajouter l'article"
-msgstr ""
-
+msgstr "Ajouter l'article"
 #: .\blog\templates\blog\ajouter_categorie.html:12
 msgid "Ajouter une nouvelle catégorie"
 msgstr ""
@@ -187,8 +261,7 @@ msgstr ""
 #: .\blog\templates\blog\gerer_articles.html:127
 #: .\blog\templates\blog\gerer_categories.html:79
 msgid "Supprimer"
-msgstr ""
-
+msgstr "Supprimer"
 #: .\blog\templates\blog\article_detail.html:64
 msgid "commentaires"
 msgstr ""
@@ -218,29 +291,24 @@ msgstr ""
 
 #: .\blog\templates\blog\article_detail.html:123
 msgid "Ajouter un commentaire"
-msgstr ""
-
+msgstr "Ajouter un commentaire"
 #: .\blog\templates\blog\article_detail.html:132
 #: .\blog\templates\blog\gerer_categories.html:44
 msgid "Nom"
-msgstr ""
-
+msgstr "Nom"
 #: .\blog\templates\blog\article_detail.html:144
 msgid "Email"
-msgstr ""
-
+msgstr "Email"
 #: .\blog\templates\blog\article_detail.html:148
 msgid "Votre email ne sera pas publié"
 msgstr ""
 
 #: .\blog\templates\blog\article_detail.html:159
 msgid "Commentaire"
-msgstr ""
-
+msgstr "Commentaire"
 #: .\blog\templates\blog\article_detail.html:168
 msgid "Publier le commentaire"
-msgstr ""
-
+msgstr "Publier le commentaire"
 #: .\blog\templates\blog\auth\login.html:4
 #: .\blog\templates\blog\auth\login.html:13
 #: .\blog\templates\blog\auth\login.html:21
@@ -364,10 +432,6 @@ msgstr ""
 
 #: .\blog\templates\blog\base.html:206
 msgid "Écrire"
-msgstr ""
-
-#: .\blog\templates\blog\base.html:207
-msgid "Mes Articles"
 msgstr ""
 
 #: .\blog\templates\blog\base.html:213
@@ -652,8 +716,7 @@ msgstr ""
 #: .\blog\templates\blog\diagnostic_images.html:379
 #: .\blog\templates\blog\gerer_articles.html:20
 msgid "Gérer les articles"
-msgstr ""
-
+msgstr "Gérer les articles"
 #: .\blog\templates\blog\gerer_articles.html:32
 msgid "Filtrer par catégorie"
 msgstr ""
@@ -665,8 +728,7 @@ msgstr ""
 
 #: .\blog\templates\blog\gerer_articles.html:45
 msgid "Effacer le filtre"
-msgstr ""
-
+msgstr "Effacer le filtre"
 #: .\blog\templates\blog\gerer_articles.html:108
 msgid "Aucune"
 msgstr ""
@@ -678,19 +740,17 @@ msgstr ""
 #: .\blog\templates\blog\gerer_articles.html:121
 #: .\blog\templates\blog\gerer_categories.html:74
 msgid "Modifier"
-msgstr ""
-
+msgstr "Modifier"
 #: .\blog\templates\blog\gerer_articles.html:143
 msgid "Aucun article trouvé"
-msgstr ""
-
+msgstr "Aucun article trouvé"
 #: .\blog\templates\blog\gerer_articles.html:146
 msgid "Aucun article dans cette catégorie."
-msgstr ""
+msgstr "Aucun article dans cette catégorie."
 
 #: .\blog\templates\blog\gerer_articles.html:148
 msgid "Commencez par créer votre premier article !"
-msgstr ""
+msgstr "Commencez par créer votre premier article !"
 
 #: .\blog\templates\blog\gerer_categories.html:9
 msgid "Gestion des catégories"
@@ -715,8 +775,7 @@ msgstr ""
 
 #: .\blog\templates\blog\gerer_categories.html:48
 msgid "Actions"
-msgstr ""
-
+msgstr "Actions"
 #: .\blog\templates\blog\gerer_categories.html:61
 msgid "Aucune description"
 msgstr ""
@@ -727,53 +786,50 @@ msgstr ""
 
 #: .\blog\templates\blog\gerer_categories.html:101
 msgid "Aucune catégorie trouvée"
-msgstr ""
+msgstr "Aucune catégorie trouvée"
 
 #: .\blog\templates\blog\gerer_categories.html:103
 msgid "Commencez par créer votre première catégorie."
-msgstr ""
+msgstr "Commencez par créer votre première catégorie."
 
 #: .\blog\templates\blog\gerer_categories.html:108
 msgid "Aucune catégorie n'a encore été créée."
-msgstr ""
+msgstr "Aucune catégorie n'a encore été créée."
 
 #: .\blog\templates\blog\home.html:46
 msgid "Articles récents"
-msgstr ""
+msgstr "Articles récents"
 
-#: .\blog\templates\blog\home.html:91
+#: .\blog\templates\blog\home.html:92
 msgid "Lire"
-msgstr ""
-
-#: .\blog\templates\blog\home.html:132
-msgid "Aucun article pour le moment"
-msgstr ""
+msgstr "Lire"
 
 #: .\blog\templates\blog\home.html:133
-msgid "Commencez par créer votre premier article pour partager vos idées !"
-msgstr ""
+msgid "Aucun article pour le moment"
+msgstr "Aucun article pour le moment"
 
-#: .\blog\templates\blog\home.html:135
+#: .\blog\templates\blog\home.html:134
+msgid "Commencez par créer votre premier article pour partager vos idées"
+msgstr "Commencez par créer votre premier article pour partager vos idées"
+
+#: .\blog\templates\blog\home.html:136
 msgid "Créer mon premier article"
-msgstr ""
+msgstr "Créer mon premier article"
 
 #: .\blog\templates\blog\modifier_article.html:10
 #: .\blog\templates\blog\supprimer_article.html:10
 msgid "Retour à l'article"
-msgstr ""
+msgstr "Retour à l'article"
 
 #: .\blog\templates\blog\modifier_article.html:33
 msgid "Modifier l'article"
-msgstr ""
-
+msgstr "Modifier l'article"
 #: .\blog\templates\blog\modifier_article.html:43
 msgid "Titre"
-msgstr ""
-
+msgstr "Titre"
 #: .\blog\templates\blog\modifier_article.html:55
 msgid "Contenu"
-msgstr ""
-
+msgstr "Contenu"
 #: .\blog\templates\blog\modifier_article.html:88
 msgid "Sélectionnez une catégorie pour votre article"
 msgstr ""
@@ -809,8 +865,7 @@ msgstr ""
 
 #: .\blog\templates\blog\supprimer_article.html:22
 msgid "Supprimer l'article"
-msgstr ""
-
+msgstr "Supprimer l'article"
 #: .\blog\templates\blog\supprimer_article.html:28
 msgid "Attention !"
 msgstr ""
@@ -835,8 +890,7 @@ msgstr ""
 
 #: .\blog\templates\blog\supprimer_article.html:61
 msgid "Supprimer définitivement"
-msgstr ""
-
+msgstr "Supprimer définitivement"
 #: .\blog\templates\blog\supprimer_categorie.html:4
 #: .\blog\templates\blog\supprimer_categorie.html:12
 msgid "Supprimer la catégorie"

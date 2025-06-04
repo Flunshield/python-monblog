@@ -4184,3 +4184,1836 @@ Traceback (most recent call last):
 SystemExit: 1
 [2025-06-03 19:49:23 +0000] [28] [INFO] Worker exiting (pid: 28)
 [2025-06-03 19:49:23 +0000] [48] [INFO] Booting worker with pid: 48
+[2025-06-04 08:02:14 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 08:02:14 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 08:02:14 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 08:02:14 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 08:02:14 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 08:02:14 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 08:02:14 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 08:02:14 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 08:02:14 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 08:02:14 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 08:02:14 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 08:02:14 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 08:02:14 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 08:02:14 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 08:02:15 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 08:02:15 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 08:02:15 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 08:02:15 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 08:02:15 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 08:02:15 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 08:02:15 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 08:02:15 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 08:02:15 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 08:02:15 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 08:02:15 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 08:02:15 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 08:02:15 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 08:02:15 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 08:02:15 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 08:02:15 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 08:02:15 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 08:02:15 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 08:02:15 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 08:02:15 +0000] [45] [INFO] Booting worker with pid: 45
+[2025-06-04 08:02:15 +0000] [46] [INFO] Booting worker with pid: 46
+[2025-06-04 08:02:15 +0000] [47] [INFO] Booting worker with pid: 47
+[2025-06-04 08:02:29 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 08:02:29 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 08:02:29 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 08:02:29 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 08:02:29 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 08:02:29 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 08:02:29 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 08:02:29 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 08:02:29 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 08:02:29 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 08:02:29 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 08:02:29 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 08:02:29 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 08:02:29 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 08:02:29 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 08:02:29 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 08:02:29 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 08:02:29 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 08:02:29 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 08:02:29 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 08:02:29 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 08:02:29 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 08:02:29 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 08:02:29 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 08:02:29 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 08:02:29 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 08:02:29 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 08:02:29 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 08:02:29 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 08:02:29 +0000] [46] [INFO] Worker exiting (pid: 46)
+[2025-06-04 08:02:29 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 08:02:29 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 08:02:29 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 08:02:29 +0000] [47] [INFO] Worker exiting (pid: 47)
+[2025-06-04 08:02:30 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 08:02:35 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 08:02:35 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 08:02:35 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 08:02:35 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 08:02:35 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 08:02:35 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 08:02:35 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 08:02:35 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 08:02:35 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 08:02:35 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 08:02:35 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 08:02:35 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 08:02:35 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 08:02:35 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 08:02:35 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 08:02:35 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 08:02:35 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 08:02:35 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 08:02:35 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 08:02:35 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 08:02:35 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 08:02:35 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 08:02:35 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 08:02:35 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 08:02:36 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 08:02:36 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 08:02:36 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 08:02:36 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 08:02:36 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 08:02:36 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 08:02:36 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 08:02:36 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 08:02:36 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 08:02:36 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 08:02:36 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 08:02:36 +0000] [45] [INFO] Booting worker with pid: 45
+[2025-06-04 08:03:49 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 08:03:49 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 08:03:49 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 08:03:49 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 08:03:49 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 08:03:49 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 08:03:49 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 08:03:49 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 08:03:49 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 08:03:49 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 08:03:49 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 08:03:49 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 08:03:49 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 08:03:49 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 08:03:49 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 08:03:49 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 08:03:49 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 08:03:49 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 08:03:49 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 08:03:49 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 08:03:49 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 08:03:49 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 08:03:49 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 08:03:49 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 08:03:49 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 08:03:49 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 08:03:49 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 08:03:49 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 08:03:49 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 08:03:49 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 08:03:49 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 08:03:49 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 08:03:49 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 08:03:49 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 08:03:50 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 08:04:03 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 08:04:03 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 08:04:03 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 08:04:03 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 08:04:03 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 08:04:03 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 08:04:03 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 08:04:03 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 08:04:03 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 08:04:03 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 08:04:03 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 08:04:03 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 08:04:03 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 08:04:03 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 08:04:03 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 08:04:04 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 08:04:04 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 08:04:04 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 08:04:04 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 08:04:04 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 08:04:04 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 08:04:04 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 08:04:04 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 08:04:04 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 08:04:04 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 08:04:04 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 08:04:04 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 08:04:04 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 08:04:04 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 08:04:04 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 08:04:04 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 08:04:04 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 08:04:04 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 08:04:04 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 08:04:05 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 08:04:05 +0000] [45] [INFO] Booting worker with pid: 45
+[2025-06-04 08:05:25 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 08:05:25 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 08:05:25 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 08:05:25 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 08:05:25 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 08:05:25 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 08:05:25 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 08:05:25 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 08:05:25 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 08:05:25 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 08:05:25 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 08:05:25 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 08:05:25 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 08:05:25 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 08:05:25 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 08:05:25 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 08:05:25 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 08:05:25 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 08:05:25 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 08:05:25 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 08:05:25 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 08:05:25 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 08:05:25 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 08:05:25 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 08:05:25 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 08:05:25 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 08:05:25 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 08:05:25 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 08:05:25 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 08:05:25 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 08:05:25 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 08:05:25 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 08:05:25 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 08:05:25 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 08:05:25 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 08:07:04 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 08:07:04 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 08:07:04 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 08:07:04 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 08:07:04 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 08:07:04 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 08:07:04 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 08:07:04 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 08:07:04 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 08:07:04 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 08:07:04 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 08:07:04 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 08:07:05 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 08:07:05 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 08:07:05 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 08:07:05 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 08:07:05 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 08:07:05 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 08:07:05 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 08:07:05 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 08:07:05 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 08:07:05 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 08:07:05 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 08:07:05 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 08:07:05 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 08:07:05 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 08:07:05 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 08:07:05 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 08:07:05 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 08:07:05 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 08:07:06 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 08:07:06 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 08:07:06 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 08:07:06 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 08:07:06 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 08:07:06 +0000] [45] [INFO] Booting worker with pid: 45
+[2025-06-04 08:30:02 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 08:30:02 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 08:30:02 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 08:30:02 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 08:30:02 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 08:30:02 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 08:30:02 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 08:30:02 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 08:30:02 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 08:30:02 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 08:30:02 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 08:30:02 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 08:30:02 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 08:30:02 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 08:30:02 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 08:30:02 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 08:30:02 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 08:30:02 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 08:30:02 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 08:30:02 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 08:30:02 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 08:30:02 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 08:30:02 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 08:30:02 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 08:30:02 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 08:30:02 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 08:30:02 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 08:30:02 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 08:30:02 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 08:30:02 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 08:30:02 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 08:30:02 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 08:30:02 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 08:30:02 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 08:30:03 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 08:30:17 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 08:30:17 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 08:30:17 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 08:30:17 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 08:30:17 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 08:30:17 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 08:30:17 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 08:30:17 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 08:30:17 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 08:30:17 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 08:30:17 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 08:30:18 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 08:30:18 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 08:30:18 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 08:30:18 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 08:30:18 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 08:30:18 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 08:30:18 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 08:30:18 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 08:30:18 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 08:30:18 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 08:30:18 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 08:30:18 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 08:30:18 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 08:30:18 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 08:30:18 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 08:30:18 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 08:30:18 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 08:30:19 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 08:30:19 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 08:30:19 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 08:30:19 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 08:30:19 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 08:30:19 +0000] [45] [INFO] Booting worker with pid: 45
+[2025-06-04 08:30:19 +0000] [46] [INFO] Booting worker with pid: 46
+[2025-06-04 08:30:19 +0000] [47] [INFO] Booting worker with pid: 47
+[2025-06-04 08:32:18 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 08:32:18 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 08:32:18 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 08:32:18 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 08:32:18 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 08:32:18 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 08:32:18 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 08:32:18 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 08:32:18 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 08:32:18 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 08:32:18 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 08:32:18 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 08:32:18 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 08:32:18 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 08:32:18 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 08:32:18 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 08:32:18 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 08:32:18 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 08:32:18 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 08:32:18 +0000] [46] [INFO] Worker exiting (pid: 46)
+[2025-06-04 08:32:18 +0000] [47] [INFO] Worker exiting (pid: 47)
+[2025-06-04 08:32:18 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 08:32:18 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 08:32:18 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 08:32:18 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 08:32:18 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 08:32:18 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 08:32:18 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 08:32:18 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 08:32:18 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 08:32:18 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 08:32:18 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 08:32:18 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 08:32:18 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 08:32:19 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 08:32:35 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 08:32:35 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 08:32:35 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 08:32:35 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-04 08:32:35 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-04 08:32:35 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 08:32:35 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 08:32:35 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 08:32:35 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 08:32:35 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 08:32:35 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 08:32:35 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 08:32:35 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 08:32:36 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 08:32:36 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 08:32:36 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 08:32:36 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 08:32:36 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 08:32:36 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 08:32:36 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 08:32:36 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 08:32:36 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 08:32:36 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 08:32:36 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 08:32:36 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 08:32:36 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 08:32:36 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 08:32:36 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 08:32:36 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 08:32:36 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 08:32:36 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 08:32:36 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 08:32:36 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 08:32:36 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 08:32:36 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 08:32:37 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 08:57:46 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 08:57:46 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 08:57:46 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 08:57:46 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 08:57:46 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-04 08:57:46 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 08:57:46 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 08:57:46 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 08:57:46 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 08:57:46 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 08:57:46 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 08:57:46 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 08:57:46 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 08:57:46 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 08:57:46 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 08:57:46 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 08:57:46 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-04 08:57:46 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 08:57:46 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 08:57:46 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 08:57:46 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 08:57:46 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 08:57:46 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 08:57:46 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 08:57:46 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 08:57:46 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 08:57:46 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 08:57:46 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 08:57:46 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 08:57:46 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 08:57:46 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 08:57:46 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 08:57:46 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 08:57:46 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 08:57:46 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 08:58:12 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 08:58:12 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 08:58:12 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 08:58:12 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-04 08:58:12 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-04 08:58:12 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 08:58:12 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 08:58:12 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 08:58:12 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 08:58:12 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 08:58:12 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 08:58:12 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 08:58:12 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 08:58:12 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 08:58:12 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 08:58:12 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 08:58:12 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 08:58:12 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 08:58:12 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 08:58:13 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 08:58:13 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 08:58:13 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 08:58:13 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 08:58:13 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 08:58:13 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 08:58:13 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 08:58:13 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 08:58:13 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 08:58:13 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 08:58:13 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 08:58:13 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 08:58:13 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 08:58:13 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 08:58:13 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 08:58:13 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 08:58:13 +0000] [43] [INFO] Booting worker with pid: 43
+2025-06-04 08:58:19 [ERROR] blog: Erreur lors du chargement de la page d'accueil: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+2025-06-04 08:58:19 [ERROR] monprojet.middleware: [30686ea8] Exception non gérée: TemplateSyntaxError: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+Traceback (most recent call last):
+  File "/app/blog/views.py", line 38, in home
+    return render(request, 'blog/home.html', context)
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 43, in home
+    return render(request, 'blog/home.html', {'articles': [], 'categories': []})
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+2025-06-04 08:58:19 [ERROR] django.request: Internal Server Error: /en/
+Traceback (most recent call last):
+  File "/app/blog/views.py", line 38, in home
+    return render(request, 'blog/home.html', context)
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 43, in home
+    return render(request, 'blog/home.html', {'articles': [], 'categories': []})
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+2025-06-04 08:58:19 [ERROR] monprojet.middleware: [30686ea8] Réponse 500 en 0.190s - Taille: 214668 bytes
+2025-06-04 08:58:24 [ERROR] blog: Erreur lors du chargement de la page d'accueil: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+2025-06-04 08:58:24 [ERROR] monprojet.middleware: [1e7f3816] Exception non gérée: TemplateSyntaxError: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+Traceback (most recent call last):
+  File "/app/blog/views.py", line 38, in home
+    return render(request, 'blog/home.html', context)
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 43, in home
+    return render(request, 'blog/home.html', {'articles': [], 'categories': []})
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+2025-06-04 08:58:24 [ERROR] django.request: Internal Server Error: /en/
+Traceback (most recent call last):
+  File "/app/blog/views.py", line 38, in home
+    return render(request, 'blog/home.html', context)
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 43, in home
+    return render(request, 'blog/home.html', {'articles': [], 'categories': []})
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'blog/base.html'> must be the first tag in the template.
+2025-06-04 08:58:24 [ERROR] monprojet.middleware: [1e7f3816] Réponse 500 en 0.147s - Taille: 214961 bytes
+[2025-06-04 08:58:54 +0000] [1] [CRITICAL] WORKER TIMEOUT (pid:40)
+[2025-06-04 08:58:54 +0000] [40] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-04 08:58:54 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 08:58:54 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 08:59:22 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 08:59:22 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-04 08:59:22 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 08:59:22 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 08:59:22 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 08:59:22 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 08:59:22 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 08:59:22 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 08:59:22 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 08:59:22 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 08:59:22 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-04 08:59:22 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 08:59:22 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 08:59:22 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 08:59:22 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 08:59:22 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 08:59:22 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 08:59:22 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 08:59:22 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 08:59:22 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 08:59:22 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 08:59:22 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 08:59:22 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 08:59:22 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 08:59:22 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 08:59:22 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 08:59:22 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 08:59:22 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 08:59:22 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 08:59:22 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 08:59:22 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 08:59:22 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 08:59:22 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 08:59:22 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 08:59:23 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 08:59:36 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 08:59:36 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 08:59:36 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 08:59:36 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-04 08:59:36 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-04 08:59:36 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 08:59:36 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 08:59:36 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 08:59:37 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 08:59:37 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 08:59:37 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 08:59:37 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 08:59:37 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 08:59:37 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 08:59:37 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 08:59:37 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 08:59:37 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 08:59:37 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 08:59:37 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 08:59:37 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 08:59:37 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 08:59:37 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 08:59:37 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 08:59:37 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 08:59:38 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 08:59:38 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 08:59:38 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 08:59:38 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 08:59:38 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 08:59:38 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 08:59:38 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 08:59:38 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 08:59:38 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 08:59:38 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 08:59:38 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 08:59:38 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 09:07:33 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 09:07:33 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 09:07:33 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 09:07:33 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 09:07:33 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-04 09:07:33 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-04 09:07:33 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 09:07:33 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 09:07:33 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 09:07:33 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 09:07:33 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 09:07:33 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 09:07:33 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 09:07:33 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 09:07:33 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 09:07:33 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 09:07:33 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 09:07:33 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 09:07:33 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 09:07:33 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 09:07:33 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 09:07:33 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 09:07:33 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 09:07:33 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 09:07:33 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 09:07:33 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 09:07:33 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 09:07:33 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 09:07:33 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 09:07:33 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 09:07:33 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 09:07:33 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 09:07:33 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 09:07:33 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 09:07:33 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 09:07:52 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 09:07:52 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 09:07:52 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 09:07:52 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-04 09:07:52 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-04 09:07:52 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 09:07:52 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 09:07:52 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 09:07:52 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 09:07:52 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 09:07:52 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 09:07:52 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 09:07:52 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 09:07:52 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 09:07:53 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 09:07:53 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 09:07:53 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 09:07:53 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 09:07:53 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 09:07:53 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 09:07:53 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 09:07:53 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 09:07:53 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 09:07:53 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 09:07:53 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 09:07:53 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 09:07:53 +0000] [34] [INFO] Booting worker with pid: 34
+2025-06-04 09:07:53 [ERROR] blog: Erreur lors du chargement de la page d'accueil: Unknown argument for 'trans' tag: '!'. The only options available are 'noop', 'context' "xxx", and 'as VAR'.
+2025-06-04 09:07:53 [ERROR] monprojet.middleware: [7254653f] Exception non gérée: TemplateSyntaxError: Unknown argument for 'trans' tag: '!'. The only options available are 'noop', 'context' "xxx", and 'as VAR'.
+Traceback (most recent call last):
+  File "/app/blog/views.py", line 38, in home
+    return render(request, 'blog/home.html', context)
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 967, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/templatetags/i18n.py", line 443, in do_translate
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Unknown argument for 'trans' tag: '!'. The only options available are 'noop', 'context' "xxx", and 'as VAR'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 43, in home
+    return render(request, 'blog/home.html', {'articles': [], 'categories': []})
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 967, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/templatetags/i18n.py", line 443, in do_translate
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Unknown argument for 'trans' tag: '!'. The only options available are 'noop', 'context' "xxx", and 'as VAR'.
+[2025-06-04 09:07:53 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 09:07:53 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 09:07:53 +0000] [37] [INFO] Booting worker with pid: 37
+2025-06-04 09:07:53 [ERROR] django.request: Internal Server Error: /es/
+Traceback (most recent call last):
+  File "/app/blog/views.py", line 38, in home
+    return render(request, 'blog/home.html', context)
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 967, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/templatetags/i18n.py", line 443, in do_translate
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Unknown argument for 'trans' tag: '!'. The only options available are 'noop', 'context' "xxx", and 'as VAR'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 43, in home
+    return render(request, 'blog/home.html', {'articles': [], 'categories': []})
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 967, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/templatetags/i18n.py", line 443, in do_translate
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Unknown argument for 'trans' tag: '!'. The only options available are 'noop', 'context' "xxx", and 'as VAR'.
+[2025-06-04 09:07:53 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 09:07:54 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 09:07:54 +0000] [40] [INFO] Booting worker with pid: 40
+2025-06-04 09:07:54 [ERROR] monprojet.middleware: [7254653f] Réponse 500 en 0.409s - Taille: 335033 bytes
+[2025-06-04 09:07:54 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 09:07:54 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 09:07:54 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 09:08:14 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 09:08:14 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-04 09:08:14 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-04 09:08:14 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 09:08:14 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 09:08:14 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 09:08:14 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 09:08:14 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 09:08:14 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 09:08:14 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 09:08:14 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 09:08:14 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 09:08:14 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 09:08:14 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 09:08:14 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 09:08:14 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 09:08:14 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 09:08:14 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 09:08:14 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 09:08:14 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 09:08:14 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 09:08:14 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 09:08:14 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 09:08:14 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 09:08:14 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 09:08:14 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 09:08:14 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 09:08:14 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 09:08:14 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 09:08:14 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 09:08:14 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 09:08:14 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 09:08:14 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 09:08:36 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 09:08:36 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 09:08:36 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 09:08:36 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-04 09:08:36 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-04 09:08:36 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 09:08:37 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 09:08:37 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 09:08:37 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 09:08:37 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 09:08:37 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 09:08:37 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 09:08:37 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 09:08:37 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 09:08:37 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 09:08:37 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 09:08:37 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 09:08:37 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 09:08:37 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 09:08:37 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 09:08:37 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 09:08:37 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 09:08:37 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 09:08:37 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 09:08:38 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 09:08:38 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 09:08:38 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 09:08:38 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 09:08:38 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 09:08:38 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 09:08:38 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 09:08:38 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 09:08:38 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 09:08:38 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 09:08:38 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 09:08:38 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 09:10:50 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 09:10:50 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 09:10:50 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-04 09:10:50 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-04 09:10:50 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 09:10:50 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 09:10:50 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 09:10:50 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 09:10:50 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 09:10:50 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 09:10:50 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 09:10:50 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 09:10:50 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 09:10:50 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 09:10:50 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 09:10:50 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 09:10:50 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 09:10:50 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 09:10:50 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 09:10:50 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 09:10:50 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 09:10:50 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 09:10:50 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 09:10:50 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 09:10:50 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 09:10:50 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 09:10:50 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 09:10:50 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 09:10:50 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 09:10:50 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 09:10:50 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 09:10:50 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 09:10:50 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 09:10:50 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 09:10:50 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 09:11:19 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 09:11:19 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 09:11:19 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 09:11:19 +0000] [11] [INFO] Booting worker with pid: 11
+[2025-06-04 09:11:19 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-06-04 09:11:19 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 09:11:19 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 09:11:19 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 09:11:19 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 09:11:19 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 09:11:19 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 09:11:19 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 09:11:19 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 09:11:19 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 09:11:19 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 09:11:20 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 09:11:20 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 09:11:20 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 09:11:20 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 09:11:20 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 09:11:20 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 09:11:20 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 09:11:20 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 09:11:20 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 09:11:20 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 09:11:20 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 09:11:20 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 09:11:20 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 09:11:21 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 09:11:21 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 09:11:21 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 09:11:21 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 09:11:21 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 09:11:21 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 09:11:21 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 09:11:21 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 09:13:24 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 09:13:24 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2025-06-04 09:13:24 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 09:13:24 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 09:13:24 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-06-04 09:13:24 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 09:13:24 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 09:13:24 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 09:13:24 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 09:13:24 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 09:13:24 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 09:13:24 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 09:13:24 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 09:13:24 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 09:13:24 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 09:13:24 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 09:13:24 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 09:13:24 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 09:13:24 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 09:13:24 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 09:13:24 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 09:13:24 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 09:13:24 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 09:13:24 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 09:13:24 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 09:13:24 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 09:13:24 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 09:13:24 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 09:13:24 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 09:13:24 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 09:13:24 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 09:13:24 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 09:13:24 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 09:13:24 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 09:13:25 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 09:18:43 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 09:18:43 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 09:18:43 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 09:18:43 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 09:18:43 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 09:18:43 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 09:18:43 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 09:18:43 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 09:18:43 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 09:18:43 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 09:18:43 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 09:18:43 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 09:18:43 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 09:18:43 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 09:18:43 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 09:18:43 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 09:18:43 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 09:18:43 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 09:18:43 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 09:18:43 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 09:18:43 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 09:18:44 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 09:18:44 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 09:18:44 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 09:18:44 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 09:18:44 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 09:18:44 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 09:18:44 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 09:18:44 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 09:18:44 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 09:18:44 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 09:18:44 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 09:18:44 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 09:18:44 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 09:18:44 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 09:18:44 +0000] [45] [INFO] Booting worker with pid: 45
+[2025-06-04 09:20:41 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 09:20:41 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 09:20:41 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 09:20:41 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 09:20:41 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 09:20:41 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 09:20:41 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 09:20:41 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 09:20:41 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 09:20:41 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 09:20:41 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 09:20:41 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 09:20:41 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 09:20:41 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 09:20:41 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 09:20:41 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 09:20:41 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 09:20:41 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 09:20:41 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 09:20:41 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 09:20:41 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 09:20:41 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 09:20:41 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 09:20:41 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 09:20:41 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 09:20:41 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 09:20:41 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 09:20:41 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 09:20:41 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 09:20:41 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 09:20:41 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 09:20:41 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 09:20:41 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 09:20:41 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 09:20:42 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 09:21:27 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 09:21:27 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 09:21:27 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 09:21:27 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 09:21:27 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 09:21:27 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 09:21:27 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 09:21:27 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 09:21:27 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 09:21:27 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 09:21:28 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 09:21:28 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 09:21:28 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 09:21:28 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 09:21:28 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 09:21:28 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 09:21:28 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 09:21:28 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 09:21:28 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 09:21:28 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 09:21:28 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 09:21:28 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 09:21:28 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 09:21:28 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 09:21:28 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 09:21:28 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 09:21:28 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 09:21:28 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 09:21:29 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 09:21:29 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 09:21:29 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 09:21:29 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 09:21:29 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 09:21:29 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 09:21:29 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 09:21:29 +0000] [45] [INFO] Booting worker with pid: 45
+[2025-06-04 09:25:19 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 09:25:19 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 09:25:19 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 09:25:19 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 09:25:19 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 09:25:19 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 09:25:19 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 09:25:19 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 09:25:19 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 09:25:19 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 09:25:19 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 09:25:19 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 09:25:19 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 09:25:19 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 09:25:19 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 09:25:19 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 09:25:19 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 09:25:19 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 09:25:19 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 09:25:19 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 09:25:19 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 09:25:19 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 09:25:19 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 09:25:19 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 09:25:19 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 09:25:19 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 09:25:19 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 09:25:19 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 09:25:19 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 09:25:19 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 09:25:19 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 09:25:19 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 09:25:19 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 09:25:19 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 09:26:22 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 09:26:22 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 09:26:22 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 09:26:22 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 09:26:22 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 09:26:23 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 09:26:23 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 09:26:23 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 09:26:23 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 09:26:23 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 09:26:23 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 09:26:23 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 09:26:23 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 09:26:23 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 09:26:23 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 09:26:23 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 09:26:23 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 09:26:23 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 09:26:23 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 09:26:23 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 09:26:23 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 09:26:23 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 09:26:23 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 09:26:23 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 09:26:23 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 09:26:24 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 09:26:24 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 09:26:24 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 09:26:24 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 09:26:24 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 09:26:24 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 09:26:24 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 09:26:24 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 09:26:24 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 09:26:24 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 09:26:24 +0000] [45] [INFO] Booting worker with pid: 45
+2025-06-04 09:28:00 [ERROR] blog: Erreur lors du chargement de la page d'accueil: Could not parse the remainder: '==' from 'selected_category=='
+2025-06-04 09:28:00 [ERROR] monprojet.middleware: [b6aaf0aa] Exception non gérée: TemplateSyntaxError: Could not parse the remainder: '==' from 'selected_category=='
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+KeyError: 'selected_category=='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/blog/views.py", line 38, in home
+    return render(request, 'blog/home.html', context)
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 181, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '==' from 'selected_category=='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+KeyError: 'selected_category=='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 43, in home
+    return render(request, 'blog/home.html', {'articles': [], 'categories': []})
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 181, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '==' from 'selected_category=='
+2025-06-04 09:28:00 [ERROR] django.request: Internal Server Error: /es/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+KeyError: 'selected_category=='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/blog/views.py", line 38, in home
+    return render(request, 'blog/home.html', context)
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 181, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '==' from 'selected_category=='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+KeyError: 'selected_category=='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/blog/views.py", line 43, in home
+    return render(request, 'blog/home.html', {'articles': [], 'categories': []})
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python3.10/site-packages/django/template/smartif.py", line 181, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '==' from 'selected_category=='
+2025-06-04 09:28:00 [ERROR] monprojet.middleware: [b6aaf0aa] Réponse 500 en 0.206s - Taille: 563157 bytes
+[2025-06-04 09:30:03 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 09:30:03 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 09:30:03 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 09:30:03 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 09:30:03 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 09:30:03 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2025-06-04 09:30:03 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 09:30:03 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 09:30:03 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 09:30:03 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 09:30:03 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 09:30:03 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 09:30:03 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 09:30:03 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 09:30:03 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 09:30:03 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 09:30:03 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 09:30:03 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 09:30:03 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 09:30:03 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 09:30:03 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 09:30:03 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 09:30:03 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 09:30:03 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 09:30:03 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 09:30:03 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 09:30:03 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 09:30:03 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 09:30:03 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 09:30:03 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 09:30:03 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 09:30:03 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 09:30:03 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 09:30:03 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 09:30:04 +0000] [1] [INFO] Shutting down: Master
+[2025-06-04 09:30:16 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-04 09:30:16 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-04 09:30:16 +0000] [1] [INFO] Using worker: sync
+[2025-06-04 09:30:16 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-06-04 09:30:16 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-06-04 09:30:16 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-06-04 09:30:16 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-06-04 09:30:16 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-06-04 09:30:16 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-06-04 09:30:16 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-06-04 09:30:17 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-06-04 09:30:17 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-06-04 09:30:17 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-06-04 09:30:17 +0000] [23] [INFO] Booting worker with pid: 23
+[2025-06-04 09:30:17 +0000] [24] [INFO] Booting worker with pid: 24
+[2025-06-04 09:30:17 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-06-04 09:30:17 +0000] [26] [INFO] Booting worker with pid: 26
+[2025-06-04 09:30:17 +0000] [27] [INFO] Booting worker with pid: 27
+[2025-06-04 09:30:17 +0000] [28] [INFO] Booting worker with pid: 28
+[2025-06-04 09:30:17 +0000] [29] [INFO] Booting worker with pid: 29
+[2025-06-04 09:30:17 +0000] [30] [INFO] Booting worker with pid: 30
+[2025-06-04 09:30:17 +0000] [31] [INFO] Booting worker with pid: 31
+[2025-06-04 09:30:17 +0000] [32] [INFO] Booting worker with pid: 32
+[2025-06-04 09:30:17 +0000] [33] [INFO] Booting worker with pid: 33
+[2025-06-04 09:30:17 +0000] [34] [INFO] Booting worker with pid: 34
+[2025-06-04 09:30:17 +0000] [35] [INFO] Booting worker with pid: 35
+[2025-06-04 09:30:17 +0000] [36] [INFO] Booting worker with pid: 36
+[2025-06-04 09:30:17 +0000] [37] [INFO] Booting worker with pid: 37
+[2025-06-04 09:30:17 +0000] [38] [INFO] Booting worker with pid: 38
+[2025-06-04 09:30:17 +0000] [39] [INFO] Booting worker with pid: 39
+[2025-06-04 09:30:17 +0000] [40] [INFO] Booting worker with pid: 40
+[2025-06-04 09:30:17 +0000] [41] [INFO] Booting worker with pid: 41
+[2025-06-04 09:30:18 +0000] [42] [INFO] Booting worker with pid: 42
+[2025-06-04 09:30:18 +0000] [43] [INFO] Booting worker with pid: 43
+[2025-06-04 09:30:18 +0000] [44] [INFO] Booting worker with pid: 44
+[2025-06-04 09:30:18 +0000] [45] [INFO] Booting worker with pid: 45
+[2025-06-04 09:32:05 +0000] [1] [INFO] Handling signal: term
+[2025-06-04 09:32:05 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-06-04 09:32:05 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-06-04 09:32:05 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-06-04 09:32:05 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-06-04 09:32:05 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-06-04 09:32:05 +0000] [22] [INFO] Worker exiting (pid: 22)
+[2025-06-04 09:32:05 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-06-04 09:32:05 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-06-04 09:32:05 +0000] [39] [INFO] Worker exiting (pid: 39)
+[2025-06-04 09:32:05 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-06-04 09:32:05 +0000] [33] [INFO] Worker exiting (pid: 33)
+[2025-06-04 09:32:05 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-06-04 09:32:05 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2025-06-04 09:32:05 +0000] [44] [INFO] Worker exiting (pid: 44)
+[2025-06-04 09:32:05 +0000] [23] [INFO] Worker exiting (pid: 23)
+[2025-06-04 09:32:05 +0000] [40] [INFO] Worker exiting (pid: 40)
+[2025-06-04 09:32:05 +0000] [38] [INFO] Worker exiting (pid: 38)
+[2025-06-04 09:32:05 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2025-06-04 09:32:05 +0000] [37] [INFO] Worker exiting (pid: 37)
+[2025-06-04 09:32:05 +0000] [35] [INFO] Worker exiting (pid: 35)
+[2025-06-04 09:32:05 +0000] [41] [INFO] Worker exiting (pid: 41)
+[2025-06-04 09:32:05 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2025-06-04 09:32:05 +0000] [45] [INFO] Worker exiting (pid: 45)
+[2025-06-04 09:32:05 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2025-06-04 09:32:05 +0000] [43] [INFO] Worker exiting (pid: 43)
+[2025-06-04 09:32:05 +0000] [42] [INFO] Worker exiting (pid: 42)
+[2025-06-04 09:32:05 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2025-06-04 09:32:05 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2025-06-04 09:32:05 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2025-06-04 09:32:05 +0000] [36] [INFO] Worker exiting (pid: 36)
+[2025-06-04 09:32:05 +0000] [34] [INFO] Worker exiting (pid: 34)
+[2025-06-04 09:32:05 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2025-06-04 09:32:05 +0000] [29] [INFO] Worker exiting (pid: 29)

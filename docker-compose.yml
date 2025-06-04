@@ -1,6 +1,8 @@
 services:
   web:
-    image: flusnhield/monblog:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: monprojet_web
     command: gunicorn monprojet.wsgi --config gunicorn_config.py
     volumes:

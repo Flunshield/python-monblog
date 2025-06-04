@@ -96,16 +96,16 @@
 {% else %}
     <div class="text-center py-5">
         <div class="mb-4">
-            <i class="bi bi-folder2-open text-muted" style="font-size: 4rem;"></i>
+            <i class="bi bi-folder2-open" style="font-size: 4rem;"></i>
         </div>
         <h4 class="mb-3">{% trans "Aucune catégorie trouvée" %}</h4>
         {% if user|is_admin %}
-            <p class="text-muted mb-4">{% trans "Commencez par créer votre première catégorie." %}</p>
+            <p class=" mb-4">{% trans "Commencez par créer votre première catégorie." %}</p>
             <a href="{% url 'ajouter_categorie' %}" class="btn btn-primary btn-lg">
                 <i class="bi bi-plus-circle me-2"></i>{% trans "Ajouter une catégorie" %}
             </a>
         {% else %}
-            <p class="text-muted mb-4">{% trans "Aucune catégorie n'a encore été créée." %}</p>
+            <p class=" mb-4">{% trans "Aucune catégorie n'a encore été créée." %}</p>
         {% endif %}
     </div>
 {% endif %}
