@@ -44,4 +44,4 @@ COPY entrypoint-with-seeding.sh /entrypoint-with-seeding.sh
 RUN chmod +x /entrypoint.sh /entrypoint-with-seeding.sh
 
 # Commande de démarrage
-ENTRYPOINT ["/entrypoint-with-seeding.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
