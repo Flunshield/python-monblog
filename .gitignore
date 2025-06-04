@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pytmp
+
+# Environnement virtuel
+venv/
+ENV/
+.env
+.env.*
+*.env
+
+# Django
+*.log
+logs/
+db.sqlite3
+media/
+staticfiles/
+
+# Fichiers de migration inutiles
+*.mo
+*.pot
+
+# Fichiers de config/déploiement sensibles
+*.secret
+*.bak
+*.swp
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Autres
+*.~
+*.tmp
+
+# Fichiers de test
+coverage*
+htmlcov/
+
+# Procfile local
+Procfile.dev

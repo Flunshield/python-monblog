@@ -7,7 +7,10 @@ Un blog moderne développé avec Django permettant la gestion d'articles, de cat
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-passing-success)
 
----
+<!-- ============================= -->
+# 🚀 EN PRODUCTION : https://monblog.jbertrand.fr/fr/
+<!-- ============================= -->
+
 
 ## Table des matières
 - [Présentation](#présentation)
@@ -21,6 +24,7 @@ Un blog moderne développé avec Django permettant la gestion d'articles, de cat
 - [Tests](#tests)
 - [Contribution](#contribution)
 - [Licence](#licence)
+- [Historique des évolutions](#historique-des-évolutions)
 - [Contact](#contact)
 - [Screenshots & Démos](#screenshots--démos)
 
@@ -51,31 +55,48 @@ git clone https://github.com/Flunshield/python-monblog.git
 cd monprojet
 ```
 
-### 2. Créer un environnement virtuel
+### 2. Configurer les variables d'environnement
+- Copier le fichier `.env.example` en `.env` :
+  ```bash
+  cp .env.example .env
+  ```
+- Ouvrir `.env` et renseigner les valeurs adaptées à votre environnement :
+  - `SECRET_KEY` : une clé secrète Django (générer avec `python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'`)
+  - `DEBUG` : `True` ou `False` selon l'environnement
+  - `DATABASE_URL` : URL de connexion à la base de données (exemple pour SQLite : `sqlite:///db.sqlite3`)
+  - Adapter les autres variables si besoin (voir commentaires dans `.env.example`)
+
+### 3. Lancer le projet avec Docker Compose (recommandé pour la prod ou tests rapides)
+```bash
+docker compose up --build
+```
+- Le projet sera accessible sur http://localhost:8000
+- Pour arrêter : `docker compose down`
+
+### 4. (Alternative) Installation manuelle (en local, sans Docker)
+
+#### a. Créer un environnement virtuel
 ```bash
 python -m venv venv
 source venv/bin/activate  # Sur Windows : venv\Scripts\activate
 ```
 
-### 3. Installer les dépendances
+#### b. Installer les dépendances
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configurer les variables d'environnement
-- Copier `.env.example` en `.env` et adapter les valeurs si besoin (ex : `SECRET_KEY`, `DEBUG`, `DATABASE_URL`, etc.).
-
-### 5. Appliquer les migrations
+#### c. Appliquer les migrations
 ```bash
 python manage.py migrate
 ```
 
-### 6. Créer un superutilisateur (optionnel)
+#### d. Créer un superutilisateur (optionnel)
 ```bash
 python manage.py createsuperuser
 ```
 
-### 7. Lancer le serveur de développement
+#### e. Lancer le serveur de développement
 ```bash
 python manage.py runserver
 ```
@@ -92,6 +113,7 @@ python manage.py runserver
   ```bash
   python manage.py makemessages -l fr
   python manage.py makemessages -l en
+  python manage.py makemessages -l es
   ```
 - Compiler les traductions :
   ```bash
@@ -138,13 +160,18 @@ monprojet/
 - 🔐 **Authentification & gestion des utilisateurs** (admin, journaliste, lecteur)
 - 📝 **CRUD complet des articles** (création, modification, suppression, consultation)
 - 🗂️ **Gestion des catégories** (ajout, édition, suppression, filtrage)
-- 💬 **Commentaires** (ajout, modération)
-- 👍 **Likes sur les articles**
-- 🌐 **Traduction multilingue** (français, anglais)
-- 📊 **Statistiques** (nombre d'articles, commentaires, etc.)
+- 💬 **Commentaires** (ajout, modération, validation par admin/journaliste)
+- 👍 **Likes sur les articles** (AJAX, sans rechargement)
+- 🌐 **Traduction multilingue** (français, anglais, espagnol)
+- 📊 **Statistiques** (nombre d'articles, commentaires, stats par journaliste)
 - 🔎 **Filtrage et recherche** (par catégorie)
 - 🖼️ **Upload et gestion d'images**
-- 🛡️ **Gestion des rôles et permissions**
+- 🛡️ **Gestion des rôles et permissions avancées**
+- 🌙 **Thème sombre/clair avec bouton de bascule**
+- 📝 **Logging avancé** (logs séparés par niveau dans /logs)
+- 🐳 **Déploiement Dockerisé & Procfile Heroku/Render**
+- 🧪 **Tests unitaires et d'intégration étendus**
+- 💄 **UI/UX moderne et responsive** (navbar, footer, etc.)
 
 ### Exemples d'utilisation
 - Un journaliste peut créer et gérer ses propres articles, mais ne peut pas gérer les utilisateurs.
@@ -236,6 +263,22 @@ POST /like/
 ## Licence
 
 Ce projet est sous licence MIT. ![Licence](https://img.shields.io/badge/license-MIT-green)
+
+---
+
+## Historique des évolutions
+
+- Ajout du système de rôles avancé (admin, journaliste, lecteur)
+- Modération et validation des commentaires
+- Système de likes AJAX
+- Statistiques détaillées pour les journalistes
+- Gestion multilingue complète (français, anglais)
+- Thème sombre/clair avec bouton de bascule
+- Logging avancé (fichiers logs par niveau)
+- Sécurité renforcée (permissions, CSRF, validation)
+- Déploiement Dockerisé et Procfile pour Heroku/Render
+- Tests unitaires et d’intégration étendus
+- Améliorations UI/UX (navbar, footer, responsive, etc.)
 
 ---
 
