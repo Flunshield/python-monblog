@@ -299,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
     pointer-events: none;
     background: transparent;
     padding: 0 0.5rem;
+    z-index: 3;
 }
 
 .register-form .form-field input:focus + label,
@@ -308,6 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
     font-size: 0.85rem;
     color: var(--color-gold);
     background: rgba(26, 26, 26, 0.95);
+    z-index: 4;
 }
 
 .register-form .form-field .field-icon {
@@ -318,6 +320,13 @@ document.addEventListener('DOMContentLoaded', function() {
     color: var(--color-red-primary);
     font-size: 1.1rem;
     z-index: 2;
+    transition: all var(--transition-medium);
+}
+
+.register-form .form-field:focus-within .field-icon {
+    color: var(--color-gold);
+    transform: translateY(-50%) scale(1.1);
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
 }
 
 .register-form .form-field.field-mismatch input {
