@@ -26,15 +26,15 @@ RUN pip install --upgrade pip && \
 # Copier le reste du code de l'application
 COPY . .
 
+# Créer un utilisateur non-root pour la sécurité en production
+RUN groupadd -r django && useradd -r -g django django
+
 # Créer le dossier des logs avec permissions appropriées
 RUN mkdir -p logs && chmod 755 logs
 
 # Créer les fichiers de logs nécessaires et donner les droits à django
 RUN touch logs/critical.log logs/error.log logs/warning.log logs/info.log logs/debug.log logs/access.log \
     && chown django:django logs/*.log
-
-# Créer un utilisateur non-root pour la sécurité en production
-RUN groupadd -r django && useradd -r -g django django
 
 # Préparer les seeders au build (validation syntaxique)
 RUN python manage.py check --deploy || echo "Warning: Check failed, continuing..."
