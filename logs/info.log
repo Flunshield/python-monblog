@@ -3123,3 +3123,93 @@ django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg �
 2025-06-04 13:57:29 [INFO] monprojet.middleware: [1e548d98] Réponse 200 en 0.221s - Taille: 14063 bytes
 2025-06-04 13:57:34 [INFO] monprojet.middleware: [fd33023e] POST /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
 2025-06-04 13:57:34 [INFO] monprojet.middleware: [fd33023e] Réponse 200 en 0.191s - Taille: 14063 bytes
+2025-06-04 13:57:37 [INFO] monprojet.middleware: [0af480bc] POST /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:57:37 [INFO] monprojet.middleware: [0af480bc] Réponse 200 en 0.219s - Taille: 14063 bytes
+2025-06-04 13:57:40 [INFO] monprojet.middleware: [7a962708] GET /fr/register/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:57:40 [INFO] monprojet.middleware: [7a962708] Réponse 200 en 0.038s - Taille: 14677 bytes
+2025-06-04 13:57:52 [INFO] monprojet.middleware: [b523497b] POST /fr/register/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 13:57:52 [INFO] monprojet.middleware: [b523497b] Réponse 302 en 0.213s - Taille: 0 bytes
+2025-06-04 13:57:52 [INFO] monprojet.middleware: [f71b1e25] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 13:57:52 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 13:57:52 [INFO] monprojet.middleware: [f71b1e25] Réponse 200 en 0.054s - Taille: 28036 bytes
+2025-06-04 13:57:53 [INFO] monprojet.middleware: [37f15b7f] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 13:57:53 [ERROR] monprojet.middleware: [37f15b7f] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:57:53 [WARNING] monprojet.middleware: [37f15b7f] Réponse 404 en 0.020s - Taille: 2512 bytes
+2025-06-04 13:57:53 [INFO] monprojet.middleware: [117fea8b] GET /media/articles/928538.jpg - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 13:57:53 [INFO] monprojet.middleware: [117fea8b] Réponse 200 en 0.026s - Taille: streaming bytes
+2025-06-04 13:57:58 [INFO] monprojet.middleware: [84d3defa] POST /fr/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 13:57:58 [INFO] monprojet.middleware: [84d3defa] Réponse 302 en 0.014s - Taille: 0 bytes
+2025-06-04 13:57:58 [INFO] monprojet.middleware: [2f787f1e] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 13:57:58 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 13:57:58 [INFO] monprojet.middleware: [2f787f1e] Réponse 200 en 0.043s - Taille: 28520 bytes
+2025-06-04 13:57:58 [INFO] monprojet.middleware: [2ca66a10] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 13:57:58 [ERROR] monprojet.middleware: [2ca66a10] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:57:58 [WARNING] monprojet.middleware: [2ca66a10] Réponse 404 en 0.023s - Taille: 2512 bytes
+2025-06-04 13:57:59 [INFO] monprojet.middleware: [42ff90a5] GET /fr/moderation-commentaires/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 13:57:59 [INFO] monprojet.middleware: [42ff90a5] Réponse 200 en 0.049s - Taille: 28499 bytes
+2025-06-04 13:59:06 [INFO] monprojet.middleware: [e0a4c3b1] GET /fr/journaliste-page/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 13:59:06 [INFO] monprojet.middleware: [e0a4c3b1] Réponse 200 en 0.055s - Taille: 24007 bytes
+2025-06-04 14:04:26 [INFO] monprojet.middleware: [029c55f0] GET /fr/moderation-commentaires/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 14:04:26 [INFO] monprojet.middleware: [029c55f0] Réponse 200 en 0.084s - Taille: 21335 bytes
+2025-06-04 14:04:30 [INFO] monprojet.middleware: [e4bb467c] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 14:04:30 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 14:04:30 [INFO] monprojet.middleware: [e4bb467c] Réponse 200 en 0.096s - Taille: 28241 bytes
+2025-06-04 14:04:30 [INFO] monprojet.middleware: [9e5bdc0f] GET /media/articles/928538.jpg - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 14:04:30 [INFO] monprojet.middleware: [80c484bf] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 14:04:30 [INFO] monprojet.middleware: [9e5bdc0f] Réponse 304 en 0.021s - Taille: 0 bytes
+2025-06-04 14:04:30 [ERROR] monprojet.middleware: [80c484bf] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:04:30 [WARNING] monprojet.middleware: [80c484bf] Réponse 404 en 0.041s - Taille: 2512 bytes
+2025-06-04 14:04:33 [INFO] monprojet.middleware: [a053cee5] GET /fr/moderation-commentaires/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 14:04:34 [INFO] monprojet.middleware: [a053cee5] Réponse 200 en 0.076s - Taille: 21335 bytes
+2025-06-04 14:04:38 [INFO] monprojet.middleware: [b12ade29] GET /fr/logout/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 14:04:38 [INFO] monprojet.middleware: [b12ade29] Réponse 200 en 0.055s - Taille: 12800 bytes
+2025-06-04 14:04:40 [INFO] monprojet.middleware: [e35e74f9] GET /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 14:04:40 [INFO] monprojet.middleware: [e35e74f9] Réponse 200 en 0.047s - Taille: 13829 bytes
+2025-06-04 14:04:48 [INFO] monprojet.middleware: [1b081ad8] POST /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 14:04:48 [INFO] monprojet.middleware: [1b081ad8] Réponse 302 en 0.383s - Taille: 0 bytes
+2025-06-04 14:04:48 [INFO] monprojet.middleware: [aaf12f8d] GET /fr/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:04:48 [INFO] blog: Accès à la page d'accueil par l'utilisateur thomas
+2025-06-04 14:04:48 [INFO] monprojet.middleware: [aaf12f8d] Réponse 200 en 0.055s - Taille: 30244 bytes
+2025-06-04 14:04:49 [INFO] monprojet.middleware: [ec32e691] GET /media/articles/IMG_20250119_203402.jpg - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:04:49 [ERROR] monprojet.middleware: [ec32e691] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:04:49 [WARNING] monprojet.middleware: [ec32e691] Réponse 404 en 0.020s - Taille: 2512 bytes
+2025-06-04 14:04:50 [INFO] monprojet.middleware: [4b2a5d73] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:04:50 [INFO] monprojet.middleware: [4b2a5d73] Réponse 200 en 0.031s - Taille: 28480 bytes
+2025-06-04 14:04:58 [INFO] monprojet.middleware: [cecabbd1] POST /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:04:58 [INFO] blog: Utilisateur thomas a désapprouvé le commentaire 9
+2025-06-04 14:04:58 [INFO] monprojet.middleware: [cecabbd1] Réponse 302 en 0.033s - Taille: 0 bytes
+2025-06-04 14:04:58 [INFO] monprojet.middleware: [577d0d44] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:04:58 [INFO] monprojet.middleware: [577d0d44] Réponse 200 en 0.068s - Taille: 28780 bytes
+2025-06-04 14:05:00 [INFO] monprojet.middleware: [d287a4db] POST /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:05:00 [INFO] blog: Utilisateur thomas a approuvé le commentaire 9
+2025-06-04 14:05:00 [INFO] monprojet.middleware: [d287a4db] Réponse 302 en 0.032s - Taille: 0 bytes
+2025-06-04 14:05:00 [INFO] monprojet.middleware: [97999528] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:05:00 [INFO] monprojet.middleware: [97999528] Réponse 200 en 0.074s - Taille: 28789 bytes
+2025-06-04 14:05:02 [INFO] monprojet.middleware: [42dffcd2] POST /fr/set-role/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:05:02 [INFO] monprojet.middleware: [42dffcd2] Réponse 302 en 0.019s - Taille: 0 bytes
+2025-06-04 14:05:02 [INFO] monprojet.middleware: [5f844aa5] GET /fr/moderation-commentaires/ - Utilisateur: thomas - IP: 172.21.0.1
+2025-06-04 14:05:02 [INFO] monprojet.middleware: [5f844aa5] Réponse 200 en 0.040s - Taille: 28818 bytes

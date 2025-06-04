@@ -1008,3 +1008,35 @@ Traceback (most recent call last):
     raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
 django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
 2025-06-04 13:56:44 [WARNING] monprojet.middleware: [91b60900] Réponse 404 en 0.021s - Taille: 2512 bytes
+2025-06-04 13:57:53 [ERROR] monprojet.middleware: [37f15b7f] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:57:53 [WARNING] monprojet.middleware: [37f15b7f] Réponse 404 en 0.020s - Taille: 2512 bytes
+2025-06-04 13:57:58 [ERROR] monprojet.middleware: [2ca66a10] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 13:57:58 [WARNING] monprojet.middleware: [2ca66a10] Réponse 404 en 0.023s - Taille: 2512 bytes
+2025-06-04 14:04:30 [ERROR] monprojet.middleware: [80c484bf] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:04:30 [WARNING] monprojet.middleware: [80c484bf] Réponse 404 en 0.041s - Taille: 2512 bytes
+2025-06-04 14:04:49 [ERROR] monprojet.middleware: [ec32e691] Exception non gérée: Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/static.py", line 40, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
+2025-06-04 14:04:49 [WARNING] monprojet.middleware: [ec32e691] Réponse 404 en 0.020s - Taille: 2512 bytes

@@ -954,12 +954,8 @@ def comment_moderation_view(request):
     
     # Filtrage selon le rôle
     if profile.role == 'journaliste':
-        # Les journalistes ne voient que les commentaires sur leurs articles
-        user_articles = Article.objects.filter(
-            models.Q(auteur__icontains=request.user.username) |
-            models.Q(auteur__icontains=request.user.first_name) |
-            models.Q(auteur__icontains=request.user.last_name)
-        )
+        # Les journalistes ne voient que les commentaires sur leurs articles (auteur = username exact, insensible à la casse)
+        user_articles = Article.objects.filter(auteur__iexact=request.user.username)
         comments_query = comments_query.filter(article__in=user_articles)
         available_articles = user_articles
     else:
