@@ -13165,3 +13165,874 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 106: '
 2025-06-04 10:19:11 [INFO] monprojet.middleware: [ad98d481] Réponse 200 en 0.065s - Taille: 21102 bytes
 2025-06-04 10:19:13 [INFO] monprojet.middleware: [07ad686a] GET /fr/register/ - Utilisateur: anonyme - IP: 172.21.0.1
 2025-06-04 10:19:13 [INFO] monprojet.middleware: [07ad686a] Réponse 200 en 0.037s - Taille: 12049 bytes
+2025-06-04 10:27:13 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:27:13 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:27:13 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:27:13 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'article') LIMIT 21; args=('blog', 'article'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'comment') LIMIT 21; args=('blog', 'comment'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'category') LIMIT 21; args=('blog', 'category'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'userprofile') LIMIT 21; args=('blog', 'userprofile'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'like') LIMIT 21; args=('blog', 'like'); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11); alias=default
+2025-06-04 10:27:14 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',); alias=default
+2025-06-04 10:27:20 [INFO] monprojet.middleware: [36a43ede] GET /fr/register/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 10:27:20 [INFO] monprojet.middleware: [36a43ede] Réponse 200 en 0.053s - Taille: 12049 bytes
+2025-06-04 10:27:22 [INFO] monprojet.middleware: [93972304] GET /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 10:27:22 [INFO] monprojet.middleware: [93972304] Réponse 200 en 0.036s - Taille: 11201 bytes
+2025-06-04 10:27:30 [INFO] monprojet.middleware: [898bc920] POST /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 10:27:30 [DEBUG] monprojet.middleware: [898bc920] Paramètres POST: {'username': 'marine'}
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'marine' LIMIT 21; args=('marine',); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'marine' LIMIT 21; args=('marine',); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT 1 AS "a" FROM "django_session" WHERE "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr' LIMIT 1; args=(1, '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.000) BEGIN; args=None; alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") VALUES ('9xi4t8f7z4ikhrdl498yxblf9gcnsvsr', 'e30:1uMlLG:fM4PbIo-sQ9egY7svTNAgkeo1tjZW87x-9UppCipEz0', '2025-06-18T10:27:30.536954+00:00'::timestamptz); args=('9xi4t8f7z4ikhrdl498yxblf9gcnsvsr', 'e30:1uMlLG:fM4PbIo-sQ9egY7svTNAgkeo1tjZW87x-9UppCipEz0', datetime.datetime(2025, 6, 18, 10, 27, 30, 536954, tzinfo=datetime.timezone.utc)); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.005) COMMIT; args=None; alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) UPDATE "auth_user" SET "last_login" = '2025-06-04T10:27:30.544231+00:00'::timestamptz WHERE "auth_user"."id" = 2; args=(datetime.datetime(2025, 6, 4, 10, 27, 30, 544231, tzinfo=datetime.timezone.utc), 2); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.002) UPDATE "blog_userprofile" SET "user_id" = 2, "role" = 'lecteur', "date_creation" = '2025-06-04T08:14:44.163621+00:00'::timestamptz WHERE "blog_userprofile"."id" = 2; args=(2, 'lecteur', datetime.datetime(2025, 6, 4, 8, 14, 44, 163621, tzinfo=datetime.timezone.utc), 2); alias=default
+2025-06-04 10:27:30 [INFO] monprojet.middleware: [898bc920] Réponse 302 en 0.385s - Taille: 0 bytes
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.000) BEGIN; args=None; alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) UPDATE "django_session" SET "session_data" = '.eJxVjMsOwiAURP-FtSGUNy7d9xsIj3ulaiAp7cr479KkC91N5pyZN_Fh34rfO6x-yeRKOLn8djGkJ9QD5Eeo90ZTq9u6RHoo9KSdzi3D63a6fwcl9DLWIiE6xYJGy8Qkc0wcrRIjgwRrUkYNSU9DEE5xcIybgBGkUmDAoSOfL-kVOBU:1uMlLG:lV_e95kEw1DI1JBH_6W_rMw_JuCx-7yJM26NeIIuIsw', "expire_date" = '2025-06-18T10:27:30.563759+00:00'::timestamptz WHERE "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'; args=('.eJxVjMsOwiAURP-FtSGUNy7d9xsIj3ulaiAp7cr479KkC91N5pyZN_Fh34rfO6x-yeRKOLn8djGkJ9QD5Eeo90ZTq9u6RHoo9KSdzi3D63a6fwcl9DLWIiE6xYJGy8Qkc0wcrRIjgwRrUkYNSU9DEE5xcIybgBGkUmDAoSOfL-kVOBU:1uMlLG:lV_e95kEw1DI1JBH_6W_rMw_JuCx-7yJM26NeIIuIsw', datetime.datetime(2025, 6, 18, 10, 27, 30, 563759, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) COMMIT; args=None; alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:27:30.593185+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 27, 30, 593185, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:27:30 [INFO] monprojet.middleware: [6446080a] GET /fr/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:27:30 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.002) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") ORDER BY "blog_article"."date_creation" DESC LIMIT 10; args=(); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "blog_like"."id", "blog_like"."user_id", "blog_like"."article_id", "blog_like"."created_at", "blog_like"."updated_at" FROM "blog_like" WHERE "blog_like"."article_id" IN (3, 2) ORDER BY "blog_like"."created_at" DESC; args=(3, 2); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation" FROM "blog_comment" WHERE "blog_comment"."article_id" IN (3, 2) ORDER BY "blog_comment"."date_creation" ASC; args=(3, 2); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", COUNT("blog_like"."id") AS "total_likes", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" LEFT OUTER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") GROUP BY "blog_article"."id", "blog_category"."id" ORDER BY 8 DESC, "blog_article"."date_creation" DESC LIMIT 10; args=(); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.000) SELECT "blog_like"."id", "blog_like"."user_id", "blog_like"."article_id", "blog_like"."created_at", "blog_like"."updated_at" FROM "blog_like" WHERE "blog_like"."article_id" IN (2, 3) ORDER BY "blog_like"."created_at" DESC; args=(2, 3); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.000) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation" FROM "blog_comment" WHERE "blog_comment"."article_id" IN (2, 3) ORDER BY "blog_comment"."date_creation" ASC; args=(2, 3); alias=default
+2025-06-04 10:27:30 [DEBUG] blog: Articles récents: 2, Articles populaires: 2
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_category" ORDER BY "blog_category"."nom" ASC; args=(); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 3 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 3, 2); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 2 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 2, 2); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 2 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 2, 2); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 3 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 3, 2); alias=default
+2025-06-04 10:27:30 [INFO] monprojet.middleware: [6446080a] Réponse 200 en 0.085s - Taille: 25279 bytes
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:27:30.775028+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 27, 30, 775028, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:27:30.776360+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 27, 30, 776360, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:27:30 [INFO] monprojet.middleware: [d8468a9e] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:27:30 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:27:30 [INFO] monprojet.middleware: [81aaf81e] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:27:30 [INFO] monprojet.middleware: [d8468a9e] Réponse 304 en 0.021s - Taille: 0 bytes
+2025-06-04 10:27:30 [INFO] monprojet.middleware: [81aaf81e] Réponse 304 en 0.020s - Taille: 0 bytes
+2025-06-04 10:27:33 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:27:33.068994+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 27, 33, 68994, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:27:33 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:27:33 [INFO] monprojet.middleware: [6168b118] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:27:33 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:27:33 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:27:33 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:27:33 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:27:33 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:27:33 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:27:33 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:27:33 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:27:33 [DEBUG] django.db.backends: (0.002) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" INNER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") WHERE "blog_like"."user_id" = 2 ORDER BY "blog_like"."created_at" DESC LIMIT 5; args=(2,); alias=default
+2025-06-04 10:27:33 [DEBUG] django.db.backends: (0.001) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation", "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation" FROM "blog_comment" INNER JOIN "blog_article" ON ("blog_comment"."article_id" = "blog_article"."id") WHERE "blog_comment"."email" = '' ORDER BY "blog_comment"."date_creation" DESC LIMIT 10; args=('',); alias=default
+2025-06-04 10:27:33 [INFO] monprojet.middleware: [6168b118] Réponse 200 en 0.079s - Taille: 19894 bytes
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'article') LIMIT 21; args=('blog', 'article'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'comment') LIMIT 21; args=('blog', 'comment'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'category') LIMIT 21; args=('blog', 'category'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'userprofile') LIMIT 21; args=('blog', 'userprofile'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'like') LIMIT 21; args=('blog', 'like'); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11); alias=default
+2025-06-04 10:31:17 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',); alias=default
+2025-06-04 10:31:22 [DEBUG] django.db.backends: (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:31:22.010371+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 31, 22, 10371, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:31:22 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:31:22 [INFO] monprojet.middleware: [0511bff6] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:31:22 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:31:22 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:31:22 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:31:22 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:31:22 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:31:22 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:31:22 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:31:22 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:31:22 [DEBUG] django.db.backends: (0.003) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" INNER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") WHERE "blog_like"."user_id" = 2 ORDER BY "blog_like"."created_at" DESC LIMIT 5; args=(2,); alias=default
+2025-06-04 10:31:22 [DEBUG] django.db.backends: (0.001) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation", "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation" FROM "blog_comment" INNER JOIN "blog_article" ON ("blog_comment"."article_id" = "blog_article"."id") WHERE "blog_comment"."email" = '' ORDER BY "blog_comment"."date_creation" DESC LIMIT 10; args=('',); alias=default
+2025-06-04 10:31:22 [INFO] monprojet.middleware: [0511bff6] Réponse 200 en 0.186s - Taille: 20067 bytes
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.015) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.003) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'article') LIMIT 21; args=('blog', 'article'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'comment') LIMIT 21; args=('blog', 'comment'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'category') LIMIT 21; args=('blog', 'category'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'userprofile') LIMIT 21; args=('blog', 'userprofile'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'like') LIMIT 21; args=('blog', 'like'); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11); alias=default
+2025-06-04 10:35:30 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',); alias=default
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:35:34.304260+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 35, 34, 304260, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.003) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:35:34 [INFO] monprojet.middleware: [fadd4e1f] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:35:34 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.002) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.005) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.002) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.004) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.003) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:35:34 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.002) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" INNER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") WHERE "blog_like"."user_id" = 2 ORDER BY "blog_like"."created_at" DESC LIMIT 5; args=(2,); alias=default
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.001) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation", "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation" FROM "blog_comment" INNER JOIN "blog_article" ON ("blog_comment"."article_id" = "blog_article"."id") WHERE "blog_comment"."email" = '' ORDER BY "blog_comment"."date_creation" DESC LIMIT 10; args=('',); alias=default
+2025-06-04 10:35:34 [INFO] monprojet.middleware: [fadd4e1f] Réponse 200 en 0.127s - Taille: 20016 bytes
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.006) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:35:34.541329+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 35, 34, 541329, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:35:34 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:35:34 [INFO] monprojet.middleware: [fcd94a35] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:35:34 [INFO] monprojet.middleware: [fcd94a35] Réponse 304 en 0.038s - Taille: 0 bytes
+2025-06-04 10:35:39 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:35:39.238385+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 35, 39, 238385, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:35:39 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:35:39 [INFO] monprojet.middleware: [3074c76c] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:35:39 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:35:39 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:35:39 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:35:39 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:35:39 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:35:39 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:35:39 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:35:39 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:35:39 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" INNER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") WHERE "blog_like"."user_id" = 2 ORDER BY "blog_like"."created_at" DESC LIMIT 5; args=(2,); alias=default
+2025-06-04 10:35:39 [DEBUG] django.db.backends: (0.001) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation", "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation" FROM "blog_comment" INNER JOIN "blog_article" ON ("blog_comment"."article_id" = "blog_article"."id") WHERE "blog_comment"."email" = '' ORDER BY "blog_comment"."date_creation" DESC LIMIT 10; args=('',); alias=default
+2025-06-04 10:35:39 [INFO] monprojet.middleware: [3074c76c] Réponse 200 en 0.073s - Taille: 20016 bytes
+2025-06-04 10:36:26 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:36:26.429094+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 36, 26, 429094, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:36:26 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:36:26 [INFO] monprojet.middleware: [6be036d3] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:36:26 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:36:26 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:36:26 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:36:26 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:36:26 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:36:26 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:36:26 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:36:26 [DEBUG] django.db.backends: (0.000) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:36:26 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" INNER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") WHERE "blog_like"."user_id" = 2 ORDER BY "blog_like"."created_at" DESC LIMIT 5; args=(2,); alias=default
+2025-06-04 10:36:26 [DEBUG] django.db.backends: (0.001) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation", "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation" FROM "blog_comment" INNER JOIN "blog_article" ON ("blog_comment"."article_id" = "blog_article"."id") WHERE "blog_comment"."email" = '' ORDER BY "blog_comment"."date_creation" DESC LIMIT 10; args=('',); alias=default
+2025-06-04 10:36:26 [INFO] monprojet.middleware: [6be036d3] Réponse 200 en 0.075s - Taille: 20016 bytes
+2025-06-04 10:43:27 [INFO] monprojet.middleware: [82abe8e3] GET /?id=91abe0da-6c99-4d6b-8f94-8fd7f81fcb36&vscodeBrowserReqId=1749033807732 - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 10:43:27 [DEBUG] monprojet.middleware: [82abe8e3] Paramètres GET: {'id': '91abe0da-6c99-4d6b-8f94-8fd7f81fcb36', 'vscodeBrowserReqId': '1749033807732'}
+2025-06-04 10:43:27 [WARNING] monprojet.middleware: [82abe8e3] Réponse 404 en 0.019s - Taille: 2262 bytes
+2025-06-04 10:43:27 [INFO] monprojet.middleware: [fd96ba99] GET /en/?id=91abe0da-6c99-4d6b-8f94-8fd7f81fcb36&vscodeBrowserReqId=1749033807732 - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 10:43:27 [DEBUG] monprojet.middleware: [fd96ba99] Paramètres GET: {'id': '91abe0da-6c99-4d6b-8f94-8fd7f81fcb36', 'vscodeBrowserReqId': '1749033807732'}
+2025-06-04 10:43:27 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-04 10:43:27 [DEBUG] django.db.backends: (0.003) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") ORDER BY "blog_article"."date_creation" DESC LIMIT 10; args=(); alias=default
+2025-06-04 10:43:27 [DEBUG] django.db.backends: (0.001) SELECT "blog_like"."id", "blog_like"."user_id", "blog_like"."article_id", "blog_like"."created_at", "blog_like"."updated_at" FROM "blog_like" WHERE "blog_like"."article_id" IN (3, 2) ORDER BY "blog_like"."created_at" DESC; args=(3, 2); alias=default
+2025-06-04 10:43:27 [DEBUG] django.db.backends: (0.000) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation" FROM "blog_comment" WHERE "blog_comment"."article_id" IN (3, 2) ORDER BY "blog_comment"."date_creation" ASC; args=(3, 2); alias=default
+2025-06-04 10:43:27 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", COUNT("blog_like"."id") AS "total_likes", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" LEFT OUTER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") GROUP BY "blog_article"."id", "blog_category"."id" ORDER BY 8 DESC, "blog_article"."date_creation" DESC LIMIT 10; args=(); alias=default
+2025-06-04 10:43:27 [DEBUG] django.db.backends: (0.001) SELECT "blog_like"."id", "blog_like"."user_id", "blog_like"."article_id", "blog_like"."created_at", "blog_like"."updated_at" FROM "blog_like" WHERE "blog_like"."article_id" IN (2, 3) ORDER BY "blog_like"."created_at" DESC; args=(2, 3); alias=default
+2025-06-04 10:43:27 [DEBUG] django.db.backends: (0.000) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation" FROM "blog_comment" WHERE "blog_comment"."article_id" IN (2, 3) ORDER BY "blog_comment"."date_creation" ASC; args=(2, 3); alias=default
+2025-06-04 10:43:27 [DEBUG] blog: Articles récents: 2, Articles populaires: 2
+2025-06-04 10:43:27 [DEBUG] django.db.backends: (0.001) SELECT "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_category" ORDER BY "blog_category"."nom" ASC; args=(); alias=default
+2025-06-04 10:43:27 [INFO] monprojet.middleware: [fd96ba99] Réponse 200 en 0.086s - Taille: 20914 bytes
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:43:38.351184+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 43, 38, 351184, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:43:38 [INFO] monprojet.middleware: [dc1a51d3] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:43:38 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.000) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:43:38 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" INNER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") WHERE "blog_like"."user_id" = 2 ORDER BY "blog_like"."created_at" DESC LIMIT 5; args=(2,); alias=default
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.001) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation", "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation" FROM "blog_comment" INNER JOIN "blog_article" ON ("blog_comment"."article_id" = "blog_article"."id") WHERE "blog_comment"."email" = '' ORDER BY "blog_comment"."date_creation" DESC LIMIT 10; args=('',); alias=default
+2025-06-04 10:43:38 [INFO] monprojet.middleware: [dc1a51d3] Réponse 200 en 0.063s - Taille: 20016 bytes
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:43:38.463939+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 43, 38, 463939, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:43:38 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:43:38 [INFO] monprojet.middleware: [18346594] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_3QYZSKF.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:43:38 [INFO] monprojet.middleware: [18346594] Réponse 304 en 0.024s - Taille: 0 bytes
+2025-06-04 10:43:47 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:43:47.119454+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 43, 47, 119454, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:43:47 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:43:47 [INFO] monprojet.middleware: [ee3d6a3e] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:43:47 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:43:47 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:43:47 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:43:47 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:43:47 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:43:47 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:43:47 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:43:47 [DEBUG] django.db.backends: (0.000) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:43:47 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" INNER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") WHERE "blog_like"."user_id" = 2 ORDER BY "blog_like"."created_at" DESC LIMIT 5; args=(2,); alias=default
+2025-06-04 10:43:47 [DEBUG] django.db.backends: (0.000) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation", "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation" FROM "blog_comment" INNER JOIN "blog_article" ON ("blog_comment"."article_id" = "blog_article"."id") WHERE "blog_comment"."email" = '' ORDER BY "blog_comment"."date_creation" DESC LIMIT 10; args=('',); alias=default
+2025-06-04 10:43:47 [INFO] monprojet.middleware: [ee3d6a3e] Réponse 200 en 0.064s - Taille: 20016 bytes
+2025-06-04 10:43:48 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:43:48.388110+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 43, 48, 388110, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:43:48 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:43:48 [INFO] monprojet.middleware: [e9935db9] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:43:48 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:43:48 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:43:48 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:43:48 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:43:48 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:43:48 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:43:48 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:43:48 [DEBUG] django.db.backends: (0.000) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:43:48 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" INNER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") WHERE "blog_like"."user_id" = 2 ORDER BY "blog_like"."created_at" DESC LIMIT 5; args=(2,); alias=default
+2025-06-04 10:43:48 [DEBUG] django.db.backends: (0.000) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation", "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation" FROM "blog_comment" INNER JOIN "blog_article" ON ("blog_comment"."article_id" = "blog_article"."id") WHERE "blog_comment"."email" = '' ORDER BY "blog_comment"."date_creation" DESC LIMIT 10; args=('',); alias=default
+2025-06-04 10:43:48 [INFO] monprojet.middleware: [e9935db9] Réponse 200 en 0.059s - Taille: 20016 bytes
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.015) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.003) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'article') LIMIT 21; args=('blog', 'article'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'comment') LIMIT 21; args=('blog', 'comment'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'category') LIMIT 21; args=('blog', 'category'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'userprofile') LIMIT 21; args=('blog', 'userprofile'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'like') LIMIT 21; args=('blog', 'like'); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11); alias=default
+2025-06-04 10:45:23 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',); alias=default
+2025-06-04 10:45:32 [DEBUG] django.db.backends: (0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:45:32.386321+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 45, 32, 386321, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:45:32 [DEBUG] django.db.backends: (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:45:32 [INFO] monprojet.middleware: [e1ee6045] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:45:32 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:45:32 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:45:32 [DEBUG] django.db.backends: (0.003) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:45:32 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:45:32 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:45:32 [DEBUG] django.db.backends: (0.002) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:45:32 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:45:32 [DEBUG] django.db.backends: (0.000) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:45:32 [DEBUG] django.db.backends: (0.002) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" INNER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") WHERE "blog_like"."user_id" = 2 ORDER BY "blog_like"."created_at" DESC LIMIT 5; args=(2,); alias=default
+2025-06-04 10:45:32 [DEBUG] django.db.backends: (0.001) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation", "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation" FROM "blog_comment" INNER JOIN "blog_article" ON ("blog_comment"."article_id" = "blog_article"."id") WHERE "blog_comment"."email" = '' ORDER BY "blog_comment"."date_creation" DESC LIMIT 10; args=('',); alias=default
+2025-06-04 10:45:32 [INFO] monprojet.middleware: [e1ee6045] Réponse 200 en 0.074s - Taille: 20003 bytes
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'article') LIMIT 21; args=('blog', 'article'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'comment') LIMIT 21; args=('blog', 'comment'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'category') LIMIT 21; args=('blog', 'category'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'userprofile') LIMIT 21; args=('blog', 'userprofile'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'like') LIMIT 21; args=('blog', 'like'); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11); alias=default
+2025-06-04 10:46:15 [DEBUG] django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',); alias=default
+2025-06-04 10:46:19 [DEBUG] django.db.backends: (0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:19.435977+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 19, 435977, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:19 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:19 [INFO] monprojet.middleware: [2addccb1] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:19 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:46:19 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:19 [DEBUG] django.db.backends: (0.002) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:46:19 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:46:19 [DEBUG] django.db.backends: (0.002) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:46:19 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:46:19 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:46:19 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:19 [INFO] monprojet.middleware: [2addccb1] Réponse 200 en 0.103s - Taille: 17107 bytes
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:23.790311+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 23, 790311, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:23 [INFO] monprojet.middleware: [d08939ce] POST /fr/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:23 [DEBUG] monprojet.middleware: [d08939ce] Paramètres POST: {'role': 'journaliste'}
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.003) UPDATE "blog_userprofile" SET "user_id" = 2, "role" = 'journaliste', "date_creation" = '2025-06-04T08:14:44.163621+00:00'::timestamptz WHERE "blog_userprofile"."id" = 2; args=(2, 'journaliste', datetime.datetime(2025, 6, 4, 8, 14, 44, 163621, tzinfo=datetime.timezone.utc), 2); alias=default
+2025-06-04 10:46:23 [INFO] monprojet.middleware: [d08939ce] Réponse 302 en 0.032s - Taille: 0 bytes
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:23.850856+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 23, 850856, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:23 [INFO] monprojet.middleware: [55a59a62] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:23 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:46:23 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:46:23 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:23 [INFO] monprojet.middleware: [55a59a62] Réponse 200 en 0.062s - Taille: 18658 bytes
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:28.157644+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 28, 157644, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:28 [INFO] monprojet.middleware: [8d7d0e9e] POST /fr/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:28 [DEBUG] monprojet.middleware: [8d7d0e9e] Paramètres POST: {'role': 'admin'}
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.002) UPDATE "blog_userprofile" SET "user_id" = 2, "role" = 'admin', "date_creation" = '2025-06-04T08:14:44.163621+00:00'::timestamptz WHERE "blog_userprofile"."id" = 2; args=(2, 'admin', datetime.datetime(2025, 6, 4, 8, 14, 44, 163621, tzinfo=datetime.timezone.utc), 2); alias=default
+2025-06-04 10:46:28 [INFO] monprojet.middleware: [8d7d0e9e] Réponse 302 en 0.031s - Taille: 0 bytes
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:28.216922+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 28, 216922, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:28 [INFO] monprojet.middleware: [caea48eb] GET /fr/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:28 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.002) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:46:28 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:46:28 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:28 [INFO] monprojet.middleware: [caea48eb] Réponse 200 en 0.074s - Taille: 18637 bytes
+2025-06-04 10:46:32 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:32.921053+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 32, 921053, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:32 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:32 [INFO] monprojet.middleware: [de557474] POST /fr/i18n/setlang/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:32 [DEBUG] monprojet.middleware: [de557474] Paramètres POST: {'next': '/fr/profile/', 'language': 'en'}
+2025-06-04 10:46:32 [INFO] monprojet.middleware: [de557474] Réponse 302 en 0.024s - Taille: 0 bytes
+2025-06-04 10:46:32 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:32.973845+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 32, 973845, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:32 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:32 [INFO] monprojet.middleware: [9b6ef12d] GET /en/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:32 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:46:32 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:32 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:46:32 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:46:32 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:46:32 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:46:32 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:46:33 [DEBUG] django.db.backends: (0.000) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:33 [INFO] monprojet.middleware: [9b6ef12d] Réponse 200 en 0.056s - Taille: 18372 bytes
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:35.094457+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 35, 94457, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:35 [INFO] monprojet.middleware: [b838dda0] POST /en/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:35 [DEBUG] monprojet.middleware: [b838dda0] Paramètres POST: {'role': 'journaliste'}
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.003) UPDATE "blog_userprofile" SET "user_id" = 2, "role" = 'journaliste', "date_creation" = '2025-06-04T08:14:44.163621+00:00'::timestamptz WHERE "blog_userprofile"."id" = 2; args=(2, 'journaliste', datetime.datetime(2025, 6, 4, 8, 14, 44, 163621, tzinfo=datetime.timezone.utc), 2); alias=default
+2025-06-04 10:46:35 [INFO] monprojet.middleware: [b838dda0] Réponse 302 en 0.028s - Taille: 0 bytes
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:35.135157+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 35, 135157, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:35 [INFO] monprojet.middleware: [e5476ac8] GET /en/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:35 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.000) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:46:35 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:46:35 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:35 [INFO] monprojet.middleware: [e5476ac8] Réponse 200 en 0.050s - Taille: 18677 bytes
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:37.270263+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 37, 270263, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:37 [INFO] monprojet.middleware: [3eb67b52] POST /en/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:37 [DEBUG] monprojet.middleware: [3eb67b52] Paramètres POST: {'role': 'lecteur'}
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.002) UPDATE "blog_userprofile" SET "user_id" = 2, "role" = 'lecteur', "date_creation" = '2025-06-04T08:14:44.163621+00:00'::timestamptz WHERE "blog_userprofile"."id" = 2; args=(2, 'lecteur', datetime.datetime(2025, 6, 4, 8, 14, 44, 163621, tzinfo=datetime.timezone.utc), 2); alias=default
+2025-06-04 10:46:37 [INFO] monprojet.middleware: [3eb67b52] Réponse 302 en 0.026s - Taille: 0 bytes
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:37.319335+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 37, 319335, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:37 [INFO] monprojet.middleware: [ac036b4e] GET /en/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:37 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:46:37 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:46:37 [DEBUG] django.db.backends: (0.000) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:37 [INFO] monprojet.middleware: [ac036b4e] Réponse 200 en 0.054s - Taille: 17417 bytes
+2025-06-04 10:46:39 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:39.544232+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 39, 544232, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:39 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:39 [INFO] monprojet.middleware: [64c7473c] POST /en/i18n/setlang/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:39 [DEBUG] monprojet.middleware: [64c7473c] Paramètres POST: {'next': '/en/profile/', 'language': 'es'}
+2025-06-04 10:46:39 [INFO] monprojet.middleware: [64c7473c] Réponse 302 en 0.030s - Taille: 0 bytes
+2025-06-04 10:46:39 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:39.600314+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 39, 600314, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:39 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:39 [INFO] monprojet.middleware: [75e23b57] GET /es/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:39 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:46:39 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:39 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:46:39 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:46:39 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:46:39 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:46:39 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:46:39 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:39 [INFO] monprojet.middleware: [75e23b57] Réponse 200 en 0.062s - Taille: 17126 bytes
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:41.354998+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 41, 354998, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:41 [INFO] monprojet.middleware: [0d07f634] POST /es/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:41 [DEBUG] monprojet.middleware: [0d07f634] Paramètres POST: {'role': 'journaliste'}
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) UPDATE "blog_userprofile" SET "user_id" = 2, "role" = 'journaliste', "date_creation" = '2025-06-04T08:14:44.163621+00:00'::timestamptz WHERE "blog_userprofile"."id" = 2; args=(2, 'journaliste', datetime.datetime(2025, 6, 4, 8, 14, 44, 163621, tzinfo=datetime.timezone.utc), 2); alias=default
+2025-06-04 10:46:41 [INFO] monprojet.middleware: [0d07f634] Réponse 302 en 0.031s - Taille: 0 bytes
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:41.401294+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 41, 401294, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:41 [INFO] monprojet.middleware: [1786271d] GET /es/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:41 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:46:41 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:46:41 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:41 [INFO] monprojet.middleware: [1786271d] Réponse 200 en 0.032s - Taille: 18682 bytes
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:43.591518+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 43, 591518, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:43 [INFO] monprojet.middleware: [550c57e6] POST /es/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:43 [DEBUG] monprojet.middleware: [550c57e6] Paramètres POST: {'role': 'admin'}
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.000) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.001) UPDATE "blog_userprofile" SET "user_id" = 2, "role" = 'admin', "date_creation" = '2025-06-04T08:14:44.163621+00:00'::timestamptz WHERE "blog_userprofile"."id" = 2; args=(2, 'admin', datetime.datetime(2025, 6, 4, 8, 14, 44, 163621, tzinfo=datetime.timezone.utc), 2); alias=default
+2025-06-04 10:46:43 [INFO] monprojet.middleware: [550c57e6] Réponse 302 en 0.019s - Taille: 0 bytes
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:43.635280+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 43, 635280, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:43 [INFO] monprojet.middleware: [0f16f7b6] GET /es/profile/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:43 [INFO] blog: Accès au profil par l'utilisateur marine
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_like" WHERE "blog_like"."user_id" = 2; args=(2,); alias=default
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.001) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE "blog_comment"."email" = ''; args=('',); alias=default
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=(); alias=default
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.000) SELECT COUNT(*) AS "__count" FROM "blog_category"; args=(); alias=default
+2025-06-04 10:46:43 [DEBUG] blog: Profil chargé pour marine: 1 likes, 0 commentaires
+2025-06-04 10:46:43 [DEBUG] django.db.backends: (0.002) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:43 [INFO] monprojet.middleware: [0f16f7b6] Réponse 200 en 0.057s - Taille: 18662 bytes
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:47.559458+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 47, 559458, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:47 [INFO] monprojet.middleware: [a4d714dd] GET /es/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:47 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") ORDER BY "blog_article"."date_creation" DESC LIMIT 10; args=(); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.000) SELECT "blog_like"."id", "blog_like"."user_id", "blog_like"."article_id", "blog_like"."created_at", "blog_like"."updated_at" FROM "blog_like" WHERE "blog_like"."article_id" IN (3, 2) ORDER BY "blog_like"."created_at" DESC; args=(3, 2); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.000) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation" FROM "blog_comment" WHERE "blog_comment"."article_id" IN (3, 2) ORDER BY "blog_comment"."date_creation" ASC; args=(3, 2); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", COUNT("blog_like"."id") AS "total_likes", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" LEFT OUTER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") GROUP BY "blog_article"."id", "blog_category"."id" ORDER BY 8 DESC, "blog_article"."date_creation" DESC LIMIT 10; args=(); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.000) SELECT "blog_like"."id", "blog_like"."user_id", "blog_like"."article_id", "blog_like"."created_at", "blog_like"."updated_at" FROM "blog_like" WHERE "blog_like"."article_id" IN (2, 3) ORDER BY "blog_like"."created_at" DESC; args=(2, 3); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.000) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation" FROM "blog_comment" WHERE "blog_comment"."article_id" IN (2, 3) ORDER BY "blog_comment"."date_creation" ASC; args=(2, 3); alias=default
+2025-06-04 10:46:47 [DEBUG] blog: Articles récents: 2, Articles populaires: 2
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.001) SELECT "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_category" ORDER BY "blog_category"."nom" ASC; args=(); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.001) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 3 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 3, 2); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 2 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 2, 2); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 2 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 2, 2); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 3 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 3, 2); alias=default
+2025-06-04 10:46:47 [INFO] monprojet.middleware: [a4d714dd] Réponse 200 en 0.049s - Taille: 27930 bytes
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:47.740178+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 47, 740178, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:47 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:47 [INFO] monprojet.middleware: [5de756d0] GET /media/articles/agile_OaDHqGR.png - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:47 [INFO] monprojet.middleware: [5de756d0] Réponse 200 en 0.019s - Taille: streaming bytes
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:49.692110+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 49, 692110, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:49 [INFO] monprojet.middleware: [3a8ffaac] POST /es/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:49 [DEBUG] monprojet.middleware: [3a8ffaac] Paramètres POST: {'role': 'journaliste'}
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.001) UPDATE "blog_userprofile" SET "user_id" = 2, "role" = 'journaliste', "date_creation" = '2025-06-04T08:14:44.163621+00:00'::timestamptz WHERE "blog_userprofile"."id" = 2; args=(2, 'journaliste', datetime.datetime(2025, 6, 4, 8, 14, 44, 163621, tzinfo=datetime.timezone.utc), 2); alias=default
+2025-06-04 10:46:49 [INFO] monprojet.middleware: [3a8ffaac] Réponse 302 en 0.029s - Taille: 0 bytes
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:46:49.747714+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 46, 49, 747714, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:49 [INFO] monprojet.middleware: [9a31f130] GET /es/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:46:49 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.002) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") ORDER BY "blog_article"."date_creation" DESC LIMIT 10; args=(); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.001) SELECT "blog_like"."id", "blog_like"."user_id", "blog_like"."article_id", "blog_like"."created_at", "blog_like"."updated_at" FROM "blog_like" WHERE "blog_like"."article_id" IN (3, 2) ORDER BY "blog_like"."created_at" DESC; args=(3, 2); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.001) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation" FROM "blog_comment" WHERE "blog_comment"."article_id" IN (3, 2) ORDER BY "blog_comment"."date_creation" ASC; args=(3, 2); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.002) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", COUNT("blog_like"."id") AS "total_likes", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" LEFT OUTER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") GROUP BY "blog_article"."id", "blog_category"."id" ORDER BY 8 DESC, "blog_article"."date_creation" DESC LIMIT 10; args=(); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.000) SELECT "blog_like"."id", "blog_like"."user_id", "blog_like"."article_id", "blog_like"."created_at", "blog_like"."updated_at" FROM "blog_like" WHERE "blog_like"."article_id" IN (2, 3) ORDER BY "blog_like"."created_at" DESC; args=(2, 3); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.000) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation" FROM "blog_comment" WHERE "blog_comment"."article_id" IN (2, 3) ORDER BY "blog_comment"."date_creation" ASC; args=(2, 3); alias=default
+2025-06-04 10:46:49 [DEBUG] blog: Articles récents: 2, Articles populaires: 2
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.001) SELECT "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_category" ORDER BY "blog_category"."nom" ASC; args=(); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 3 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 3, 2); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.001) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 2 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 2, 2); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 2 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 2, 2); alias=default
+2025-06-04 10:46:49 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 3 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 3, 2); alias=default
+2025-06-04 10:46:49 [INFO] monprojet.middleware: [9a31f130] Réponse 200 en 0.083s - Taille: 28217 bytes
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:47:04.393447+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 47, 4, 393447, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:47:04 [INFO] monprojet.middleware: [832528ec] POST /es/set-role/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:47:04 [DEBUG] monprojet.middleware: [832528ec] Paramètres POST: {'role': 'lecteur'}
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.000) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.001) UPDATE "blog_userprofile" SET "user_id" = 2, "role" = 'lecteur', "date_creation" = '2025-06-04T08:14:44.163621+00:00'::timestamptz WHERE "blog_userprofile"."id" = 2; args=(2, 'lecteur', datetime.datetime(2025, 6, 4, 8, 14, 44, 163621, tzinfo=datetime.timezone.utc), 2); alias=default
+2025-06-04 10:47:04 [INFO] monprojet.middleware: [832528ec] Réponse 302 en 0.021s - Taille: 0 bytes
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-06-04T10:47:04.425761+00:00'::timestamptz AND "django_session"."session_key" = '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr') LIMIT 21; args=(datetime.datetime(2025, 6, 4, 10, 47, 4, 425761, tzinfo=datetime.timezone.utc), '9xi4t8f7z4ikhrdl498yxblf9gcnsvsr'); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:47:04 [INFO] monprojet.middleware: [ae50a625] GET /es/ - Utilisateur: marine - IP: 172.21.0.1
+2025-06-04 10:47:04 [INFO] blog: Accès à la page d'accueil par l'utilisateur marine
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") ORDER BY "blog_article"."date_creation" DESC LIMIT 10; args=(); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.001) SELECT "blog_like"."id", "blog_like"."user_id", "blog_like"."article_id", "blog_like"."created_at", "blog_like"."updated_at" FROM "blog_like" WHERE "blog_like"."article_id" IN (3, 2) ORDER BY "blog_like"."created_at" DESC; args=(3, 2); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.001) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation" FROM "blog_comment" WHERE "blog_comment"."article_id" IN (3, 2) ORDER BY "blog_comment"."date_creation" ASC; args=(3, 2); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.001) SELECT "blog_article"."id", "blog_article"."titre", "blog_article"."contenu", "blog_article"."auteur", "blog_article"."category_id", "blog_article"."image", "blog_article"."date_creation", COUNT("blog_like"."id") AS "total_likes", "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_article" LEFT OUTER JOIN "blog_like" ON ("blog_article"."id" = "blog_like"."article_id") LEFT OUTER JOIN "blog_category" ON ("blog_article"."category_id" = "blog_category"."id") GROUP BY "blog_article"."id", "blog_category"."id" ORDER BY 8 DESC, "blog_article"."date_creation" DESC LIMIT 10; args=(); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.000) SELECT "blog_like"."id", "blog_like"."user_id", "blog_like"."article_id", "blog_like"."created_at", "blog_like"."updated_at" FROM "blog_like" WHERE "blog_like"."article_id" IN (2, 3) ORDER BY "blog_like"."created_at" DESC; args=(2, 3); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.000) SELECT "blog_comment"."id", "blog_comment"."article_id", "blog_comment"."nom", "blog_comment"."email", "blog_comment"."contenu", "blog_comment"."date_creation" FROM "blog_comment" WHERE "blog_comment"."article_id" IN (2, 3) ORDER BY "blog_comment"."date_creation" ASC; args=(2, 3); alias=default
+2025-06-04 10:47:04 [DEBUG] blog: Articles récents: 2, Articles populaires: 2
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.001) SELECT "blog_userprofile"."id", "blog_userprofile"."user_id", "blog_userprofile"."role", "blog_userprofile"."date_creation" FROM "blog_userprofile" WHERE "blog_userprofile"."user_id" = 2 LIMIT 21; args=(2,); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.000) SELECT "blog_category"."id", "blog_category"."nom", "blog_category"."description", "blog_category"."date_creation" FROM "blog_category" ORDER BY "blog_category"."nom" ASC; args=(); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 3 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 3, 2); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 2 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 2, 2); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 2 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 2, 2); alias=default
+2025-06-04 10:47:04 [DEBUG] django.db.backends: (0.000) SELECT 1 AS "a" FROM "blog_like" WHERE ("blog_like"."article_id" = 3 AND "blog_like"."user_id" = 2) LIMIT 1; args=(1, 3, 2); alias=default
+2025-06-04 10:47:04 [INFO] monprojet.middleware: [ae50a625] Réponse 200 en 0.044s - Taille: 25290 bytes

@@ -624,3 +624,4 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 106: '
 2025-06-04 10:04:47 [WARNING] monprojet.middleware: [54102d93] Réponse 404 en 0.023s - Taille: 2347 bytes
 2025-06-04 10:07:33 [WARNING] monprojet.middleware: [f4f89bfb] Réponse 403 en 0.017s - Taille: 75 bytes
 2025-06-04 10:08:16 [WARNING] monprojet.middleware: [115007bd] Réponse 404 en 0.016s - Taille: 2347 bytes
+2025-06-04 10:43:27 [WARNING] monprojet.middleware: [82abe8e3] Réponse 404 en 0.019s - Taille: 2262 bytes

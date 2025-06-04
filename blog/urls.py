@@ -21,5 +21,6 @@ urlpatterns = [
     path('journaliste-page/', views.page_journaliste, name='page_journaliste'),
     path('like/<int:article_id>/', views.toggle_like, name='toggle_like'),
     path('debug-like/', views.test_like_debug, name='debug_like'),
+    path('profile/', views.profile_view, name='profile'),
     path('diagnostic-images/', views.diagnostic_images, name='diagnostic_images'),  # Diagnostic Django complet
 ]

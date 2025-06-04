@@ -1,0 +1,157 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+{% load role_tags %}
+
+{% block hero %}{% endblock %}
+
+{% block content %}
+<!-- Navigation -->
+<nav class="mb-4 d-flex justify-content-between align-items-center fade-in-up">
+    <a href="{% url 'home' %}" class="btn btn-primary">
+        <i class="bi bi-arrow-left me-1"></i>{% trans "Retour à l'accueil" %}
+    </a>
+</nav>
+
+<!-- Messages de succès -->
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle me-2"></i>{{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    {% endfor %}
+{% endif %}
+
+<div class="row">
+    <!-- Informations personnelles -->
+    <div class="col-lg-4 mb-4">
+        <div class="premium-card fade-in-left">
+            <div class="card-header bg-gradient-premium text-white">
+                <h4 class="mb-0">
+                    <i class="bi bi-person-circle me-2"></i>{% trans "Mon Profil" %}
+                </h4>
+            </div>
+            <div class="card-body text-center">
+                <div class="mb-4">
+                    <i class="bi bi-person-circle display-1 text-gold mb-3"></i>
+                    <h5 class="text-gold">{{ user.get_full_name|default:user.username }}</h5>
+                    {% user_role user as current_role %}
+                    <span class="badge premium-badge fs-6">
+                        <i class="bi bi-person-badge me-1"></i>{{ current_role|capfirst }}
+                    </span>
+                </div>
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <small class="text-secondary">
+                            <i class="bi bi-envelope me-1"></i>{% trans "Email" %}
+                        </small>
+                        <span>{{ user.email }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <small class="text-secondary">
+                            <i class="bi bi-calendar me-1"></i>{% trans "Membre depuis" %}
+                        </small>
+                        <span>{{ user.date_joined|date:"d/m/Y" }}</span>
+                    </div>
+                    {% if user.first_name %}
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <small class="text-secondary">
+                            <i class="bi bi-person me-1"></i>{% trans "Prénom" %}
+                        </small>
+                        <span>{{ user.first_name }}</span>
+                    </div>
+                    {% endif %}
+                    {% if user.last_name %}
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <small class="text-secondary">
+                            <i class="bi bi-person me-1"></i>{% trans "Nom" %}
+                        </small>
+                        <span>{{ user.last_name }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <button type="button" class="btn btn-primary w-100" disabled>
+                    <i class="bi bi-pencil me-1"></i>{% trans "Modifier mon profil" %}
+                    <small class="d-block text-white-50">{% trans "(Bientôt disponible)" %}</small>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistiques et activités -->
+    <div class="col-lg-8">
+        <!-- Statistiques générales -->
+        <div class="premium-card mb-4 fade-in-up">
+            <div class="card-header">
+                <h4 class="mb-0">
+                    <i class="bi bi-graph-up me-2"></i>{% trans "Mes Statistiques" %}
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-3 mb-3">
+                        <div class="stat-item">
+                            <div class="stat-icon bg-primary text-white rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-heart-fill"></i>
+                            </div>                            <h5 class="text-primary mb-0">{{ total_liked_articles }}</h5>
+                            <small class="text-secondary">{% trans "Articles likés" %}</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="stat-item">
+                            <div class="stat-icon bg-success text-white rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>                            <h5 class="text-success mb-0">{{ total_comments }}</h5>
+                            <small class="text-secondary">{% trans "Commentaires postés" %}</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="stat-item">
+                            <div class="stat-icon bg-warning text-white rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-journal-text"></i>
+                            </div>                            <h5 class="text-warning mb-0">{{ total_articles_platform }}</h5>
+                            <small class="text-secondary">{% trans "Articles sur la plateforme" %}</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="stat-item">
+                            <div class="stat-icon bg-info text-white rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-tags"></i>
+                            </div>                            <h5 class="text-info mb-0">{{ total_categories }}</h5>
+                            <small class="text-secondary">{% trans "Catégories disponibles" %}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<style>
+.stat-item {
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+    transform: scale(1.1);
+}
+
+/* Amélioration du contraste pour text-secondary */
+.text-secondary {
+    color: #6c757d !important;
+}
+
+@media (max-width: 768px) {
+    .col-md-3 {
+        margin-bottom: 1rem;
+    }
+}
+</style>
+{% endblock %}

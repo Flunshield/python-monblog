@@ -11,7 +11,7 @@ from django.views.decorators.http import require_POST
 from django.db import models
 import logging
 from .forms import ArticleForm, CommentForm, CategoryForm
-from .models import Article, Category, UserProfile, Like
+from .models import Article, Category, UserProfile, Like, Comment
 
 # Configuration du logger pour ce module
 logger = logging.getLogger('blog')
@@ -669,3 +669,60 @@ def test_like_debug(request):
     }
     
     return render(request, 'blog/debug_like.html', context)
+
+
+@login_required
+def profile_view(request):
+    """
+    Vue pour afficher le profil utilisateur avec ses statistiques
+    """
+    logger.info(f"Accès au profil par l'utilisateur {request.user}")
+    
+    try:
+        user = request.user
+        
+        # Récupérer ou créer le profil utilisateur
+        profile, created = UserProfile.objects.get_or_create(user=user)
+        
+        # Statistiques des likes
+        liked_articles = Article.objects.filter(
+            likes__user=user
+        ).select_related('category').order_by('-likes__created_at')[:10]
+        
+        # Nombre total d'articles likés
+        total_liked_articles = user.likes.count()
+        
+        # Commentaires postés par l'utilisateur
+        user_comments = Comment.objects.filter(
+            email=user.email
+        ).select_related('article').order_by('-date_creation')[:10]
+        total_comments = Comment.objects.filter(email=user.email).count()
+        
+        # Articles récemment likés (5 derniers)
+        recent_liked_articles = Article.objects.filter(
+            likes__user=user
+        ).select_related('category').order_by('-likes__created_at')[:5]
+        
+        # Statistiques générales
+        total_articles_platform = Article.objects.count()
+        total_categories = Category.objects.count()
+        
+        logger.debug(f"Profil chargé pour {user.username}: {total_liked_articles} likes, {total_comments} commentaires")
+        
+        context = {
+            'user_profile': profile,
+            'liked_articles': liked_articles,
+            'total_liked_articles': total_liked_articles,
+            'user_comments': user_comments,
+            'total_comments': total_comments,
+            'recent_liked_articles': recent_liked_articles,
+            'total_articles_platform': total_articles_platform,
+            'total_categories': total_categories,
+        }
+        
+        return render(request, 'blog/profile.html', context)
+        
+    except Exception as e:
+        logger.error(f"Erreur lors du chargement du profil pour {request.user}: {e}")
+        messages.error(request, _('Une erreur est survenue lors du chargement de votre profil.'))
+        return redirect('home')
