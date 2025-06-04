@@ -2,8 +2,14 @@ from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseForbidden
 from django.utils.translation import gettext_lazy as _
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, PasswordResetForm, SetPasswordForm
+from django.contrib.auth.tokens import default_token_generator
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.encoding import force_bytes, force_str
+from django.contrib.sites.shortcuts import get_current_site
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.http import JsonResponse
@@ -996,3 +1002,78 @@ def comment_moderation_view(request):
     }
     
     return render(request, 'blog/moderation.html', context)
+
+
+def password_reset_view(request):
+    """Vue pour demander la réinitialisation du mot de passe"""
+    if request.method == 'POST':
+        form = PasswordResetForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            # Vérifier si l'email existe dans la base de données
+            User = get_user_model()
+            try:
+                user = User.objects.get(email=email)
+                
+                # Générer le token de réinitialisation
+                token = default_token_generator.make_token(user)
+                uid = urlsafe_base64_encode(force_bytes(user.pk))
+                
+                # Construire l'URL de réinitialisation
+                current_site = get_current_site(request)
+                reset_url = f"http://{current_site.domain}/password-reset-confirm/{uid}/{token}/"
+                  # Envoyer l'email (version simplifiée - en production, utiliser des templates HTML)
+                subject = _('Réinitialisation de votre mot de passe')
+                message = _(f'Cliquez sur ce lien pour réinitialiser votre mot de passe: {reset_url}')
+                
+                try:
+                    send_mail(
+                        subject,
+                        message,
+                        settings.DEFAULT_FROM_EMAIL,  # Utilise l'email configuré dans settings
+                        [email],
+                        fail_silently=False,
+                    )
+                    messages.success(request, _('Un email de réinitialisation a été envoyé à votre adresse.'))
+                except Exception as e:
+                    # En cas d'erreur d'envoi d'email, afficher le lien directement (pour le développement)
+                    messages.warning(request, _(f'Email non configuré. Lien de réinitialisation: {reset_url}'))
+                
+            except User.DoesNotExist:
+                # Pour la sécurité, on affiche le même message même si l'email n'existe pas
+                messages.success(request, _('Un email de réinitialisation a été envoyé à votre adresse.'))
+            
+            return redirect('login')
+    else:
+        form = PasswordResetForm()
+    
+    return render(request, 'blog/auth/password_reset.html', {'form': form})
+
+def password_reset_confirm_view(request, uidb64, token):
+    """Vue pour confirmer la réinitialisation du mot de passe"""
+    User = get_user_model()
+    
+    try:
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+    
+    if user is not None and default_token_generator.check_token(user, token):
+        if request.method == 'POST':
+            form = SetPasswordForm(user, request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, _('Votre mot de passe a été réinitialisé avec succès.'))
+                return redirect('login')
+        else:
+            form = SetPasswordForm(user)
+        
+        return render(request, 'blog/auth/password_reset_confirm.html', {
+            'form': form,
+            'validlink': True
+        })
+    else:
+        return render(request, 'blog/auth/password_reset_confirm.html', {
+            'validlink': False
+        })

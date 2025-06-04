@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'monprojet.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blogDb', # config('DB_NAME', default='blogDb'),
-        'USER': 'postgres', # config('DB_USER', default='postgres'),
-        'PASSWORD': 'julien', # config('DB_PASSWORD', default='julien'),
-        'HOST': 'db', # config('DB_HOST', default='localhost'),
-        'PORT': '5432' # config('DB_PORT', default='5432'),
+        'NAME': config('DB_NAME', default='blogDb'),
+        'USER': config('DB_USER', default='postgres'),
+        'PASSWORD': config('DB_PASSWORD', default='julien'),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='5432'),
     }
 }
 
@@ -260,6 +260,16 @@ LOGGING = {
 # Ensure logs directory exists
 LOGS_DIR = os.path.join(BASE_DIR, 'logs')
 os.makedirs(LOGS_DIR, exist_ok=True)
+
+# Email Configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST', default='')
+EMAIL_PORT = config('EMAIL_PORT', default=587, cast=int)
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='')
+SERVER_EMAIL = config('SERVER_EMAIL', default='')
 
 # Sécurité production
 SECURE_HSTS_SECONDS = config('SECURE_HSTS_SECONDS', default=31536000, cast=int)
