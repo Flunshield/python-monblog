@@ -1129,3 +1129,9 @@ Traceback (most recent call last):
     raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
 django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
 2025-06-04 14:16:04 [WARNING] monprojet.middleware: [3302340c] Réponse 404 en 0.027s - Taille: 2512 bytes
+2025-06-04 14:55:29 [WARNING] monprojet.middleware: [05f34069] Réponse 404 en 0.013s - Taille: 2185 bytes
+2025-06-04 14:56:30 [ERROR] blog: Erreur lors du chargement de la page d'accueil: column blog_comment.is_deleted does not exist
+LINE 1: ...mment"."is_approved", "blog_comment"."parent_id", "blog_comm...
+                                                             ^
+
+2025-06-04 14:59:17 [WARNING] monprojet.middleware: [f869d6ae] Réponse 404 en 0.012s - Taille: 2262 bytes

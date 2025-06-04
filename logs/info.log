@@ -3366,3 +3366,69 @@ Traceback (most recent call last):
     raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
 django.http.response.Http404: « /app/media/articles/IMG_20250119_203402.jpg » n’existe pas
 2025-06-04 14:16:04 [WARNING] monprojet.middleware: [3302340c] Réponse 404 en 0.027s - Taille: 2512 bytes
+2025-06-04 14:55:29 [INFO] monprojet.middleware: [05f34069] GET / - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 14:55:29 [WARNING] monprojet.middleware: [05f34069] Réponse 404 en 0.013s - Taille: 2185 bytes
+2025-06-04 14:55:29 [INFO] monprojet.middleware: [64056a6a] GET /fr/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 14:55:29 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-04 14:55:29 [INFO] monprojet.middleware: [64056a6a] Réponse 200 en 0.063s - Taille: 16140 bytes
+2025-06-04 14:55:34 [INFO] monprojet.middleware: [7a314b75] GET /fr/login/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 14:55:34 [INFO] monprojet.middleware: [7a314b75] Réponse 200 en 0.039s - Taille: 15470 bytes
+2025-06-04 14:55:41 [INFO] monprojet.middleware: [a19dd8af] GET /fr/register/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 14:55:41 [INFO] monprojet.middleware: [a19dd8af] Réponse 200 en 0.070s - Taille: 16318 bytes
+2025-06-04 14:55:54 [INFO] monprojet.middleware: [7ed36856] POST /fr/register/ - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 14:55:54 [INFO] monprojet.middleware: [7ed36856] Réponse 302 en 0.228s - Taille: 0 bytes
+2025-06-04 14:55:54 [INFO] monprojet.middleware: [24da2e6e] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:55:54 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-04 14:55:55 [INFO] monprojet.middleware: [24da2e6e] Réponse 200 en 0.069s - Taille: 19004 bytes
+2025-06-04 14:56:00 [INFO] monprojet.middleware: [5246b88b] POST /fr/set-role/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:00 [INFO] monprojet.middleware: [5246b88b] Réponse 302 en 0.028s - Taille: 0 bytes
+2025-06-04 14:56:00 [INFO] monprojet.middleware: [547c0da9] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:00 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-04 14:56:00 [INFO] monprojet.middleware: [547c0da9] Réponse 200 en 0.061s - Taille: 20754 bytes
+2025-06-04 14:56:04 [INFO] monprojet.middleware: [2f552e8e] GET /fr/ajouter/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:04 [INFO] monprojet.middleware: [2f552e8e] Action importante: ajouter_article par l'utilisateur julien
+2025-06-04 14:56:04 [INFO] blog: Tentative d'ajout d'article par l'utilisateur julien
+2025-06-04 14:56:04 [INFO] monprojet.middleware: [2f552e8e] Réponse 200 en 0.053s - Taille: 21198 bytes
+2025-06-04 14:56:08 [INFO] monprojet.middleware: [a7c1fb2b] GET /fr/gerer-categories/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:08 [INFO] monprojet.middleware: [a7c1fb2b] Réponse 200 en 0.052s - Taille: 18135 bytes
+2025-06-04 14:56:11 [INFO] monprojet.middleware: [9ab885dd] POST /fr/set-role/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:11 [INFO] monprojet.middleware: [9ab885dd] Réponse 302 en 0.032s - Taille: 0 bytes
+2025-06-04 14:56:11 [INFO] monprojet.middleware: [0589e93f] GET /fr/gerer-categories/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:11 [INFO] monprojet.middleware: [0589e93f] Réponse 200 en 0.050s - Taille: 18626 bytes
+2025-06-04 14:56:13 [INFO] monprojet.middleware: [f7fd8f7c] GET /fr/ajouter-categorie/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:13 [INFO] monprojet.middleware: [f7fd8f7c] Action importante: ajouter_categorie par l'utilisateur julien
+2025-06-04 14:56:13 [INFO] monprojet.middleware: [f7fd8f7c] Réponse 200 en 0.050s - Taille: 19733 bytes
+2025-06-04 14:56:18 [INFO] monprojet.middleware: [2a9f8d10] POST /fr/ajouter-categorie/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:18 [INFO] monprojet.middleware: [2a9f8d10] Action importante: ajouter_categorie par l'utilisateur julien
+2025-06-04 14:56:18 [INFO] monprojet.middleware: [2a9f8d10] Réponse 302 en 0.018s - Taille: 0 bytes
+2025-06-04 14:56:18 [INFO] monprojet.middleware: [05b0235a] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:18 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-04 14:56:18 [INFO] monprojet.middleware: [05b0235a] Réponse 200 en 0.065s - Taille: 20882 bytes
+2025-06-04 14:56:20 [INFO] monprojet.middleware: [6e0cfddb] GET /fr/ajouter/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:20 [INFO] monprojet.middleware: [6e0cfddb] Action importante: ajouter_article par l'utilisateur julien
+2025-06-04 14:56:20 [INFO] blog: Tentative d'ajout d'article par l'utilisateur julien
+2025-06-04 14:56:20 [INFO] monprojet.middleware: [6e0cfddb] Réponse 200 en 0.057s - Taille: 21224 bytes
+2025-06-04 14:56:29 [INFO] monprojet.middleware: [6f121113] POST /fr/ajouter/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:29 [INFO] monprojet.middleware: [6f121113] Action importante: ajouter_article par l'utilisateur julien
+2025-06-04 14:56:29 [INFO] blog: Tentative d'ajout d'article par l'utilisateur julien
+2025-06-04 14:56:30 [INFO] blog.models: Création d'un nouvel article: 'Chat Gpt remplace les devs !' par julien
+2025-06-04 14:56:30 [INFO] blog.models: Article 'Chat Gpt remplace les devs !' créé avec succès (ID: 1)
+2025-06-04 14:56:30 [INFO] blog: Article 'Chat Gpt remplace les devs !' créé avec succès par julien
+2025-06-04 14:56:30 [INFO] monprojet.middleware: [6f121113] Réponse 302 en 0.162s - Taille: 0 bytes
+2025-06-04 14:56:30 [INFO] monprojet.middleware: [1af88e11] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:56:30 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-04 14:56:30 [ERROR] blog: Erreur lors du chargement de la page d'accueil: column blog_comment.is_deleted does not exist
+LINE 1: ...mment"."is_approved", "blog_comment"."parent_id", "blog_comm...
+                                                             ^
+
+2025-06-04 14:56:30 [INFO] monprojet.middleware: [1af88e11] Réponse 200 en 0.057s - Taille: 21009 bytes
+2025-06-04 14:59:15 [INFO] monprojet.middleware: [9813ba23] GET /fr/ - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:59:15 [INFO] blog: Accès à la page d'accueil par l'utilisateur julien
+2025-06-04 14:59:15 [INFO] monprojet.middleware: [9813ba23] Réponse 200 en 0.088s - Taille: 26553 bytes
+2025-06-04 14:59:15 [INFO] monprojet.middleware: [8b72add0] GET /media/articles/20250506_1511_Vid%C3%A9o_de_Chats_Amusants_simple_compose_01jtjvg343fk7s82w5ss0k7tct_tUNgJMX.png - Utilisateur: julien - IP: 172.21.0.1
+2025-06-04 14:59:15 [INFO] monprojet.middleware: [8b72add0] Réponse 200 en 0.032s - Taille: streaming bytes
+2025-06-04 14:59:17 [INFO] monprojet.middleware: [f869d6ae] GET /?id=2de83953-0d45-4871-97c9-ff1819febd6e&vscodeBrowserReqId=1749049157847 - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 14:59:17 [WARNING] monprojet.middleware: [f869d6ae] Réponse 404 en 0.012s - Taille: 2262 bytes
+2025-06-04 14:59:17 [INFO] monprojet.middleware: [f4fa1cce] GET /en/?id=2de83953-0d45-4871-97c9-ff1819febd6e&vscodeBrowserReqId=1749049157847 - Utilisateur: anonyme - IP: 172.21.0.1
+2025-06-04 14:59:17 [INFO] blog: Accès à la page d'accueil par l'utilisateur AnonymousUser
+2025-06-04 14:59:17 [INFO] monprojet.middleware: [f4fa1cce] Réponse 200 en 0.060s - Taille: 20805 bytes
