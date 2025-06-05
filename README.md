@@ -115,7 +115,7 @@ cd monprojet
 ```bash
 docker compose up --build
 ```
-- Le projet sera accessible sur http://localhost:8000
+- Le projet sera accessible sur http://localhost:8000/fr
 - Pour arrêter : `docker compose down`
 
 ### 4. (Alternative) Installation manuelle (en local, sans Docker)
@@ -145,6 +145,8 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
+
+- Le projet sera accessible sur http://localhost:8000/fr
 
 ---
 
