@@ -14,14 +14,17 @@ from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
 from django.db import models
 from django.db.models import Q, Count, Case, When, IntegerField
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import logging
 import re
+import json
 from .forms import ArticleForm, CommentForm, CategoryForm, SearchForm, CommentReplyForm
 from .models import Article, Category, UserProfile, Like, Comment
 from .forms_user import UserCreationForm
+from .services.gemini_service import GeminiService
 
 # Configuration du logger pour ce module
 logger = logging.getLogger('blog')
@@ -128,9 +131,143 @@ def ajouter_article(request):
         if request.user.is_authenticated:
             initial_data['auteur'] = request.user.username
             logger.debug(f"Pré-remplissage du formulaire avec l'auteur: {request.user.username}")
+        
+        # Récupérer les paramètres GET pour pré-remplir avec du contenu généré par IA
+        titre_param = request.GET.get('titre')
+        contenu_param = request.GET.get('contenu')
+        
+        if titre_param:
+            initial_data['titre'] = titre_param
+            logger.debug(f"Pré-remplissage du titre depuis paramètre GET: {titre_param[:50]}...")
+            
+        if contenu_param:
+            initial_data['contenu'] = contenu_param
+            logger.debug(f"Pré-remplissage du contenu depuis paramètre GET: {len(contenu_param)} caractères")
+            # Ajouter un message d'information si le contenu provient de l'IA
+            messages.info(request, _('Le contenu a été pré-rempli avec l\'article généré par IA. Vous pouvez le modifier avant de publier.'))
+        
         form = ArticleForm(initial=initial_data)
 
     return render(request, 'blog/ajouter_article.html', {'form': form})
+
+
+@login_required
+@require_POST
+def generate_article_with_ai(request):
+    """
+    Vue AJAX pour générer un article avec l'IA Gemini
+    """
+    logger.info(f"🤖 Requête reçue pour génération d'article - Méthode: {request.method}, User: {request.user}")
+    
+    try:
+        # Vérifier que l'utilisateur peut créer des articles
+        try:
+            profile = request.user.profile
+            if profile.role.name not in ['journaliste', 'admin']:
+                return JsonResponse({
+                    'success': False,
+                    'error': 'Accès interdit : seuls les journalistes et administrateurs peuvent utiliser l\'IA.'
+                }, status=403)
+        except UserProfile.DoesNotExist:
+            return JsonResponse({
+                'success': False,
+                'error': 'Profil utilisateur non trouvé.'
+            }, status=403)
+        
+        # Récupérer les données de la requête
+        data = json.loads(request.body)
+        resume = data.get('resume', '').strip()
+        
+        if not resume:
+            return JsonResponse({
+                'success': False,
+                'error': 'Le résumé est requis pour générer un article.'
+            })
+        
+        if len(resume) < 10:
+            return JsonResponse({
+                'success': False,
+                'error': 'Le résumé doit contenir au moins 10 caractères.'
+            })
+        
+        logger.info(f"Génération d'article IA demandée par {request.user.username}")
+        
+        # Initialiser le service Gemini
+        try:
+            gemini_service = GeminiService()
+        except Exception as e:
+            logger.error(f"Erreur d'initialisation Gemini: {e}")
+            return JsonResponse({
+                'success': False,
+                'error': 'Service IA temporairement indisponible. Veuillez réessayer plus tard.'
+            })
+        
+        # Détecter la langue préférée de l'utilisateur (par défaut français)
+        langue = request.LANGUAGE_CODE if hasattr(request, 'LANGUAGE_CODE') else 'fr'
+        
+        # Générer le contenu
+        try:
+            result = gemini_service.generate_article_content(resume, langue)
+            
+            logger.info(f"Article généré avec succès pour {request.user.username}")
+            
+            return JsonResponse({
+                'success': True,
+                'titre': result['titre'],
+                'contenu': result['contenu']
+            })
+            
+        except Exception as e:
+            logger.error(f"Erreur lors de la génération d'article: {e}")
+            return JsonResponse({
+                'success': False,
+                'error': 'Erreur lors de la génération. Veuillez vérifier votre résumé et réessayer.'
+            })
+    
+    except json.JSONDecodeError:
+        return JsonResponse({
+            'success': False,
+            'error': 'Format de données invalide.'
+        })
+    except Exception as e:
+        logger.error(f"Erreur inattendue dans generate_article_with_ai: {e}")
+        return JsonResponse({
+            'success': False,
+            'error': 'Une erreur inattendue s\'est produite.'
+        })
+
+
+@login_required
+def gemini_generator_page(request):
+    """
+    Page dédiée pour générer des articles avec l'API Gemini
+    """
+    try:
+        # Vérifier que l'utilisateur peut créer des articles
+        profile = request.user.profile
+        if profile.role.name not in ['journaliste', 'admin']:
+            return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent utiliser l'IA.")
+    except UserProfile.DoesNotExist:
+        from .models import Role
+        default_roles = Role.get_default_roles()
+        UserProfile.objects.create(user=request.user, role=default_roles['lecteur'])
+        return HttpResponseForbidden("Accès interdit : seuls les journalistes et administrateurs peuvent utiliser l'IA.")
+    
+    # Tester la connexion Gemini
+    gemini_available = False
+    try:
+        gemini_service = GeminiService()
+        gemini_available = gemini_service.test_connection()
+    except Exception as e:
+        logger.error(f"Erreur de connexion Gemini: {e}")
+    
+    context = {
+        'title': 'Générateur d\'articles IA',
+        'gemini_available': gemini_available,
+        'user_role': profile.role.name,
+    }
+    
+    return render(request, 'blog/gemini_generator.html', context)
 
 
 @login_required

@@ -3,6 +3,18 @@ from .models import Article, Comment, Category
 
 
 class ArticleForm(forms.ModelForm):
+    # Champ optionnel pour l'assistance IA
+    resume_ia = forms.CharField(
+        max_length=500,
+        required=False,
+        widget=forms.Textarea(attrs={
+            'rows': 3,
+            'placeholder': 'Décrivez brièvement le sujet de votre article pour utiliser l\'assistance IA...',
+            'class': 'form-control'
+        }),
+        help_text="Optionnel : Décrivez votre article en quelques phrases pour que l'IA génère automatiquement le titre et le contenu."
+    )
+    
     class Meta:
         model = Article
         fields = ['titre', 'contenu', 'auteur', 'category', 'image']

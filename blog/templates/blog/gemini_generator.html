@@ -1,0 +1,444 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block hero %}{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- En-tête -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="text-center text-primary mb-3">
+                <i class="bi bi-robot me-2"></i>{% trans "Générateur d'articles avec IA" %}
+            </h1>
+            <p class="text-center text-muted">{% trans "Créez des articles de qualité en quelques secondes avec l'intelligence artificielle Gemini" %}</p>
+        </div>
+    </div>
+
+    <!-- Statut de connexion Gemini -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="alert {% if gemini_available %}alert-success{% else %}alert-warning{% endif %}" role="alert">
+                <div class="d-flex align-items-center">
+                    <i class="bi {% if gemini_available %}bi-check-circle-fill{% else %}bi-exclamation-triangle-fill{% endif %} me-2"></i>
+                    <div>
+                        {% if gemini_available %}
+                            <strong>{% trans "Service IA opérationnel" %}</strong><br>
+                            {% trans "L'API Gemini est disponible et prête à générer du contenu." %}
+                        {% else %}
+                            <strong>{% trans "Service IA indisponible" %}</strong><br>
+                            {% trans "Impossible de se connecter à l'API Gemini. Veuillez réessayer plus tard." %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Zone d'affichage de l'article généré -->
+        <div class="col-lg-8 mb-4">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-file-text me-2"></i>{% trans "Article généré" %}
+                    </h5>
+                </div>
+                <div class="card-body" style="min-height: 400px;">
+                    <div id="generated-article" class="d-none">
+                        <h2 id="article-title" class="text-primary mb-3"></h2>
+                        <div id="article-content" class="article-content"></div>
+                        <hr>
+                        <div class="d-flex justify-content-end gap-2">
+                            <button type="button" class="btn btn-outline-primary" onclick="copyToClipboard()">
+                                <i class="bi bi-clipboard me-1"></i>{% trans "Copier" %}
+                            </button>
+                            <button type="button" class="btn btn-outline-success" onclick="saveAsDraft()">
+                                <i class="bi bi-save me-1"></i>{% trans "Sauvegarder comme brouillon" %}
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="placeholder-content" class="text-center text-muted py-5">
+                        <i class="bi bi-lightbulb" style="font-size: 4rem; opacity: 0.3;"></i>
+                        <p class="mt-3">{% trans "Votre article généré apparaîtra ici" %}</p>
+                    </div>
+
+                    <div id="loading-content" class="text-center py-5 d-none">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">{% trans "Génération en cours..." %}</span>
+                        </div>
+                        <p class="mt-3 text-muted">
+                            <i class="bi bi-magic me-1"></i>{% trans "L'IA Gemini génère votre article..." %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulaire de génération -->
+        <div class="col-lg-4">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-chat-square-text me-2"></i>{% trans "Paramètres de génération" %}
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form id="gemini-form">
+                        {% csrf_token %}
+                        
+                        <!-- Champ de prompt -->
+                        <div class="mb-3">
+                            <label for="prompt" class="form-label fw-bold">
+                                <i class="bi bi-pencil me-1"></i>{% trans "Votre demande" %}
+                            </label>
+                            <textarea 
+                                class="form-control" 
+                                id="prompt" 
+                                name="prompt" 
+                                rows="4" 
+                                placeholder="{% trans 'Décrivez le sujet de votre article...' %}"
+                                required
+                            ></textarea>
+                            <div class="form-text">
+                                {% trans "Minimum 10 caractères. Soyez spécifique pour de meilleurs résultats." %}
+                            </div>
+                        </div>
+
+                        <!-- Sélection de la langue -->
+                        <div class="mb-3">
+                            <label for="language" class="form-label fw-bold">
+                                <i class="bi bi-globe me-1"></i>{% trans "Langue" %}
+                            </label>
+                            <select class="form-select" id="language" name="language">
+                                <option value="fr" selected>{% trans "Français" %}</option>
+                                <option value="en">{% trans "Anglais" %}</option>
+                                <option value="es">{% trans "Espagnol" %}</option>
+                            </select>
+                        </div>
+
+                        <!-- Bouton de génération -->
+                        <div class="d-grid">
+                            <button 
+                                type="submit" 
+                                class="btn btn-primary btn-lg"
+                                id="generate-btn"
+                                {% if not gemini_available %}disabled{% endif %}
+                            >
+                                <i class="bi bi-magic me-2"></i>{% trans "Générer l'article" %}
+                            </button>
+                        </div>
+
+                        {% if not gemini_available %}
+                        <div class="alert alert-warning mt-3 mb-0">
+                            <small>{% trans "Service IA temporairement indisponible" %}</small>
+                        </div>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+
+            <!-- Conseils d'utilisation -->
+            <div class="card mt-4">
+                <div class="card-header bg-info text-white">
+                    <h6 class="card-title mb-0">
+                        <i class="bi bi-info-circle me-1"></i>{% trans "Conseils d'utilisation" %}
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <ul class="small mb-0">
+                        <li>{% trans "Soyez précis dans votre demande" %}</li>
+                        <li>{% trans "Mentionnez le ton souhaité (formel, décontracté, etc.)" %}</li>
+                        <li>{% trans "Spécifiez la longueur approximative si nécessaire" %}</li>
+                        <li>{% trans "Vous pouvez modifier l'article généré avant de le publier" %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <a href="{% url 'gerer_articles' %}" class="btn btn-outline-primary me-2">
+                <i class="bi bi-arrow-left me-1"></i>{% trans "Retour aux articles" %}
+            </a>
+            <a href="{% url 'ajouter_article' %}" class="btn btn-outline-success">
+                <i class="bi bi-plus-circle me-1"></i>{% trans "Créer un article manuellement" %}
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Toast pour les notifications -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="notification-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i class="bi bi-info-circle-fill text-primary me-2"></i>
+            <strong class="me-auto">{% trans "Notification" %}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toast-message">
+            <!-- Message will be inserted here -->
+        </div>
+    </div>
+</div>
+
+<style>
+.article-content {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.article-content p {
+    margin-bottom: 1rem;
+}
+
+.article-content h1, .article-content h2, .article-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#prompt {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-lg {
+    padding: 12px 30px;
+    font-weight: 600;
+}
+</style>
+
+<script>
+console.log('🔧 Chargement du script Gemini Generator');
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('✅ DOM ready - Initialisation du générateur Gemini');
+    
+    // Récupération des éléments
+    const form = document.getElementById('gemini-form');
+    const generateBtn = document.getElementById('generate-btn');
+    const promptField = document.getElementById('prompt');
+    const languageField = document.getElementById('language');
+    
+    const generatedArticleDiv = document.getElementById('generated-article');
+    const placeholderContent = document.getElementById('placeholder-content');
+    const loadingContent = document.getElementById('loading-content');
+    
+    const articleTitle = document.getElementById('article-title');
+    const articleContent = document.getElementById('article-content');
+    
+    // Vérification des éléments critiques
+    if (!form) {
+        console.error('❌ Formulaire non trouvé !');
+        return;
+    }
+    
+    if (!generateBtn) {
+        console.error('❌ Bouton de génération non trouvé !');
+        return;
+    }
+    
+    console.log('✅ Tous les éléments trouvés');
+    
+    // URL de l'API (fixée pour éviter les problèmes de template)
+    const apiUrl = '{% url "generate_article_with_ai" %}';
+    console.log('🌐 URL API:', apiUrl);
+
+    // Event listener sur le formulaire
+    form.addEventListener('submit', function(e) {
+        console.log('🚀 Événement submit déclenché !');
+        e.preventDefault();
+        
+        const prompt = promptField.value.trim();
+        const language = languageField.value;
+        
+        console.log('📝 Données du formulaire:', { prompt: prompt.substring(0, 50) + '...', language });
+        
+        // Validation
+        if (prompt.length < 10) {
+            console.warn('⚠️ Prompt trop court');
+            showToast('Le prompt doit contenir au moins 10 caractères.', 'warning');
+            return;
+        }
+
+        // Afficher le loader
+        console.log('🔄 Affichage du loader');
+        placeholderContent.classList.add('d-none');
+        generatedArticleDiv.classList.add('d-none');
+        loadingContent.classList.remove('d-none');
+        
+        // Désactiver le bouton
+        generateBtn.disabled = true;
+        generateBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Génération...';
+
+        // Préparer les données
+        const formData = {
+            resume: prompt,
+            langue: language
+        };
+        
+        // Récupérer le token CSRF
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]');
+        if (!csrfToken) {
+            console.error('❌ Token CSRF non trouvé !');
+            showToast('Erreur: Token CSRF manquant', 'error');
+            resetUI();
+            return;
+        }
+
+        // Envoyer la requête
+        console.log('📡 Envoi de la requête POST vers:', apiUrl);
+        console.log('📦 Données:', formData);
+        
+        fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken.value
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            console.log('📡 Réponse reçue - Status:', response.status, response.statusText);
+            if (!response.ok) {
+                throw new Error('Erreur HTTP: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('📦 Données reçues:', data);
+            if (data.success) {
+                console.log('✅ Génération réussie');
+                // Afficher l'article généré
+                articleTitle.textContent = data.titre;
+                articleContent.innerHTML = formatArticleContent(data.contenu);
+                
+                loadingContent.classList.add('d-none');
+                placeholderContent.classList.add('d-none');
+                generatedArticleDiv.classList.remove('d-none');
+                
+                showToast('Article généré avec succès !', 'success');
+            } else {
+                console.error('❌ Erreur de génération:', data.error);
+                resetToPlaceholder();
+                showToast(data.error || 'Erreur lors de la génération.', 'error');
+            }
+        })
+        .catch(error => {
+            console.error('❌ Erreur de fetch:', error);
+            resetToPlaceholder();
+            showToast('Erreur de connexion. Veuillez réessayer.', 'error');
+        })
+        .finally(() => {
+            resetUI();
+        });
+    });
+    
+    // Fonction pour réinitialiser l'UI
+    function resetUI() {
+        generateBtn.disabled = false;
+        generateBtn.innerHTML = '<i class="bi bi-magic me-2"></i>Générer l\'article';
+    }
+    
+    // Fonction pour revenir au placeholder
+    function resetToPlaceholder() {
+        loadingContent.classList.add('d-none');
+        generatedArticleDiv.classList.add('d-none');
+        placeholderContent.classList.remove('d-none');
+    }
+
+    // Fonction pour formater le contenu
+    function formatArticleContent(content) {
+        if (!content) return '';
+        return content
+            .split('\n\n')
+            .filter(paragraph => paragraph.trim())
+            .map(paragraph => '<p>' + paragraph.trim() + '</p>')
+            .join('');
+    }
+
+    // Fonction pour afficher les toasts
+    function showToast(message, type = 'info') {
+        console.log('🔔 Toast:', type, message);
+        
+        const toast = document.getElementById('notification-toast');
+        const toastMessage = document.getElementById('toast-message');
+        const toastHeader = toast.querySelector('.toast-header i');
+        
+        if (!toast || !toastMessage) {
+            console.warn('⚠️ Éléments de toast non trouvés, utilisation d\'alert');
+            alert(message);
+            return;
+        }
+        
+        // Configurer le style selon le type
+        const iconClasses = {
+            'success': 'bi-check-circle-fill text-success',
+            'error': 'bi-exclamation-triangle-fill text-danger',
+            'warning': 'bi-exclamation-circle-fill text-warning',
+            'info': 'bi-info-circle-fill text-primary'
+        };
+        
+        toastHeader.className = 'bi me-2 ' + (iconClasses[type] || iconClasses['info']);
+        toastMessage.textContent = message;
+        
+        try {
+            const bsToast = new bootstrap.Toast(toast);
+            bsToast.show();
+        } catch (e) {
+            console.warn('⚠️ Bootstrap Toast non disponible, utilisation d\'alert');
+            alert(message);
+        }
+    }
+
+    // Fonctions globales pour les boutons
+    window.copyToClipboard = function() {
+        console.log('📋 Copie dans le presse-papiers');
+        const title = articleTitle.textContent;
+        const content = articleContent.textContent;
+        const fullText = title + '\n\n' + content;
+        
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(fullText).then(() => {
+                showToast('Article copié dans le presse-papiers !', 'success');
+            }).catch(() => {
+                showToast('Erreur lors de la copie.', 'error');
+            });
+        } else {
+            // Fallback pour les navigateurs plus anciens
+            const textArea = document.createElement('textarea');
+            textArea.value = fullText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast('Article copié dans le presse-papiers !', 'success');
+            } catch (err) {
+                showToast('Erreur lors de la copie.', 'error');
+            }
+            document.body.removeChild(textArea);
+        }
+    };
+
+    // Fonction pour sauvegarder comme brouillon
+    window.saveAsDraft = function() {
+        console.log('💾 Sauvegarde comme brouillon');
+        const title = encodeURIComponent(articleTitle.textContent);
+        const content = encodeURIComponent(articleContent.textContent);
+        const url = '{% url "ajouter_article" %}?titre=' + title + '&contenu=' + content;
+        window.location.href = url;
+    };
+    
+    console.log('✅ Script Gemini Generator initialisé avec succès');
+});
+</script>
+{% endblock %}

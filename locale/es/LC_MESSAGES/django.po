@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-#, fuzzy
+
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-04 11:15+0200\n"
+"POT-Creation-Date: 2025-06-05 11:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,64 +27,66 @@ msgid "Panneau d'Administration"
 msgstr "Panel de Administración"
 
 #: .\blog\templates\blog\admin\page_admin.html:15
-#, fuzzy
+
 #| msgid "Accs Admin"
 msgid "Accès Admin"
 msgstr "Acceso Admin"
 
 #: .\blog\templates\blog\admin\page_admin.html:26
+#: .\blog\templates\blog\tous_les_articles.html:63
 msgid "Articles"
 msgstr "Artículos"
 
 #: .\blog\templates\blog\admin\page_admin.html:30
-#, fuzzy
+
 #| msgid "Grer tous les articles du blog"
 msgid "Gérer tous les articles du blog"
 msgstr "Gestionar todos los artículos del blog"
 
 #: .\blog\templates\blog\admin\page_admin.html:33
+#: .\blog\templates\blog\home.html:55
 msgid "Voir tous les articles"
 msgstr "Ver todos los artículos"
 
 #: .\blog\templates\blog\admin\page_admin.html:36
 #: .\blog\templates\blog\gerer_articles.html:22
-#: .\blog\templates\blog\gerer_articles.html:151
+#: .\blog\templates\blog\gerer_articles.html:150
 msgid "Ajouter un article"
 msgstr "Agregar un artículo"
 
 #: .\blog\templates\blog\admin\page_admin.html:48
-#: .\blog\templates\blog\admin\page_admin.html:111
+#: .\blog\templates\blog\admin\page_admin.html:133
 #: .\blog\templates\blog\admin\page_journaliste.html:48
-#: .\blog\templates\blog\base.html:54 .\blog\templates\blog\base.html:65
-#: .\blog\templates\blog\base.html:208
-#, fuzzy
+#: .\blog\templates\blog\base.html:64 .\blog\templates\blog\base.html:75
+#: .\blog\templates\blog\base.html:210
+
 #| msgid "Catégorie"
 msgid "Catégories"
 msgstr "Categorías"
 
 #: .\blog\templates\blog\admin\page_admin.html:52
-#, fuzzy
+
 #| msgid "Grer les catgories"
 msgid "Organiser les catégories d'articles"
 msgstr "Organizar las categorías de artículos"
 
 #: .\blog\templates\blog\admin\page_admin.html:55
 #: .\blog\templates\blog\admin\page_journaliste.html:55
-#, fuzzy
+
 #| msgid "Voir les catgories"
 msgid "Voir les catégories"
 msgstr "Ver las categorías"
 
 #: .\blog\templates\blog\admin\page_admin.html:58
 #: .\blog\templates\blog\gerer_categories.html:13
-#: .\blog\templates\blog\gerer_categories.html:105
-#, fuzzy
+#: .\blog\templates\blog\gerer_categories.html:104
+
 #| msgid "Ajouter une catgorie"
 msgid "Ajouter une catégorie"
 msgstr "Agregar una categoría"
 
 #: .\blog\templates\blog\admin\page_admin.html:70
-#: .\blog\templates\blog\admin\page_admin.html:119
+#: .\blog\templates\blog\admin\page_admin.html:141
 msgid "Utilisateurs"
 msgstr "Usuarios"
 
@@ -100,22 +102,42 @@ msgstr "Interfaz Admin Django"
 msgid "Statistiques"
 msgstr "Estadísticas"
 
-#: .\blog\templates\blog\admin\page_admin.html:94
+#: .\blog\templates\blog\admin\page_admin.html:92
+#: .\blog\templates\blog\admin\page_admin.html:149
+#: .\blog\templates\blog\moderation.html:109
+msgid "Commentaires"
+msgstr "Comentarios"
+
+#: .\blog\templates\blog\admin\page_admin.html:96
+
+#| msgid "Grer tous les articles du blog"
+msgid "Modérer tous les commentaires de la plateforme"
+msgstr "Gestionar todos los artículos del blog"
+
+#: .\blog\templates\blog\admin\page_admin.html:99
+
+#| msgid "Date de cration"
+msgid "Interface de modération"
+msgstr "Fecha de creación"
+
+#: .\blog\templates\blog\admin\page_admin.html:102
+
+#| msgid "Commentaires"
+msgid "Commentaires en attente"
+msgstr "Comentarios"
+
+#: .\blog\templates\blog\admin\page_admin.html:116
 msgid "Aperçu du système"
 msgstr "Visión general del sistema"
 
-#: .\blog\templates\blog\admin\page_admin.html:103
-#, fuzzy
+#: .\blog\templates\blog\admin\page_admin.html:125
+
 #| msgid "Articles récents"
 msgid "Articles publiés"
 msgstr "Artículos publicados"
 
-#: .\blog\templates\blog\admin\page_admin.html:127
-msgid "Commentaires"
-msgstr "Comentarios"
+#: .\blog\templates\blog\admin\page_admin.html:162
 
-#: .\blog\templates\blog\admin\page_admin.html:140
-#, fuzzy
 #| msgid "Fonctionnalit de statistiques  venir !"
 msgid "Fonctionnalité de statistiques à venir !"
 msgstr "¡Funcionalidad de estadísticas próximamente!"
@@ -129,18 +151,18 @@ msgid "Espace Journaliste"
 msgstr "Espacio Periodista"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:15
-#, fuzzy
+
 #| msgid "Accs Journaliste"
 msgid "Accès Journaliste"
 msgstr "Acceso Periodista"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:26
-#: .\blog\templates\blog\base.html:207
+#: .\blog\templates\blog\base.html:209
 msgid "Mes Articles"
 msgstr "Mis Artículos"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:30
-#, fuzzy
+
 #| msgid "Crer et grer vos articles"
 msgid "Créer et gérer vos articles"
 msgstr "Crear y gestionar sus artículos"
@@ -150,19 +172,20 @@ msgid "Voir mes articles"
 msgstr "Ver mis artículos"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:36
-#, fuzzy
+#: .\blog\templates\blog\home.html:100
+
 #| msgid "Crer un article"
 msgid "Créer un article"
 msgstr "Crear un artículo"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:52
-#, fuzzy
+
 #| msgid "Toutes les catégories"
 msgid "Consulter les catégories disponibles"
 msgstr "Ver categorías disponibles"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:58
-#, fuzzy
+
 #| msgid "Crer une catgorie"
 msgid "Créer une catégorie"
 msgstr "Crear una categoría"
@@ -184,7 +207,7 @@ msgid "Articles ce mois-ci"
 msgstr "Artículos este mes"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:98
-#, fuzzy
+
 #| msgid "Commentaires reus"
 msgid "Commentaires reçus"
 msgstr "Comentarios recibidos"
@@ -198,19 +221,19 @@ msgid "Ce que vous pouvez faire :"
 msgstr "Lo que puede hacer:"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:122
-#, fuzzy
+
 #| msgid "Crer et modifier vos articles"
 msgid "Créer et modifier vos articles"
 msgstr "Crear y modificar sus artículos"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:123
-#, fuzzy
+
 #| msgid "Voir toutes les catgories"
 msgid "Voir toutes les catégories"
 msgstr "Ver todas las categorías"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:124
-#, fuzzy
+
 #| msgid "Grer vos publications"
 msgid "Gérer vos publications"
 msgstr "Gestionar sus publicaciones"
@@ -224,13 +247,13 @@ msgid "Restrictions :"
 msgstr "Restricciones:"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:131
-#, fuzzy
+
 #| msgid "Pas de cration de catgories"
 msgid "Pas de création de catégories"
 msgstr "No crear categorías"
 
 #: .\blog\templates\blog\admin\page_journaliste.html:132
-#, fuzzy
+
 #| msgid "Pas d'accs  l'admin Django"
 msgid "Pas d'accès à l'admin Django"
 msgstr "Sin acceso al admin Django"
@@ -238,6 +261,30 @@ msgstr "Sin acceso al admin Django"
 #: .\blog\templates\blog\admin\page_journaliste.html:133
 msgid "Pas de gestion des utilisateurs"
 msgstr "Sin gestión de usuarios"
+
+#: .\blog\templates\blog\admin\page_journaliste.html:148
+#: .\blog\templates\blog\base.html:59
+msgid "Modération"
+msgstr "Moderación"
+
+#: .\blog\templates\blog\admin\page_journaliste.html:152
+
+#| msgid "Crer et modifier vos articles"
+msgid "Modérer les commentaires sur vos articles"
+msgstr "Crear y modificar sus artículos"
+
+#: .\blog\templates\blog\admin\page_journaliste.html:155
+
+#| msgid "commentaires"
+msgid "Mes commentaires"
+msgstr "comentarios"
+
+#: .\blog\templates\blog\admin\page_journaliste.html:158
+#: .\blog\templates\blog\moderation.html:52
+#: .\blog\templates\blog\moderation.html:79
+#: .\blog\templates\blog\moderation.html:169
+msgid "En attente"
+msgstr "En espera"
 
 #: .\blog\templates\blog\ajouter_article.html:12
 msgid "Ajouter un Nouvel Article"
@@ -248,13 +295,14 @@ msgid "Titre de l'article"
 msgstr "Título del artículo"
 
 #: .\blog\templates\blog\ajouter_article.html:33
+#: .\blog\templates\blog\moderation.html:119
 #: .\blog\templates\blog\modifier_article.html:67
 msgid "Auteur"
 msgstr "Autor"
 
 #: .\blog\templates\blog\ajouter_article.html:45
 #: .\blog\templates\blog\modifier_article.html:79
-#, fuzzy
+
 #| msgid "Catégorie"
 msgid "Catégorie"
 msgstr "Categorías"
@@ -278,9 +326,10 @@ msgstr "Contenido del artículo"
 
 #: .\blog\templates\blog\ajouter_article.html:86
 #: .\blog\templates\blog\ajouter_categorie.html:55
+#: .\blog\templates\blog\moderation.html:233
 #: .\blog\templates\blog\modifier_article.html:121
 #: .\blog\templates\blog\modifier_categorie.html:58
-#: .\blog\templates\blog\supprimer_article.html:58
+#: .\blog\templates\blog\supprimer_article.html:57
 #: .\blog\templates\blog\supprimer_categorie.html:45
 msgid "Annuler"
 msgstr "Cancelar"
@@ -290,14 +339,14 @@ msgid "Ajouter l'article"
 msgstr "Agregar el artículo"
 
 #: .\blog\templates\blog\ajouter_categorie.html:12
-#, fuzzy
+
 #| msgid "Ajouter une nouvelle catgorie"
 msgid "Ajouter une nouvelle catégorie"
 msgstr "Agregar una nueva categoría"
 
 #: .\blog\templates\blog\ajouter_categorie.html:29
 #: .\blog\templates\blog\modifier_categorie.html:29
-#, fuzzy
+
 #| msgid "Nom de la catgorie"
 msgid "Nom de la catégorie"
 msgstr "Nombre de la categoría"
@@ -310,20 +359,24 @@ msgstr "Descripción"
 
 #: .\blog\templates\blog\ajouter_categorie.html:52
 #: .\blog\templates\blog\modifier_categorie.html:57
-#, fuzzy
+
 #| msgid "Grer les catgories"
 msgid "Gérer les catégories"
 msgstr "Gestionar las categorías"
 
 #: .\blog\templates\blog\ajouter_categorie.html:58
-#, fuzzy
+
 #| msgid "Ajouter la catgorie"
 msgid "Ajouter la catégorie"
 msgstr "Agregar la categoría"
 
 #: .\blog\templates\blog\article_detail.html:11
-#: .\blog\templates\blog\diagnostic_images.html:375
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:368
+#: .\blog\templates\blog\profile.html:11
+#: .\blog\templates\blog\search_results.html:159
+#: .\blog\templates\blog\search_results_new.html:159
+#: .\blog\templates\blog\tous_les_articles.html:130
+
 #| msgid "Retour  l'accueil"
 msgid "Retour à l'accueil"
 msgstr "Volver al inicio"
@@ -333,81 +386,120 @@ msgid "Modifier cet article"
 msgstr "Modificar este artículo"
 
 #: .\blog\templates\blog\article_detail.html:21
-#: .\blog\templates\blog\gerer_articles.html:127
-#: .\blog\templates\blog\gerer_categories.html:79
+#: .\blog\templates\blog\gerer_articles.html:126
+#: .\blog\templates\blog\gerer_categories.html:78
+#: .\blog\templates\blog\moderation.html:210
+#: .\blog\templates\blog\moderation.html:211
 msgid "Supprimer"
 msgstr "Eliminar"
 
 #: .\blog\templates\blog\article_detail.html:64
+#: .\blog\templates\blog\moderation.html:22
 msgid "commentaires"
 msgstr "comentarios"
 
 #: .\blog\templates\blog\article_detail.html:71
 msgid "Liké"
-msgstr ""
+msgstr "Le gustó"
 
 #: .\blog\templates\blog\article_detail.html:71
 msgid "J'aime"
 msgstr "Me gusta"
 
-#: .\blog\templates\blog\article_detail.html:76
+#: .\blog\templates\blog\article_detail.html:75
 msgid "likes"
 msgstr "me gusta"
 
-#: .\blog\templates\blog\article_detail.html:94
+#: .\blog\templates\blog\article_detail.html:93
 #, python-format
 msgid "Commentaire (%(comments_count)s)"
 msgid_plural "Commentaires (%(comments_count)s)"
 msgstr[0] "Comentario (%(comments_count)s)"
 msgstr[1] "Comentarios (%(comments_count)s)"
 
-#: .\blog\templates\blog\article_detail.html:115
-#, fuzzy
+#: .\blog\templates\blog\article_detail.html:114
+
 #| msgid "Aucun commentaire pour le moment. Soyez le premier  commenter !"
 msgid "Aucun commentaire pour le moment. Soyez le premier à commenter !"
 msgstr "Ningún comentario por el momento. ¡Sé el primero en comentar!"
 
-#: .\blog\templates\blog\article_detail.html:123
+#: .\blog\templates\blog\article_detail.html:122
 msgid "Ajouter un commentaire"
 msgstr "Agregar un comentario"
 
-#: .\blog\templates\blog\article_detail.html:132
+#: .\blog\templates\blog\article_detail.html:131
 #: .\blog\templates\blog\gerer_categories.html:44
+#: .\blog\templates\blog\profile.html:67
 msgid "Nom"
 msgstr "Nombre"
 
-#: .\blog\templates\blog\article_detail.html:144
+#: .\blog\templates\blog\article_detail.html:143
+#: .\blog\templates\blog\auth\password_reset.html:39
+#: .\blog\templates\blog\auth\register.html:56
+#: .\blog\templates\blog\profile.html:46
 msgid "Email"
 msgstr "Email"
 
-#: .\blog\templates\blog\article_detail.html:148
-#, fuzzy
+#: .\blog\templates\blog\article_detail.html:147
+
 #| msgid "Votre email ne sera pas publi"
 msgid "Votre email ne sera pas publié"
 msgstr "Su email no será publicado"
 
-#: .\blog\templates\blog\article_detail.html:159
+#: .\blog\templates\blog\article_detail.html:158
+#: .\blog\templates\blog\moderation.html:122
 msgid "Commentaire"
 msgstr "Comentario"
 
-#: .\blog\templates\blog\article_detail.html:168
+#: .\blog\templates\blog\article_detail.html:167
 msgid "Publier le commentaire"
 msgstr "Publicar el comentario"
 
-#: .\blog\templates\blog\auth\login.html:4
-#: .\blog\templates\blog\auth\login.html:13
-#: .\blog\templates\blog\auth\login.html:21
-#: .\blog\templates\blog\base.html:136
+#: .\blog\templates\blog\auth\login.html:4 .\blog\templates\blog\base.html:138
 msgid "Login"
 msgstr "Iniciar sesión"
 
-#: .\blog\templates\blog\auth\login.html:25
+#: .\blog\templates\blog\auth\login.html:16
+msgid "Welcome Back"
+msgstr "Bienvenido de nuevo"
+
+#: .\blog\templates\blog\auth\login.html:17
+msgid "Sign in to your account"
+msgstr "Inicia sesión en tu cuenta"
+
+#: .\blog\templates\blog\auth\login.html:41
+#: .\blog\templates\blog\auth\register.html:39
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: .\blog\templates\blog\auth\login.html:55
+#: .\blog\templates\blog\auth\register.html:73
+msgid "Password"
+msgstr "Contraseña"
+
+#: .\blog\templates\blog\auth\login.html:70
+msgid "Remember me"
+msgstr "Recuérdame"
+
+#: .\blog\templates\blog\auth\login.html:75
+msgid "Forgot password?"
+msgstr "¿Olvidaste tu contraseña?"
+
+#: .\blog\templates\blog\auth\login.html:83
+#: .\blog\templates\blog\auth\register.html:112
+msgid "Sign In"
+msgstr "Iniciar sesión"
+
+#: .\blog\templates\blog\auth\login.html:89
 msgid "Don't have an account?"
 msgstr "¿No tienes una cuenta?"
 
-#: .\blog\templates\blog\auth\login.html:26
-msgid "Register here"
-msgstr "Regístrate aquí"
+#: .\blog\templates\blog\auth\login.html:92
+#: .\blog\templates\blog\auth\register.html:103
+
+#| msgid "Account"
+msgid "Create Account"
+msgstr "Crear cuenta"
 
 #: .\blog\templates\blog\auth\logout.html:4
 #: .\blog\templates\blog\auth\logout.html:12
@@ -422,94 +514,192 @@ msgstr "Has cerrado sesión exitosamente."
 msgid "Login Again"
 msgstr "Iniciar sesión de nuevo"
 
+#: .\blog\templates\blog\auth\password_reset.html:4
+#: .\blog\templates\blog\auth\password_reset.html:17
+msgid "Reset Password"
+msgstr "Restablecer contraseña"
+
+#: .\blog\templates\blog\auth\password_reset.html:18
+msgid "Enter your email to receive reset instructions"
+msgstr ""
+"Introduce tu correo electrónico para recibir instrucciones de "
+"restablecimiento"
+
+#: .\blog\templates\blog\auth\password_reset.html:52
+msgid "Send Reset Email"
+msgstr "Enviar correo de restablecimiento"
+
+#: .\blog\templates\blog\auth\password_reset.html:58
+msgid "Remember your password?"
+msgstr "¿Recuerdas tu contraseña?"
+
+#: .\blog\templates\blog\auth\password_reset.html:61
+msgid "Back to Sign In"
+msgstr "Volver a iniciar sesión"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:4
+#: .\blog\templates\blog\auth\password_reset_confirm.html:18
+msgid "Set New Password"
+msgstr "Establecer nueva contraseña"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:19
+msgid "Enter your new password below"
+msgstr "Introduce tu nueva contraseña abajo"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:40
+msgid "New Password"
+msgstr "Nueva contraseña"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:53
+msgid "Confirm New Password"
+msgstr "Confirmar nueva contraseña"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:66
+msgid "Update Password"
+msgstr "Actualizar contraseña"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:74
+msgid "Invalid Reset Link"
+msgstr "Enlace de restablecimiento inválido"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:75
+msgid "This password reset link is invalid or has expired"
+msgstr "Este enlace de restablecimiento es inválido o ha expirado"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:80
+msgid ""
+"The password reset link you used is invalid or has expired. This could "
+"happen for the following reasons:"
+msgstr ""
+"El enlace de restablecimiento que usaste es inválido o ha expirado. Esto "
+"puede suceder por las siguientes razones:"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:82
+msgid "The link has already been used"
+msgstr "El enlace ya ha sido usado"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:83
+msgid "The link has expired (24 hours)"
+msgstr "El enlace ha expirado (24 horas)"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:84
+msgid "The link was corrupted during transmission"
+msgstr "El enlace se corrompió durante la transmisión"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:89
+msgid "Please request a new password reset"
+msgstr "Por favor solicita un nuevo restablecimiento de contraseña"
+
+#: .\blog\templates\blog\auth\password_reset_confirm.html:92
+msgid "Request New Reset"
+msgstr "Solicitar nuevo restablecimiento"
+
 #: .\blog\templates\blog\auth\register.html:4
-#: .\blog\templates\blog\auth\register.html:13
-#: .\blog\templates\blog\auth\register.html:21
-#: .\blog\templates\blog\base.html:137
+#: .\blog\templates\blog\base.html:139
 msgid "Register"
 msgstr "Registrarse"
 
-#: .\blog\templates\blog\auth\register.html:25
+#: .\blog\templates\blog\auth\register.html:16
+msgid "Join Our Community"
+msgstr "Únete a nuestra comunidad"
+
+#: .\blog\templates\blog\auth\register.html:17
+msgid "Create your account to get started"
+msgstr "Crea tu cuenta para comenzar"
+
+#: .\blog\templates\blog\auth\register.html:88
+
+#| msgid "Confirmer la suppression"
+msgid "Confirm Password"
+msgstr "Confirmar la eliminación"
+
+#: .\blog\templates\blog\auth\register.html:109
 msgid "Already have an account?"
 msgstr "¿Ya tienes una cuenta?"
-
-#: .\blog\templates\blog\auth\register.html:26
-msgid "Login here"
-msgstr "Inicia sesión aquí"
 
 #: .\blog\templates\blog\base.html:9
 msgid "My Awesome Blog"
 msgstr "Mi Blog Increíble"
 
-#: .\blog\templates\blog\base.html:28 .\blog\templates\blog\base.html:181
+#: .\blog\templates\blog\base.html:30 .\blog\templates\blog\base.html:183
 msgid "MonBlog"
 msgstr "MiBlog"
 
-#: .\blog\templates\blog\base.html:37 .\blog\templates\blog\base.html:205
+#: .\blog\templates\blog\base.html:39 .\blog\templates\blog\base.html:207
+#: .\blog\templates\blog\moderation.html:306
 #: .\blog\templates\blog\modifier_article.html:13
 #: .\blog\templates\blog\supprimer_article.html:13
+#: .\blog\templates\blog\tous_les_articles.html:25
 msgid "Accueil"
 msgstr "Inicio"
 
-#: .\blog\templates\blog\base.html:44
+#: .\blog\templates\blog\base.html:45
 msgid "Nouvel Article"
 msgstr "Nuevo Artículo"
 
-#: .\blog\templates\blog\base.html:49
+#: .\blog\templates\blog\base.html:50
+msgid "Générateur IA"
+msgstr ""
+
+#: .\blog\templates\blog\base.html:54
 msgid "Gérer Articles"
 msgstr "Gestionar artículos"
 
-#: .\blog\templates\blog\base.html:59 .\blog\templates\blog\base.html:113
+#: .\blog\templates\blog\base.html:69 .\blog\templates\blog\moderation.html:18
+#: .\blog\templates\blog\moderation.html:310
 msgid "Admin"
 msgstr "Admin"
 
-#: .\blog\templates\blog\base.html:70 .\blog\templates\blog\base.html:104
+#: .\blog\templates\blog\base.html:80 .\blog\templates\blog\moderation.html:20
+#: .\blog\templates\blog\moderation.html:314
 msgid "Journaliste"
 msgstr "Periodista"
 
-#: .\blog\templates\blog\base.html:89
-#, fuzzy
-#| msgid "Changer de rle"
-msgid "Changer de rôle"
-msgstr "Cambiar de rol"
+#: .\blog\templates\blog\base.html:88
+#: .\blog\templates\blog\search_form.html:11
+#: .\blog\templates\blog\search_results.html:25
+#: .\blog\templates\blog\search_results_new.html:25
+msgid "Rechercher"
+msgstr "Buscar"
 
-#: .\blog\templates\blog\base.html:95
-msgid "Lecteur"
-msgstr "Lector"
+#: .\blog\templates\blog\base.html:99
+msgid "Rechercher..."
+msgstr "Buscar..."
 
-#: .\blog\templates\blog\base.html:126
+#: .\blog\templates\blog\base.html:101
+#: .\blog\templates\blog\search_form.html:9
+msgid "Recherche"
+msgstr "Búsqueda"
+
+#: .\blog\templates\blog\base.html:128
 msgid "Account"
 msgstr "Cuenta"
 
-#: .\blog\templates\blog\base.html:131
+#: .\blog\templates\blog\base.html:133
 msgid "My Profile"
 msgstr "Mi Perfil"
 
-#: .\blog\templates\blog\base.html:132
+#: .\blog\templates\blog\base.html:134
 msgid "Settings"
 msgstr "Configuración"
 
-#: .\blog\templates\blog\base.html:134
+#: .\blog\templates\blog\base.html:136
 msgid "Logout"
 msgstr "Cerrar sesión"
 
-#: .\blog\templates\blog\base.html:152
-msgid "Bienvenue sur MonBlog"
-msgstr "Bienvenido a MiBlog"
-
-#: .\blog\templates\blog\base.html:153
+#: .\blog\templates\blog\base.html:155
 msgid ""
 "Découvrez des articles passionnants et partagez vos idées avec notre "
 "communauté."
 msgstr ""
 "Descubra artículos fascinantes y comparta sus ideas con nuestrocomunidad"
 
-#: .\blog\templates\blog\base.html:155
+#: .\blog\templates\blog\base.html:157
 msgid "Découvrir"
 msgstr "Descubra"
 
-#: .\blog\templates\blog\base.html:184
-#, fuzzy
+#: .\blog\templates\blog\base.html:186
+
 #| msgid ""
 #| "Votre plateforme de blog moderne pour partager vos ides et dcouvrir de "
 #| "nouveaux contenus inspirants."
@@ -520,361 +710,549 @@ msgstr ""
 "Tu moderna plataforma de blog para compartir tus ideas y descubrir otras "
 "nuevas. contenido."
 
-#: .\blog\templates\blog\base.html:203
+#: .\blog\templates\blog\base.html:205
 msgid "Navigation"
 msgstr "Navegación"
 
-#: .\blog\templates\blog\base.html:206
-#, fuzzy
+#: .\blog\templates\blog\base.html:208
+
 #| msgid "crire"
 msgid "Écrire"
 msgstr "Escribir"
 
-#: .\blog\templates\blog\base.html:213
+#: .\blog\templates\blog\base.html:215
 msgid "Ressources"
 msgstr "Recursos"
 
-#: .\blog\templates\blog\base.html:215
+#: .\blog\templates\blog\base.html:217
 msgid "Aide"
 msgstr "Ayuda"
 
-#: .\blog\templates\blog\base.html:216
+#: .\blog\templates\blog\base.html:218
 msgid "FAQ"
 msgstr "FAQ"
 
-#: .\blog\templates\blog\base.html:217
+#: .\blog\templates\blog\base.html:219
 msgid "Contact"
 msgstr "Contacto"
 
-#: .\blog\templates\blog\base.html:218
+#: .\blog\templates\blog\base.html:220
 msgid "Support"
 msgstr "Soporte"
 
-#: .\blog\templates\blog\base.html:223
-msgid "Légal"
-msgstr ""
-
 #: .\blog\templates\blog\base.html:225
-#, fuzzy
+msgid "Légal"
+msgstr "Legal"
+
+#: .\blog\templates\blog\base.html:227
+
 #| msgid "Confidentialit"
 msgid "Confidentialité"
 msgstr "Privacidad"
 
-#: .\blog\templates\blog\base.html:226
+#: .\blog\templates\blog\base.html:228
 msgid "Conditions"
 msgstr "Condiciones"
 
-#: .\blog\templates\blog\base.html:227
+#: .\blog\templates\blog\base.html:229
 msgid "Cookies"
 msgstr "Cookies"
 
-#: .\blog\templates\blog\base.html:228
-#, fuzzy
+#: .\blog\templates\blog\base.html:230
+
 #| msgid "Mentions lgales"
 msgid "Mentions légales"
 msgstr "Aviso legal"
 
-#: .\blog\templates\blog\base.html:233
+#: .\blog\templates\blog\base.html:235
 msgid "Newsletter"
 msgstr "Boletín"
 
-#: .\blog\templates\blog\base.html:234
+#: .\blog\templates\blog\base.html:236
 msgid "Restez informé des derniers articles"
 msgstr "Manténgase al día con los últimos artículos"
 
-#: .\blog\templates\blog\base.html:236
+#: .\blog\templates\blog\base.html:238
 msgid "Votre email"
 msgstr "Tu email"
 
-#: .\blog\templates\blog\base.html:248
-#, fuzzy
+#: .\blog\templates\blog\base.html:250
+
 #| msgid "MonBlog. Tous droits rservs."
 msgid "MonBlog. Tous droits réservés."
 msgstr "MiBlog. Todos los derechos reservados."
 
-#: .\blog\templates\blog\base.html:253
+#: .\blog\templates\blog\base.html:255
 msgid "Fait avec"
 msgstr "Hecho con"
 
-#: .\blog\templates\blog\base.html:253
-#, fuzzy
+#: .\blog\templates\blog\base.html:255
+
 #| msgid "par l'quipe MonBlog"
 msgid "par l'équipe MonBlog"
 msgstr "por el equipo MiBlog"
 
-#: .\blog\templates\blog\diagnostic_images.html:12
+#: .\blog\templates\blog\diagnostic_images.html:11
 msgid "Diagnostic des Images"
 msgstr "Diagnóstico de Imágenes"
 
-#: .\blog\templates\blog\diagnostic_images.html:15
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:14
+
 #| msgid "Vrification complte de l'affichage des images du blog avec Django"
 msgid "Vérification complète de l'affichage des images du blog avec Django"
 msgstr ""
 "Verificación completa de la visualización de imágenes del blog con Django"
 
-#: .\blog\templates\blog\diagnostic_images.html:26
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:24
+
 #| msgid "Images testes"
 msgid "Images testées"
 msgstr "Imágenes probadas"
 
-#: .\blog\templates\blog\diagnostic_images.html:34
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:31
+
 #| msgid "Succs"
 msgid "Succès"
 msgstr "Éxito"
 
-#: .\blog\templates\blog\diagnostic_images.html:42
+#: .\blog\templates\blog\diagnostic_images.html:38
 msgid "Avertissements"
 msgstr "Advertencias"
 
-#: .\blog\templates\blog\diagnostic_images.html:50
+#: .\blog\templates\blog\diagnostic_images.html:45
 msgid "Erreurs"
 msgstr "Errores"
 
-#: .\blog\templates\blog\diagnostic_images.html:60
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:55
+
 #| msgid "Informations Systme"
 msgid "Informations Système"
 msgstr "Información del Sistema"
 
-#: .\blog\templates\blog\diagnostic_images.html:68
+#: .\blog\templates\blog\diagnostic_images.html:63
 msgid "Total d'articles"
 msgstr "Total de artículos"
 
-#: .\blog\templates\blog\diagnostic_images.html:72
+#: .\blog\templates\blog\diagnostic_images.html:67
 msgid "Articles avec images"
 msgstr "Artículos con imágenes"
 
-#: .\blog\templates\blog\diagnostic_images.html:76
+#: .\blog\templates\blog\diagnostic_images.html:71
 msgid "Mode debug"
 msgstr "Modo debug"
 
-#: .\blog\templates\blog\diagnostic_images.html:79
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:74
+
 #| msgid "Activ"
 msgid "Activé"
 msgstr "Activado"
 
-#: .\blog\templates\blog\diagnostic_images.html:81
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:76
+
 #| msgid "Dsactiv"
 msgid "Désactivé"
 msgstr "Desactivado"
 
-#: .\blog\templates\blog\diagnostic_images.html:98
+#: .\blog\templates\blog\diagnostic_images.html:93
 msgid "Dossier articles"
 msgstr "Carpeta de artículos"
 
-#: .\blog\templates\blog\diagnostic_images.html:102
+#: .\blog\templates\blog\diagnostic_images.html:97
 msgid "Accessible"
 msgstr "Accesible"
 
-#: .\blog\templates\blog\diagnostic_images.html:106
+#: .\blog\templates\blog\diagnostic_images.html:101
 msgid "Introuvable"
 msgstr "No encontrado"
 
-#: .\blog\templates\blog\diagnostic_images.html:121
+#: .\blog\templates\blog\diagnostic_images.html:116
 msgid "Test des Images d'Articles"
 msgstr "Prueba de Imágenes de Artículos"
 
-#: .\blog\templates\blog\diagnostic_images.html:143
+#: .\blog\templates\blog\diagnostic_images.html:137
 msgid "Image non disponible"
 msgstr "Imagen no disponible"
 
-#: .\blog\templates\blog\diagnostic_images.html:153
-#: .\blog\templates\blog\diagnostic_images.html:226
+#: .\blog\templates\blog\diagnostic_images.html:147
+#: .\blog\templates\blog\diagnostic_images.html:220
 msgid "OK"
 msgstr "OK"
 
-#: .\blog\templates\blog\diagnostic_images.html:157
-#: .\blog\templates\blog\diagnostic_images.html:230
+#: .\blog\templates\blog\diagnostic_images.html:151
+#: .\blog\templates\blog\diagnostic_images.html:224
 msgid "Attention"
 msgstr "Atención"
 
-#: .\blog\templates\blog\diagnostic_images.html:161
-#: .\blog\templates\blog\diagnostic_images.html:246
-#: .\blog\templates\blog\diagnostic_images.html:322
+#: .\blog\templates\blog\diagnostic_images.html:155
+#: .\blog\templates\blog\diagnostic_images.html:240
+#: .\blog\templates\blog\diagnostic_images.html:315
 msgid "Erreur"
 msgstr "Error"
 
-#: .\blog\templates\blog\diagnostic_images.html:168
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:162
+
 #| msgid "Dtails techniques"
 msgid "Détails techniques"
 msgstr "Detalles técnicos"
 
-#: .\blog\templates\blog\diagnostic_images.html:174
-#: .\blog\templates\blog\diagnostic_images.html:290
+#: .\blog\templates\blog\diagnostic_images.html:168
+#: .\blog\templates\blog\diagnostic_images.html:283
 msgid "Nom du fichier"
 msgstr "Nombre del archivo"
 
-#: .\blog\templates\blog\diagnostic_images.html:178
+#: .\blog\templates\blog\diagnostic_images.html:172
 msgid "URL"
 msgstr "URL"
 
-#: .\blog\templates\blog\diagnostic_images.html:182
+#: .\blog\templates\blog\diagnostic_images.html:176
 msgid "Fichier existe"
 msgstr "El archivo existe"
 
-#: .\blog\templates\blog\diagnostic_images.html:186
-#: .\blog\templates\blog\diagnostic_images.html:212
-#: .\blog\templates\blog\diagnostic_images.html:275
-#: .\blog\templates\blog\diagnostic_images.html:302
+#: .\blog\templates\blog\diagnostic_images.html:180
+#: .\blog\templates\blog\diagnostic_images.html:206
+#: .\blog\templates\blog\diagnostic_images.html:268
+#: .\blog\templates\blog\diagnostic_images.html:295
 msgid "Oui"
 msgstr "Sí"
 
-#: .\blog\templates\blog\diagnostic_images.html:190
-#: .\blog\templates\blog\diagnostic_images.html:216
-#: .\blog\templates\blog\diagnostic_images.html:279
+#: .\blog\templates\blog\diagnostic_images.html:184
+#: .\blog\templates\blog\diagnostic_images.html:210
+#: .\blog\templates\blog\diagnostic_images.html:272
 msgid "Non"
 msgstr "No"
 
-#: .\blog\templates\blog\diagnostic_images.html:196
-#: .\blog\templates\blog\diagnostic_images.html:291
+#: .\blog\templates\blog\diagnostic_images.html:190
+#: .\blog\templates\blog\diagnostic_images.html:284
 msgid "Taille"
 msgstr "Tamaño"
 
-#: .\blog\templates\blog\diagnostic_images.html:204
+#: .\blog\templates\blog\diagnostic_images.html:198
 msgid "Type MIME"
 msgstr "Tipo MIME"
 
-#: .\blog\templates\blog\diagnostic_images.html:208
+#: .\blog\templates\blog\diagnostic_images.html:202
 msgid "Lisible"
 msgstr "Legible"
 
-#: .\blog\templates\blog\diagnostic_images.html:222
+#: .\blog\templates\blog\diagnostic_images.html:216
 msgid "Encodage URL"
 msgstr "Codificación URL"
 
-#: .\blog\templates\blog\diagnostic_images.html:236
+#: .\blog\templates\blog\diagnostic_images.html:230
 msgid "Chemin complet"
 msgstr "Ruta completa"
 
-#: .\blog\templates\blog\diagnostic_images.html:255
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:248
+
 #| msgid "Aucune image  tester"
 msgid "Aucune image à tester"
 msgstr "Ninguna imagen para probar"
 
-#: .\blog\templates\blog\diagnostic_images.html:256
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:249
+
 #| msgid "Aucun article avec image n'a t trouv dans la base de donnes."
 msgid "Aucun article avec image n'a été trouvé dans la base de données."
 msgstr "No se encontró ningún artículo con imagen en la base de datos."
 
-#: .\blog\templates\blog\diagnostic_images.html:266
+#: .\blog\templates\blog\diagnostic_images.html:259
 msgid "Contenu du Dossier Media"
 msgstr "Contenido de la Carpeta Media"
 
-#: .\blog\templates\blog\diagnostic_images.html:271
+#: .\blog\templates\blog\diagnostic_images.html:264
 msgid "Chemin"
 msgstr "Ruta"
 
-#: .\blog\templates\blog\diagnostic_images.html:272
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:265
+
 #| msgid "criture autorise"
 msgid "Écriture autorisée"
 msgstr "Escritura autorizada"
 
-#: .\blog\templates\blog\diagnostic_images.html:285
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:278
+
 #| msgid "Fichiers trouvs"
 msgid "Fichiers trouvés"
 msgstr "Archivos encontrados"
 
-#: .\blog\templates\blog\diagnostic_images.html:292
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:285
+
 #| msgid "Utilis"
 msgid "Utilisé"
 msgstr "Utilizado"
 
-#: .\blog\templates\blog\diagnostic_images.html:304
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:297
+
 #| msgid "Non utilis"
 msgid "Non utilisé"
 msgstr "No utilizado"
 
-#: .\blog\templates\blog\diagnostic_images.html:315
+#: .\blog\templates\blog\diagnostic_images.html:308
 msgid "Le dossier articles est vide."
 msgstr "La carpeta de artículos está vacía."
 
-#: .\blog\templates\blog\diagnostic_images.html:328
+#: .\blog\templates\blog\diagnostic_images.html:321
 msgid "Le dossier media/articles/ n'existe pas!"
 msgstr "¡La carpeta media/articles/ no existe!"
 
-#: .\blog\templates\blog\diagnostic_images.html:338
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:331
+
 #| msgid "Actions Recommandes"
 msgid "Actions Recommandées"
 msgstr "Acciones Recomendadas"
 
-#: .\blog\templates\blog\diagnostic_images.html:344
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:337
+
 #| msgid "Problmes dtects"
 msgid "Problèmes détectés"
 msgstr "Problemas detectados"
 
-#: .\blog\templates\blog\diagnostic_images.html:346
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:339
+
 #| msgid "Vrifiez que les fichiers d'images existent physiquement"
 msgid "Vérifiez que les fichiers d'images existent physiquement"
 msgstr "Verifique que los archivos de imágenes existan físicamente"
 
-#: .\blog\templates\blog\diagnostic_images.html:347
+#: .\blog\templates\blog\diagnostic_images.html:340
 msgid "Assurez-vous que les permissions de lecture sont correctes"
 msgstr "Asegúrese de que los permisos de lectura sean correctos"
 
-#: .\blog\templates\blog\diagnostic_images.html:348
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:341
+
 #| msgid "Vrifiez la configuration MEDIA_ROOT et MEDIA_URL dans settings.py"
 msgid "Vérifiez la configuration MEDIA_ROOT et MEDIA_URL dans settings.py"
 msgstr "Verifique la configuración MEDIA_ROOT y MEDIA_URL en settings.py"
 
-#: .\blog\templates\blog\diagnostic_images.html:355
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:348
+
 #| msgid "Amliorations possibles"
 msgid "Améliorations possibles"
 msgstr "Mejoras posibles"
 
-#: .\blog\templates\blog\diagnostic_images.html:357
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:350
+
 #| msgid "Optimisez la taille des images pour amliorer les performances"
 msgid "Optimisez la taille des images pour améliorer les performances"
 msgstr "Optimice el tamaño de las imágenes para mejorar el rendimiento"
 
-#: .\blog\templates\blog\diagnostic_images.html:358
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:351
+
 #| msgid "Vrifiez l'encodage des noms de fichiers avec des caractres spciaux"
 msgid "Vérifiez l'encodage des noms de fichiers avec des caractères spéciaux"
 msgstr ""
 "Verifique la codificación de nombres de archivos con caracteres especiales"
 
-#: .\blog\templates\blog\diagnostic_images.html:365
+#: .\blog\templates\blog\diagnostic_images.html:358
 msgid "Excellent!"
 msgstr "¡Excelente!"
 
-#: .\blog\templates\blog\diagnostic_images.html:366
-#, fuzzy
+#: .\blog\templates\blog\diagnostic_images.html:359
+
 #| msgid "Toutes les images sont correctement configures et accessibles."
 msgid "Toutes les images sont correctement configurées et accessibles."
 msgstr "Todas las imágenes están configuradas correctamente y son accesibles."
 
-#: .\blog\templates\blog\diagnostic_images.html:379
+#: .\blog\templates\blog\diagnostic_images.html:372
 #: .\blog\templates\blog\gerer_articles.html:20
-#, fuzzy
+
 #| msgid "Grer les articles"
 msgid "Gérer les articles"
 msgstr "Gestionar los artículos"
+
+#: .\blog\templates\blog\gemini_generator.html:13
+
+#| msgid "Gérer Articles"
+msgid "Générateur d'articles avec IA"
+msgstr "Gestionar artículos"
+
+#: .\blog\templates\blog\gemini_generator.html:15
+msgid ""
+"Créez des articles de qualité en quelques secondes avec l'intelligence "
+"artificielle Gemini"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:27
+
+#| msgid "Date de cration"
+msgid "Service IA opérationnel"
+msgstr "Fecha de creación"
+
+#: .\blog\templates\blog\gemini_generator.html:28
+msgid "L'API Gemini est disponible et prête à générer du contenu."
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:30
+
+#| msgid "Toutes les catégories"
+msgid "Service IA indisponible"
+msgstr "Ver categorías disponibles"
+
+#: .\blog\templates\blog\gemini_generator.html:31
+msgid ""
+"Impossible de se connecter à l'API Gemini. Veuillez réessayer plus tard."
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:45
+
+#| msgid "Article lik"
+msgid "Article généré"
+msgstr "Artículo marcado como me gusta"
+
+#: .\blog\templates\blog\gemini_generator.html:55
+msgid "Copier"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:58
+msgid "Sauvegarder comme brouillon"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:65
+msgid "Votre article généré apparaîtra ici"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:70
+msgid "Génération en cours..."
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:73
+msgid "L'IA Gemini génère votre article..."
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:85
+
+#| msgid "Date de cration"
+msgid "Paramètres de génération"
+msgstr "Fecha de creación"
+
+#: .\blog\templates\blog\gemini_generator.html:95
+
+#| msgid "Votre email"
+msgid "Votre demande"
+msgstr "Tu email"
+
+#: .\blog\templates\blog\gemini_generator.html:102
+msgid "Décrivez le sujet de votre article..."
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:106
+msgid "Minimum 10 caractères. Soyez spécifique pour de meilleurs résultats."
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:113
+msgid "Langue"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:116
+msgid "Français"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:117
+msgid "Anglais"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:118
+msgid "Espagnol"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:130
+
+#| msgid "Grer les articles"
+msgid "Générer l'article"
+msgstr "Gestionar los artículos"
+
+#: .\blog\templates\blog\gemini_generator.html:136
+msgid "Service IA temporairement indisponible"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:147
+
+#| msgid "Consultation"
+msgid "Conseils d'utilisation"
+msgstr "Consulta"
+
+#: .\blog\templates\blog\gemini_generator.html:152
+msgid "Soyez précis dans votre demande"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:153
+msgid "Mentionnez le ton souhaité (formel, décontracté, etc.)"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:154
+msgid "Spécifiez la longueur approximative si nécessaire"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:155
+msgid "Vous pouvez modifier l'article généré avant de le publier"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:166
+
+#| msgid "Retour  l'article"
+msgid "Retour aux articles"
+msgstr "Volver al artículo"
+
+#: .\blog\templates\blog\gemini_generator.html:169
+
+#| msgid "Crer un article"
+msgid "Créer un article manuellement"
+msgstr "Crear un artículo"
+
+#: .\blog\templates\blog\gemini_generator.html:180
+
+#| msgid "Navigation"
+msgid "Notification"
+msgstr "Navegación"
+
+#: .\blog\templates\blog\gemini_generator.html:241
+msgid "Le prompt doit contenir au moins 10 caractères."
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:252
+
+#| msgid "Modération"
+msgid "Génération..."
+msgstr "Moderación"
+
+#: .\blog\templates\blog\gemini_generator.html:283
+
+#| msgid "Article ajout avec succs!"
+msgid "Article généré avec succès !"
+msgstr "¡Artículo agregado con éxito!"
+
+#: .\blog\templates\blog\gemini_generator.html:287
+
+#| msgid "Erreur lors de la sauvegarde de l'article."
+msgid "Erreur lors de la génération."
+msgstr "Error al guardar el artículo."
+
+#: .\blog\templates\blog\gemini_generator.html:293
+msgid "Erreur de connexion. Veuillez réessayer."
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:298
+
+#| msgid "Crer un article"
+msgid "Générer un article"
+msgstr "Crear un artículo"
+
+#: .\blog\templates\blog\gemini_generator.html:336
+msgid "Article copié dans le presse-papiers !"
+msgstr ""
+
+#: .\blog\templates\blog\gemini_generator.html:338
+
+#| msgid "Erreur lors de la sauvegarde de l'article."
+msgid "Erreur lors de la copie."
+msgstr "Error al guardar el artículo."
 
 #: .\blog\templates\blog\gerer_articles.html:32
 msgid "Filtrer par catégorie"
 msgstr "Filtrar por categoría"
 
 #: .\blog\templates\blog\gerer_articles.html:35
-#: .\blog\templates\blog\home.html:27
-#, fuzzy
+#: .\blog\templates\blog\home.html:31
+#: .\blog\templates\blog\tous_les_articles.html:39
+
 #| msgid "Toutes les catgories"
 msgid "Toutes les catégories"
 msgstr "Todas las categorías"
@@ -883,39 +1261,39 @@ msgstr "Todas las categorías"
 msgid "Effacer le filtre"
 msgstr "Borrar el filtro"
 
-#: .\blog\templates\blog\gerer_articles.html:108
+#: .\blog\templates\blog\gerer_articles.html:107
 msgid "Aucune"
 msgstr "Ninguna"
 
-#: .\blog\templates\blog\gerer_articles.html:116
+#: .\blog\templates\blog\gerer_articles.html:115
 msgid "Voir"
 msgstr "Ver"
 
-#: .\blog\templates\blog\gerer_articles.html:121
-#: .\blog\templates\blog\gerer_categories.html:74
+#: .\blog\templates\blog\gerer_articles.html:120
+#: .\blog\templates\blog\gerer_categories.html:73
 msgid "Modifier"
 msgstr "Modificar"
 
-#: .\blog\templates\blog\gerer_articles.html:143
-#, fuzzy
+#: .\blog\templates\blog\gerer_articles.html:142
+
 #| msgid "Aucun article trouv"
 msgid "Aucun article trouvé"
 msgstr "No se han encontrado artículos"
 
-#: .\blog\templates\blog\gerer_articles.html:146
-#, fuzzy
+#: .\blog\templates\blog\gerer_articles.html:145
+
 #| msgid "Aucun article dans cette catgorie."
 msgid "Aucun article dans cette catégorie."
 msgstr "Ningún artículo en esta categoría."
 
-#: .\blog\templates\blog\gerer_articles.html:148
-#, fuzzy
+#: .\blog\templates\blog\gerer_articles.html:147
+
 #| msgid "Commencez par crer votre premier article !"
 msgid "Commencez par créer votre premier article !"
 msgstr "Empieza por crear tu primer artículo !"
 
 #: .\blog\templates\blog\gerer_categories.html:9
-#, fuzzy
+
 #| msgid "Gestion des catgories"
 msgid "Gestion des catégories"
 msgstr "Gestión de categorías"
@@ -925,13 +1303,12 @@ msgid "Mode consultation"
 msgstr "Modo consulta"
 
 #: .\blog\templates\blog\gerer_categories.html:36
-#, fuzzy, python-format
 #| msgid "Liste des catgories (%(count)s)"
 msgid "Liste des catégories (%(count)s)"
 msgstr "Lista de categorías (%(count)s)"
 
 #: .\blog\templates\blog\gerer_categories.html:46
-#, fuzzy
+
 #| msgid "Date de cration"
 msgid "Date de création"
 msgstr "Fecha de creación"
@@ -941,60 +1318,208 @@ msgid "Nb d'articles"
 msgstr "Nº de artículos"
 
 #: .\blog\templates\blog\gerer_categories.html:48
+#: .\blog\templates\blog\moderation.html:124
 msgid "Actions"
 msgstr "Acciones"
 
-#: .\blog\templates\blog\gerer_categories.html:61
+#: .\blog\templates\blog\gerer_categories.html:60
 msgid "Aucune description"
 msgstr "Sin descripción"
 
-#: .\blog\templates\blog\gerer_categories.html:85
+#: .\blog\templates\blog\gerer_categories.html:84
 msgid "Consultation"
 msgstr "Consulta"
 
-#: .\blog\templates\blog\gerer_categories.html:101
-#, fuzzy
+#: .\blog\templates\blog\gerer_categories.html:100
+
 #| msgid "Aucune catgorie trouve"
 msgid "Aucune catégorie trouvée"
 msgstr "No se ha encontrado ninguna categoría"
 
-#: .\blog\templates\blog\gerer_categories.html:103
-#, fuzzy
+#: .\blog\templates\blog\gerer_categories.html:102
+
 #| msgid "Commencez par crer votre premire catgorie."
 msgid "Commencez par créer votre première catégorie."
 msgstr "Comience creando su primera categoría."
 
-#: .\blog\templates\blog\gerer_categories.html:108
+#: .\blog\templates\blog\gerer_categories.html:107
 msgid "Aucune catégorie n'a encore été créée."
 msgstr "Aún no se ha creado ninguna categoría."
 
-#: .\blog\templates\blog\home.html:46
+#: .\blog\templates\blog\home.html:23
+
+#| msgid "Bienvenue sur MonBlog"
+msgid "Bienvenue sur MonBlog"
+msgstr "Bienvenido a MiBlog"
+
+#: .\blog\templates\blog\home.html:25
+msgid "Découvrez nos derniers articles et contenus populaires"
+msgstr "Descubre nuestros últimos artículos y contenidos populares"
+
+#: .\blog\templates\blog\home.html:52
 msgid "Articles récents"
 msgstr "Artículos recientes"
 
-#: .\blog\templates\blog\home.html:92
-msgid "Lire"
-msgstr "Leer"
+#: .\blog\templates\blog\home.html:69
 
-#: .\blog\templates\blog\home.html:133
-msgid "Aucun article pour le moment"
+#| msgid "Aucun article trouv"
+msgid "Aucun article récent trouvé"
+msgstr "No se han encontrado artículos"
+
+#: .\blog\templates\blog\home.html:77
+
+#| msgid "Articles publis"
+msgid "Articles populaires"
+msgstr "Artículos publicados"
+
+#: .\blog\templates\blog\home.html:95
+msgid "Rejoignez notre communauté"
+msgstr "Únete a nuestra comunidad"
+
+#: .\blog\templates\blog\home.html:96
+
+#| msgid ""
+#| "Votre plateforme de blog moderne pour partager vos ides et dcouvrir de "
+#| "nouveaux contenus inspirants."
+msgid "Partagez vos idées et découvrez de nouveaux contenus passionnants"
+msgstr ""
+"Tu moderna plataforma de blog para compartir tus ideas y descubrir otras "
+"nuevas. contenido."
+
+#: .\blog\templates\blog\home.html:105
+msgid "S'inscrire"
+msgstr "Inscríbete"
+
+#: .\blog\templates\blog\home.html:108
+msgid "Se connecter"
+msgstr "Iniciar sesión"
+
+#: .\blog\templates\blog\moderation.html:5
+#: .\blog\templates\blog\moderation.html:14
+
+#| msgid "commentaires"
+msgid "Modération des commentaires"
+msgstr "comentarios"
+
+#: .\blog\templates\blog\moderation.html:44
+
+#| msgid "commentaires"
+msgid "Total commentaires"
+msgstr "comentarios"
+
+#: .\blog\templates\blog\moderation.html:60
+#: .\blog\templates\blog\moderation.html:80
+msgid "Approuvés"
+msgstr "Aprobado"
+
+#: .\blog\templates\blog\moderation.html:70
+msgid "Filtres"
+msgstr "Filtros"
+
+#: .\blog\templates\blog\moderation.html:76
+#: .\blog\templates\blog\moderation.html:123
+msgid "Statut"
+msgstr "Estado"
+
+#: .\blog\templates\blog\moderation.html:78
+msgid "Tous"
+msgstr "Todos"
+
+#: .\blog\templates\blog\moderation.html:84
+#: .\blog\templates\blog\moderation.html:120
+
+#| msgid "Articles"
+msgid "Article"
+msgstr "Artículos"
+
+#: .\blog\templates\blog\moderation.html:86
+#: .\blog\templates\blog\tous_les_articles.html:29
+#: .\blog\templates\blog\tous_les_articles.html:67 .\blog\views.py:102
+
+#| msgid "Voir tous les articles"
+msgid "Tous les articles"
+msgstr "Ver todos los artículos"
+
+#: .\blog\templates\blog\moderation.html:97
+msgid "Réinitialiser"
+msgstr "Restablecer"
+
+#: .\blog\templates\blog\moderation.html:121
+msgid "Date"
+msgstr "Fecha"
+
+#: .\blog\templates\blog\moderation.html:137
+msgid "Réponse à"
+msgstr "Respuesta a"
+
+#: .\blog\templates\blog\moderation.html:158
+msgid "réponse(s)"
+msgstr "respuesta(s)"
+
+#: .\blog\templates\blog\moderation.html:165
+msgid "Approuvé"
+msgstr "Aprobado"
+
+#: .\blog\templates\blog\moderation.html:181
+#: .\blog\templates\blog\moderation.html:182
+msgid "Désapprouver"
+msgstr "Desaprobar"
+
+#: .\blog\templates\blog\moderation.html:190
+#: .\blog\templates\blog\moderation.html:191
+msgid "Approuver"
+msgstr "Aprobar"
+
+#: .\blog\templates\blog\moderation.html:200
+#: .\blog\templates\blog\moderation.html:201
+msgid "Répondre"
+msgstr "Responder"
+
+#: .\blog\templates\blog\moderation.html:206
+
+#| msgid "tes-vous sr de vouloir supprimer l'article suivant ?"
+msgid "Êtes-vous sûr de vouloir supprimer ce commentaire ?"
+msgstr "¿Está seguro de que desea eliminar el siguiente artículo?"
+
+#: .\blog\templates\blog\moderation.html:224
+msgid "Votre réponse..."
+msgstr "Tu respuesta..."
+
+#: .\blog\templates\blog\moderation.html:228
+msgid "Envoyer"
+msgstr "Enviar"
+
+#: .\blog\templates\blog\moderation.html:248
+
+#| msgid "commentaires"
+msgid "Navigation des commentaires"
+msgstr "comentarios"
+
+#: .\blog\templates\blog\moderation.html:284
+
+#| msgid "Aucun article trouv"
+msgid "Aucun commentaire trouvé"
+msgstr "No se han encontrado artículos"
+
+#: .\blog\templates\blog\moderation.html:287
+msgid "Aucun commentaire ne correspond aux filtres sélectionnés."
+msgstr "Ningún comentario coincide con los filtros seleccionados."
+
+#: .\blog\templates\blog\moderation.html:290
+
+#| msgid "Aucun article pour le moment"
+msgid "Aucun commentaire sur vos articles pour le moment."
 msgstr "Ningún artículo por el momento"
 
-#: .\blog\templates\blog\home.html:134
-#, fuzzy
-#| msgid "Commencez par creer votre premier article pour partager vos idees !"
-msgid "Commencez par créer votre premier article pour partager vos idées"
-msgstr "Empieza por crear tu primer artículo para compartir tus ideas"
+#: .\blog\templates\blog\moderation.html:292
 
-#: .\blog\templates\blog\home.html:136
-#, fuzzy
-#| msgid "Crer mon premier article"
-msgid "Créer mon premier article"
-msgstr "Crear mi primer artículo"
+#| msgid "Aucun commentaire pour le moment. Soyez le premier  commenter !"
+msgid "Aucun commentaire sur la plateforme pour le moment."
+msgstr "Ningún comentario por el momento. ¡Sé el primero en comentar!"
 
 #: .\blog\templates\blog\modifier_article.html:10
 #: .\blog\templates\blog\supprimer_article.html:10
-#, fuzzy
+
 #| msgid "Retour  l'article"
 msgid "Retour à l'article"
 msgstr "Volver al artículo"
@@ -1012,7 +1537,7 @@ msgid "Contenu"
 msgstr "Contenido"
 
 #: .\blog\templates\blog\modifier_article.html:88
-#, fuzzy
+
 #| msgid "Slectionnez une catgorie pour votre article"
 msgid "Sélectionnez une catégorie pour votre article"
 msgstr "Seleccione una categoría para su artículo"
@@ -1031,22 +1556,166 @@ msgid "Enregistrer les modifications"
 msgstr "Guardar las modificaciones"
 
 #: .\blog\templates\blog\modifier_categorie.html:4
-#, fuzzy
+
 #| msgid "Modifier la catgorie"
 msgid "Modifier la catégorie"
 msgstr "Modificar la categoría"
 
 #: .\blog\templates\blog\modifier_categorie.html:13
-#, fuzzy
+
 #| msgid "Modifier la catgorie:"
 msgid "Modifier la catégorie:"
 msgstr "Modificar la categoría:"
 
 #: .\blog\templates\blog\modifier_categorie.html:47
-#, fuzzy
+
 #| msgid "Informations sur la catgorie"
 msgid "Informations sur la catégorie"
 msgstr "Información sobre la categoría"
+
+#: .\blog\templates\blog\partials\article_card.html:54
+msgid "Lire"
+msgstr "Leer"
+
+#: .\blog\templates\blog\profile.html:31
+
+#| msgid "My Profile"
+msgid "Mon Profil"
+msgstr "Mi Perfil"
+
+#: .\blog\templates\blog\profile.html:52
+msgid "Membre depuis"
+msgstr "Miembro desde"
+
+#: .\blog\templates\blog\profile.html:59
+msgid "Prénom"
+msgstr "Nombre de pila"
+
+#: .\blog\templates\blog\profile.html:75
+
+#| msgid "Modifier cet article"
+msgid "Modifier mon profil"
+msgstr "Modificar este artículo"
+
+#: .\blog\templates\blog\profile.html:76
+
+#| msgid "Image non disponible"
+msgid "(Bientôt disponible)"
+msgstr "Imagen no disponible"
+
+#: .\blog\templates\blog\profile.html:88
+
+#| msgid "Mes statistiques"
+msgid "Mes Statistiques"
+msgstr "Mis estadísticas"
+
+#: .\blog\templates\blog\profile.html:98
+
+#| msgid "Article lik"
+msgid "Articles likés"
+msgstr "Artículo marcado como me gusta"
+
+#: .\blog\templates\blog\profile.html:106
+
+#| msgid "Commentaires reus"
+msgid "Commentaires postés"
+msgstr "Comentarios recibidos"
+
+#: .\blog\templates\blog\profile.html:114
+
+#| msgid "Informations sur la catgorie"
+msgid "Articles sur la plateforme"
+msgstr "Información sobre la categoría"
+
+#: .\blog\templates\blog\profile.html:122
+
+#| msgid "Toutes les catégories"
+msgid "Catégories disponibles"
+msgstr "Ver categorías disponibles"
+
+#: .\blog\templates\blog\search_results.html:6
+#: .\blog\templates\blog\search_results.html:16
+#: .\blog\templates\blog\search_results_new.html:6
+#: .\blog\templates\blog\search_results_new.html:16
+msgid "Résultats de recherche"
+msgstr "Resultados de búsqueda"
+
+#: .\blog\templates\blog\search_results.html:94
+#: .\blog\templates\blog\search_results_new.html:94
+
+#| msgid "Titre de l'article"
+msgid "Lire l'article"
+msgstr "Título del artículo"
+
+#: .\blog\templates\blog\search_results.html:105
+#: .\blog\templates\blog\search_results_new.html:105
+msgid "Navigation des résultats de recherche"
+msgstr "Resultados de la búsqueda"
+
+#: .\blog\templates\blog\search_results.html:110
+#: .\blog\templates\blog\search_results_new.html:110
+msgid "Précédent"
+msgstr "Anterior"
+
+#: .\blog\templates\blog\search_results.html:130
+#: .\blog\templates\blog\search_results_new.html:130
+msgid "Suivant"
+msgstr "Siguiente"
+
+#: .\blog\templates\blog\search_results.html:144
+#: .\blog\templates\blog\search_results_new.html:144
+
+#| msgid "Aucun article trouv"
+msgid "Aucun résultat trouvé"
+msgstr "No se han encontrado artículos"
+
+#: .\blog\templates\blog\search_results.html:146
+#: .\blog\templates\blog\search_results_new.html:146
+#, python-format
+msgid ""
+"\n"
+"                            Votre recherche \"<strong>%(query)s</strong>\" "
+"n'a donné aucun résultat.\n"
+"                        "
+msgstr ""
+
+#: .\blog\templates\blog\search_results.html:151
+#: .\blog\templates\blog\search_results_new.html:151
+
+#| msgid "Restrictions :"
+msgid "Suggestions :"
+msgstr "Restricciones:"
+
+#: .\blog\templates\blog\search_results.html:153
+#: .\blog\templates\blog\search_results_new.html:153
+msgid "Vérifiez l'orthographe de vos mots-clés"
+msgstr "Verifica la ortografía de tus palabras clave"
+
+#: .\blog\templates\blog\search_results.html:154
+#: .\blog\templates\blog\search_results_new.html:154
+msgid "Essayez des termes plus généraux"
+msgstr "Intenta términos más generales"
+
+#: .\blog\templates\blog\search_results.html:155
+#: .\blog\templates\blog\search_results_new.html:155
+msgid "Utilisez moins de mots-clés"
+msgstr "Usa menos palabras clave"
+
+#: .\blog\templates\blog\search_results.html:168
+#: .\blog\templates\blog\search_results_new.html:168
+
+#| msgid "Crer et modifier vos articles"
+msgid "Recherchez parmi nos articles"
+msgstr "Crear y modificar sus artículos"
+
+#: .\blog\templates\blog\search_results.html:170
+#: .\blog\templates\blog\search_results_new.html:170
+msgid ""
+"Utilisez le formulaire ci-dessus pour rechercher des articles par titre, "
+"contenu ou auteur."
+msgstr ""
+"Utiliza el formulario de arriba para buscar artículos por título, contenido "
+"o autor."
 
 #: .\blog\templates\blog\supprimer_article.html:4
 msgid "Supprimer l'article - Mon Blog Django"
@@ -1062,19 +1731,18 @@ msgstr "¡Atención!"
 
 #: .\blog\templates\blog\supprimer_article.html:28
 #: .\blog\templates\blog\supprimer_categorie.html:18
-#, fuzzy
+
 #| msgid "Cette action est irrversible."
 msgid "Cette action est irréversible."
 msgstr "Esta acción es irreversible."
 
 #: .\blog\templates\blog\supprimer_article.html:31
-#, fuzzy
+
 #| msgid "tes-vous sr de vouloir supprimer l'article suivant ?"
 msgid "Êtes-vous sûr de vouloir supprimer l'article suivant ?"
 msgstr "¿Está seguro de que desea eliminar el siguiente artículo?"
 
-#: .\blog\templates\blog\supprimer_article.html:47
-#, fuzzy, python-format
+#: .\blog\templates\blog\supprimer_article.html:46
 #| msgid ""
 #| "\n"
 #| "                                        Par %(auteur)s - "
@@ -1091,15 +1759,15 @@ msgstr ""
 "%(date|date:\"d/m/Y  H:i\")s\n"
 "                                    "
 
-#: .\blog\templates\blog\supprimer_article.html:61
-#, fuzzy
+#: .\blog\templates\blog\supprimer_article.html:60
+
 #| msgid "Supprimer dfinitivement"
 msgid "Supprimer définitivement"
 msgstr "Eliminar definitivamente"
 
 #: .\blog\templates\blog\supprimer_categorie.html:4
 #: .\blog\templates\blog\supprimer_categorie.html:12
-#, fuzzy
+
 #| msgid "Supprimer la catgorie"
 msgid "Supprimer la catégorie"
 msgstr "Eliminar la categoría"
@@ -1109,19 +1777,19 @@ msgid "Attention!"
 msgstr "¡Atención!"
 
 #: .\blog\templates\blog\supprimer_categorie.html:21
-#, fuzzy
+
 #| msgid "tes-vous sr de vouloir supprimer la catgorie suivante ?"
 msgid "Êtes-vous sûr de vouloir supprimer la catégorie suivante ?"
 msgstr "¿Está seguro de que desea eliminar la siguiente categoría?"
 
 #: .\blog\templates\blog\supprimer_categorie.html:30
-#, fuzzy
+
 #| msgid "Date de cration:"
 msgid "Date de création:"
 msgstr "Fecha de creación:"
 
 #: .\blog\templates\blog\supprimer_categorie.html:31
-#, fuzzy
+
 #| msgid "Nombre d'articles associs:"
 msgid "Nombre d'articles associés:"
 msgstr "Número de artículos asociados:"
@@ -1131,7 +1799,6 @@ msgid "Note:"
 msgstr "Nota:"
 
 #: .\blog\templates\blog\supprimer_categorie.html:37
-#, fuzzy, python-format
 #| msgid ""
 #| "Les %(count)s article%(count|pluralize)s associ%(count|pluralize)s  cette "
 #| "catgorie ne seront pas supprim%(count|pluralize)s, mais n'auront plus de "
@@ -1149,93 +1816,267 @@ msgstr ""
 msgid "Confirmer la suppression"
 msgstr "Confirmar la eliminación"
 
-#: .\blog\views.py:42
+#: .\blog\templates\blog\tous_les_articles.html:75
+
+#| msgid "Nouvel Article"
+msgid "Nouvel article"
+msgstr "Nuevo Artículo"
+
+#: .\blog\templates\blog\tous_les_articles.html:95
+
+#| msgid "Voir tous les articles"
+msgid "Affichage de tous les articles"
+msgstr "Ver todos los artículos"
+
+#: .\blog\templates\blog\tous_les_articles.html:106
+
+#| msgid "Aucun article dans cette catgorie."
+msgid "Aucun article dans cette catégorie"
+msgstr "Ningún artículo en esta categoría."
+
+#: .\blog\templates\blog\tous_les_articles.html:108
+msgid "Aucun article pour le moment"
+msgstr "Ningún artículo por el momento"
+
+#: .\blog\templates\blog\tous_les_articles.html:113
+
+#| msgid "Slectionnez une catgorie pour votre article"
+msgid "Essayez de sélectionner une autre catégorie ou"
+msgstr "Seleccione una categoría para su artículo"
+
+#: .\blog\templates\blog\tous_les_articles.html:114
+
+#| msgid "Voir tous les articles"
+msgid "voir tous les articles"
+msgstr "Ver todos los artículos"
+
+#: .\blog\templates\blog\tous_les_articles.html:116
+
+#| msgid "Commencez par creer votre premier article pour partager vos idees !"
+msgid "Commencez par créer votre premier article pour partager vos idées"
+msgstr "Empieza por crear tu primer artículo para compartir tus ideas"
+
+#: .\blog\templates\blog\tous_les_articles.html:121
+
+#| msgid "Crer mon premier article"
+msgid "Créer mon premier article"
+msgstr "Crear mi primer artículo"
+
+#: .\blog\views.py:73 .\blog\views.py:108
 msgid "Une erreur est survenue lors du chargement de la page."
 msgstr "Ha ocurrido un error al cargar la página."
 
-#: .\blog\views.py:55
-#, fuzzy
+#: .\blog\views.py:121
+
 #| msgid "Article ajout avec succs!"
 msgid "Article ajouté avec succès!"
 msgstr "¡Artículo agregado con éxito!"
 
-#: .\blog\views.py:59
+#: .\blog\views.py:125
 msgid "Erreur lors de la sauvegarde de l'article."
 msgstr "Error al guardar el artículo."
 
-#: .\blog\views.py:88
-#, fuzzy
+#: .\blog\views.py:147
+msgid ""
+"Le contenu a été pré-rempli avec l'article généré par IA. Vous pouvez le "
+"modifier avant de publier."
+msgstr ""
+
+#: .\blog\views.py:289
+
 #| msgid "Catgorie ajoute avec succs!"
 msgid "Catégorie ajoutée avec succès!"
 msgstr "¡Categoría agregada con éxito!"
 
-#: .\blog\views.py:106
-#, fuzzy
+#: .\blog\views.py:326
+
 #| msgid "Commentaire ajout avec succs!"
-msgid "Commentaire ajouté avec succès!"
+msgid "Commentaire ajouté avec succès! Il sera visible après modération."
 msgstr "¡Comentario agregado con éxito!"
 
-#: .\blog\views.py:157
-#, fuzzy, python-brace-format
+#: .\blog\views.py:379
 #| msgid "Catgorie \"{category.nom}\" modifie avec succs!"
 msgid "Catégorie \"{category.nom}\" modifiée avec succès!"
 msgstr "¡Categoría \"{category.nom}\" modificada con éxito!"
 
-#: .\blog\views.py:187
-#, fuzzy, python-brace-format
+#: .\blog\views.py:410
 #| msgid "Catgorie \"{category_name}\" supprime avec succs!"
 msgid "Catégorie \"{category_name}\" supprimée avec succès!"
 msgstr "¡Categoría \"{category_name}\" eliminada con éxito!"
 
-#: .\blog\views.py:219
-#, fuzzy, python-brace-format
+#: .\blog\views.py:443
 #| msgid "Article \"{article.titre}\" modifi avec succs!"
 msgid "Article \"{article.titre}\" modifié avec succès!"
 msgstr "¡Artículo \"{article.titre}\" modificado con éxito!"
 
-#: .\blog\views.py:253
-#, fuzzy, python-brace-format
+#: .\blog\views.py:478
 #| msgid "Article \"{article_title}\" supprim avec succs!"
 msgid "Article \"{article_title}\" supprimé avec succès!"
 msgstr "¡Artículo \"{article_title}\" eliminado con éxito!"
 
-#: .\blog\views.py:296
+#: .\blog\views.py:522
 msgid "Registration successful!"
 msgstr "¡Registro exitoso!"
 
-#: .\blog\views.py:316
+#: .\blog\views.py:542
 #, python-brace-format
 msgid "Welcome, {username}! You are now logged in."
 msgstr "¡Bienvenido, {username}! Ya has iniciado sesión."
 
-#: .\blog\views.py:319 .\blog\views.py:321
+#: .\blog\views.py:545 .\blog\views.py:547
 msgid "Invalid username or password."
 msgstr "Nombre de usuario o contraseña inválidos."
 
-#: .\blog\views.py:328
+#: .\blog\views.py:554
 msgid "You have been logged out."
 msgstr "Has cerrado sesión."
 
-#: .\blog\views.py:342
-#, python-brace-format
-msgid "Votre rôle a été changé pour {role}"
-msgstr "Su función ha cambiado a {role}"
+#: .\blog\views.py:789
 
-#: .\blog\views.py:574
-#, fuzzy
 #| msgid "Like retir"
 msgid "Like retiré"
 msgstr "Me gusta retirado"
 
-#: .\blog\views.py:578
-#, fuzzy
+#: .\blog\views.py:793
+
 #| msgid "Article lik"
 msgid "Article liké"
 msgstr "Artículo marcado como me gusta"
 
-#: .\blog\views.py:593
+#: .\blog\views.py:808
 msgid "Une erreur s'est produite lors du like"
 msgstr "Se ha producido un error al dar me gusta"
+
+#: .\blog\views.py:889
+
+#| msgid "Une erreur est survenue lors du chargement de la page."
+msgid "Une erreur est survenue lors du chargement de votre profil."
+msgstr "Ha ocurrido un error al cargar la página."
+
+#: .\blog\views.py:1055
+
+#| msgid "Commentaire ajout avec succs!"
+msgid "Commentaire approuvé avec succès"
+msgstr "¡Comentario agregado con éxito!"
+
+#: .\blog\views.py:1061
+
+#| msgid "Commentaire ajout avec succs!"
+msgid "Commentaire désapprouvé avec succès"
+msgstr "¡Comentario agregado con éxito!"
+
+#: .\blog\views.py:1067
+
+#| msgid "Commentaire ajout avec succs!"
+msgid "Commentaire supprimé avec succès"
+msgstr "¡Comentario agregado con éxito!"
+
+#: .\blog\views.py:1081
+
+#| msgid "Catgorie ajoute avec succs!"
+msgid "Réponse ajoutée avec succès"
+msgstr "¡Categoría agregada con éxito!"
+
+#: .\blog\views.py:1084
+msgid "Le contenu de la réponse ne peut pas être vide"
+msgstr "El contenido de la respuesta no puede estar vacío"
+
+#: .\blog\views.py:1087
+
+#| msgid "Commentaires reus"
+msgid "Commentaire introuvable"
+msgstr "Comentarios recibidos"
+
+#: .\blog\views.py:1164
+msgid "Réinitialisation de votre mot de passe"
+msgstr "Restablecer la contraseña"
+
+#: .\blog\views.py:1165
+#, python-brace-format
+msgid "Cliquez sur ce lien pour réinitialiser votre mot de passe: {reset_url}"
+msgstr "Haga clic en este enlace para restablecer su contraseña: {reset_url}"
+
+#: .\blog\views.py:1175 .\blog\views.py:1185
+msgid "Un email de réinitialisation a été envoyé à votre adresse."
+msgstr ""
+"Se ha enviado un correo electrónico de restablecimiento a su dirección."
+
+#: .\blog\views.py:1181
+#, python-brace-format
+msgid ""
+"Erreur d'envoi d'email vers {email}. Lien de réinitialisation: {reset_url}"
+msgstr ""
+"Error al enviar correo electrónico a {email}. Restablecer enlace: {reset_url}"
+
+#: .\blog\views.py:1208
+msgid "Votre mot de passe a été réinitialisé avec succès."
+msgstr "Su contraseña se ha restablecido correctamente."
+
+#: .\templates\blog\home.html:3 .\templates\blog\home.html:6
+#: .\templates\blog\home.html:10 .\templates\blog\home.html:15
+#: .\templates\blog\home.html:20 .\templates\blog\home.html:25
+#: .\templates\blog\home.html:48 .\templates\blog\home.html:76
+msgid "Par"
+msgstr "Por"
+
+#: .\templates\blog\home.html:28 .\templates\blog\home.html:51
+#: .\templates\blog\home.html:80
+msgid "Lire la suite"
+msgstr "Seguir leyendo"
+
+#: .\templates\blog\home.html:37
+
+#| msgid "Articles récents"
+msgid "Derniers articles publiés"
+msgstr "Artículos publicados"
+
+#: .\templates\blog\home.html:57
+
+#| msgid "Aucun article trouv"
+msgid "Aucun article récent."
+msgstr "No se han encontrado artículos"
+
+#: .\templates\blog\home.html:62
+
+#| msgid "Voir mes articles"
+msgid "Voir plus d'articles"
+msgstr "Ver mis artículos"
+
+#: .\templates\blog\home.html:65
+
+#| msgid "Articles publis"
+msgid "Articles les plus populaires"
+msgstr "Artículos publicados"
+
+#: .\templates\blog\home.html:86
+
+#| msgid "Aucun article pour le moment"
+msgid "Aucun article populaire pour le moment."
+msgstr "Ningún artículo por el momento"
+
+#: .\templates\blog\home.html:91
+
+#| msgid "Voir mes articles"
+msgid "Voir plus d'articles populaires"
+msgstr "Ver mis artículos"
+
+#~ msgid "Register here"
+#~ msgstr "Regístrate aquí"
+
+#~ msgid "Login here"
+#~ msgstr "Inicia sesión aquí"
+
+
+#~| msgid "Changer de rle"
+#~ msgid "Changer de rôle"
+#~ msgstr "Cambiar de rol"
+
+#~ msgid "Lecteur"
+#~ msgstr "Lector"
+
+#, python-brace-format
+#~ msgid "Votre rôle a été changé pour {role}"
+#~ msgstr "Su función ha cambiado a {role}"
 
 #~ msgid "Catgories"
 #~ msgstr "Categorías"
@@ -1248,9 +2089,6 @@ msgstr "Se ha producido un error al dar me gusta"
 
 #~ msgid "Aperu du systme"
 #~ msgstr "Vista general del sistema"
-
-#~ msgid "Articles publis"
-#~ msgstr "Artículos publicados"
 
 #~ msgid "Consulter les catgories disponibles"
 #~ msgstr "Consultar las categorías disponibles"

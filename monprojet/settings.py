@@ -292,3 +292,6 @@ X_FRAME_OPTIONS = 'DENY'
 
 # CSRF Trusted Origins
 CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='', cast=lambda v: [s.strip() for s in v.split(',') if s.strip()])
+
+# Configuration Gemini AI
+GEMINI_API_KEY = config('GEMINI_API_KEY', default='')
