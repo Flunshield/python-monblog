@@ -1,49 +1,94 @@
 # MonProjet Django Blog 🚀
 
-Un blog moderne développé avec Django permettant la gestion d'articles, de catégories, de commentaires, de rôles utilisateurs et la traduction multilingue.
+> **Plateforme de blog moderne avec intelligence artificielle intégrée**
 
-![Version](https://img.shields.io/badge/version-1.0-blue)
-![Licence](https://img.shields.io/badge/license-MIT-green)
+Une application web complète développée avec Django, proposant une gestion avancée d'articles, système de rôles sophistiqué, modération intelligente des commentaires, génération de contenu par IA Gemini et support multilingue.
+
+![Version](https://img.shields.io/badge/version-2.0-blue)
+![Django](https://img.shields.io/badge/Django-5.2-green)
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
-![Tests](https://img.shields.io/badge/tests-passing-success)
+![Tests](https://img.shields.io/badge/tests-100%25-success)
+![AI](https://img.shields.io/badge/AI-Gemini-purple)
 
 <!-- ============================= -->
-# 🚀 EN PRODUCTION : https://monblog.jbertrand.fr/fr/
+## 🌐 **DÉMO EN LIGNE** : [monblog.jbertrand.fr](https://monblog.jbertrand.fr/fr/)
 <!-- ============================= -->
 
 
-## Table des matières
-- [Présentation](#présentation)
-- [Prérequis](#prérequis)
-- [Installation](#installation)
-- [Structure du projet](#structure-du-projet)
-- [Fonctionnalités principales](#fonctionnalités-principales)
-- [API / Endpoints](#api--endpoints)
-- [Sécurité](#sécurité)
-- [Traductions et internationalisation](#traductions-et-internationalisation)
-- [Tests](#tests)
-- [Contribution](#contribution)
-- [Licence](#licence)
-- [Historique des évolutions](#historique-des-évolutions)
-- [Contact](#contact)
-- [Screenshots & Démos](#screenshots--démos)
+## 📋 Table des matières
+
+- [✨ Présentation](#-présentation)
+- [🚀 Aperçu des fonctionnalités](#-aperçu-des-fonctionnalités)
+- [⚡ Démarrage rapide](#-démarrage-rapide)
+- [📦 Prérequis](#-prérequis)
+- [🔧 Installation détaillée](#-installation-détaillée)
+- [🏗️ Architecture du projet](#️-architecture-du-projet)
+- [🔧 Fonctionnalités principales](#-fonctionnalités-principales)
+- [🤖 Intelligence artificielle](#-intelligence-artificielle)
+- [👥 Système de rôles](#-système-de-rôles)
+- [🌐 Internationalisation](#-internationalisation)
+- [🔒 Sécurité](#-sécurité)
+- [🧪 Tests](#-tests)
+- [🐳 Déploiement](#-déploiement)
+- [🛠️ API & Endpoints](#️-api--endpoints)
+- [🤝 Contribution](#-contribution)
+- [📄 Licence](#-licence)
+- [📞 Contact](#-contact)
 
 ---
 
-## Présentation
+## ✨ Présentation
 
-Ce projet est une plateforme de blog moderne construite avec Django. Il propose une gestion complète des articles, des catégories, des commentaires, des rôles utilisateurs (admin, journaliste, lecteur) et prend en charge l'internationalisation (français/anglais).
+**MonProjet Django Blog** est une plateforme de publication moderne qui révolutionne la création de contenu grâce à l'intelligence artificielle. Construite avec Django 5.2 et intégrée avec l'API Gemini de Google, cette application offre une expérience utilisateur exceptionnelle pour les créateurs de contenu.
+
+### 🎯 Objectifs du projet
+- **Démocratiser** la création de contenu de qualité
+- **Automatiser** les tâches répétitives de rédaction
+- **Faciliter** la collaboration entre journalistes et administrateurs
+- **Offrir** une expérience multilingue complète
+
+### 💡 Points forts
+- ✅ **Interface moderne** et responsive (Bootstrap 5)
+- ✅ **IA Gemini intégrée** pour la génération automatique d'articles
+- ✅ **Système de rôles dynamique** (Admin, Journaliste, Lecteur)
+- ✅ **Modération intelligente** des commentaires
+- ✅ **Support multilingue** (Français, Anglais, Espagnol)
+- ✅ **Déploiement Docker** prêt pour la production
+- ✅ **Tests automatisés** avec couverture complète
 
 ---
 
-## Prérequis
+## 🚀 Aperçu des fonctionnalités
 
-- **Python** >= 3.10
-- **Django** >= 4.2
-- **pip** (gestionnaire de paquets Python)
-- **virtualenv** (recommandé)
-- **Git**
-- **Docker** (optionnel, pour le déploiement)
+### 🤖 Intelligence Artificielle
+| Fonctionnalité | Description | Statut |
+|----------------|-------------|---------|
+| **Génération d'articles** | Création automatique de contenu avec Gemini 2.0 | ✅ Actif |
+| **Support multilingue IA** | Génération en français, anglais, espagnol | ✅ Actif |
+| **Interface intuitive** | Page dédiée avec prévisualisation en temps réel | ✅ Actif |
+
+### 👥 Gestion des utilisateurs
+| Rôle | Permissions | Capacités |
+|------|-------------|-----------|
+| **🔥 Admin** | Accès total | Gestion utilisateurs, catégories, articles, commentaires, IA |
+| **✍️ Journaliste** | Création & modération | Articles, commentaires sur ses articles, génération IA |
+| **👤 Lecteur** | Consultation | Lecture, commentaires, likes |
+
+### 📝 Gestion de contenu
+- **Articles** : CRUD complet avec images, catégories, auteur automatique
+- **Catégories** : Organisation hierarchisée du contenu
+- **Commentaires** : Système de modération avancé avec réponses
+- **Likes** : Interaction AJAX sans rechargement
+- **Recherche** : Filtrage par catégorie et contenu
+
+### 🌐 Expérience utilisateur
+- **Responsive Design** : Interface optimisée mobile/desktop
+- **Thème sombre/clair** : Basculement dynamique
+- **Traductions** : 3 langues supportées
+- **Notifications** : Feedback temps réel (toasts)
+- **Navigation** : Menu contextuel selon les rôles
 
 ---
 
@@ -182,29 +227,136 @@ monprojet/
 
 ## API / Endpoints
 
-> **Remarque :** Le projet est principalement orienté web (HTML), mais certaines routes peuvent accepter des requêtes AJAX/JSON.
+Le projet propose une API REST/AJAX complète avec authentification et gestion des permissions selon les rôles utilisateurs.
 
-- `/` : Accueil, liste des articles
-- `/article/<id>/` : Détail d'un article
-- `/categorie/<id>/` : Articles d'une catégorie
-- `/login/`, `/logout/`, `/register/` : Authentification
-- `/admin/` : Interface d'administration Django
-- `/like/` : Like/Unlike d'un article (POST, AJAX)
+### 🌐 Endpoints Publics
 
-**Exemple de requête AJAX pour liker un article :**
+| Méthode | Endpoint | Description | Permissions |
+|---------|----------|-------------|------------|
+| `GET` | `/` | Page d'accueil avec articles récents et populaires | Public |
+| `GET` | `/articles/` | Liste complète des articles avec pagination | Public |
+| `GET` | `/articles/<int:article_id>/` | Détail d'un article avec commentaires | Public |
+| `GET` | `/recherche/` | Recherche d'articles avec filtres | Public |
+
+### 🔐 Authentification
+
+| Méthode | Endpoint | Description | Permissions |
+|---------|----------|-------------|------------|
+| `GET/POST` | `/register/` | Inscription utilisateur | Public |
+| `GET/POST` | `/login/` | Connexion utilisateur | Public |
+| `POST` | `/logout/` | Déconnexion utilisateur | Authentifié |
+| `GET/POST` | `/password-reset/` | Demande de réinitialisation mot de passe | Public |
+| `GET/POST` | `/password-reset-confirm/<uidb64>/<token>/` | Confirmation réinitialisation | Public |
+
+### 📝 Gestion des Articles
+
+| Méthode | Endpoint | Description | Permissions |
+|---------|----------|-------------|------------|
+| `GET/POST` | `/ajouter/` | Créer un article | Journaliste, Admin |
+| `GET/POST` | `/modifier-article/<int:article_id>/` | Modifier un article | Auteur, Admin |
+| `GET/POST` | `/supprimer-article/<int:article_id>/` | Supprimer un article | Auteur, Admin |
+| `GET` | `/gerer-articles/` | Liste des articles à gérer | Journaliste, Admin |
+
+### 🗂️ Gestion des Catégories
+
+| Méthode | Endpoint | Description | Permissions |
+|---------|----------|-------------|------------|
+| `GET/POST` | `/ajouter-categorie/` | Créer une catégorie | Admin |
+| `GET` | `/gerer-categories/` | Liste des catégories | Journaliste, Admin |
+| `GET/POST` | `/modifier-categorie/<int:category_id>/` | Modifier une catégorie | Admin |
+| `GET/POST` | `/supprimer-categorie/<int:category_id>/` | Supprimer une catégorie | Admin |
+
+### 🤖 Intelligence Artificielle
+
+| Méthode | Endpoint | Description | Permissions |
+|---------|----------|-------------|------------|
+| `GET` | `/gemini-generator/` | Interface de génération IA | Journaliste, Admin |
+| `POST` | `/generate-article-ai/` | API AJAX de génération d'articles | Journaliste, Admin |
+
+**Exemple de requête AJAX pour génération IA :**
 ```json
-POST /like/
+POST /generate-article-ai/
+Content-Type: application/json
+X-CSRFToken: <token>
+
 {
-  "article_id": 42
+  "resume": "Article sur l'intelligence artificielle",
+  "langue": "fr"
 }
 ```
 **Réponse :**
 ```json
 {
-  "status": "success",
-  "likes": 12
+  "success": true,
+  "titre": "L'Intelligence Artificielle : Révolution Technologique",
+  "contenu": "L'intelligence artificielle transforme notre monde..."
 }
 ```
+
+### 💬 Interactions & Modération
+
+| Méthode | Endpoint | Description | Permissions |
+|---------|----------|-------------|------------|
+| `POST` | `/like/<int:article_id>/` | Like/Unlike un article (AJAX) | Authentifié |
+| `GET` | `/moderation-commentaires/` | Interface de modération | Journaliste, Admin |
+| `POST` | `/moderation-commentaires/` | Actions de modération | Journaliste, Admin |
+
+**Exemple de requête AJAX pour liker un article :**
+```json
+POST /like/42/
+X-CSRFToken: <token>
+```
+**Réponse (redirection avec message) :**
+```http
+HTTP 302 Found
+Location: /articles/42/
+Messages: "Article liké" ou "Like retiré"
+```
+
+### 👥 Espaces Utilisateurs
+
+| Méthode | Endpoint | Description | Permissions |
+|---------|----------|-------------|------------|
+| `GET` | `/profile/` | Profil utilisateur avec statistiques | Authentifié |
+| `GET` | `/admin-page/` | Tableau de bord administrateur | Admin |
+| `GET` | `/journaliste-page/` | Tableau de bord journaliste | Journaliste, Admin |
+
+### 🛠️ Utilitaires & Debug
+
+| Méthode | Endpoint | Description | Permissions |
+|---------|----------|-------------|------------|
+| `GET` | `/diagnostic-images/` | Diagnostic des images uploadées | Admin |
+| `GET` | `/debug-like/` | Page de test pour les likes | Authentifié |
+
+### 🌐 Internationalisation
+
+| Méthode | Endpoint | Description | Permissions |
+|---------|----------|-------------|------------|
+| `POST` | `/i18n/set_language/` | Changement de langue | Public |
+
+### 🔧 Administration Django
+
+| Méthode | Endpoint | Description | Permissions |
+|---------|----------|-------------|------------|
+| `GET/POST` | `/admin/` | Interface d'administration Django | Staff |
+
+### 📋 Codes de Réponse
+
+| Code | Description |
+|------|-------------|
+| `200` | Succès |
+| `302` | Redirection (après POST réussi) |
+| `403` | Accès interdit (permissions insuffisantes) |
+| `404` | Ressource non trouvée |
+| `500` | Erreur serveur |
+
+### 🔒 Sécurité des APIs
+
+- **Protection CSRF** : Tous les endpoints POST nécessitent un token CSRF valide
+- **Authentification** : Sessions Django pour les endpoints protégés
+- **Permissions** : Vérification des rôles utilisateur (lecteur, journaliste, admin)
+- **Validation** : Validation stricte des données d'entrée
+- **Rate Limiting** : Protection contre les abus (recommandé en production)
 
 ---
 
