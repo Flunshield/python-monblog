@@ -49,6 +49,23 @@
                             </div>
 
                             <div class="row">
+                                <!-- Champ Email -->
+                                <div class="col-12">
+                                    <div class="form-field fadeInUp">
+                                        {{ form.email }}
+                                        <label for="{{ form.email.id_for_label }}">{% translate "Email" %}</label>
+                                        <i class="fas fa-envelope field-icon"></i>
+                                        {% if form.email.errors %}
+                                            <div class="field-error">{{ form.email.errors.0 }}</div>
+                                        {% endif %}
+                                        {% if form.email.help_text %}
+                                            <div class="field-help">{{ form.email.help_text }}</div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
                                 <!-- Champ Mot de passe -->
                                 <div class="col-lg-6 col-12">
                                     <div class="form-field fadeInUp">

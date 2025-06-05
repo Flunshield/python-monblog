@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseForbidden
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import authenticate, login, logout, get_user_model
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, PasswordResetForm, SetPasswordForm
+from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm, SetPasswordForm
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
@@ -21,6 +21,7 @@ import logging
 import re
 from .forms import ArticleForm, CommentForm, CategoryForm, SearchForm, CommentReplyForm
 from .models import Article, Category, UserProfile, Like, Comment
+from .forms_user import UserCreationForm
 
 # Configuration du logger pour ce module
 logger = logging.getLogger('blog')
