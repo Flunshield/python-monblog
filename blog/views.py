@@ -1010,6 +1010,7 @@ def password_reset_view(request):
         form = PasswordResetForm(request.POST)
         if form.is_valid():
             email = form.cleaned_data['email']
+            print(f"[DEBUG] Email saisi par l'utilisateur: {email}")
             # Vérifier si l'email existe dans la base de données
             User = get_user_model()
             try:
@@ -1018,8 +1019,7 @@ def password_reset_view(request):
                 # Générer le token de réinitialisation
                 token = default_token_generator.make_token(user)
                 uid = urlsafe_base64_encode(force_bytes(user.pk))
-                
-                # Construire l'URL de réinitialisation
+                  # Construire l'URL de réinitialisation
                 current_site = get_current_site(request)
                 reset_url = f"http://{current_site.domain}/password-reset-confirm/{uid}/{token}/"
                   # Envoyer l'email (version simplifiée - en production, utiliser des templates HTML)
@@ -1035,9 +1035,12 @@ def password_reset_view(request):
                         fail_silently=False,
                     )
                     messages.success(request, _('Un email de réinitialisation a été envoyé à votre adresse.'))
+                    # Log pour debug
+                    logger.info(f"Email de réinitialisation envoyé de {settings.DEFAULT_FROM_EMAIL} vers {email}")
                 except Exception as e:
                     # En cas d'erreur d'envoi d'email, afficher le lien directement (pour le développement)
-                    messages.warning(request, _(f'Email non configuré. Lien de réinitialisation: {reset_url}'))
+                    logger.error(f"Erreur d'envoi d'email vers {email}: {str(e)}")
+                    messages.warning(request, _(f'Erreur d\'envoi d\'email vers {email}. Lien de réinitialisation: {reset_url}'))
                 
             except User.DoesNotExist:
                 # Pour la sécurité, on affiche le même message même si l'email n'existe pas

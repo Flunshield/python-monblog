@@ -13,13 +13,20 @@ services:
       - .env    
     environment:
       DJANGO_SETTINGS_MODULE: monprojet.settings
-      POSTGRES_DB: ${DB_NAME:-blogDb}
-      POSTGRES_USER: ${DB_USER:-postgres}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-julien}
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
       DB_HOST: ${DB_HOST}
-      DB_PORT: ${DB_PORT:-5432}
-      DJANGO_ADMIN_PASSWORD: ${DJANGO_ADMIN_PASSWORD:-ProdAdmin2024!}
-      DJANGO_DEBUG: ${DEBUG:-False}
+      DB_PORT: ${DB_PORT}
+      DJANGO_ADMIN_PASSWORD: ${DJANGO_ADMIN_PASSWORD}
+      DJANGO_DEBUG: ${DEBUG}
+      EMAIL_HOST: ${EMAIL_HOST}
+      EMAIL_PORT: ${EMAIL_PORT}
+      EMAIL_HOST_USER: ${EMAIL_HOST_USER}
+      EMAIL_HOST_PASSWORD: ${EMAIL_HOST_PASSWORD}
+      EMAIL_USE_TLS: ${EMAIL_USE_TLS}
+      DEFAULT_FROM_EMAIL: ${DEFAULT_FROM_EMAIL}
+      SERVER_EMAIL: ${SERVER_EMAIL}
     ports:
       - "8000:8000"
     depends_on:
@@ -52,8 +59,25 @@ services:
       - django_network
     restart: always
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: monprojet_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    networks:
+      - django_network
+    restart: always
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
 volumes:
   postgres_data:
+  pgadmin_data:
 
 networks:
   django_network:
